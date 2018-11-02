@@ -1,0 +1,6 @@
+Task 1
+1) Create random array X with 1000 elements
+2) Separate this array on even array A and odd array B
+3) Count the sum SumA of all even elements 
+4) Count the sum ProdB of all odd elements
+5) Multiply the elements of arrays with the same index for new array C_i
