@@ -2,6 +2,7 @@ package com.company;
 import com.company.Comparators.FirstLastNameComparator;
 import com.company.Comparators.YearComparator;
 import com.company.Employee;
+import com.company.Randomizers.Randomizer;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -13,33 +14,12 @@ public class Main {
         List<Employee> employees = new ArrayList<>();
         Map<BigDecimal, List<Employee>> staff = new TreeMap<>();
         Map<Integer, List<Employee>> staffSeparatedDepart = new TreeMap<>();
-
         BigDecimal border = new BigDecimal("1200");
         Random amountStaff = new Random();
         Integer numberAmountStaff = amountStaff.nextInt(100)+1;
-        for (Integer i = 0 ; i < numberAmountStaff ; i++) {
-            Random randEmployee = new Random();
+        fillingCollections(numberAmountStaff, employees, staff, staffSeparatedDepart);
 
-            String choiceEmployeeOrManager = randomizeEmployeeOrManager();
-            BigDecimal choiceSalary = randomizeSalaryEmployee();
-            if (choiceEmployeeOrManager == "Manager") choiceSalary = choiceSalary.add(choiceSalary.multiply(generateRandomBigDecimalFromRange(new BigDecimal("0.1"),new BigDecimal("0.3"))));
-
-            Employee employee = new Employee("First"+(randEmployee.nextInt(500)+1),"Last"+(randEmployee.nextInt(500)+1),
-                    choiceEmployeeOrManager, randEmployee.nextInt(30)+1970, randEmployee.nextInt(5)+1,
-                    choiceSalary);
-            employees.add(employee);
-
-            if (!staff.containsKey(employee.getSalary())) {
-                staff.put(employee.getSalary(), new ArrayList<>());
-            }
-            staff.get(employee.getSalary()).add(employee);
-
-            if (!staffSeparatedDepart.containsKey(employee.getDepartment())) {
-                staffSeparatedDepart.put(employee.getDepartment(), new ArrayList<>());
-            }
-            staffSeparatedDepart.get(employee.getDepartment()).add(employee);
-
-        }
+        //Output of task
         System.out.println("1)Staff sorted by name:");  //1
         Collections.sort(employees, new FirstLastNameComparator());
         for (Employee x : employees)
@@ -89,24 +69,28 @@ public class Main {
 
 
     }
+    public static void fillingCollections(Integer numbAmSt, List<Employee> empl, Map<BigDecimal, List<Employee>> st, Map<Integer, List<Employee>> stSepDep) {
+        for (Integer i = 0 ; i < numbAmSt ; i++) {
+            Random randEmployee = new Random();
+            String choiceEmployeeOrManager = Randomizer.randomizeEmployeeOrManager();
+            BigDecimal choiceSalary = Randomizer.randomizeSalaryEmployee();
+            if (choiceEmployeeOrManager == "Manager") choiceSalary = choiceSalary.add(choiceSalary.multiply(Randomizer.generateRandomBigDecimalFromRange(new BigDecimal("0.1"),new BigDecimal("0.3"))));
 
-    public static BigDecimal randomizeSalaryEmployee() {
-        Random randZeroOrOne = new Random();
+            Employee employee = new Employee("First"+(randEmployee.nextInt(500)+1),"Last"+(randEmployee.nextInt(500)+1),
+                    choiceEmployeeOrManager, randEmployee.nextInt(30)+1970, randEmployee.nextInt(5)+1,
+                    choiceSalary);
+            empl.add(employee);
 
-        if (randZeroOrOne.nextBoolean()) return new BigDecimal("1000");
-        else return new BigDecimal("1001");
+            if (!st.containsKey(employee.getSalary())) {
+                st.put(employee.getSalary(), new ArrayList<>());
+            }
+            st.get(employee.getSalary()).add(employee);
+
+            if (!stSepDep.containsKey(employee.getDepartment())) {
+                stSepDep.put(employee.getDepartment(), new ArrayList<>());
+            }
+            stSepDep.get(employee.getDepartment()).add(employee);
+        }
     }
-    public static String randomizeEmployeeOrManager() {
-        Random randZeroOrOne = new Random();
 
-        if (randZeroOrOne.nextBoolean()) return "Employee";
-        else return "Manager";
-    }
-    public static BigDecimal generateRandomBigDecimalFromRange(BigDecimal min, BigDecimal max) {
-
-        BigDecimal randomBigDecimal = min.add(new BigDecimal(Math.random()).multiply(max.subtract(min)));
-
-        return randomBigDecimal.setScale(2,BigDecimal.ROUND_HALF_UP);
-
-    }
 }
