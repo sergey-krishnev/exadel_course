@@ -1,0 +1,5 @@
+Task 2
+1) Display employees sorting by name;
+2) Display employees with salary more than 1200 by year
+3) Display employees who have equal salary and calculate the sum
+4) Display the common salary from each department.
