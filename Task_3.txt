@@ -1,0 +1,9 @@
+Skill = {ID Name LastUsed Year LastCheck CheckedBy SkillType SkillStatus}
+SkillType = {ID Name} SkillStatus = {Enum}
+
+Ru
+1) Display the list, sorted by SkillType
+2) Filter of data by SkillType and SkillStatus
+3) All skills, which have LastCheck, must be displayed by year
+4) Filter by Checked/Unchecked
+5) Search by group of skills, sort by LastUsed  
