@@ -1,0 +1,1457 @@
+Application Server / ATG Dynamo
+Application Server / Azure Service Fabric
+Application Server / GlassFish
+Application Server / JBoss
+Application Server / MS IIS
+Application Server / OC4J
+Application Server / Opencloud Rhino
+Application Server / Oracle Tuxedo
+Application Server / Resin
+Application Server / Tomcat
+Application Server / Web Sphere
+Application Server / WebLogic
+Application Server / WildFly
+Architecture / Business logic / Analytics
+Architecture / Business logic / Booking engine
+Architecture / Business logic / Business Process Management
+Architecture / Business logic / Financial calculations
+Architecture / Business logic / Forecasting
+Architecture / Business logic / Payment
+Architecture / Business logic / Workflow
+Architecture / Client side / Mobile
+Architecture / Client side / Web
+Architecture / Cloud
+Architecture / Clustering
+Architecture / Congiration / Runtime updates
+Architecture / Data processing / Batch processing
+Architecture / Data processing / Data Migration
+Architecture / Data processing / Data Transformation
+Architecture / Data processing / Scheduling
+Architecture / Data storage / DB Cluster
+Architecture / Data storage / Distributed Database
+Architecture / Design patterns
+Architecture / Monitoring
+Architecture / Multitenancy
+Architecture / Patterns / Actor Model
+Architecture / Patterns / Microservices
+Architecture / Recovery
+Architecture / Reporting
+Architecture / Reporting / MS Office documents
+Architecture / SAAS
+Architecture / Search
+Architecture / Search / Citation-search
+Architecture / Search / Full Text Indexing and search
+Architecture / Search / Search by filter
+Architecture / Security / Action-based security
+Architecture / Security / Attribute-based access control (ABAC)
+Architecture / Security / Audit
+Architecture / Security / Role based security
+Architecture / Serverless computing
+Architecture / SOA
+Architecture / SOA / ESB
+Architecture / Standalone application
+Architecture / User interface / Portal
+Architecture / User interface / Skins
+Architecture / User interface / Themes
+Architecture / User interface / Widgets
+Augmented Reality (AR) / ARCore
+Augmented Reality (AR) / Wikitude SDK
+Big Data / Amazon DynamoDB
+Big Data / Cassandra
+Big Data / Couchbase
+Big Data / Drill
+Big Data / Hadoop
+Big Data / Hbase
+Big Data / Hive
+Big Data / Impala
+Big Data / Spark
+Business Intelligence
+Business Intelligence / Modelling / Cognos Framework Manager
+Business Intelligence / OLAP / Cognos Transformer
+Business Intelligence / OLAP / Microsoft SSAS
+Business Intelligence / Reporting / Cognos Report Studio
+Business Intelligence / Reporting / Microsoft SSRS
+Business Intelligence / SAP BusinessObjects
+Business Intelligence / SAS
+Business Intelligence / SAS / Administration
+Business Intelligence / Visualisation / Exago
+Business Intelligence / Visualisation / Tableu
+Business Rules Management / Red Hat Decision Manager (JBoss Enterprise BRMS)
+C++ technologies / ATL
+C++ technologies / COM/DCOM
+C++ technologies / MFC
+C++ technologies / Qt
+C++ technologies / STL
+C++ technologies / WinAPI
+Cloud Computing / Amazon AWS / Amazon Simple Workflow Service (SWF)
+Cloud Computing / Amazon AWS / API Gateway
+Cloud Computing / Amazon AWS / Aurora
+Cloud Computing / Amazon AWS / CloudFormation
+Cloud Computing / Amazon AWS / CloudWatch
+Cloud Computing / Amazon AWS / EC2
+Cloud Computing / Amazon AWS / ECS
+Cloud Computing / Amazon AWS / Elastic Beanstalk
+Cloud Computing / Amazon AWS / Elastic Transcoder
+Cloud Computing / Amazon AWS / IAM
+Cloud Computing / Amazon AWS / Lambda
+Cloud Computing / Amazon AWS / RDS
+Cloud Computing / Amazon AWS / Route 53
+Cloud Computing / Amazon AWS / S3
+Cloud Computing / Amazon AWS / SES
+Cloud Computing / Amazon AWS / SNS
+Cloud Computing / Amazon AWS / SQS
+Cloud Computing / Amazon AWS / VPC
+Cloud Computing / CloudServer activecloud
+Cloud Computing / Google Cloud
+Cloud Computing / Heroku
+Cloud Computing / IBM Cloud
+Cloud Computing / IBM Cloud / IBM Bluemix
+Cloud Computing / IBM Cloud / IBM Lift
+Cloud Computing / iCloud
+Cloud Computing / MS Azure / App Services
+Cloud Computing / MS Azure / Application Insights
+Cloud Computing / MS Azure / Azure Active Directory
+Cloud Computing / MS Azure / Azure Cosmos DB
+Cloud Computing / MS Azure / Key vaults
+Cloud Computing / MS Azure / Redis caches
+Cloud Computing / MS Azure / Service Bus
+Cloud Computing / MS Azure / SQL
+Cloud Computing / MS Azure / Storage accounts
+Cloud Computing / MS Azure / Virtual Machines
+Cloud Computing / OpenShift
+Cloud Computing / OpenStack
+Cloud Computing / Pivotal Cloud Foundry
+Cloud Computing / Serverless framework
+Cloud Computing / ServiceNow
+CMS / Adobe AEM
+CMS / Alfresco
+CMS / Drupal
+CMS / Joomla
+CMS / Kentico
+CMS / Magento
+CMS / OmniUpdate
+CMS / Other
+CMS / SDL Tridion
+CMS / Wordpress
+CRM / Microsoft Dynamics
+CRM / Opentaps
+CRM / Salesforce
+CRM / Sugar
+CRM / Talisma
+CRM / Zoho CRM
+CSS / Frameworks / Less
+CSS / Frameworks / Sass
+CSS / Frameworks / Stylus
+Data / Apache Avro
+Data / Apache Parquet
+Data Format / CSV
+Data Format / JSON
+Data Format / JSON / JSONP
+Data Format / XML
+Data Format / XML / Open XML
+Data Format / XML / XPath
+Data Format / XML / XSD
+Data Format / XML / XSL, XSLT
+Data Grids and Caches / Gemfire
+Data Grids and Caches / Hazelcast
+Data Grids and Caches / Memcached
+Data Integration / Informatica MDM
+Data Integration / Informatica PowerCenter
+Data Integration / Microsoft SSIS
+Data Integration / Pentaho
+Data Science & AI / Data Cleaning
+Data Science & AI / Data Mining
+Data Science & AI / Kaggle Experience
+Data Science & AI / Language Based Profiling
+Data Science & AI / Machine Learning / Bayesian Networks
+Data Science & AI / Machine Learning / Decision Trees
+Data Science & AI / Machine Learning / Deep Learning & Neural Networks
+Data Science & AI / Machine Learning / Feature learning
+Data Science & AI / Machine Learning / Genetic Algorithms
+Data Science & AI / Machine Learning / Reinforcement Learning
+Data Science & AI / Machine Learning / Rule-based machine learning
+Data Science & AI / Machine Learning / Similarity learning
+Data Science & AI / Machine Learning / Support Vector Machines
+Data Science & AI / Natural Language Processing (NLP)
+Data Science & AI / Statistics / Cluster analysis & Classification
+Data Science & AI / Statistics / Data Visualisation & Descriptive statistics
+Data Science & AI / Statistics / Design of experiments
+Data Science & AI / Statistics / Hypothesis testing
+Data Science & AI / Statistics / Inferential Statistics
+Data Science & AI / Statistics / Nonparametric statistics
+Data Science & AI / Statistics / Predictive analytics & Modelling
+Data Science & AI / Statistics / Regression analysis
+Data Science & AI / Statistics / Robust statistics
+Data Science & AI / Statistics / Survival analysis
+Data Science & AI / Statistics / Time series analysis
+Data Science & AI / Tools / AWS Rekognition
+Data Science & AI / Tools / AWS SageMaker
+Data Science & AI / Tools / Dataiku
+Data Science & AI / Tools / Google Cloud Vision
+Data Science & AI / Tools / H2O
+Data Science & AI / Tools / Knime
+Data Science & AI / Tools / Machine Learning / TensorFlow
+Data Science & AI / Tools / Rapidminer
+Data Science & AI / Tools / Statistics / JMP
+Data Science & AI / Tools / Statistics / Matlab
+Data Science & AI / Tools / Statistics / SAS
+Data Science & AI / Tools / Statistics / SPSS
+Data Science & AI / Tools / Statistics / Stata
+Data Science & AI / Tools / Tibco Spotfire
+Data Storage / Blockchain
+Data Storage / Data Warehouse / Amazon Redshift
+Data Storage / Graph / Neo4j
+Data Storage / NoSQL / Infinispan
+Data Storage / NoSQL / MongoDB
+Data Storage / NoSQL / OrientDB
+Data Storage / NoSQL / Redis
+Data Storage / NoSQL / Rocket U2 (UniData and UniVerse)
+Data Storage / OLAP
+Data Storage / RDBMS / Firebird
+Data Storage / RDBMS / H2
+Data Storage / RDBMS / HSQLDB
+Data Storage / RDBMS / IBM Db2
+Data Storage / RDBMS / IBM Db2 Warehouse (dashDB)
+Data Storage / RDBMS / IBM Informix
+Data Storage / RDBMS / MS Access
+Data Storage / RDBMS / MS SQL Server
+Data Storage / RDBMS / MS SQL Server / Performance Monitoring and Tuning
+Data Storage / RDBMS / MySQL
+Data Storage / RDBMS / Netezza
+Data Storage / RDBMS / Oracle
+Data Storage / RDBMS / PostgreSQL
+Data Storage / RDBMS / Sqllite
+Data Storage / RDBMS / Sybase
+Data Storage / RDBMS / Teradata
+Data Storage / RDBMS / Vertica
+Data Storage / xBase
+Data Storage / xBase / Clipper
+Data Storage / xBase / dBase
+Data Storage / xBase / Microsoft Visual FoxPro
+Design / Illustration work using graphics tablets
+Design Tools / 3Ds Max
+Design Tools / Adobe Acrobat
+Design Tools / Adobe Dreamweaver
+Design Tools / Adobe Edge Reflow
+Design Tools / Adobe Fireworks
+Design Tools / Adobe Illustrator
+Design Tools / Adobe ImageReady
+Design Tools / Adobe InDesign
+Design Tools / Adobe Photoshop
+Design Tools / Adobe XD
+Design Tools / CorelDraw
+Design Tools / Figma
+Design Tools / Microsoft Expression Blend
+Design Tools / Microsoft Expression Design
+Design Tools / Microsoft Expression Sketch Flow
+Design Tools / Sketch
+DevOps / Monitoring & Logs / New Relic
+Domain / Agriculture
+Domain / Agriculture / Dairy
+Domain / Agriculture / Farming
+Domain / Agriculture / Fishery
+Domain / Agriculture / Ranching
+Domain / Art
+Domain / Art / Animation
+Domain / Art / Arts and Crafts
+Domain / Art / Design
+Domain / Art / Fine Art
+Domain / Art / Graphic Design
+Domain / Art / Motion Pictures and Film
+Domain / Art / Museums and Institutions
+Domain / Art / Music
+Domain / Art / Performing Arts
+Domain / Art / Photography
+Domain / Art / Writing and Editing
+Domain / Construction
+Domain / Construction / Architecture & Planning
+Domain / Construction / Building Materials
+Domain / Construction / Civil Engineering
+Domain / Construction / Commercial Real Estate
+Domain / Construction / Construction
+Domain / Construction / Glass, Ceramics & Concrete
+Domain / Construction / Industrial Automation
+Domain / Construction / Mechanical or Industrial Engineering
+Domain / Construction / Real Estate
+Domain / Construction / Real Estate / Construction Equipment and Supplies
+Domain / Construction / Real Estate / Property Leasing and Management
+Domain / Construction / Real Estate / Real Estate Agents and Appraisers
+Domain / Construction / Real Estate / Real Estate and Construction Other
+Domain / Construction / Real Estate / Real Estate Investment and Development
+Domain / Corporations
+Domain / Corporations / Accounting
+Domain / Corporations / Business Supplies and Equipment
+Domain / Corporations / Commercial Real Estate
+Domain / Corporations / Environmental Services
+Domain / Corporations / Facilities Services
+Domain / Corporations / Human Resources
+Domain / Corporations / Import and Export
+Domain / Corporations / Logistics and Supply Chain
+Domain / Corporations / Management Consulting
+Domain / Corporations / Market Research
+Domain / Corporations / Marketing and Advertising
+Domain / Corporations / Marketing and Advertising / Demographics & Use
+Domain / Corporations / Marketing and Advertising / Marketing and Advertising Other
+Domain / Corporations / Marketing and Advertising / Mobile Internet & Apps
+Domain / Corporations / Marketing and Advertising / Online Video & Entertainment
+Domain / Corporations / Marketing and Advertising / Reach & Traffic
+Domain / Corporations / Marketing and Advertising / Search Engines & SEO
+Domain / Corporations / Marketing and Advertising / Social Media & User-Generated Content
+Domain / Corporations / Outsourcing & Offshoring
+Domain / Corporations / Professional Training & Coaching
+Domain / Corporations / Program Development
+Domain / Corporations / Public Relations and Communications
+Domain / Corporations / Staffing and Recruiting
+Domain / Corporations / Translation and Localization
+Domain / Education
+Domain / Education / E-Learning
+Domain / Education / Education Management
+Domain / Education / Higher Education
+Domain / Education / Primary & Secondary Education
+Domain / Education / Research
+Domain / Finance
+Domain / Finance / Banking
+Domain / Finance / Capital Markets
+Domain / Finance / Commercial Real Estate
+Domain / Finance / Financial Services
+Domain / Finance / Financial Services / Credit Cards and Related Services
+Domain / Finance / Financial Services / Credit Unions
+Domain / Finance / Financial Services / Financial Services Other
+Domain / Finance / Financial Services / Lending and Mortgage
+Domain / Finance / Financial Services / Personal Financial Planning and Private Banking
+Domain / Finance / Financial Services / Securities Agents and Brokers
+Domain / Finance / Financial Services / Trust, Fiduciary, and Custody Activities
+Domain / Finance / Insurance
+Domain / Finance / Investment Banking
+Domain / Finance / Investment Management
+Domain / Finance / Real Estate
+Domain / Finance / Real Estate / Construction Equipment and Supplies
+Domain / Finance / Real Estate / Property Leasing and Management
+Domain / Finance / Real Estate / Real Estate Agents and Appraisers
+Domain / Finance / Real Estate / Real Estate and Construction Other
+Domain / Finance / Real Estate / Real Estate Investment and Development
+Domain / Finance / Venture Capital & Private Equity
+Domain / Goods
+Domain / Goods / Apparel & Fashion
+Domain / Goods / Consumer Electronics
+Domain / Goods / Consumer Goods
+Domain / Goods / Consumer Goods / Consumer Goods Other
+Domain / Goods / Consumer Goods / Toys
+Domain / Goods / Cosmetics
+Domain / Goods / Cosmetics / Cosmetics & Personal Care
+Domain / Goods / Cosmetics / Cosmetics Other
+Domain / Goods / Electrical & Electronic Manufacturing
+Domain / Goods / Food Production
+Domain / Goods / Furniture
+Domain / Goods / Furniture / Furniture Other
+Domain / Goods / Furniture / Furniture, Furnishings & Household Items
+Domain / Goods / Import and Export
+Domain / Goods / Luxury Goods & Jewelry
+Domain / Goods / Packaging and Containers
+Domain / Goods / Real Estate
+Domain / Goods / Real Estate / Construction Equipment and Supplies
+Domain / Goods / Real Estate / Property Leasing and Management
+Domain / Goods / Real Estate / Real Estate Agents and Appraisers
+Domain / Goods / Real Estate / Real Estate and Construction Other
+Domain / Goods / Real Estate / Real Estate Investment and Development
+Domain / Goods / Retail
+Domain / Goods / Retail / Automobile Dealers
+Domain / Goods / Retail / Automobile Parts and Supplies
+Domain / Goods / Retail / Beer, Wine and Liquor Stores
+Domain / Goods / Retail / Clothing and Shoe Stores
+Domain / Goods / Retail / Department Stores
+Domain / Goods / Retail / Florist
+Domain / Goods / Retail / Furniture Stores
+Domain / Goods / Retail / Gasoline Stations
+Domain / Goods / Retail / Grocery and Specialty Stores
+Domain / Goods / Retail / Hardware and Building Material Dealers
+Domain / Goods / Retail / Office Supplies Stores
+Domain / Goods / Retail / Retail Others
+Domain / Goods / Sporting Goods
+Domain / Goods / Supermarkets
+Domain / Goods / Tobacco
+Domain / Goods / Wholesale
+Domain / Goods / Wholesale / Apparel Wholesalers
+Domain / Goods / Wholesale / Automobile Parts Wholesalers
+Domain / Goods / Wholesale / Beer, Wine and Liquor Wholesalers
+Domain / Goods / Wholesale / Chemicals and Plastics Wholesalers
+Domain / Goods / Wholesale / Grocery and Food Wholesalers
+Domain / Goods / Wholesale / Lumber and Construction Materials Wholesalers
+Domain / Goods / Wholesale / Metal and Mineral Wholesalers
+Domain / Goods / Wholesale / Office Equipment and Suppliers Wholesalers
+Domain / Goods / Wholesale / Petroleum Products Wholesalers
+Domain / Goods / Wholesale / Wholesale and Distribution Other
+Domain / Goods / Wine and Spirits
+Domain / Governance
+Domain / Governance / Aviation & Aerospace
+Domain / Governance / Biotechnology
+Domain / Governance / Civil Engineering
+Domain / Governance / Defense & Space
+Domain / Governance / Executive Office
+Domain / Governance / Government Administration
+Domain / Governance / Government Administration / Government Other
+Domain / Governance / Government Administration / International Bodies and Organizations
+Domain / Governance / Government Administration / Local Government
+Domain / Governance / Government Administration / National Government
+Domain / Governance / Government Administration / State & Provincial Government
+Domain / Governance / Government Relations
+Domain / Governance / International Affairs
+Domain / Governance / International Trade and Development
+Domain / Governance / Judiciary
+Domain / Governance / Law Enforcement
+Domain / Governance / Mechanical or Industrial Engineering
+Domain / Governance / Military
+Domain / Governance / Nanotechnology
+Domain / Governance / Political Organization
+Domain / Governance / Public Policy
+Domain / Governance / Public Safety
+Domain / Governance / Renewables & Environment
+Domain / Governance / Research
+Domain / Governance / Telecommunications
+Domain / Governance / Telecommunications / Cable and Television Providers
+Domain / Governance / Telecommunications / Telecommunications Equipment and Accessories
+Domain / Governance / Telecommunications / Telecommunications Other
+Domain / Governance / Telecommunications / Telephone Service Providers and Carriers
+Domain / Governance / Telecommunications / Video and Teleconferencing
+Domain / Governance / Think Tanks
+Domain / Governance / Translation and Localization
+Domain / Healthcare
+Domain / Healthcare / Alternative Medicine
+Domain / Healthcare / Biotechnology
+Domain / Healthcare / Health, Wellness and Fitness
+Domain / Healthcare / Hospital & Health Care
+Domain / Healthcare / Hospital & Health Care / Diagnostic Laboratories
+Domain / Healthcare / Hospital & Health Care / Doctors and Health Care Practitioners
+Domain / Healthcare / Hospital & Health Care / Health, Pharmaceuticals, and Biotech Other
+Domain / Healthcare / Hospital & Health Care / Hospitals
+Domain / Healthcare / Hospital & Health Care / Medical Devices
+Domain / Healthcare / Hospital & Health Care / Medical Supplies and Equipment
+Domain / Healthcare / Hospital & Health Care / Outpatient Care Centers
+Domain / Healthcare / Hospital & Health Care / Personal Health Care Products
+Domain / Healthcare / Hospital & Health Care / Residential and Long-term Care Facilities
+Domain / Healthcare / Medical Devices
+Domain / Healthcare / Medical Practice
+Domain / Healthcare / Mental Health Care
+Domain / Healthcare / Pharmaceuticals
+Domain / Healthcare / Veterinary
+Domain / Legal
+Domain / Legal / Alternative Dispute Resolution
+Domain / Legal / Judiciary
+Domain / Legal / Law Enforcement
+Domain / Legal / Law Practice
+Domain / Legal / Legal Services
+Domain / Legal / Legal Services / Auditing, tax and law
+Domain / Legal / Legal Services / Legal Services Other
+Domain / Manufacturing
+Domain / Manufacturing / Airlines & Aviation
+Domain / Manufacturing / Automotive
+Domain / Manufacturing / Automotive / Automotive and vehicle manufacturing
+Domain / Manufacturing / Automotive / Automotive Other
+Domain / Manufacturing / Automotive / Automotive, motorcycles and bicycles
+Domain / Manufacturing / Aviation & Aerospace
+Domain / Manufacturing / Business Supplies and Equipment
+Domain / Manufacturing / Chemicals
+Domain / Manufacturing / Consumer Electronics
+Domain / Manufacturing / Consumer Goods
+Domain / Manufacturing / Electrical & Electronic Manufacturing
+Domain / Manufacturing / Food Production
+Domain / Manufacturing / Furniture
+Domain / Manufacturing / Glass, Ceramics & Concrete
+Domain / Manufacturing / Industrial Automation
+Domain / Manufacturing / Industrial Automation / Industrial Automation Other
+Domain / Manufacturing / Industrial Automation / Test and measurement
+Domain / Manufacturing / Machinery
+Domain / Manufacturing / Mechanical or Industrial Engineering
+Domain / Manufacturing / Mining & Metals
+Domain / Manufacturing / Nanotechnology
+Domain / Manufacturing / Oil & Energy
+Domain / Manufacturing / Packaging and Containers
+Domain / Manufacturing / Paper & Forest Products
+Domain / Manufacturing / Plastics
+Domain / Manufacturing / Railroad Manufacture
+Domain / Manufacturing / Renewables & Environment
+Domain / Manufacturing / Retail
+Domain / Manufacturing / Retail / Automobile Dealers
+Domain / Manufacturing / Retail / Automobile Parts and Supplies
+Domain / Manufacturing / Retail / Beer, Wine and Liquor Stores
+Domain / Manufacturing / Retail / Clothing and Shoe Stores
+Domain / Manufacturing / Retail / Department Stores
+Domain / Manufacturing / Retail / Florist
+Domain / Manufacturing / Retail / Furniture Stores
+Domain / Manufacturing / Retail / Gasoline Stations
+Domain / Manufacturing / Retail / Grocery and Specialty Stores
+Domain / Manufacturing / Retail / Hardware and Building Material Dealers
+Domain / Manufacturing / Retail / Office Supplies Stores
+Domain / Manufacturing / Retail / Retail Others
+Domain / Manufacturing / Shipbuilding
+Domain / Manufacturing / Textiles
+Domain / Manufacturing / Utilities
+Domain / Manufacturing / Wine and Spirits
+Domain / Media
+Domain / Media / Animation
+Domain / Media / Arts and Crafts
+Domain / Media / Broadcast Media
+Domain / Media / Computer Games
+Domain / Media / Design
+Domain / Media / Entertainment
+Domain / Media / Fine Art
+Domain / Media / Graphic Design
+Domain / Media / Information Services
+Domain / Media / Libraries
+Domain / Media / Marketing and Advertising
+Domain / Media / Media Production
+Domain / Media / Motion Pictures and Film
+Domain / Media / Museums and Institutions
+Domain / Media / Newspapers
+Domain / Media / Online Media
+Domain / Media / Performing Arts
+Domain / Media / Photography
+Domain / Media / Printing
+Domain / Media / Publishing
+Domain / Media / Publishing / Books & Publishing
+Domain / Media / Publishing / Publishing Other
+Domain / Media / Writing and Editing
+Domain / Organizations
+Domain / Organizations / Alternative Dispute Resolution
+Domain / Organizations / Civic & Social Organization
+Domain / Organizations / Consumer Services
+Domain / Organizations / E-Learning
+Domain / Organizations / Fund-Raising
+Domain / Organizations / Individual & Family Services
+Domain / Organizations / International Trade and Development
+Domain / Organizations / Non-Profit Organization Management
+Domain / Organizations / Philanthropy
+Domain / Organizations / Political Organization
+Domain / Organizations / Program Development
+Domain / Organizations / Religious Institutions
+Domain / Organizations / Renewables & Environment
+Domain / Organizations / Security and Investigations
+Domain / Organizations / Think Tanks
+Domain / Recreation
+Domain / Recreation / Arts and Crafts
+Domain / Recreation / Broadcast Media
+Domain / Recreation / Computer Games
+Domain / Recreation / Entertainment
+Domain / Recreation / Entertainment / Entertainment Other
+Domain / Recreation / Entertainment / Radio, TV & Film
+Domain / Recreation / Environmental Services
+Domain / Recreation / Fine Art
+Domain / Recreation / Food & Beverages
+Domain / Recreation / Gambling & Casinos
+Domain / Recreation / Health, Wellness and Fitness
+Domain / Recreation / Hospitality
+Domain / Recreation / Leisure, Travel & Tourism
+Domain / Recreation / Leisure, Travel & Tourism / Amusement Parks and Attractions
+Domain / Recreation / Leisure, Travel & Tourism / Cruise Ship Operations
+Domain / Recreation / Leisure, Travel & Tourism / Rental Cars
+Domain / Recreation / Leisure, Travel & Tourism / Spectator Sports and Teams
+Domain / Recreation / Leisure, Travel & Tourism / Taxi, Buses and Transit Systems
+Domain / Recreation / Leisure, Travel & Tourism / Travel Agents and Services
+Domain / Recreation / Leisure, Travel & Tourism / Travel, Recreations and Leisure Other
+Domain / Recreation / Libraries
+Domain / Recreation / Media Production
+Domain / Recreation / Motion Pictures and Film
+Domain / Recreation / Museums and Institutions
+Domain / Recreation / Music
+Domain / Recreation / Newspapers
+Domain / Recreation / Performing Arts
+Domain / Recreation / Photography
+Domain / Recreation / Printing
+Domain / Recreation / Publishing
+Domain / Recreation / Recreational Facilities and Services
+Domain / Recreation / Restaurants
+Domain / Recreation / Sporting Goods
+Domain / Recreation / Sports
+Domain / Recreation / Wine and Spirits
+Domain / Recreation / Writing and Editing
+Domain / Services
+Domain / Services / Civic & Social Organization
+Domain / Services / Consumer Services
+Domain / Services / Environmental Services
+Domain / Services / Environmental Services / Energy, water and environment
+Domain / Services / Environmental Services / Environmental Services Other
+Domain / Services / Facilities Services
+Domain / Services / Food & Beverages
+Domain / Services / Food & Beverages / Alcoholic Beverages
+Domain / Services / Food & Beverages / Food & Beverages Other
+Domain / Services / Food & Beverages / Non-alcoholic Beverages
+Domain / Services / Food Production
+Domain / Services / Hospitality
+Domain / Services / Individual & Family Services
+Domain / Services / Information Services
+Domain / Services / Leisure, Travel & Tourism
+Domain / Services / Leisure, Travel & Tourism / Amusement Parks and Attractions
+Domain / Services / Leisure, Travel & Tourism / Cruise Ship Operations
+Domain / Services / Leisure, Travel & Tourism / Rental Cars
+Domain / Services / Leisure, Travel & Tourism / Spectator Sports and Teams
+Domain / Services / Leisure, Travel & Tourism / Taxi, Buses and Transit Systems
+Domain / Services / Leisure, Travel & Tourism / Travel Agents and Services
+Domain / Services / Leisure, Travel & Tourism / Travel, Recreations and Leisure Other
+Domain / Services / Libraries
+Domain / Services / Package/Freight Delivery
+Domain / Services / Recreational Facilities and Services
+Domain / Services / Religious Institutions
+Domain / Services / Restaurants
+Domain / Services / Security and Investigations
+Domain / Services / Translation and Localization
+Domain / Technology
+Domain / Technology / Airlines/Aviation
+Domain / Technology / Biotechnology
+Domain / Technology / Computer & Network Security
+Domain / Technology / Computer Hardware
+Domain / Technology / Computer Networking
+Domain / Technology / Computer Software
+Domain / Technology / Defense & Space
+Domain / Technology / Information Technology and Services
+Domain / Technology / Internet
+Domain / Technology / Nanotechnology
+Domain / Technology / Pharmaceuticals
+Domain / Technology / Semiconductors
+Domain / Technology / Telecommunications
+Domain / Technology / Telecommunications / Cable and Television Providers
+Domain / Technology / Telecommunications / Telecommunications Equipment and Accessories
+Domain / Technology / Telecommunications / Telecommunications Other
+Domain / Technology / Telecommunications / Telephone Service Providers and Carriers
+Domain / Technology / Telecommunications / Video and Teleconferencing
+Domain / Technology / Transportation/Trucking/Railroad
+Domain / Technology / Venture Capital & Private Equity
+Domain / Technology / Wireless
+Domain / Transport
+Domain / Transport / Airlines/Aviation
+Domain / Transport / Hospitality
+Domain / Transport / Import and Export
+Domain / Transport / International Trade and Development
+Domain / Transport / Leisure, Travel & Tourism
+Domain / Transport / Leisure, Travel & Tourism / Amusement Parks and Attractions
+Domain / Transport / Leisure, Travel & Tourism / Cruise Ship Operations
+Domain / Transport / Leisure, Travel & Tourism / Rental Cars
+Domain / Transport / Leisure, Travel & Tourism / Spectator Sports and Teams
+Domain / Transport / Leisure, Travel & Tourism / Taxi, Buses and Transit Systems
+Domain / Transport / Leisure, Travel & Tourism / Travel Agents and Services
+Domain / Transport / Leisure, Travel & Tourism / Travel, Recreations and Leisure Other
+Domain / Transport / Logistics and Supply Chain
+Domain / Transport / Maritime
+Domain / Transport / Package/Freight Delivery
+Domain / Transport / Warehousing
+eCommerce / ATG
+eCommerce / Shopify
+Embedded Development / Android
+Embedded Development / iPhone & iPad
+Embedded Development / Java ME
+Embedded Development / Linux
+Embedded Development / Symbian
+Embedded Development / Tizen
+Embedded Development / Windows 8 RT
+Embedded Development / Windows Phone 7.5
+Embedded Development / Windows Phone 8
+Enterprise Solutions / SAP
+Enterprise Solutions / Tibco
+Flash / OSMF
+Flash / Red5
+Flash / RobotLegs
+Flash / XIFF
+Flex / BlazeDS
+Flex / Cairngorm
+Game Development / LibGDX
+Game Development / Unity3D
+Groovy / GDK
+Groovy / GPars
+Groovy / Grails
+IBM Solutions / Frameworks / XPages
+IBM Solutions / IBM Lotus Notes and Domino
+IBM Solutions / Mainframe / ISPF
+IBM Solutions / Mainframe / JCL
+IBM Solutions / Mainframe / SDSF
+IBM Solutions / Mainframe / TSO
+IDE / Aptana
+IDE / Borland C++ Builder
+IDE / Borland Delphi
+IDE / Borland JBuilder
+IDE / Eclipse
+IDE / Flash
+IDE / Flex Builder
+IDE / Flex Studio
+IDE / IntelliJ IDEA
+IDE / MS Visual Studio
+IDE / Mule Studio
+IDE / NetBeans
+IDE / PHPStorm
+IDE / Qt Creator
+IDE / RStudio
+IDE / RubyMine
+IDE / SAP NetWeaver Studio
+IDE / SAP PowerBuilder
+IDE / WebStorm
+IDE / WSAD
+IDE / XCode
+IDE / Zend Studio
+Industry Vertical / Emerging Verticals
+Industry Vertical / Financial Services
+Industry Vertical / Life Sciences & Healthcare
+Industry Vertical / Media & Entertainment
+Industry Vertical / Software & Hi-Tech
+Industry Vertical / Transportation and Logistics
+Industry Vertical / Travel & Consumer
+Installation packages
+Installation packages / Debian Packaging System
+Installation packages / InstallAnywhere
+Integration / Apache Thrift
+Integration / Google Protocol Buffers
+Integration / Microsoft Graph
+Internet Technologies / AJAX
+Internet Technologies / AJAX / DWR
+Internet Technologies / API / GraphQL
+Internet Technologies / Bindows
+Internet Technologies / Bootstrap
+Internet Technologies / CORS
+Internet Technologies / Flex
+Internet Technologies / Foundation
+Internet Technologies / GraphQL services
+Internet Technologies / Hessian
+Internet Technologies / HTML / Display Tag library
+Internet Technologies / HTML, CSS
+Internet Technologies / HTML5
+Internet Technologies / HTTP
+Internet Technologies / HTTP2
+Internet Technologies / IoT / CoAP
+Internet Technologies / IoT / Mosquitto
+Internet Technologies / IoT / MQTT
+Internet Technologies / IoT / XMPP
+Internet Technologies / REST services
+Internet Technologies / WebServices
+IT & Administration / Antivirus / Dr.Web
+IT & Administration / Antivirus / Symantec
+IT & Administration / Configuration management / Ansible
+IT & Administration / Configuration management / Azure ARM templates
+IT & Administration / Configuration management / Chef
+IT & Administration / Configuration management / PowerShell DSC
+IT & Administration / Configuration management / Puppet
+IT & Administration / Configuration management / SaltStack
+IT & Administration / Firewall / Kerio Control
+IT & Administration / LDAP
+IT & Administration / Networking / DFS
+IT & Administration / Networking / DHCP
+IT & Administration / Networking / DNS
+IT & Administration / Networking / RRAS
+IT & Administration / NTLM
+IT & Administration / SSL / Letsencrypt
+IT & Administration / Virtualization / MS HyperV
+IT & Administration / Virtualization / OpenStack
+IT & Administration / Virtualization / Oracle VM
+IT & Administration / Virtualization / Storage / StarWind Virtual SAN
+IT & Administration / Virtualization / VMWare
+IT & Administration / Virtualization / VMWare / vSphere
+IT & Administration / Virtualization / XenServer
+IT & Administration / Windows / RDP
+IT & Administration / Windows / Windows AD (Active directory)
+IT & Administration / Windows / WSUS
+Java / Akka
+Java / AndroMDA
+Java / AOP / AspectJ
+Java / AOP / Spring AOP
+Java / Apache Commons
+Java / Apache HttpComponents
+Java / AppFuse
+Java / Bean mapping / Dozer
+Java / Bean mapping / MapStruct
+Java / Castor
+Java / CDI
+Java / Data Transformation / Smooks
+Java / Dependency Injection / Dagger
+Java / Desktop UI / RCP
+Java / Desktop UI / SWT
+Java / EasyMock
+Java / Eclipse Development
+Java / EHCache
+Java / EJB 2
+Java / EJB 3
+Java / Google Guice
+Java / Gson
+Java / Integration / Apache Camel
+Java / Integration / JWebDAV for Exchange
+Java / Integration / JWebServices for Exchange
+Java / Integration / Spring Integration
+Java / iText
+Java / Jackson
+Java / Java SE
+Java / JavaCC
+Java / Javafx
+Java / JBoss Enterprise Application Platform (EAP)
+Java / jCaptcha
+Java / JMS
+Java / JMX
+Java / JNI
+Java / JRun
+Java / Log4j
+Java / MINA
+Java / NetCharts Pro
+Java / Netty
+Java / OpenEJB
+Java / Optimization / JProfiler
+Java / Optimization / Visual VM
+Java / OSGi
+Java / Persistence / DbUtils
+Java / Persistence / Hibernate
+Java / Persistence / JDBC
+Java / Persistence / JPA
+Java / Persistence / OrmLite
+Java / PlayFramework
+Java / POI
+Java / ProGuard
+Java / Quartz
+Java / Reporting Tools / Actuate
+Java / Reporting Tools / Birt
+Java / Reporting Tools / Docx4j
+Java / Reporting Tools / JasperReports
+Java / Reporting Tools / PowerCharts
+Java / Reporting Tools / XDocReport
+Java / Seam
+Java / Security / Spring Security
+Java / Sockets
+Java / Sound
+Java / Spring
+Java / Spring / Spring Batch
+Java / Spring / Spring Boot
+Java / Spring / Spring Data
+Java / Swing
+Java / Telecommunication / JSLEE
+Java / Telecommunication / SIP Servlets
+Java / Template Engines / FreeMarker
+Java / Template Engines / String Template
+Java / Template Engines / Velocity
+Java / Testing / EasyMock
+Java / Testing / Mockito
+Java / Web / ADF
+Java / Web / Apache Sling
+Java / Web / Exadel Flamingo
+Java / Web / Facelets
+Java / Web / GWT
+Java / Web / GWT / Ext GWT
+Java / Web / HtmlUnit
+Java / Web / JBoss EL
+Java / Web / JSF
+Java / Web / JSF / PrimeFaces
+Java / Web / Portal / GateIn
+Java / Web / Portal / JBoss Enterprise Portal
+Java / Web / Portal / Jetspeed
+Java / Web / Portal / JSR-168
+Java / Web / Portal / Liferay
+Java / Web / Portal / Websphere Portal
+Java / Web / Portlets
+Java / Web / RichFaces
+Java / Web / Servlets, JSP
+Java / Web / Spring MVC
+Java / Web / Struts
+Java / Web / Struts 2
+Java / Web / Thymeleaf
+Java / Web / Vaadin
+Java / Web / WebWork
+Java / Web / Wicket
+Java / Web / Zkoss
+Java / Web services
+Java / Web services / CXF
+Java / Web services / JAX-RS
+Java / Web services / JAX-WS
+Java / Workflow / Drools
+Java / Workflow / jBPM
+Java / Workflow / Orchestra
+Java / WS / Apache Axis
+Java / WS / Apache CXF
+Java / WS / Jersey
+Java / WS / Restlet
+Java / WS / Spring WS
+Java / XML / JAXB
+Java / XML / StAX
+JavaScript / Frameworks / Angular 2
+JavaScript / Frameworks / Angular 2 / Material
+JavaScript / Frameworks / Angular 4
+JavaScript / Frameworks / Angular JS 1
+JavaScript / Frameworks / Angular JS 1/ Material
+JavaScript / Frameworks / Backbone
+JavaScript / Frameworks / Bootstrap
+JavaScript / Frameworks / Electron
+JavaScript / Frameworks / EmberJS
+JavaScript / Frameworks / ExtJS
+JavaScript / Frameworks / GoogleMap API
+JavaScript / Frameworks / Infragistics
+JavaScript / Frameworks / Jasmine
+JavaScript / Frameworks / jQuery
+JavaScript / Frameworks / jQuery UI
+JavaScript / Frameworks / Kendo UI
+JavaScript / Frameworks / Kinetic.js
+JavaScript / Frameworks / KnockoutJs
+JavaScript / Frameworks / LESS
+JavaScript / Frameworks / Lo-Dash
+JavaScript / Frameworks / Materialalize
+JavaScript / Frameworks / MobX
+JavaScript / Frameworks / Moment.js
+JavaScript / Frameworks / Motools
+JavaScript / Frameworks / Polymer 2
+JavaScript / Frameworks / Prototype
+JavaScript / Frameworks / Ramda
+JavaScript / Frameworks / ReactJS
+JavaScript / Frameworks / RequireJS
+JavaScript / Frameworks / RxJS
+JavaScript / Frameworks / Underscore
+JavaScript / Frameworks / Vue.js
+JavaScript / Frameworks / Vue.js / Vuetify
+JavaScript / Frameworks / WinJS
+JavaScript / Frameworks / Yahoo UI
+JavaScript / Redux
+JavaScript / Server side / ExpressJs
+JavaScript / Templates / Pug
+JavaScript / Testing / Chai
+JavaScript / Testing / Mocha
+JavaScript / Testing / QUnit
+JavaScript / Testing / Sinon
+JavaScript / Vizualization / D3.js
+JavaScript / Web Components
+JavaScript / WebGL
+Language / Chinese / Speaking
+Language / Chinese / Writing
+Language / English / Speaking
+Language / English / Writing
+Language / French / Speaking
+Language / French / Writing
+Language / German / Speaking
+Language / German / Writing
+Language / Japanese / Speaking
+Language / Japanese / Writing
+Language / Polish / Speaking
+Language / Polish / Writing
+Language / Swedish / Speaking
+Language / Swedish / Writing
+Message broker / ActiveMQ
+Message broker / Azure Service Bus
+Message broker / Kafka
+Message broker / RabbitMQ
+Methodologies / Estimation
+Methodologies / IDEF0
+Methodologies / IDEF3
+Methodologies / Kanban
+Methodologies / Microsoft Solution Framework
+Methodologies / RUP
+Methodologies / Scrum
+Methodologies / Scrumban
+Methodologies / XP
+Mobile / Android platform
+Mobile / Blackberry platform
+Mobile / Cross platform development / Infragistics
+Mobile / Cross platform development / Xamarin
+Mobile / Development Platform / Firebase
+Mobile / Distribution Platform / Bitrise
+Mobile / Distribution Platform / HockeyApp
+Mobile / Firefox OS
+Mobile / Hybrid development / Appery.io
+Mobile / Hybrid development / Cordova + JavaScript
+Mobile / Hybrid development / Cordova Android plug-in / Java
+Mobile / Hybrid development / Cordova iOS plug-in / Objective-C
+Mobile / Hybrid development / Cordova Qt / Cross platform desktop programming
+Mobile / Hybrid development / Cordova Qt plug-in / Qt Blackberry 10
+Mobile / Hybrid development / Cordova Windows Phone 8 plug-in / C#
+Mobile / Hybrid development / Ionic
+Mobile / Hybrid development / React Native
+Mobile / Hybrid development / RhoMobile Suite (Rhodes Framework)
+Mobile / iOS platform
+Mobile / Native development / Android / Java
+Mobile / Native development / Android / NDK, C, C++
+Mobile / Native development / Android / User Interface Guidelines
+Mobile / Native development / BlackBerry / Java
+Mobile / Native development / BlackBerry /C,C++
+Mobile / Native development / BlackBerry 10/ C++, Qt, QML
+Mobile / Native development / BlackBerry Tablet OS/ C, C++
+Mobile / Native development / iOS / Application Publishing
+Mobile / Native development / iOS / Blocks
+Mobile / Native development / iOS / Cocoa Touch Frameworks / AddressBookUI
+Mobile / Native development / iOS / Cocoa Touch Frameworks / EventKitUI
+Mobile / Native development / iOS / Cocoa Touch Frameworks / GameKit
+Mobile / Native development / iOS / Cocoa Touch Frameworks / iAd
+Mobile / Native development / iOS / Cocoa Touch Frameworks / MapKit
+Mobile / Native development / iOS / Cocoa Touch Frameworks / MessageUI
+Mobile / Native development / iOS / Cocoa Touch Frameworks / Twitter
+Mobile / Native development / iOS / Cocoa Touch Frameworks / UIKit
+Mobile / Native development / iOS / Cocoa Touch Layer / Apple Push Notification Service
+Mobile / Native development / iOS / Cocoa Touch Layer / Auto Layout
+Mobile / Native development / iOS / Cocoa Touch Layer / External Display
+Mobile / Native development / iOS / Cocoa Touch Layer / Gesture Recognizers
+Mobile / Native development / iOS / Cocoa Touch Layer / Local Notifications
+Mobile / Native development / iOS / Cocoa Touch Layer / Peer-to-Peer Services
+Mobile / Native development / iOS / Cocoa Touch Layer / Storyboards
+Mobile / Native development / iOS / Cocos2d-x
+Mobile / Native development / iOS / Core OS Layer / Accelerate
+Mobile / Native development / iOS / Core OS Layer / CoreBluetooth
+Mobile / Native development / iOS / Core OS Layer / ExternalAccessory
+Mobile / Native development / iOS / Core OS Layer / GenericSecurityServices
+Mobile / Native development / iOS / Core OS Layer / Security
+Mobile / Native development / iOS / Core OS Layer / System
+Mobile / Native development / iOS / Core Services Layer / Accounts
+Mobile / Native development / iOS / Core Services Layer / AddressBook
+Mobile / Native development / iOS / Core Services Layer / AdSupport
+Mobile / Native development / iOS / Core Services Layer / CFNetwork
+Mobile / Native development / iOS / Core Services Layer / CoreData
+Mobile / Native development / iOS / Core Services Layer / CoreFoundation
+Mobile / Native development / iOS / Core Services Layer / CoreLocation
+Mobile / Native development / iOS / Core Services Layer / CoreMedia
+Mobile / Native development / iOS / Core Services Layer / CoreMotion
+Mobile / Native development / iOS / Core Services Layer / CoreTelephony
+Mobile / Native development / iOS / Core Services Layer / Event Kit
+Mobile / Native development / iOS / Core Services Layer / Foundation
+Mobile / Native development / iOS / Core Services Layer / MobileCoreServices
+Mobile / Native development / iOS / Core Services Layer / NewsstandKit
+Mobile / Native development / iOS / Core Services Layer / PassKit
+Mobile / Native development / iOS / Core Services Layer / QuickLook
+Mobile / Native development / iOS / Core Services Layer / Social
+Mobile / Native development / iOS / Core Services Layer / StoreKit
+Mobile / Native development / iOS / Core Services Layer / SystemConfiguration
+Mobile / Native development / iOS / Human Interface Guidelines
+Mobile / Native development / iOS / Localization
+Mobile / Native development / iOS / Media Layer Frameworks / AssetsLibrary
+Mobile / Native development / iOS / Media Layer Frameworks / AudioToolbox
+Mobile / Native development / iOS / Media Layer Frameworks / AudioUnit
+Mobile / Native development / iOS / Media Layer Frameworks / AVFoundation
+Mobile / Native development / iOS / Media Layer Frameworks / CoreAudio
+Mobile / Native development / iOS / Media Layer Frameworks / CoreGraphics
+Mobile / Native development / iOS / Media Layer Frameworks / CoreImage
+Mobile / Native development / iOS / Media Layer Frameworks / CoreMIDI
+Mobile / Native development / iOS / Media Layer Frameworks / CoreText
+Mobile / Native development / iOS / Media Layer Frameworks / CoreVideo
+Mobile / Native development / iOS / Media Layer Frameworks / GLKit
+Mobile / Native development / iOS / Media Layer Frameworks / ImageIO
+Mobile / Native development / iOS / Media Layer Frameworks / MediaPlayer
+Mobile / Native development / iOS / Media Layer Frameworks / OpenAL
+Mobile / Native development / iOS / Media Layer Frameworks / OpenGLES
+Mobile / Native development / iOS / Media Layer Frameworks / QuartzCore
+Mobile / Native development / iOS / Memory Management / ARC (Auto-reference count)
+Mobile / Native development / iOS / Memory Management / Memory Management Basics
+Mobile / Native development / iOS / Multithreading
+Mobile / Native development / iOS / Objective-C
+Mobile / Native development / iOS / Other / Instruments / Activity Monitor
+Mobile / Native development / iOS / Other / Instruments / Allocations
+Mobile / Native development / iOS / Other / Instruments / Automation
+Mobile / Native development / iOS / Other / Instruments / Core Animation
+Mobile / Native development / iOS / Other / Instruments / Energy Diagnostics
+Mobile / Native development / iOS / Other / Instruments / Leaks
+Mobile / Native development / iOS / Other / Instruments / Network
+Mobile / Native development / iOS / Other / Instruments / Open GL ES Driver
+Mobile / Native development / iOS / Other / Instruments / OpenGL ES Analysis
+Mobile / Native development / iOS / Other / Instruments / System Trace
+Mobile / Native development / iOS / Other / Instruments / System Usage
+Mobile / Native development / iOS / Other / Instruments / Time Profiler
+Mobile / Native development / iOS / Other / Parsers / HTML
+Mobile / Native development / iOS / Other / Parsers / JSON
+Mobile / Native development / iOS / Other / Parsers / XML
+Mobile / Native development / iOS / Other / RestKit Services
+Mobile / Native development / iOS / Other / Working with Cache
+Mobile / Native development / iOS / Unit testing / GHUnit
+Mobile / Native development / iOS / Unit testing / KIF
+Mobile / Native development / iOS / Unit testing / SenTestingKit
+Mobile / Native development / iOS / Unit testing / UIAutomation
+Mobile / Native development / Windows Phone / .NET
+Mobile / Native development / Windows Phone / C++
+Mobile / Native development / Windows RT
+Mobile / Notifications / Firebase Cloud Messaging
+Mobile / Web / HTML5, JS, CSS3
+Mobile / Web / Infragistics
+Mobile / Web / Integration / Web Google Maps
+Mobile / Web / jQueryMobile
+Mobile / Web / jQueryMobile / jQTouch plugin
+Mobile / Web / Responsive web design
+Mobile / Web / RhoMobile framework
+Mobile / Web / Sencha Touch
+Mobile / Web / Titanium framework
+Mobile / Web / Yahoo! Blueprint platform
+Mobile / Windows 7 platform
+Modeling / BPMN
+Modeling / UML
+MS .Net / ActiveX
+MS .Net / ADO.NET
+MS .Net / ASP.Net
+MS .Net / ASP.NET Core 1.0
+MS .Net / ASP.NET Core 2.0
+MS .Net / ASP.Net MVC
+MS .Net / ASP.NET Web API 1
+MS .Net / ASP.NET Web API 2
+MS .Net / ASP.NET WebForms
+MS .Net / Authentication / IdentityServer3
+MS .Net / Compact Framework
+MS .Net / Core .Net 2.0
+MS .Net / Core .Net 3.5
+MS .Net / Core .Net 4.0
+MS .Net / Core .Net 4.5
+MS .Net / Dependency Injection / Autofac
+MS .Net / Dependency Injection / MEF
+MS .Net / Dependency Injection / Ninject
+MS .Net / Dependency Injection / Unity
+MS .Net / DevExpress
+MS .Net / Entity Framework
+MS .Net / Entity Framework Code First
+MS .Net / ESB / Biztalk
+MS .Net / Infragistics
+MS .Net / LINQ
+MS .Net / Logging / Log4net
+MS .Net / Logging / NLog
+MS .Net / Logging / Serilog
+MS .Net / Message Bus / Masstransit
+MS .Net / Message Bus / NServiceBus
+MS .Net / Optimization / DotMemory
+MS .Net / Optimization / DotTrace
+MS .Net / Orleans
+MS .Net / ORM / EF Core
+MS .Net / ORM / EntityFramework
+MS .Net / ORM / L2S
+MS .Net / ORM / NHibernate
+MS .Net / Reporting Services
+MS .Net / Security / IdentityServer4
+MS .Net / SharePoint
+MS .Net / SignalR
+MS .Net / TAP
+MS .Net / TPL
+MS .Net / WCF
+MS .Net / Web Services
+MS .Net / WF
+MS .Net / Win Forms
+MS .Net / Windows Services
+MS .Net / WPF
+Network Technologies / Configuration Cisco devices
+Network Technologies / Configuration Juniper devices
+Network Technologies / IP Telephony
+Network Technologies / IP Telephony / Asterisk
+Network Technologies / IP Telephony / Cisco Unified Communications Manager (CallManager)
+Network Technologies / IP Telephony / Cisco Unified Contact Center Express
+Network Technologies / Layer 2 Security
+Network Technologies / Layer 3 Security
+Network Technologies / Monitoring Tools
+Network Technologies / Monitoring Tools / Conformity Monkey
+Network Technologies / Monitoring Tools / Janitor Monkey
+Network Technologies / Monitoring Tools / Zabbix
+Network Technologies / Quality of Service (QoS)
+Network Technologies / Redundancy, Load balancing
+Network Technologies / Routing Protocols
+Network Technologies / SCTP
+Network Technologies / SIP
+Network Technologies / SSL & TLS
+Network Technologies / Switching Technologies
+OS / FreeBSD
+OS / LINUX
+OS / LINUX / Hewlett Packard Unix (HP-UX)
+OS / LINUX / Red Hat Enterprise Linux (RHEL)
+OS / MAC
+OS / Palm
+OS / Solaris
+OS / UNIX
+OS / Windows
+OS / zOS
+Payments / PayPal
+Payments / Stripe
+Payments / SWIFT
+Persistence / iBATIS
+PHP / Frameworks / CodeIgnitor
+PHP / Frameworks / KOHANA
+PHP / Frameworks / Laravel
+PHP / Frameworks / Symfony
+PHP / Frameworks / Yii
+PHP / Frameworks / Yii2
+PHP / Frameworks / Zend Frameowrk
+PHP / Templaters / Smarty3
+PHP / Templaters / Twig
+Products & Solutions / DataTrac
+Products & Solutions / Kentico
+Products & Solutions / Microsoft Power BI
+Programming Languages / ActionScript
+Programming Languages / C
+Programming Languages / C#
+Programming Languages / C++
+Programming Languages / COBOL
+Programming Languages / Erlang
+Programming Languages / Go
+Programming Languages / Groovy
+Programming Languages / Java
+Programming Languages / JavaScript
+Programming Languages / Kotlin
+Programming Languages / Objective C
+Programming Languages / PHP
+Programming Languages / R
+Programming Languages / Ruby
+Programming Languages / Scala
+Programming Languages / Scripting / Bash
+Programming Languages / Scripting / Beanshell
+Programming Languages / Scripting / CoffeeScript
+Programming Languages / Scripting / ColdFusion
+Programming Languages / Scripting / Lua
+Programming Languages / Scripting / MDX
+Programming Languages / Scripting / MS ASP
+Programming Languages / Scripting / MS VBScript
+Programming Languages / Scripting / Perl
+Programming Languages / Scripting / PowerShell
+Programming Languages / Scripting / Python
+Programming Languages / Scripting / Shell
+Programming Languages / Scripting / SQL
+Programming Languages / Scripting / SQL / Oracle PL/SQL
+Programming Languages / Scripting / Tcl
+Programming Languages / Swift
+Programming Languages / TypeScript
+Programming Languages / VB.NET
+Programming Languages / VBA
+Programming Languages / Xbase++
+Python / CPython / Python/C API
+Python / Frameworks / Django
+Python / Frameworks / Flask
+Python / Frameworks / Tornado
+Python / Frameworks / Twisted
+Python / ORM / SQLAlchemy
+Python / STL / Asyncio
+Repository managers / Artifactory
+Repository managers / Nexus
+Requirements Gathering / Confluence
+Ruby / Persistence / ActiveRecord
+Ruby / Ruby On Rails
+Search Engine / ElasticSearch
+Search Engine / FAST ESP
+Search Engine / Lucene
+Search Engine / Solr
+Security
+Security / HMAC
+Security / OpenAM
+Security / OpenDJ
+Security / OpenID
+Security / OpenIDM
+Security / OpenSSO
+Security / Ping Federate
+Security / SAML
+Security / SSO
+SOA / ESB / Apache Synapse
+SOA / ESB / JBoss ESB
+SOA / ESB / Mule
+SOA / ESB / Open ESB
+SOA / MuleSoft Anypoint Platform
+SOA / SOAP
+SOA / WSO2 / Data Service Server
+SOA / WSO2 / Dev Studio (Eclipse Add-Ons)
+SOA / WSO2 / ESB
+Social API / Bit.ly
+Social API / Dropbox
+Social API / Facebook API
+Social API / FourSquare
+Social API / Google
+Social API / Linkedin
+Social API / oDesk API
+Social API / Tumblr
+Social API / Twitter API
+Social API / VK
+Social API / Yahoo
+Software Platform / Adobe AIR
+Software Platform / Adobe Flash
+Software Platform / MS .Net
+Software Platform / NodeJS
+Software Platform / Silverlight
+Software Testing / Automation Testing / Back-end
+Software Testing / Automation Testing / Mobile
+Software Testing / Automation Testing / TV Consoles
+Software Testing / Automation Testing / Web
+Software Testing / Manual Web & Desktop Testing
+Software Testing / Mobile Testing / Hybrid
+Software Testing / Mobile Testing / Native / Android
+Software Testing / Mobile Testing / Native / BlackBerry
+Software Testing / Mobile Testing / Native / iOS
+Software Testing / Mobile Testing / Native / Windows Phone
+Software Testing / Mobile Testing / Web
+Software Testing / Perfomance Testing and Optimisation
+Software Testing / Testing Tools / Automation / Apache JMeter
+Software Testing / Testing Tools / Automation / Appium
+Software Testing / Testing Tools / Automation / Bitbar (cloud)
+Software Testing / Testing Tools / Automation / BlazeMeter
+Software Testing / Testing Tools / Automation / CasperJS
+Software Testing / Testing Tools / Automation / CppUnit
+Software Testing / Testing Tools / Automation / CrossBrowserTesting
+Software Testing / Testing Tools / Automation / Cucumber
+Software Testing / Testing Tools / Automation / CUnit
+Software Testing / Testing Tools / Automation / Espresso
+Software Testing / Testing Tools / Automation / FitNess
+Software Testing / Testing Tools / Automation / Gatling
+Software Testing / Testing Tools / Automation / HP Unified Functional Testing (UFT) , QTP
+Software Testing / Testing Tools / Automation / HTTPUnit
+Software Testing / Testing Tools / Automation / IBM Functional Tester
+Software Testing / Testing Tools / Automation / ITAS
+Software Testing / Testing Tools / Automation / Jasmine
+Software Testing / Testing Tools / Automation / Jest
+Software Testing / Testing Tools / Automation / JUnit
+Software Testing / Testing Tools / Automation / Karma
+Software Testing / Testing Tools / Automation / Katalon Studio
+Software Testing / Testing Tools / Automation / Mercury LoadRunner, WinRunner, QuickTest
+Software Testing / Testing Tools / Automation / MonkeyTalk
+Software Testing / Testing Tools / Automation / MSTests
+Software Testing / Testing Tools / Automation / Nightwatch
+Software Testing / Testing Tools / Automation / NUnit
+Software Testing / Testing Tools / Automation / Oracle Open Script
+Software Testing / Testing Tools / Automation / Phantomjs
+Software Testing / Testing Tools / Automation / Protractor
+Software Testing / Testing Tools / Automation / Ranorex
+Software Testing / Testing Tools / Automation / Rational Robot, XDE
+Software Testing / Testing Tools / Automation / REST Assured
+Software Testing / Testing Tools / Automation / Retrofit
+Software Testing / Testing Tools / Automation / Robot framework
+Software Testing / Testing Tools / Automation / Robotium
+Software Testing / Testing Tools / Automation / RobotJs
+Software Testing / Testing Tools / Automation / RSpec
+Software Testing / Testing Tools / Automation / Segue SilkTest, SilkPerformer
+Software Testing / Testing Tools / Automation / Selenide
+Software Testing / Testing Tools / Automation / Selenium
+Software Testing / Testing Tools / Automation / SoapUI
+Software Testing / Testing Tools / Automation / SWTBot
+Software Testing / Testing Tools / Automation / TestComplete
+Software Testing / Testing Tools / Automation / TestNG
+Software Testing / Testing Tools / Automation / TestPlant eggplant
+Software Testing / Testing Tools / Automation / UI Automation (iOS)
+Software Testing / Testing Tools / Automation / UI Automator
+Software Testing / Testing Tools / Automation / WatiR-WatiJ-WatiN
+Software Testing / Testing Tools / Automation / WebdriverIO
+Software Testing / Testing Tools / Automation / XCTest/XCUITest
+Software Testing / Testing Tools / Mobile / Android Studio
+Software Testing / Testing Tools / Mobile / Apple Configurator
+Software Testing / Testing Tools / Mobile / Beta by Crashlytics
+Software Testing / Testing Tools / Mobile / Chaos Monkey
+Software Testing / Testing Tools / Mobile / Firebase Crashlytics
+Software Testing / Testing Tools / Mobile / TestFlight
+Software Testing / Testing Tools / Other / BrowserStack
+Software Testing / Testing Tools / Other / Charles Proxy
+Software Testing / Testing Tools / Other / Fiddler
+Software Testing / Testing Tools / Other / HTTP Analyzer
+Software Testing / Testing Tools / Other / Mercury TestDirector
+Software Testing / Testing Tools / Other / OWASP ZAP
+Software Testing / Testing Tools / Other / Postman
+Software Testing / Testing Tools / Other / Robomongo/MongoChef
+Software Testing / Testing Tools / Other / Vega Scanner
+Software Testing / Testing Tools / Other / Web Console
+Software Testing / TV Consoles Testing
+System Programming / Arm assembler
+System Programming / Linux Kernel
+Telecommunication / GSM
+Telecommunication / IMS
+Telecommunication / Protocol / Diameter
+Telecommunication / Protocol / SIGTRAN
+Telecommunication / Protocol / SIGTRAN / M3UA
+Telecommunication / Protocol / SS7
+Telecommunication / Protocol / SS7 / CAP
+Telecommunication / Protocol / SS7 / ISUP
+Telecommunication / Protocol / SS7 / MAP
+Telecommunication / Protocol / SS7 / SCCP
+Telecommunication / Protocol / SS7 / TCAP
+Tools / Analytics / Accept360
+Tools / Analytics / Doors
+Tools / Analytics / Flurry Analytics
+Tools / Analytics / Google Analytics
+Tools / Analytics / Localytics
+Tools / Analytics / Mingle
+Tools / Analytics / Nielsen
+Tools / Analytics / Rally
+Tools / Analytics / Youbora
+Tools / Application Lifecycle Management / HP ALM (Quality Center)
+Tools / Application Lifecycle Management / Oracle Test Manager
+Tools / Application Lifecycle Management / TFS
+Tools / Application Lifecycle Management / VersionOne
+Tools / Application Lifecycle Management / Visual Studio Team Services (VSTS)
+Tools / Bug Tracking system / Bugzilla
+Tools / Bug Tracking system / IBM Clear Quest
+Tools / Bug Tracking system / Spira test
+Tools / Bug Tracking system / YouTrack
+Tools / Build servers / Atlassian Bamboo
+Tools / Build servers / CruiseControl
+Tools / Build servers / Jenkins (Hudson)
+Tools / Build servers / Octopus Deploy
+Tools / Build servers / Teamcity
+Tools / Building Tools / ANT, Maven
+Tools / Building Tools / Autotools
+Tools / Building Tools / Bower
+Tools / Building Tools / Bundler
+Tools / Building Tools / CMake
+Tools / Building Tools / GitLab Runner
+Tools / Building Tools / Gradle
+Tools / Building Tools / GruntJs
+Tools / Building Tools / Gulp
+Tools / Building Tools / npm
+Tools / Building Tools / NuGet
+Tools / Building Tools / SBT
+Tools / Building Tools / Webpack
+Tools / Capistrano
+Tools / Collaboration / IBM Notes
+Tools / Containers / Orchestration / Docker Swarm
+Tools / Containers / Orchestration / Kubernetes
+Tools / Containers / Orchestration / Mesos
+Tools / Crucible Fisheye
+Tools / Cygwin
+Tools / DB / Flyway
+Tools / DB / Liquibase
+Tools / Debugging / gdb
+Tools / EMMA
+Tools / Environment / Docker
+Tools / Environment / Vagrant
+Tools / GCC
+Tools / GDB
+Tools / IJG library
+Tools / Kibana
+Tools / Linkerd
+Tools / Logstash
+Tools / LuntBuild
+Tools / Microservices / Istion
+Tools / MinGW
+Tools / Modelling / Bizagi
+Tools / Modelling / BPwin
+Tools / Modelling / Enterprise Architect
+Tools / Modelling / Exadel Tiggr
+Tools / Modelling / MS Visio
+Tools / Modelling / PowerDesigner
+Tools / Modelling / Rational Rose
+Tools / Modelling / UI / Axure
+Tools / Modelling / UI / Balsamiq
+Tools / Modelling / UI / InVision
+Tools / Modelling / UI / Pencil
+Tools / Modelling / UI / Zeplin
+Tools / Modelling / Visual paradigm
+Tools / MySQL Workbench
+Tools / Oracle Forms & Reports
+Tools / Planning / Daptiv
+Tools / Planning / HP Agile Manager
+Tools / Planning / MS Project
+Tools / Planning / Open Project
+Tools / Planning / XPlanner
+Tools / REST / JBoss Resteasy
+Tools / REST / OData
+Tools / REST / Swagger
+Tools / Roku Portal
+Tools / Saucelabs
+Tools / SonarQube
+Tools / Task Tracking system / Aha
+Tools / Task Tracking system / Asana
+Tools / Task Tracking system / Clarity
+Tools / Task Tracking system / Gemini
+Tools / Task Tracking system / IBM Clear Quest/ Rational ClearQuest
+Tools / Task Tracking system / JIRA
+Tools / Task Tracking system / Mantis
+Tools / Task Tracking system / Pivotal Tracker
+Tools / Task Tracking system / PMC
+Tools / Task Tracking system / Rally
+Tools / Task Tracking system / Redmine
+Tools / Task Tracking system / Track
+Tools / Test Management / Squash TM
+Tools / Test Management / TestLink
+Tools / Test Management / testPAD
+Tools / Test Management / TestRail
+Tools / Test Management / Zephyr
+Tools / VM Ware
+Tools / Xbox Portal
+VCS / Clear Case
+VCS / CVS
+VCS / DTR
+VCS / Git
+VCS / Mercurial
+VCS / Perforce
+VCS / StarTeam
+VCS / SVN
+VCS / Team Foundation Version Control
+VCS / VSS
+Web Server / Apache HTTP
+Web Server / Jetty
+Web Server / Nginx
+Willing to go to business trip
+Willing to relocate to Europe
+Willing to relocate to USA
