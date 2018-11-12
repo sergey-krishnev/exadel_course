@@ -25,9 +25,19 @@ public class Main {
         thirdCondition(otherskills); //3
         fourthCondition(otherskills, CHOICE_CHECK);
 
-        System.out.println("/////////5) Search by group of skills, sort by LastUsed  ////////////");
+        Comparable<String> searchCriteria = new Comparable<String>() {
+            @Override
+            public int compareTo(String treeData) {
+                if (treeData == null)
+                    return 1;
+                boolean nodeOk = treeData.contains("210");
+                return nodeOk ? 0 : 1;
+            }
+        };
 
-        Tree<String> tree = new Tree<>()
+        System.out.println("/////////5) Search by group of skills, sort by LastUsed  ////////////");
+        TreeNode<String> treeRoot = SampleData.getSet1();
+
         /*
 
         System.out.println("/////////5) Search by group of skills, sort by LastUsed  ////////////");
