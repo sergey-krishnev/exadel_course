@@ -7,6 +7,6 @@ import java.util.Comparator;
 public class SkillTypeComparator implements Comparator<Skill> {
     public int compare(Skill a, Skill b){
 
-        return (a.getSkillType().getIdSkillType()).compareTo(b.getSkillType().getIdSkillType());
+        return (a.getSkillType()).compareTo(b.getSkillType());
     }
 }

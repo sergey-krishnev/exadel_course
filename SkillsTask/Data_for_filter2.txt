@@ -1,0 +1,46 @@
+Domain / Agriculture ; Industry / Domain Knowledge ; Announced
+Domain / Agriculture / Dairy ; Industry / Domain Knowledge ; Announced
+Domain / Agriculture / Farming ; Industry / Domain Knowledge ; Announced
+Industry Vertical / Emerging Verticals ; Industry vertical ; Announced
+Industry Vertical / Financial Services ; Industry vertical ; Announced
+Industry Vertical / Life Sciences & Healthcare ; Industry vertical ; Announced
+Language / Chinese / Speaking ; Languages ; Announced
+Language / Chinese / Writing ; Languages ; Announced
+Language / English / Speaking ; Languages ; Announced
+Willing to go to business trip ; Other ; Announced
+Willing to relocate to Europe ; Other ; Announced
+Willing to relocate to USA ; Other ; Announced
+Architecture / Cloud ; Technical / Development ; Announced
+Augmented Reality (AR) / ARCore ; Technical / Development ; Announced
+Augmented Reality (AR) / Wikitude SDK ; Technical / Development ; Announced
+Mobile / Android platform ; Technical / Mobile ; Announced
+Mobile / Blackberry platform ; Technical / Mobile ; Announced
+Mobile / Cross platform development / Infragistics ; Technical / Mobile ; Announced
+Programming Languages / ActionScript ; Technical / Programming Languages and Platforms ; Announced
+Programming Languages / C ; Technical / Programming Languages and Platforms ; Announced
+Programming Languages / C# ; Technical / Programming Languages and Platforms ; Announced
+Architecture / Business logic / Analytics ; Technical / Project Architecture ; Announced
+Architecture / Business logic / Booking engine ; Technical / Project Architecture ; Announced
+Architecture / Business logic / Business Process Management ; Technical / Project Architecture ; Announced
+Methodologies / Estimation ; Technical / Project Management ; Announced
+Methodologies / IDEF0 ; Technical / Project Management ; Announced
+Methodologies / IDEF3 ; Technical / Project Management ; Announced
+Software Testing / Automation Testing / Back-end ; Technical / QA & QC ; Announced
+Software Testing / Automation Testing / Mobile ; Technical / QA & QC ; Announced
+Software Testing / Automation Testing / TV Consoles ; Technical / QA & QC ; Announced
+Application Server / ATG Dynamo ; Technical / System Administration & DevOps ; Announced
+Application Server / Azure Service Fabric ; Technical / System Administration & DevOps ; Announced
+Application Server / GlassFish ; Technical / System Administration & DevOps ; Announced
+Design / Illustration work using graphics tablets ; Technical / Visual Design ; Announced
+Design Tools / 3Ds Max ; Technical / Visual Design ; Announced
+Design Tools / Adobe Acrobat ; Technical / Visual Design ; Announced
+eCommerce / Elasti? Path ; Technical / Development ; Proposed for including
+Primary skill / .Net ; Primary ; Unannounced
+Primary skill / ActionScript ; Primary ; Unannounced
+Primary skill / AEM ; Primary ; Unannounced
+Background check ; Other ; Unannounced
+Dollar card (Alfa Bank) ; Other ; Unannounced
+Other / Student ; Other ; Unannounced
+Expert skill / Assessment Interview ; Expert ; Unannounced
+Expert skill / Communities / Leading ; Expert ; Unannounced
+Expert skill / Communities / Participation ; Expert ; Unannounced
