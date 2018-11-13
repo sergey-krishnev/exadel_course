@@ -1,8 +1,16 @@
 package com.company.Skills;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class SampleData {
 
-    public static TreeNode<String> getSet1() {
+    public static TreeNode<String> getSet1() throws IOException {
+        String nameFile = "Data_for_filter2.txt";
+        List<String> dataSkill = Files.readAllLines(Paths.get(nameFile), StandardCharsets.UTF_8);
         TreeNode<String> root = new TreeNode<String>("root");
         {
             TreeNode<String> node0 = root.addChild("node0");

@@ -25,19 +25,20 @@ public class Main {
         thirdCondition(otherskills); //3
         fourthCondition(otherskills, CHOICE_CHECK);
 
-        Comparable<String> searchCriteria = new Comparable<String>() {
-            @Override
-            public int compareTo(String treeData) {
-                if (treeData == null)
-                    return 1;
-                boolean nodeOk = treeData.contains("210");
-                return nodeOk ? 0 : 1;
-            }
-        };
 
         System.out.println("/////////5) Search by group of skills, sort by LastUsed  ////////////");
-        TreeNode<String> treeRoot = SampleData.getSet1();
-
+        String nameFile = "Data_for_filter2.txt";
+        List<String> dataAll = Files.readAllLines(Paths.get(nameFile), StandardCharsets.UTF_8);
+        List<String> dataSkillType = new ArrayList<>();
+        for (String dataFirst : dataAll) {
+            String[] oneDataFirst = dataFirst.split(" ; ");
+            dataSkillType.add(oneDataFirst[0]);
+        }
+        SkillTreeNode skillTreeNode = new SkillTreeNode(dataSkillType);
+        System.out.println(editLine(skillTreeNode.toString()));
+       // String editedSkillTreeNode = skillTreeNode.toString().replace("[{","\n \t \t");
+       // editedSkillTreeNode = editedSkillTreeNode.replace("[]}]}","\n \t");
+       // System.out.println(editedSkillTreeNode);
         /*
 
         System.out.println("/////////5) Search by group of skills, sort by LastUsed  ////////////");
@@ -106,6 +107,33 @@ public class Main {
             }
 
         }
+    }
+    public static String colTab(Integer col) {
+        String value ="";
+        for (Integer i = 0; i < col; i++) {
+            value += " \t";
+        }
+        return " \n " + value;
+    }
+    public static StringBuffer editLine(String line) {
+        StringBuffer bufferLine = new StringBuffer(line);
+        Integer changer = 0;
+        while ((bufferLine.indexOf("{")!=-1) || bufferLine.indexOf("}")!=-1) {
+            if (bufferLine.indexOf("{")!=-1) {
+                Integer position = bufferLine.indexOf("{");
+                bufferLine.setCharAt(position,'(');
+                bufferLine.insert(position,colTab(changer));
+                changer++;
+            }
+            if (bufferLine.indexOf("}")!=-1) {
+                Integer position = bufferLine.indexOf("}");
+                bufferLine.setCharAt(position,')');
+                bufferLine.insert(position,colTab(changer));
+                changer--;
+            }
+
+        }
+        return bufferLine;
     }
 
 }
