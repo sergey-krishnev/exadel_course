@@ -23,33 +23,8 @@ public class Main {
         firstCondition(otherskills); //1
         secondCondition(otherskills, CHOICE_SKILL_STATUS, CHOICE_SKILL_TYPE); //2
         thirdCondition(otherskills); //3
-        fourthCondition(otherskills, CHOICE_CHECK);
-
-
-        System.out.println("/////////5) Search by group of skills, sort by LastUsed  ////////////");
-        String nameFile = "Data_for_filter2.txt";
-        List<String> dataAll = Files.readAllLines(Paths.get(nameFile), StandardCharsets.UTF_8);
-        List<String> dataSkillType = new ArrayList<>();
-        for (String dataFirst : dataAll) {
-            String[] oneDataFirst = dataFirst.split(" ; ");
-            dataSkillType.add(oneDataFirst[0]);
-        }
-        SkillTreeNode skillTreeNode = new SkillTreeNode(dataSkillType);
-        System.out.println(editLine(skillTreeNode.toString()));
-       // String editedSkillTreeNode = skillTreeNode.toString().replace("[{","\n \t \t");
-       // editedSkillTreeNode = editedSkillTreeNode.replace("[]}]}","\n \t");
-       // System.out.println(editedSkillTreeNode);
-        /*
-
-        System.out.println("/////////5) Search by group of skills, sort by LastUsed  ////////////");
-        Collections.sort(skills, new LastUsedSkillComparator());
-
-    }
-    private static SkillStatus randomizeStatus() {
-        Random randZeroOrOne = new Random();
-        if (randZeroOrOne.nextBoolean()) return SkillStatus.CHECKED;
-        else return SkillStatus.UNCHECKED;
-    }*/
+        fourthCondition(otherskills, CHOICE_CHECK); //4
+        fifthCondition(otherskills, CHOICE_SKILL_STATUS, CHOICE_SKILL_TYPE); //5
     }
 
     public static void skillAggregate(List<Skill> skills) throws IOException {
@@ -108,32 +83,73 @@ public class Main {
 
         }
     }
+    public static void fifthCondition(List<Skill> skills, String bySkillStat, String bySkillType) {
+        System.out.println("/////////5) Search by group of skills (SkillStatus and SkillType), sort by LastUsed  ////////////");
+        List<Skill> bySkillStatus = new ArrayList<>();
+        List<String> nameSkillList = new ArrayList<>();
+        List<String> nameSkillListLastChild = new ArrayList<>();
+
+        for (Skill skill : skills) {
+            if((skill.getSkillStatus().equals(bySkillStat)) && (skill.getSkillType().equals(bySkillType))) // Condition of Skill Status and Skill Type
+                bySkillStatus.add(skill);
+        }
+        Collections.sort(bySkillStatus, new SkillTypeComparator().thenComparing(new LastUsedSkillComparator()));
+        for (Skill x : bySkillStatus) {
+            nameSkillList.add(x.getNameSkill());
+        }
+        for (String x : nameSkillList) {
+            String[] separateBySlash = x.split(" / ");
+            nameSkillListLastChild.add(separateBySlash[separateBySlash.length-1]);
+        }
+
+        SkillTreeNode skillTreeNode = new SkillTreeNode(nameSkillList);
+        StringBuffer skillTreeNodeLine = editLine(skillTreeNode.toString());
+
+        for (Integer i = 0 ; i < nameSkillListLastChild.size(); i++) {
+            skillTreeNodeLine.insert(skillTreeNodeLine.indexOf(nameSkillListLastChild.get(i))+ nameSkillListLastChild.get(i).length(),
+                    bySkillStatus.get(i).displayToListString());
+        }
+
+        System.out.println(skillTreeNodeLine);
+    }
+
+
     public static String colTab(Integer col) {
         String value ="";
         for (Integer i = 0; i < col; i++) {
-            value += " \t";
+            value += " \t ";
         }
-        return " \n " + value;
+        return "\n " + value;
     }
     public static StringBuffer editLine(String line) {
         StringBuffer bufferLine = new StringBuffer(line);
         Integer changer = 0;
-        while ((bufferLine.indexOf("{")!=-1) || bufferLine.indexOf("}")!=-1) {
-            if (bufferLine.indexOf("{")!=-1) {
+        while ((bufferLine.indexOf("{")!=-1) && bufferLine.indexOf("}")!=-1) {
+            if (bufferLine.indexOf("{") < bufferLine.indexOf("}")) {
                 Integer position = bufferLine.indexOf("{");
-                bufferLine.setCharAt(position,'(');
+                bufferLine.setCharAt(position,' ');
                 bufferLine.insert(position,colTab(changer));
                 changer++;
-            }
+            } else
             if (bufferLine.indexOf("}")!=-1) {
                 Integer position = bufferLine.indexOf("}");
-                bufferLine.setCharAt(position,')');
+                bufferLine.setCharAt(position,' ');
                 bufferLine.insert(position,colTab(changer));
                 changer--;
             }
-
+        deleteElement(bufferLine,"[");
+        deleteElement(bufferLine,"]");
+        deleteElement(bufferLine,",");
         }
+        deleteElement(bufferLine,"}");
         return bufferLine;
     }
-
+    public static StringBuffer deleteElement (StringBuffer deletedLine, String element) {
+        while (deletedLine.indexOf(element)!=-1) {
+            Integer positionLeft = deletedLine.indexOf(element);
+            deletedLine.setCharAt(positionLeft,'\b');
+        }
+        return deletedLine;
+    }
+    //public static List<String> dataAllEditor(String choiceSkillType, String choiceSkillStatus)
 }

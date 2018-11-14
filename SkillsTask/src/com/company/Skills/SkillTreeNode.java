@@ -46,7 +46,7 @@ public class SkillTreeNode {
                 if (child == null) {
                     child = new SkillTreeNode(line);
                     node.getChildren().add(child);
-                    node.getChildren().sort(Comparator.comparing(SkillTreeNode::getName));
+                    //node.getChildren().sort(Comparator.comparing(SkillTreeNode::getName));
                 }
                 node = child;
             }
@@ -61,9 +61,6 @@ public class SkillTreeNode {
 
     @Override
     public String toString() {
-        return "{" +
-                "'" + name + '\'' +
-                ", " + children +
-                '}';
+        return "{" + name + '\n' + children + '}';
     }
 }

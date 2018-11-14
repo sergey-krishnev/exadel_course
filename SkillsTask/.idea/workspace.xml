@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="251a2ad0-9843-43be-9964-8e9d92e2e8c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ArrayTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArrayTask/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ArrayTask/out/production/ArrayTask/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ArrayTask/out/production/ArrayTask/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ArrayTask/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ArrayTask/src/com/company/Main.java" afterDir="false" />
@@ -10,9 +9,20 @@
       <change beforePath="$PROJECT_DIR$/../InheritanceTask/out/production/InheritanceTask/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../InheritanceTask/out/production/InheritanceTask/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/SampleData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/SampleData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/SampleData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/Skill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/Skill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/SkillFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/SkillTreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/SkillTreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/TreeNodeIter$ProcessStages.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SkillsTask/com/company/Skills/TreeNodeIter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Skills/SampleData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Skills/SampleData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Skills/SampleData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Skills/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Skills/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Skills/SkillFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Skills/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Skills/TreeNodeIter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Task 1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Task 1.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,30 +69,31 @@
     <session id="1355318409">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="19" />
+          <entry key="java" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="19" />
+          <entry key="JAVA" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3424" />
+          <entry key="java" value="4958" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3424" />
+          <entry key="JAVA" value="4958" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -121,8 +132,44 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="120" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="238">
+              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/YearSkillComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/LastUsedSkillComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,51 +180,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Skill.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-544">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="1079">
+              <caret line="101" column="71" selection-start-line="101" selection-start-column="71" selection-end-line="101" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#300#301#0" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#1514#1515#0" expanded="true" />
-                <element signature="e#1583#1584#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNodeIter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SampleData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#147#155#0" expanded="true" />
-                <element signature="e#993#1001#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,20 +192,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+            <state relative-caret-position="425">
+              <caret line="38" column="50" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#241#242#0" expanded="true" />
-                <element signature="e#273#274#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1736#1737#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillStatus.java" />
         <option value="$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Skills/Skill.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillCheck.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/NodeSkill.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/Node.java" />
@@ -242,8 +239,10 @@
         <option value="$PROJECT_DIR$/src/com/company/Skills/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/TreeNodeIter.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SampleData.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Comparators/SkillComparator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/Skill.java" />
       </list>
     </option>
   </component>
@@ -267,8 +266,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,18 +289,27 @@
               <item name="SkillsTask" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Comparators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SkillsTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SkillsTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="Skills" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542110379051" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542199524391" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
   </component>
@@ -354,12 +360,13 @@
       <workItem from="1542020620489" duration="12475000" />
       <workItem from="1542044083583" duration="4540000" />
       <workItem from="1542095851813" duration="348000" />
-      <workItem from="1542096219477" duration="13610000" />
+      <workItem from="1542096219477" duration="13858000" />
+      <workItem from="1542184010944" duration="13689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78871000" />
+    <option name="totallyTimeSpent" value="92808000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,9 +379,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26439232" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26705757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -384,7 +390,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973504" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32777232" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994112" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994112" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32973504" />
@@ -470,69 +476,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Tree.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SampleSearching.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/LastUsedSkillComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/YearSkillComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNodeIter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SampleData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#147#155#0" expanded="true" />
-            <element signature="e#993#1001#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#263#264#0" expanded="true" />
@@ -545,10 +492,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Skill.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNodeIter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="-536">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SampleData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/SkillComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/LastUsedSkillComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -557,28 +541,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        <state relative-caret-position="425">
+          <caret line="38" column="50" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1079">
+          <caret line="101" column="71" selection-start-line="101" selection-start-column="71" selection-end-line="101" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/YearSkillComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
+        <state relative-caret-position="238">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

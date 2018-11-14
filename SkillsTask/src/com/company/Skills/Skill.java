@@ -1,9 +1,12 @@
 package com.company.Skills;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 
-public class Skill {
+public class
+Skill {
     private String nameSkill,checkedBySkill;
     private Integer idSkill,yearSkill,lastUsedSkill;
     private GregorianCalendar lastCheckSkill;
@@ -66,7 +69,8 @@ public class Skill {
         this.skillStatus = skillStatus;
     }
 
-    public Skill(Integer idSkill, String nameSkill,String checkedBySkill, Integer yearSkill, Integer lastUsedSkill, GregorianCalendar lastCheckSkill, String skillType,String skillStatus) {
+    public Skill(Integer idSkill, String nameSkill,String checkedBySkill, Integer yearSkill, Integer lastUsedSkill,
+                 GregorianCalendar lastCheckSkill, String skillType,String skillStatus) {
         this.idSkill = idSkill;
         this.nameSkill = nameSkill;
         this.checkedBySkill = checkedBySkill;
@@ -89,5 +93,17 @@ public class Skill {
                             "Last used in: %s \t Last check: \t Checked by: \n",
                     getSkillType(),getNameSkill(),getYearSkill(), getLastUsedSkill());
         }
+    }
+    public String displayToListString () {
+        String stringLine;
+        if (getSkillStatus().equals("Unannounced") && getSkillType().equals("Primary")) {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/y");
+            stringLine = "\t Years: " + getYearSkill() + " \t Last used in: "+ getLastUsedSkill() + " \t Last check: "
+                    + dateFormat.format(getLastCheckSkill().getTime()) + " \t Checked by: " + getCheckedBySkill() + " \n";
+        } else {
+            stringLine = "\t Years: " + getYearSkill() + " \t Last used in: "+ getLastUsedSkill() + " \t Last check: \t \t \t"
+                    + " \t Checked by: \t \t \t \n";
+        }
+        return  stringLine;
     }
 }
