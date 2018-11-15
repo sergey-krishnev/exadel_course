@@ -14,28 +14,66 @@ import java.util.*;
 
 public class Main {
 
+    private ISkillFilter filter;
+
+    private IDisplay iDisplay;
+
     public static void main(String[] args) throws IOException {
-        final String CHOICE_SKILL_STATUS = "Announced";
-        final String CHOICE_SKILL_TYPE = "Industry / Domain Knowledge";
-        final String CHOICE_CHECK = "CHECKED";
-        List<Skill> otherskills = new ArrayList<>();
-        skillAggregate(otherskills);
-        firstCondition(otherskills); //1
-        secondCondition(otherskills, CHOICE_SKILL_STATUS, CHOICE_SKILL_TYPE); //2
-        thirdCondition(otherskills); //3
-        fourthCondition(otherskills, CHOICE_CHECK); //4
-        fifthCondition(otherskills, CHOICE_SKILL_STATUS, CHOICE_SKILL_TYPE); //5
+
+        SkillAggregate skillAggregate = new SkillAggregate(new SkillsFileReader("Data_for_filter2.txt"));
+
+        IDisplay skillDisplay = new DisplayImpl();
+
+        ISkillFilter filter = new SkillFilterImpl(skillAggregate.getSkills());
+
+        skillDisplay.display(filter.findAll());
+
+        skillDisplay.display(filter.findByLastCheck(new Date()));
+
+
+//        final String CHOICE_SKILL_STATUS = "Announced";
+//        final String CHOICE_SKILL_TYPE = "Industry / Domain Knowledge";
+//        final String CHOICE_CHECK = "CHECKED";
+//        List<Skill> otherskills = new ArrayList<>();
+//        SkillsFileReader skillsFileReader = new SkillsFileReader("Data_for_filter2.txt");
+//        SkillAggregate skillAggregate = new SkillAggregate(skillsFileReader);
+//        skillAggregate.display();
+//
+//        SortedSkillList sortedSkillList = new SortedSkillList(skillAggregate.getSkills(),new SkillTypeComparator());
+//        sortedSkillList.display(); //1
+//
+//
+//
+//        FilteredSkillList filteredSkillList = new FilteredSkillList(skillAggregate.getSkills(),CHOICE_SKILL_STATUS,CHOICE_SKILL_TYPE);
+//        filteredSkillList.display(); //2
+//
+//        FilteredSkillList lastCheckedFilteredSkillList = new FilteredSkillList(skillAggregate.getSkills(),new YearSkillComparator());
+//        lastCheckedFilteredSkillList.display(); //3
+//
+//        FilteredSkillList last4CheckedFilteredSkillList = new FilteredSkillList(skillAggregate.getSkills(),new YearSkillComparator(), CHOICE_CHECK);
+//
+//        all - last4CheckedFilteredSkillList
+
+
+
+        //skillAggregate(otherskills);
+       // firstCondition(otherskills); //1
+       // secondCondition(otherskills, CHOICE_SKILL_STATUS, CHOICE_SKILL_TYPE); //2
+       // thirdCondition(otherskills); //3
+      //  fourthCondition(otherskills, CHOICE_CHECK); //4
+      //  fifthCondition(otherskills, CHOICE_SKILL_STATUS, CHOICE_SKILL_TYPE); //5
     }
 
-    public static void skillAggregate(List<Skill> skills) throws IOException {
+    /* public static void skillAggregate(List<Skill> skills) throws IOException {
         String nameFile = "Data_for_filter2.txt";
         List<String> dataSkill = Files.readAllLines(Paths.get(nameFile), StandardCharsets.UTF_8);
         Random rand = new Random();
         for (Integer i = 0; i < dataSkill.size(); i++) {
             Integer randomLastUsedSkill = rand.nextInt(18) + 2000;
             String[] splitLineSkill = dataSkill.get(i).split(" ; ");
+            GregorianCalendar gregorianCalendar = new GregorianCalendar(randomLastUsedSkill, rand.nextInt(12), rand.nextInt(28) + 1);
             skills.add(new Skill(i, splitLineSkill[0], "Ivanov Ivan", rand.nextInt(5) + 1,
-                    randomLastUsedSkill, new GregorianCalendar(randomLastUsedSkill, rand.nextInt(12), rand.nextInt(28) + 1), splitLineSkill[1], splitLineSkill[2]));
+                    randomLastUsedSkill, gregorianCalendar.getTime(), splitLineSkill[1], splitLineSkill[2]));
         }
         System.out.println("///////Output of all skills///////");
         for (Skill x : skills) {
@@ -151,5 +189,5 @@ public class Main {
         }
         return deletedLine;
     }
-    //public static List<String> dataAllEditor(String choiceSkillType, String choiceSkillStatus)
+    */
 }

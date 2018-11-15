@@ -8,6 +8,7 @@ import java.util.Objects;
 public class SkillTreeNode {
 
     private String name;
+    private Skill data;
     private List<SkillTreeNode> children = new ArrayList<>();
 
     public SkillTreeNode(String name) {
@@ -28,6 +29,14 @@ public class SkillTreeNode {
 
     public void setChildren(List<SkillTreeNode> children) {
         this.children = children;
+    }
+
+    public Skill getData() {
+        return data;
+    }
+
+    public void setData(Skill data) {
+        this.data = data;
     }
 
     public SkillTreeNode(List<String> skills) {
