@@ -18,6 +18,10 @@ public interface ISkillFilter {
 
     List<Skill> findByStatus(String status, Comparator<Skill> comparator);
 
+    List<Skill> findByTypeAndStatus(String type, String status);
+
+    List<Skill> findByTypeAndStatus(String type, String status, Comparator<Skill> comparator);
+
     List<Skill> findByLastCheck(Date last);
 
     List<Skill> findByLastCheck(Date last, Comparator<Skill> comparator);

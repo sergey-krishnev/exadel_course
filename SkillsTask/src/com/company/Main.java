@@ -19,6 +19,11 @@ public class Main {
     private IDisplay iDisplay;
 
     public static void main(String[] args) throws IOException {
+        final String CHOICE_SKILL_STATUS = "Announced";
+
+        final String CHOICE_SKILL_TYPE = "Industry / Domain Knowledge";
+
+        final String CHOICE_CHECK = "CHECKED";
 
         SkillAggregate skillAggregate = new SkillAggregate(new SkillsFileReader("Data_for_filter2.txt"));
 
@@ -28,12 +33,12 @@ public class Main {
 
         skillDisplay.display(filter.findAll());
 
-        skillDisplay.display(filter.findByLastCheck(new Date()));
+        skillDisplay.display(filter.findAll(new SkillTypeComparator()));
+
+        skillDisplay.display(filter.findByType(CHOICE_SKILL_TYPE));
 
 
-//        final String CHOICE_SKILL_STATUS = "Announced";
-//        final String CHOICE_SKILL_TYPE = "Industry / Domain Knowledge";
-//        final String CHOICE_CHECK = "CHECKED";
+//
 //        List<Skill> otherskills = new ArrayList<>();
 //        SkillsFileReader skillsFileReader = new SkillsFileReader("Data_for_filter2.txt");
 //        SkillAggregate skillAggregate = new SkillAggregate(skillsFileReader);
