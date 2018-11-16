@@ -27,6 +27,15 @@ public class SkillTreeNode {
         return children;
     }
 
+    public List<SkillTreeNode> getChildren(int indent) {
+        List<SkillTreeNode> indentChildren = new ArrayList<>();
+        for ( SkillTreeNode child : children) {
+            child.name += colIndent(indent);
+            indentChildren.add(child);
+        }
+        return indentChildren;
+    }
+
     public void setChildren(List<SkillTreeNode> children) {
         this.children = children;
     }
@@ -39,15 +48,13 @@ public class SkillTreeNode {
         this.data = data;
     }
 
-    public SkillTreeNode(List<String> skills) {
+    public SkillTreeNode(List<Skill> skills) {
         SkillTreeNode root = new SkillTreeNode("");
-
-        for (String skill: skills) {
+        for (Skill skill: skills) {
             SkillTreeNode node = root;
 
-            String[] strings = skill.split(" / ");
+            String[] strings = skill.getNameSkill().split(" / ");
             for (String line : strings) {
-
                 SkillTreeNode child = node.getChildren().stream()
                         .filter(ch -> Objects.equals(line, ch.getName()))
                         .findFirst()
@@ -55,11 +62,11 @@ public class SkillTreeNode {
                 if (child == null) {
                     child = new SkillTreeNode(line);
                     node.getChildren().add(child);
-                    //node.getChildren().sort(Comparator.comparing(SkillTreeNode::getName));
+                    node.getChildren().sort(Comparator.comparing(SkillTreeNode::getName));
                 }
                 node = child;
             }
-
+            node.setData(skill);
         }
         this.name = root.getName();
         this.children = root.getChildren();
@@ -67,7 +74,22 @@ public class SkillTreeNode {
     /*public void display() {
         System.out.printf("Name: %s \t Children: %s \n",getName(),getChildren());
     }*/
-
+    public void displayChildren(int j) {
+        for (int i = 0 ; i < getChildren(j).size() ; i++) {
+            System.out.print(getChildren(j).get(i).name + " ");
+            if (getChildren(j).get(i).data != null) {
+                System.out.println(getChildren(j).get(i).data.displayToListString());
+            } else
+                System.out.println(" ");
+        }
+    }
+    public static String colIndent(int col) {
+        String tab = "";
+        for (int i = 0 ; i < col ; i++) {
+            tab += "\t ";
+        }
+        return tab;
+    }
     @Override
     public String toString() {
         return "{" + name + '\n' + children + '}';
