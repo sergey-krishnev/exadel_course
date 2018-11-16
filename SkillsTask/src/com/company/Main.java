@@ -33,9 +33,15 @@ public class Main {
 
         skillDisplay.display(filter.findAll());
 
-        skillDisplay.display(filter.findAll(new SkillTypeComparator()));
+        skillDisplay.display(filter.findAll(new SkillTypeComparator())); //1
 
-        skillDisplay.display(filter.findByType(CHOICE_SKILL_TYPE));
+        skillDisplay.display(filter.findByTypeAndStatus(CHOICE_SKILL_TYPE,CHOICE_SKILL_STATUS)); //2
+
+        skillDisplay.display(filter.findByTypeAndStatus("Primary","Unannounced", new YearSkillComparator())); //3
+
+        skillDisplay.display(filter.findByCheck(CHOICE_CHECK)); //4
+
+        skillDisplay.display(filter.findByType("CHOICE_SKILL_TYPE",new LastUsedSkillComparator())); //5
 
 
 //

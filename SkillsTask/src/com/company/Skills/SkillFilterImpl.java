@@ -84,13 +84,21 @@ public class SkillFilterImpl implements ISkillFilter {
     }
 
     @Override
-    public List<Skill> findByLastCheck(Date last) {
-        return skills;
+    public List<Skill> findByCheck(String check) {
+        List<Skill> byCheck = new ArrayList<>();
+        if(check.equals("CHECKED")) {
+            for (Skill skill : skills) {
+                if (skill.checkedSkill())
+                    byCheck.add(skill);
+            }
+            return byCheck;
+        } else {
+            for (Skill skill : skills) {
+                if (!(skill.checkedSkill()))
+                    byCheck.add(skill);
+            }
+            return byCheck;
+        }
     }
 
-    @Override
-    public List<Skill> findByLastCheck(Date last, Comparator<Skill> comparator) {
-        Collections.sort(skills,comparator);
-        return skills;
-    }
 }

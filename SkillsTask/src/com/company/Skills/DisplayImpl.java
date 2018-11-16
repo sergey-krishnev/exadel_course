@@ -6,7 +6,7 @@ public class DisplayImpl implements IDisplay {
     @Override
     public void display(List<Skill> skills) {
 
-        SkillTreeNode skillTreeNode = new SkillTreeNode(skills);
+       // SkillTreeNode skillTreeNode = new SkillTreeNode(skills);
 
     }
 }

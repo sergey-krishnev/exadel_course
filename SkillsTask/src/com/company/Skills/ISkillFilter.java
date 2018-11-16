@@ -22,8 +22,5 @@ public interface ISkillFilter {
 
     List<Skill> findByTypeAndStatus(String type, String status, Comparator<Skill> comparator);
 
-    List<Skill> findByLastCheck(Date last);
-
-    List<Skill> findByLastCheck(Date last, Comparator<Skill> comparator);
-
+    List<Skill> findByCheck(String check);
 }

@@ -32,7 +32,7 @@ public class SkillTreeNode {
     }
 
     public Skill getData() {
-        return data;
+       return data;
     }
 
     public void setData(Skill data) {
