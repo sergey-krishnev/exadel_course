@@ -1,18 +1,27 @@
 package com.company.Skills;
 
 import java.text.SimpleDateFormat;
-import java.util.GregorianCalendar;
+import java.util.*;
 
 public class Skill {
+    private static String standartCheckedBySkill = "Ivanov Ivan";
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/y");
+
+
     private String nameSkill,checkedBySkill;
     private Integer idSkill,yearSkill,lastUsedSkill;
-    private GregorianCalendar lastCheckSkill;
+    private Date lastCheckSkill;
     private String skillType;
     private String skillStatus;
 
     public String getNameSkill() { return nameSkill; }
 
     public void setNameSkill(String nameSkill) { this.nameSkill = nameSkill; }
+
+    public String getLastChildSkill() {
+        String[] splitLineSkill = nameSkill.split(" / ");
+        return splitLineSkill[2];
+    }
 
     public Integer getIdSkill() { return idSkill; }
 
@@ -42,12 +51,20 @@ public class Skill {
         this.lastUsedSkill = lastUsedSkill;
     }
 
-    public GregorianCalendar getLastCheckSkill() {
+    public Date getLastCheckSkill() {
         return lastCheckSkill;
     }
 
-    public void setLastCheckSkill(GregorianCalendar lastCheckSkill) {
+    public void setLastCheckSkill(Date lastCheckSkill) {
         this.lastCheckSkill = lastCheckSkill;
+    }
+
+    public String getLastCheckSkillFormatted() {
+        if (lastCheckSkill == null) {
+            return "";
+        } else {
+            return sdf.format(lastCheckSkill);
+        }
     }
 
     public String getSkillType() {
@@ -66,7 +83,27 @@ public class Skill {
         this.skillStatus = skillStatus;
     }
 
-    public Skill(Integer idSkill, String nameSkill,String checkedBySkill, Integer yearSkill, Integer lastUsedSkill, GregorianCalendar lastCheckSkill, String skillType,String skillStatus) {
+    public Skill(Integer idSkill, String nameSkill, String skillType, String skillStatus) {
+        Random rand = new Random();
+        Integer randomLastUsedSkill = rand.nextInt(18) + 2000;
+        this.idSkill = idSkill;
+        this.nameSkill = nameSkill;
+        this.skillType = skillType;
+        this.skillStatus = skillStatus;
+        yearSkill = rand.nextInt(5) + 1;
+        lastUsedSkill = randomLastUsedSkill;
+        if (checkedSkill()) {
+            checkedBySkill = standartCheckedBySkill;
+            GregorianCalendar gc = new GregorianCalendar(randomLastUsedSkill, rand.nextInt(12), rand.nextInt(28) + 1);
+            this.lastCheckSkill = gc.getTime();
+        } else {
+            checkedBySkill = "";
+            lastCheckSkill = null;
+
+        }
+    }
+    public Skill(Integer idSkill, String nameSkill,String checkedBySkill, Integer yearSkill, Integer lastUsedSkill,
+                 Date lastCheckSkill, String skillType,String skillStatus) {
         this.idSkill = idSkill;
         this.nameSkill = nameSkill;
         this.checkedBySkill = checkedBySkill;
@@ -76,18 +113,25 @@ public class Skill {
         this.skillType = skillType;
         this.skillStatus = skillStatus;
     }
+    public boolean checkedSkill() {
+        return checkedSkill("Unannounced","Primary");
+    }
+    public boolean checkedSkill(String skillStatus, String skillType) {
+        if (this.skillStatus.equals(skillStatus) && this.skillType.equals(skillType)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public void display() {
-        if (getSkillStatus().equals("Unannounced") && getSkillType().equals("Primary")) {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/y");
             System.out.printf("SkillType: %s \t Skill: %s \t Years: %s \t " +
                             "Last used in: %s \t Last check: %s \t Checked by: %s \n",
                     getSkillType(),getNameSkill(),getYearSkill(), getLastUsedSkill(),
-                    dateFormat.format(getLastCheckSkill().getTime()), getCheckedBySkill());
-        } else {
-            System.out.printf("SkillType: %s \t Skill: %s \t Years: %s \t " +
-                            "Last used in: %s \t Last check: \t Checked by: \n",
-                    getSkillType(),getNameSkill(),getYearSkill(), getLastUsedSkill());
-        }
+                    getLastCheckSkillFormatted(), getCheckedBySkill());
+    }
+    public String displayToListString () {
+        return "\t Years: " + getYearSkill() + " \t Last used in: "+ getLastUsedSkill() + " \t Last check: "
+                + getLastCheckSkillFormatted() + " \t Checked by: " + getCheckedBySkill();
     }
 }

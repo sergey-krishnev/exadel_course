@@ -1,4 +1,3 @@
-Domain / Agriculture ; Industry / Domain Knowledge ; Announced
 Domain / Agriculture / Dairy ; Industry / Domain Knowledge ; Announced
 Domain / Agriculture / Farming ; Industry / Domain Knowledge ; Announced
 Industry Vertical / Emerging Verticals ; Industry vertical ; Announced

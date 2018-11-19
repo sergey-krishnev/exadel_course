@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="251a2ad0-9843-43be-9964-8e9d92e2e8c3" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="251a2ad0-9843-43be-9964-8e9d92e2e8c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Skills/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Skills/Skill.java" afterDir="false" />
+    </list>
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,29 +54,31 @@
     <session id="1355318409">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="17" />
+          <entry key="java" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="17" />
+          <entry key="JAVA" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1705" />
+          <entry key="java" value="7745" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1705" />
+          <entry key="JAVA" value="7745" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -102,14 +112,53 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-161296771">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.83" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1129" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1129" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="14" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/DisplayImpl.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="600">
               <caret line="39" selection-start-line="39" selection-end-line="39" />
+=======
+            <state relative-caret-position="13">
+              <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,8 +167,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNode.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/IDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1120">
               <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding>
@@ -131,24 +181,61 @@
                 <element signature="e#1514#1515#0" expanded="true" />
                 <element signature="e#1583#1584#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="100">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNodeIter.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/ISkillFilter.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="60">
               <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+=======
+            <state relative-caret-position="333">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SampleData.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="20">
               <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+=======
+            <state relative-caret-position="-56">
+              <caret line="59" column="64" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillFilterImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state>
+              <caret column="27" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+=======
+            <state relative-caret-position="175">
+              <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
             </state>
           </provider>
         </entry>
@@ -156,8 +243,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Skill.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" selection-end-column="27" />
+            <state relative-caret-position="1535">
+              <caret line="134" column="89" selection-start-line="134" selection-start-column="89" selection-end-line="134" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,10 +253,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="1040">
+              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#919#920#0" expanded="true" />
+                <element signature="e#959#960#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillAggregate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,37 +279,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/LastUsedSkillComparator.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillsFileReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/YearSkillComparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="680">
+              <caret line="59" column="68" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -218,8 +292,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -235,14 +309,10 @@
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillTwo.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillThree.java" />
         <option value="$PROJECT_DIR$/src/com/company/Interfaces/SkillDisplayable.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Comparators/LastUsedSkillComparator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Comparators/LastCheckSkillComparator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Comparators/YearSkillComparator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillType.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillStatus.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Skills/Skill.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SkillCheck.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/NodeSkill.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/Node.java" />
@@ -250,6 +320,25 @@
         <option value="$PROJECT_DIR$/src/com/company/Skills/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/TreeNodeIter.java" />
         <option value="$PROJECT_DIR$/src/com/company/Skills/SampleData.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Comparators/SkillComparator.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/SkillsFileReader.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Interfaces/Displayer.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Comparators/YearSkillComparator.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Comparators/LastUsedSkillComparator.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/SortedSkillList.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/FiltredSkillList.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/CheckedFiltredSkillList.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/CheckedFilteredSkillList.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/FilteredSkillList.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/IDisplay.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/IDisplayImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/SkillAggregate.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/ISkillFilter.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/DisplayImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/Skill.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Skills/SkillFilterImpl.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
@@ -269,6 +358,8 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -315,9 +406,19 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542057091970" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Git/mingw64/IdeaProjects/exadel_course/SkillsTask" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542321933882" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.Skills" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -365,17 +466,78 @@
       <workItem from="1541934009915" duration="16583000" />
       <workItem from="1542020620489" duration="12475000" />
       <workItem from="1542044083583" duration="4540000" />
+<<<<<<< HEAD
       <workItem from="1542304466472" duration="76000" />
+=======
+      <workItem from="1542095851813" duration="348000" />
+      <workItem from="1542096219477" duration="13858000" />
+      <workItem from="1542184010944" duration="13689000" />
+      <workItem from="1542269427020" duration="21532000" />
+      <workItem from="1542304552055" duration="1370000" />
+      <workItem from="1542318209497" duration="4105000" />
+      <workItem from="1542350785822" duration="4242000" />
+      <workItem from="1542538795076" duration="3549000" />
+      <workItem from="1542569356679" duration="9773000" />
+      <workItem from="1542610472905" duration="595000" />
+      <workItem from="1542613939776" duration="1326000" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="64989000" />
+=======
+    <option name="totallyTimeSpent" value="139300000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2624161" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21208054" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32844576" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.11876833" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47214076" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32973504" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32844576" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26439232" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -384,11 +546,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973504" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32844576" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32777232" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994112" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32973504" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -403,13 +565,41 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="this.getChildren()" language="JAVA" />
+        <watch expression="skillTreeNode.children.get(13)" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>this.getChildren()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Data/DataSkills.java" />
@@ -425,6 +615,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Tree.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SampleSearching.java" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -462,12 +653,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="27" selection-end-column="27" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNode.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/TreeNodeIter.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SampleData.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/SkillComparator.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillFactory.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Calendar.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/text/DateFormat.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Interfaces/Displayer.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/FiltredSkillList.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/CheckedFiltredSkillList.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/CheckedFilteredSkillList.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/YearSkillComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/FilteredSkillList.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/nio/file/Files.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SortedSkillList.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/LastUsedSkillComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -482,36 +717,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillsFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="59" column="68" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillAggregate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/SkillTypeComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/IDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/ISkillFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Comparators/YearSkillComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1535">
+          <caret line="134" column="89" selection-start-line="134" selection-start-column="89" selection-end-line="134" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SampleData.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/DisplayImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Skills/SkillFilterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="20">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+=======
+        <state relative-caret-position="175">
+          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="59" column="64" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> 2abd21f9bb89523f5e74e68a5716a12994c48e95
         </state>
       </provider>
     </entry>
