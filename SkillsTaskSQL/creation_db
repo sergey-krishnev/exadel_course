@@ -1,0 +1,31 @@
+-- Database: skills_list
+
+-- DROP DATABASE skills_list;
+
+CREATE DATABASE skills_list
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+CREATE TABLE skills
+(
+	Id SERIAL PRIMARY KEY
+	name_skill CHARACTER VARYING(50)
+	year_skill INTEGER
+	last_used_skill INTEGER
+	last_check_skill DATE
+	checked_by_skill CHARACTER VARYING(30)
+)
+CREATE TABLE skill_types
+(
+	Id SERIAL PRIMARY KEY
+	name_skill_type CHARACTER VARYING(50)
+)
+CREATE TABLE skill_statuses
+(
+	Id SERIAL PRIMARY KEY
+	name_skill_status CHARACTER VARYING(50)
+)
