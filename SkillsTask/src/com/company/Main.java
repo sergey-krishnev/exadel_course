@@ -21,15 +21,19 @@ public class Main {
     public static void main(String[] args) throws IOException {
         final String CHOICE_SKILL_STATUS = "Announced";
 
-        final String CHOICE_SKILL_TYPE = "Industry / Domain Knowledge";
+        final String CHOICE_SKILL_TYPE = "Languages";
 
-        final String CHOICE_CHECK = "CHECKED";
+        final String CHOICE_CHECK = "UNCHECKED";
 
         SkillAggregate skillAggregate = new SkillAggregate(new SkillsFileReader("Data_for_filter2.txt"));
 
         IDisplay skillDisplay = new DisplayImpl();
 
         ISkillFilter filter = new SkillFilterImpl(skillAggregate.getSkills());
+
+        for (Skill x : skillAggregate.getSkills()) {
+            x.display();
+        }
 
         System.out.println("1) Display the list");
 
@@ -53,7 +57,7 @@ public class Main {
 
         System.out.println("5) Search by group of skills, sort by LastUsed");
 
-        skillDisplay.display(filter.findByType("CHOICE_SKILL_TYPE",new LastUsedSkillComparator())); //5
+        skillDisplay.display(filter.findByType(CHOICE_SKILL_TYPE,new LastUsedSkillComparator())); //5
 
 
 

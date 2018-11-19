@@ -117,7 +117,7 @@ public class Skill {
         return checkedSkill("Unannounced","Primary");
     }
     public boolean checkedSkill(String skillStatus, String skillType) {
-        if (skillStatus.equals(skillStatus) && skillType.equals(skillType)) {
+        if (this.skillStatus.equals(skillStatus) && this.skillType.equals(skillType)) {
             return true;
         } else {
             return false;
@@ -132,6 +132,6 @@ public class Skill {
     }
     public String displayToListString () {
         return "\t Years: " + getYearSkill() + " \t Last used in: "+ getLastUsedSkill() + " \t Last check: "
-                + getLastCheckSkillFormatted() + " \t Checked by: " + getCheckedBySkill() + " \n";
+                + getLastCheckSkillFormatted() + " \t Checked by: " + getCheckedBySkill();
     }
 }
