@@ -31,17 +31,29 @@ public class Main {
 
         ISkillFilter filter = new SkillFilterImpl(skillAggregate.getSkills());
 
+        System.out.println("1) Display the list");
+
         skillDisplay.display(filter.findAll());
 
-   //     skillDisplay.display(filter.findAll(new SkillTypeComparator())); //1
+        System.out.println("1) Display the list, sorted by SkillType");
 
-    //    skillDisplay.display(filter.findByTypeAndStatus(CHOICE_SKILL_TYPE,CHOICE_SKILL_STATUS)); //2
+        skillDisplay.display(filter.findAll(new SkillTypeComparator())); //1
 
-    //    skillDisplay.display(filter.findByTypeAndStatus("Primary","Unannounced", new YearSkillComparator())); //3
+        System.out.println("2) Filter of data by SkillType and SkillStatus");
 
-     //   skillDisplay.display(filter.findByCheck(CHOICE_CHECK)); //4
+        skillDisplay.display(filter.findByTypeAndStatus(CHOICE_SKILL_TYPE,CHOICE_SKILL_STATUS)); //2
 
-     //   skillDisplay.display(filter.findByType("CHOICE_SKILL_TYPE",new LastUsedSkillComparator())); //5
+        System.out.println("3) All skills, which have LastCheck, must be displayed by year");
+
+        skillDisplay.display(filter.findByTypeAndStatus("Primary","Unannounced", new YearSkillComparator())); //3
+
+        System.out.println("4) Filter by Checked/Unchecked");
+
+        skillDisplay.display(filter.findByCheck(CHOICE_CHECK)); //4
+
+        System.out.println("5) Search by group of skills, sort by LastUsed");
+
+        skillDisplay.display(filter.findByType("CHOICE_SKILL_TYPE",new LastUsedSkillComparator())); //5
 
 
 

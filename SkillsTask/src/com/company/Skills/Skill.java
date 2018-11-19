@@ -18,6 +18,11 @@ public class Skill {
 
     public void setNameSkill(String nameSkill) { this.nameSkill = nameSkill; }
 
+    public String getLastChildSkill() {
+        String[] splitLineSkill = nameSkill.split(" / ");
+        return splitLineSkill[2];
+    }
+
     public Integer getIdSkill() { return idSkill; }
 
     public void setIdSkill(Integer idSkill) { this.idSkill = idSkill; }
