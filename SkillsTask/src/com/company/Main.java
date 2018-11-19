@@ -57,7 +57,15 @@ public class Main {
 
         System.out.println("5) Search by group of skills, sort by LastUsed");
 
-        skillDisplay.display(filter.findByType(CHOICE_SKILL_TYPE,new LastUsedSkillComparator())); //5
+        List<Skill> groupSkill = new ArrayList<>();
+
+        groupSkill.add(new Skill("Primary skill / ActionScript", 5, 2012));
+
+        groupSkill.add(new Skill("Application Server / ATG Dynamo", 3, 2008));
+
+        skillDisplay.display(filter.findBySkills(groupSkill, new LastUsedSkillComparator()));
+
+        // skillDisplay.display(filter.findByType(CHOICE_SKILL_TYPE, new LastUsedSkillComparator())); //5
 
 
 

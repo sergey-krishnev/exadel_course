@@ -101,4 +101,21 @@ public class SkillFilterImpl implements ISkillFilter {
         }
     }
 
+    @Override
+    public List<Skill> findBySkills(List<Skill> groupSkills, Comparator<Skill> comparator) {
+        List<Skill> bySkill = new ArrayList<>();
+        Boolean flag = false;
+        for (Skill skill : skills) {
+            for (Skill elementSkill : groupSkills) {
+                if ((skill.getNameSkill().equals(elementSkill.getNameSkill())) &&
+                        (skill.getYearSkill().equals(elementSkill.getYearSkill())) &&
+                        (skill.getLastUsedSkill().equals(elementSkill.getLastUsedSkill()))) {
+                    flag = true;
+                } else flag = false;
+            }
+            if (flag) bySkill.add(skill);
+        }
+        return bySkill;
+    }
+
 }

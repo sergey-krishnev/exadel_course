@@ -23,4 +23,6 @@ public interface ISkillFilter {
     List<Skill> findByTypeAndStatus(String type, String status, Comparator<Skill> comparator);
 
     List<Skill> findByCheck(String check);
+
+    List<Skill> findBySkills(List<Skill> skills, Comparator<Skill> comparator);
 }

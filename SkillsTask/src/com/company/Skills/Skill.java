@@ -113,6 +113,11 @@ public class Skill {
         this.skillType = skillType;
         this.skillStatus = skillStatus;
     }
+    public Skill(String nameSkill,Integer yearSkill, Integer lastUsedSkill) {
+        this.nameSkill = nameSkill;
+        this.yearSkill = yearSkill;
+        this.lastUsedSkill = lastUsedSkill;
+    }
     public boolean checkedSkill() {
         return checkedSkill("Unannounced","Primary");
     }
