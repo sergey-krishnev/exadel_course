@@ -58,9 +58,9 @@ INSERT INTO skills (name_skill, year_skill, last_used_skill,id_type,id_status) V
 	('Design Tools / Adobe Acrobat', 2, 2006, 111, 100),
 	('eCommerce / Elasti? Path', 2, 2009, 112, 101);
 INSERT INTO skills (name_skill, year_skill, last_used_skill,last_check_skill,checked_by_skill,id_type,id_status) VALUES
-	('Primary skill / .Net', 2, 2015, 12/15/2015,'Ivanov Ivan', 113, 102),
-	('Primary skill / ActionScript', 1, 2003, 01/11/2003,'Ivanov Ivan', 113, 102),
-	('Primary skill / AEM', 3, 2002, 18/12/2002,'Ivanov Ivan', 113, 102);
+	('Primary skill / .Net', 2, 2015, '15/12/2015','Ivanov Ivan', 113, 102),
+	('Primary skill / ActionScript', 1, 2003, '01/11/2003','Ivanov Ivan', 113, 102),
+	('Primary skill / AEM', 3, 2002, '18/12/2002','Ivanov Ivan', 113, 102);
 INSERT INTO skills (name_skill, year_skill, last_used_skill,id_type,id_status) VALUES
 	('Background check', 3, 2001, 114, 102),
 	('Dollar card (Alfa Bank)', 1, 2001, 114, 102),

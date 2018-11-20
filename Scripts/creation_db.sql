@@ -26,7 +26,7 @@ SET search_path TO skill_schema;
 		name_skill CHARACTER VARYING(60) NOT NULL,
 		year_skill BIGINT NOT NULL,
 		last_used_skill BIGINT NOT NULL,
-		last_check_skill CHARACTER VARYING(9),
+		last_check_skill DATE,
 		checked_by_skill CHARACTER VARYING(30),
 		id_type BIGINT NOT NULL,
 		id_status BIGINT NOT NULL
