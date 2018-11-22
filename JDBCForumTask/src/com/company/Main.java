@@ -2,12 +2,18 @@ package com.company;
 
 import com.company.Implementations.SearchImpl;
 import com.company.Interfaces.ISearch;
+import org.apache.log4j.BasicConfigurator;
 
-import java.sql.*;
+
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class Main {
 
-    public static void main(String[] argv) throws SQLException {
+    public static void main(String[] argv) throws SQLException, ParseException {
+
+        BasicConfigurator.configure();
 
         System.out.println("-------- PostgreSQL "
                 + "JDBC Connection ------------");
@@ -30,19 +36,20 @@ public class Main {
 
         System.out.println("Search by Subject");
 
-        search_by.searchBySubject();
+        search_by.searchBySubject("Capitals");
 
         System.out.println("Search by user");
 
-        search_by.searchByUser();
+        search_by.searchByUserId(107);
 
         System.out.println("Search by user and date");
 
-        search_by.searchByUserAndDate();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        search_by.searchByUserIdAndDate(107,"2017-11-23");
 
         System.out.println("Search by word in message");
 
-        search_by.searchByWordMessage();
+        search_by.searchByWordMessage("%co%");
     }
-
 }
