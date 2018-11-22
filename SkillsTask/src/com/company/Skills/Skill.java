@@ -130,10 +130,8 @@ public class Skill {
     }
 
     public void display() {
-            System.out.printf("SkillType: %s \t Skill: %s \t Years: %s \t " +
-                            "Last used in: %s \t Last check: %s \t Checked by: %s \n",
-                    getSkillType(),getNameSkill(),getYearSkill(), getLastUsedSkill(),
-                    getLastCheckSkillFormatted(), getCheckedBySkill());
+            System.out.printf("Name Skill: %s \t Skill Type: %s \t Skill Status: %s \n",
+                   getNameSkill(),getSkillType(),getSkillStatus());
     }
     public String displayToListString () {
         return "\t Years: " + getYearSkill() + " \t Last used in: "+ getLastUsedSkill() + " \t Last check: "
