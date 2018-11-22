@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="postgresql-42.2.5">
+    <CLASSES>
+      <root url="jar://C:/Programs/squirrel-sql-3.9.0/postgresql-42.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
