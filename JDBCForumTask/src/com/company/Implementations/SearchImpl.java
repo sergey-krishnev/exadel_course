@@ -1,86 +1,93 @@
 package com.company.Implementations;
 
+import com.company.ForumParts.Connector;
+import com.company.ForumParts.Results;
 import com.company.Interfaces.ISearch;
 
 import java.sql.*;
-import org.apache.log4j.Logger;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchImpl implements ISearch {
-
-    final static Logger logger = Logger.getLogger(SearchImpl.class);
+    private static String SELECT_SQL_NAME = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending " +
+            "FROM forum_schema.subject " +
+            "INNER JOIN forum_schema.users ON subject.user_id = users.id " +
+            "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id " +
+            "WHERE subject.name = ?;";
+    private static String SELECT_SQL_USER_ID = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending \n" +
+            "FROM forum_schema.subject " +
+            "INNER JOIN forum_schema.users ON subject.user_id = users.id " +
+            "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id " +
+            "WHERE subject.user_id = ?;";
+    private static String SELECT_SQL_USER_DATE = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending \n" +
+            "FROM forum_schema.subject " +
+            "INNER JOIN forum_schema.users ON subject.user_id = users.id " +
+            "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id " +
+            "WHERE subject.user_id = ? " +
+            "AND subject.date_sending = ?;";
+    private static String SELECT_SQL_MESSAGE_LIKE = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending \n" +
+            "FROM forum_schema.subject " +
+            "INNER JOIN forum_schema.users ON subject.user_id = users.id " +
+            "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id " +
+            "WHERE subject.message LIKE ?;";
 
     @Override
-    public void searchBySubject(String s) throws SQLException {
-        String selectSQL = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending " +
-                "FROM forum_schema.subject " +
-                "INNER JOIN forum_schema.users ON subject.user_id = users.id " +
-                "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id " +
-                "WHERE subject.name = ?;" ;
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/forum", "postgres", "postgres");
-             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL)) {
-            preparedStatement.setString(1,s);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-                logger.info(rs.getString("nickname") + " : " + rs.getString("topic_name") + " : " +  rs.getString("subject_name") + " : " +
-                        rs.getString("message") + " : " + rs.getString("date_sending"));
-            }
-        }
-
+    public List<Results> searchBySubject(String subject) throws SQLException {
+        List<Results> resultsList = new ArrayList<>();
+        preparedStOneSetString(subject, resultsList, SELECT_SQL_NAME);
+        return resultsList;
     }
 
     @Override
-    public void searchByUserId(Integer u) throws SQLException {
-        String selectSQL = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending \n" +
-                "FROM forum_schema.subject " +
-                "INNER JOIN forum_schema.users ON subject.user_id = users.id " +
-                "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id " +
-                "WHERE subject.user_id = ?;";
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/forum", "postgres", "postgres");
-             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL)) {
-            preparedStatement.setInt(1,u);
+    public List<Results> searchByUserId(Integer u) throws SQLException {
+        List<Results> resultsList = new ArrayList<>();
+
+        try (Connection connection = Connector.connect();
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_SQL_USER_ID)) {
+            preparedStatement.setInt(1, u);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                logger.info(rs.getString("nickname") + " : " + rs.getString("topic_name") + " : " +  rs.getString("subject_name") + " : " +
-                        rs.getString("message") + " : " + rs.getString("date_sending"));
+                resultsList.add(new Results(rs.getString("nickname"), rs.getString("topic_name"), rs.getString("subject_name"),
+                        rs.getString("message"), rs.getDate("date_sending")));
             }
         }
+        return resultsList;
     }
 
     @Override
-    public void searchByUserIdAndDate(Integer u, String date) throws SQLException {
-        String selectSQL = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending \n" +
-                "FROM forum_schema.subject\n" +
-                "INNER JOIN forum_schema.users ON subject.user_id = users.id\n" +
-                "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id\n" +
-                "WHERE subject.user_id = ? \n" +
-                "AND subject.date_sending = ?;";
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/forum", "postgres", "postgres");
-             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL)) {
-            preparedStatement.setInt(1,u);
+    public List<Results> searchByUserIdAndDate(Integer u, String date) throws SQLException {
+        List<Results> resultsList = new ArrayList<>();
+        try (Connection connection = Connector.connect();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_SQL_USER_DATE)) {
+            preparedStatement.setInt(1, u);
             preparedStatement.setDate(2, Date.valueOf(date));
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                logger.info(rs.getString("nickname") + " : " + rs.getString("topic_name") + " : " +  rs.getString("subject_name") + " : " +
-                        rs.getString("message") + " : " + rs.getString("date_sending"));
+                resultsList.add(new Results(rs.getString("nickname"), rs.getString("topic_name"), rs.getString("subject_name"),
+                        rs.getString("message"), rs.getDate("date_sending")));
             }
         }
+        return resultsList;
     }
 
     @Override
-    public void searchByWordMessage(String w) throws SQLException {
-        String selectSQL = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending \n" +
-                "FROM forum_schema.subject\n" +
-                "INNER JOIN forum_schema.users ON subject.user_id = users.id\n" +
-                "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id\n" +
-                "WHERE subject.message LIKE ?;";
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/forum", "postgres", "postgres");
-             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL)) {
-            preparedStatement.setString(1,w);
+    public List<Results> searchByWordMessage(String wordMessage) throws SQLException {
+        List<Results> resultsList = new ArrayList<>();
+        preparedStOneSetString(wordMessage, resultsList, SELECT_SQL_MESSAGE_LIKE);
+        return resultsList;
+    }
+
+    public List<Results> preparedStOneSetString(String value, List<Results> resultsList, String selectedSQL) throws SQLException {
+        try (Connection connection = Connector.connect();
+             PreparedStatement preparedStatement = connection.prepareStatement(selectedSQL)) {
+            preparedStatement.setString(1, value);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                logger.info(rs.getString("nickname") + " : " + rs.getString("topic_name") + " : " +  rs.getString("subject_name") + " : " +
-                        rs.getString("message") + " : " + rs.getString("date_sending"));
+                resultsList.add(new Results(rs.getString("nickname"), rs.getString("topic_name"), rs.getString("subject_name"),
+                        rs.getString("message"), rs.getDate("date_sending")));
             }
         }
+        return resultsList;
     }
+
 }
