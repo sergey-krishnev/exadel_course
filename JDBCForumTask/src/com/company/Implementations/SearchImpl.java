@@ -1,8 +1,10 @@
 package com.company.Implementations;
 
+import com.company.Exceptions.MyJdbcException;
 import com.company.ForumParts.Connector;
 import com.company.ForumParts.Results;
 import com.company.Interfaces.ISearch;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -23,6 +25,9 @@ public class SearchImpl implements ISearch {
     private static String UPDATE_SQL_MESSAGE_BY_USER_ID = "UPDATE forum_schema.subject " +
             "SET message = '[Blocked by moderator]' " +
             "WHERE user_id = ?;";
+    private static String DELETE_SQL_MESSAGE_BY_USER_ID ="DELETE FROM forum_schema.subject " +
+            "WHERE user_id = ?;";
+    private final static Logger logger = Logger.getLogger(Connector.class);
 
     @Override
     public List<Results> searchBySubject(String subject) throws SQLException {
@@ -71,34 +76,27 @@ public class SearchImpl implements ISearch {
     }
 
     @Override
-    public List<Results> updateMessageByUserId(Integer u) throws SQLException {
+    public List<Results> searchAll() throws SQLException {
         List<Results> resultsList = new ArrayList<>();
-        Connection connection = Connector.connect();
-        PreparedStatement updatePreparedStatement = null;
-        PreparedStatement selectPreparedStatement = null;
-        try {
-            connection.setAutoCommit(false);
-            updatePreparedStatement = connection.prepareStatement(UPDATE_SQL_MESSAGE_BY_USER_ID);
-            selectPreparedStatement = connection.prepareStatement(SELECT_SQL_ALL);
-            updatePreparedStatement.setInt(1,u);
-            updatePreparedStatement.executeUpdate();
-            selectPreparedStatement.executeUpdate();
-            connection.commit();
-            ResultSet rs = selectPreparedStatement.executeQuery();
+        try (Connection connection = Connector.connect();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_SQL_ALL)) {
+            ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 resultsList.add(new Results(rs.getString("nickname"), rs.getString("topic_name"), rs.getString("subject_name"),
                         rs.getString("message"), rs.getDate("date_sending")));
             }
-        return resultsList;
-        } catch (SQLException e) {
-            connection.rollback();
         }
         return resultsList;
     }
 
     @Override
-    public List<Results> deleteMessageByUserId(Integer u) throws SQLException {
-        return null;
+    public void updateMessageByUserId(Integer u) throws SQLException {
+        preparedStTransactionOneSetInt(u,UPDATE_SQL_MESSAGE_BY_USER_ID);
+    }
+
+    @Override
+    public void deleteMessageByUserId(Integer u) throws SQLException {
+        preparedStTransactionOneSetInt(u,DELETE_SQL_MESSAGE_BY_USER_ID);
     }
 
     public List<Results> preparedStOneSetString(String value, List<Results> resultsList, String selectedSQL) throws SQLException {
@@ -113,9 +111,28 @@ public class SearchImpl implements ISearch {
         }
         return resultsList;
     }
+    public void preparedStTransactionOneSetInt(Integer u, String selectedSQL) throws  SQLException {
+        Connection connection = Connector.connect();
+        PreparedStatement preparedStatement = null;
+        try {
 
-    public void transaction(Connection connection) {
-
+            connection.setAutoCommit(false);
+            preparedStatement = connection.prepareStatement(DELETE_SQL_MESSAGE_BY_USER_ID);
+            preparedStatement.setInt(1, u);
+            preparedStatement.executeUpdate();
+            connection.commit();
+        } catch (SQLException e) {
+            logger.error(e.getMessage());
+            connection.rollback();
+            throw new MyJdbcException(e.getMessage());
+        } finally {
+            connection.setAutoCommit(true);
+            if (preparedStatement != null) {
+                preparedStatement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        }
     }
-
 }

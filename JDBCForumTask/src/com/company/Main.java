@@ -44,7 +44,15 @@ public class Main {
 
             log.info("Update by user");
 
-            displayBy.display(searchBy.deleteMessageByUserId(103));
+            searchBy.updateMessageByUserId(103);
+
+            displayBy.display(searchBy.searchAll());
+
+            log.info("Delete by user");
+
+            searchBy.deleteMessageByUserId(103);
+
+            displayBy.display(searchBy.searchAll());
 
         } catch (MyJdbcException e) {
             log.error("JDBC error : " + e.getMessage(), e);
