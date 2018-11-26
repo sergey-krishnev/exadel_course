@@ -31,3 +31,6 @@ SELECT users.nickname AS nickname, topic.name AS topic, subject.name AS subject,
 FROM forum_schema.subject
 INNER JOIN forum_schema.users ON subject.user_id = users.id
 INNER JOIN forum_schema.topic ON subject.topic_id = topic.id
+--6)Delete the message
+DELETE FROM forum_schema.subject
+WHERE user_id = 103;
