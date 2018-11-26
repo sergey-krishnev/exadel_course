@@ -16,4 +16,8 @@ public interface ISearch {
     List<Results> searchByUserIdAndDate(Integer u, String d) throws SQLException;
 
     List<Results> searchByWordMessage(String w) throws SQLException;
+
+    List<Results> updateMessageByUserId(Integer u) throws SQLException;
+
+    List<Results> deleteMessageByUserId(Integer u) throws SQLException;
 }

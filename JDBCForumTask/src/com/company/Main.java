@@ -41,6 +41,11 @@ public class Main {
             log.info("Search by word in message");
 
             displayBy.display(searchBy.searchByWordMessage("%co%"));
+
+            log.info("Update by user");
+
+            displayBy.display(searchBy.deleteMessageByUserId(103));
+
         } catch (MyJdbcException e) {
             log.error("JDBC error : " + e.getMessage(), e);
         }

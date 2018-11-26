@@ -23,7 +23,7 @@ public class Connector {
             e.printStackTrace();
         }
         try {
-            dmConnection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/foru", "postgres", "postgres");
+            dmConnection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/forum", "postgres", "postgres");
             return dmConnection;
         } catch (SQLException e) {
             logger.error(e.getMessage());
