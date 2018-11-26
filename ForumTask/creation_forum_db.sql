@@ -1,14 +1,5 @@
 CREATE SCHEMA IF NOT EXISTS forum_schema;
 SET search_path TO forum_schema;
-	CREATE SEQUENCE forum_id_users_seq
-		INCREMENT BY 1
-		START WITH 100;
-	CREATE SEQUENCE forum_id_topic_seq
-		INCREMENT BY 1
-		START WITH 100;
-	CREATE SEQUENCE forum_id_subject_seq
-		INCREMENT BY 1
-		START WITH 100;
 	CREATE TABLE users
 	(
 		id BIGINT PRIMARY KEY,

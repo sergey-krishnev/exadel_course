@@ -23,3 +23,11 @@ FROM forum_schema.subject
 INNER JOIN forum_schema.users ON subject.user_id = users.id
 INNER JOIN forum_schema.topic ON subject.topic_id = topic.id
 WHERE subject.message LIKE '%co%';
+--5)Update the message
+UPDATE forum_schema.subject
+SET message = '[Blocked by moderator]'
+WHERE user_id = 103;
+SELECT users.nickname AS nickname, topic.name AS topic, subject.name AS subject, subject.message, subject.date_sending 
+FROM forum_schema.subject
+INNER JOIN forum_schema.users ON subject.user_id = users.id
+INNER JOIN forum_schema.topic ON subject.topic_id = topic.id
