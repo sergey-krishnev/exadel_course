@@ -11,21 +11,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchImpl implements ISearch {
-    private static String SELECT_SQL_ALL = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending " +
+    private final static String SELECT_SQL_ALL = "SELECT users.nickname AS nickname, topic.name AS topic_name, subject.name AS subject_name, subject.message, subject.date_sending " +
             "FROM forum_schema.subject " +
             "INNER JOIN forum_schema.users ON subject.user_id = users.id " +
             "INNER JOIN forum_schema.topic ON subject.topic_id = topic.id ";
 
-    private static String SELECT_SQL_NAME =  SELECT_SQL_ALL + "WHERE subject.name = ?;";
-    private static String SELECT_SQL_USER_ID = SELECT_SQL_ALL + "WHERE subject.user_id = ?;";
-    private static String SELECT_SQL_USER_DATE = SELECT_SQL_ALL + "WHERE subject.user_id = ? " +
+    private final static String SELECT_SQL_NAME =  SELECT_SQL_ALL + "WHERE subject.name = ?;";
+    private final static String SELECT_SQL_USER_ID = SELECT_SQL_ALL + "WHERE subject.user_id = ?;";
+    private final static String SELECT_SQL_USER_DATE = SELECT_SQL_ALL + "WHERE subject.user_id = ? " +
             "AND subject.date_sending = ?;";
-    private static String SELECT_SQL_MESSAGE_LIKE = SELECT_SQL_ALL +
+    private final static String SELECT_SQL_MESSAGE_LIKE = SELECT_SQL_ALL +
             "WHERE subject.message LIKE ?;";
-    private static String UPDATE_SQL_MESSAGE_BY_USER_ID = "UPDATE forum_schema.subject " +
+    private final static String UPDATE_SQL_MESSAGE_BY_USER_ID = "UPDATE forum_schema.subject " +
             "SET message = '[Blocked by moderator]' " +
             "WHERE user_id = ?;";
-    private static String DELETE_SQL_MESSAGE_BY_USER_ID ="DELETE FROM forum_schema.subject " +
+    private final static String DELETE_SQL_MESSAGE_BY_USER_ID ="DELETE FROM forum_schema.subject " +
             "WHERE user_id = ?;";
     private final static Logger logger = Logger.getLogger(Connector.class);
 
@@ -99,6 +99,20 @@ public class SearchImpl implements ISearch {
         preparedStTransactionOneSetInt(u,DELETE_SQL_MESSAGE_BY_USER_ID);
     }
 
+    @Override
+    public void updateAndDeleteMessageByUserId(String u, Integer w) throws SQLException {
+        try (Connection connection = Connector.connect();
+             PreparedStatement updatePreparedStatement = connection.prepareStatement(UPDATE_SQL_MESSAGE_BY_USER_ID);
+             PreparedStatement deletePreparedStatement = connection.prepareStatement(DELETE_SQL_MESSAGE_BY_USER_ID)) {
+             connection.setAutoCommit(false);
+             deletePreparedStatement.setInt(1,w);
+             deletePreparedStatement.executeUpdate();
+             updatePreparedStatement.setString(1,u);
+             updatePreparedStatement.executeUpdate();
+             connection.commit();
+        }
+    }
+
     public List<Results> preparedStOneSetString(String value, List<Results> resultsList, String selectedSQL) throws SQLException {
         try (Connection connection = Connector.connect();
              PreparedStatement preparedStatement = connection.prepareStatement(selectedSQL)) {
@@ -111,28 +125,14 @@ public class SearchImpl implements ISearch {
         }
         return resultsList;
     }
-    public void preparedStTransactionOneSetInt(Integer u, String selectedSQL) throws  SQLException {
-        Connection connection = Connector.connect();
-        PreparedStatement preparedStatement = null;
-        try {
 
+    public void preparedStTransactionOneSetInt(Integer u, String selectedSQL) throws  SQLException {
+        try (Connection connection = Connector.connect();
+             PreparedStatement preparedStatement = connection.prepareStatement(selectedSQL)) {
             connection.setAutoCommit(false);
-            preparedStatement = connection.prepareStatement(DELETE_SQL_MESSAGE_BY_USER_ID);
             preparedStatement.setInt(1, u);
             preparedStatement.executeUpdate();
             connection.commit();
-        } catch (SQLException e) {
-            logger.error(e.getMessage());
-            connection.rollback();
-            throw new MyJdbcException(e.getMessage());
-        } finally {
-            connection.setAutoCommit(true);
-            if (preparedStatement != null) {
-                preparedStatement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
         }
     }
 }

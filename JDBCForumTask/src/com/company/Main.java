@@ -42,15 +42,21 @@ public class Main {
 
             displayBy.display(searchBy.searchByWordMessage("%co%"));
 
-            log.info("Update by user");
+//            log.info("Update by user");
+//
+//            searchBy.updateMessageByUserId(103);
+//
+//            displayBy.display(searchBy.searchAll());
 
-            searchBy.updateMessageByUserId(103);
+//            log.info("Delete by user");
+//
+//            searchBy.deleteMessageByUserId(103);
+//
+//            displayBy.display(searchBy.searchAll());
 
-            displayBy.display(searchBy.searchAll());
+            log.info("Update and delete by user");
 
-            log.info("Delete by user");
-
-            searchBy.deleteMessageByUserId(103);
+            searchBy.updateAndDeleteMessageByUserId("103",108);
 
             displayBy.display(searchBy.searchAll());
 

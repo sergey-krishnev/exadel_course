@@ -22,4 +22,6 @@ public interface ISearch {
     void updateMessageByUserId(Integer u) throws SQLException;
 
     void deleteMessageByUserId(Integer u) throws SQLException;
+
+    void updateAndDeleteMessageByUserId(String u, Integer w) throws  SQLException;
 }
