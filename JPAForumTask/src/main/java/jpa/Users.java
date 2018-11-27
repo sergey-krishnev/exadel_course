@@ -1,40 +1,41 @@
-package entity;
+package jpa;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "users")
-@NamedQuery(name = "User.getAll", query = "SELECT u FROM User u")
-public class User {
-
+@Table(name = "users", schema = "forum_schema")
+public class Users implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @Column(name = "id", unique = true)
+    private int id;
 
-    @Column(name = "nickname", length = 30, nullable = false)
+    @Column(name = "nickname", nullable = false)
     private String nickname;
 
-    @Column(name = "password", length = 50, nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "email", length = 40, nullable = false)
+    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "first_name", length = 15, nullable = false)
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "last_name", length = 20, nullable = false)
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    public User(String nickname, String password, String email, String firstName, String lastName) {
-        this.nickname = nickname;
-        this.password = password;
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    @OneToMany(mappedBy = "users")
+    private List<Subject> subjects;
+
+    public int getId() {
+        return id;
     }
 
-    public User() {
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNickname() {
@@ -77,14 +78,19 @@ public class User {
         this.lastName = lastName;
     }
 
-    public long getId() {
-        return id;
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
     }
 
     @Override
     public String toString() {
-        return "User{" +
-                "nickname='" + nickname + '\'' +
+        return "Users{" +
+                "id=" + id +
+                ", nickname='" + nickname + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", firstName='" + firstName + '\'' +
