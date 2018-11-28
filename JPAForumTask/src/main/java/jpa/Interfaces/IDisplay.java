@@ -1,5 +1,7 @@
 package jpa.Interfaces;
 
-public interface IDisplay {
+import java.util.List;
 
+public interface IDisplay {
+    void display(List list);
 }

@@ -1,5 +1,9 @@
 package jpa;
 
+import jpa.Implementations.DisplayImpl;
+import jpa.Implementations.SearchImpl;
+import jpa.Interfaces.IDisplay;
+import jpa.Interfaces.ISearch;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -7,6 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import java.util.Arrays;
 import java.util.List;
 import jpa.Subject;
 
@@ -22,14 +27,10 @@ public class Main {
 
         logger.info("log4j is work");
 
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-        em = emf.createEntityManager();
+        ISearch searchBy = new SearchImpl();
+        IDisplay displayBy = new DisplayImpl();
+        displayBy.display(searchBy.searchBySubject("Capitals"));
 
-        Query q = em.createNamedQuery("findAll");
-        List usersList = q.getResultList();
-        for (Object users : usersList) {
-            logger.info(users);
-        }
     }
+
 }

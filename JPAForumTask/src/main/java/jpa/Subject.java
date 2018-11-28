@@ -8,10 +8,18 @@ import java.util.List;
 @Entity
 @Table(name = "subject", schema = "forum_schema")
 
-@NamedQuery(
-        name="findAll",
-        query="SELECT m FROM Subject m, Users d  WHERE d = m.users"
-)
+@NamedQueries({
+        @NamedQuery(name = "findAll",
+                query = "SELECT s.users.nickname AS nickname, s.topic.name AS topic, s.name, s.message, s.dateSending FROM Subject s"),
+
+        @NamedQuery(name = "findBySubject",
+                query = "SELECT s.users.nickname AS nickname, s.topic.name AS topic, s.name, s.message, s.dateSending FROM Subject s " +
+                "WHERE s.name = :name")
+})
+//@NamedQuery(
+//        name="findBySubject",
+//        query="SELECT s.users.nickname AS nickname, s.topic.name AS topic, s.message, s.dateSending FROM Subject s WHERE s.users.id = 107"
+//)
 
 public class Subject implements Serializable {
     @Id
