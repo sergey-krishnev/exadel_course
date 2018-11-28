@@ -1,46 +1,95 @@
 package jpa.Implementations;
 
 import jpa.Interfaces.ISearch;
+import jpa.Subject;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.sql.Date;
 import java.util.List;
 
 public class SearchImpl implements ISearch {
 
-    public List searchBySubject(String s) {
+    public List<Subject> searchBySubject(String s) {
 
         EntityManagerFactory emf = Persistence
                 .createEntityManagerFactory("ForumTask");
 
         EntityManager em = emf.createEntityManager();
         return em.createNamedQuery(
-                "findBySubject")
+                "findBySubject", Subject.class)
                 .setParameter("name", s)
                 .getResultList();
     }
 
-    public List searchByUserId(Integer u) {
+    public List<Subject> searchByUserId(Integer u) {
         EntityManagerFactory emf = Persistence
                 .createEntityManagerFactory("ForumTask");
 
         EntityManager em = emf.createEntityManager();
         return em.createNamedQuery(
-                "findById")
+                "findById", Subject.class)
                 .setParameter("id", u)
                 .getResultList();
     }
 
-    public List searchByUserIdAndDate(Integer u, String d) {
-        return null;
+    public List<Subject> searchByUserIdAndDate(Integer u, java.sql.Date d) {
+        EntityManagerFactory emf = Persistence
+                .createEntityManagerFactory("ForumTask");
+
+        EntityManager em = emf.createEntityManager();
+        return em.createNamedQuery(
+                "findByUserAndDate", Subject.class)
+                .setParameter("id", u)
+                .setParameter("dateSending", d)
+                .getResultList();
     }
 
-    public List searchByWordMessage(String w) {
-        return null;
+    public List<Subject> searchByWordMessage(String w) {
+        EntityManagerFactory emf = Persistence
+                .createEntityManagerFactory("ForumTask");
+
+        EntityManager em = emf.createEntityManager();
+        return em.createNamedQuery(
+                "findByWordMessage", Subject.class)
+                .setParameter("message", w)
+                .getResultList();
     }
 
-    public List searchAll() {
-        return null;
+    public List<Subject> searchAll() {
+        EntityManagerFactory emf = Persistence
+                .createEntityManagerFactory("ForumTask");
+
+        EntityManager em = emf.createEntityManager();
+        return em.createNamedQuery(
+                "findAll", Subject.class)
+                .getResultList();
+    }
+
+    public void updateMessageByUserId(Integer u) {
+        EntityManagerFactory emf = Persistence
+                .createEntityManagerFactory("ForumTask");
+
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.createNamedQuery(
+                "updateMessageById", Subject.class)
+                .setParameter("id", u)
+                .executeUpdate();
+        em.getTransaction().commit();
+    }
+
+    public void deleteMessageByUserId(Integer u) {
+        EntityManagerFactory emf = Persistence
+                .createEntityManagerFactory("ForumTask");
+
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.createNamedQuery(
+                "deleteMessageById", Subject.class)
+                .setParameter("id", u)
+                .executeUpdate();
+        em.getTransaction().commit();
     }
 }

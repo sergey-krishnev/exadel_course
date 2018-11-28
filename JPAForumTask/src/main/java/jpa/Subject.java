@@ -10,16 +10,31 @@ import java.util.List;
 
 @NamedQueries({
         @NamedQuery(name = "findAll",
-                query = "SELECT s.users.nickname AS nickname, s.topic.name AS topic, s.name, s.message, s.dateSending FROM Subject s"),
+                query = "SELECT s FROM Subject s"),
 
         @NamedQuery(name = "findBySubject",
-                query = "SELECT s.users.nickname AS nickname, s.topic.name AS topic, s.name, s.message, s.dateSending FROM Subject s " +
-                "WHERE s.name = :name")
+                query = "SELECT s FROM Subject s " +
+                "WHERE s.name = :name"),
+
+        @NamedQuery(name = "findById",
+                query = "SELECT s FROM Subject s " +
+                        "WHERE s.users.id = :id"),
+
+        @NamedQuery(name = "findByUserAndDate",
+                query = "SELECT s FROM Subject s " +
+                        "WHERE s.users.id = :id AND s.dateSending = :dateSending"),
+
+        @NamedQuery(name = "findByWordMessage",
+                query = "SELECT s FROM Subject s " +
+                        "WHERE s.message LIKE :message"),
+
+        @NamedQuery(name = "updateMessageById",
+                query = "UPDATE Subject s SET s.message = '[Blocked by moderator]' " +
+                        "WHERE s.users.id = :id"),
+
+        @NamedQuery(name = "deleteMessageById",
+                query = "DELETE FROM Subject s WHERE s.users.id = :id")
 })
-//@NamedQuery(
-//        name="findBySubject",
-//        query="SELECT s.users.nickname AS nickname, s.topic.name AS topic, s.message, s.dateSending FROM Subject s WHERE s.users.id = 107"
-//)
 
 public class Subject implements Serializable {
     @Id
@@ -33,7 +48,7 @@ public class Subject implements Serializable {
     private String message;
 
     @Column(name = "date_sending", nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date dateSending;
 
     @ManyToOne(fetch = FetchType.LAZY)

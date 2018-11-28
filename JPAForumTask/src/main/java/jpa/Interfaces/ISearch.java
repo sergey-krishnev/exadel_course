@@ -5,14 +5,18 @@ import jpa.Subject;
 import java.util.List;
 
 public interface ISearch {
-    List searchBySubject(String s);
+    List<Subject> searchBySubject(String s);
 
-    List searchByUserId(Integer u);
+    List<Subject> searchByUserId(Integer u);
 
-    List searchByUserIdAndDate(Integer u, String d);
+    List<Subject> searchByUserIdAndDate(Integer u, java.sql.Date d);
 
-    List searchByWordMessage(String w);
+    List<Subject> searchByWordMessage(String w);
 
-    List searchAll();
+    List<Subject> searchAll();
+
+    void updateMessageByUserId(Integer u);
+
+    void deleteMessageByUserId(Integer u);
 
 }
