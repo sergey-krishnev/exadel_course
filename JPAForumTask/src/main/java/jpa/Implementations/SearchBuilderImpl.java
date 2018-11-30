@@ -1,21 +1,17 @@
 package jpa.Implementations;
 
+import jpa.Factories.EntityManagerCreator;
 import jpa.Interfaces.ISearch;
 import jpa.Subject;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
 import java.util.List;
 
 public class SearchBuilderImpl implements ISearch  {
     public List<Subject> searchBySubject(String s) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Subject> q = cb.createQuery(Subject.class);
         Root<Subject> sr = q.from(Subject.class);
@@ -28,10 +24,7 @@ public class SearchBuilderImpl implements ISearch  {
     }
 
     public List<Subject> searchByUserId(Integer u) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Subject> q = cb.createQuery(Subject.class);
         Root<Subject> sr = q.from(Subject.class);
@@ -44,10 +37,7 @@ public class SearchBuilderImpl implements ISearch  {
     }
 
     public List<Subject> searchByUserIdAndDate(Integer u, java.sql.Date d) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Subject> q = cb.createQuery(Subject.class);
         Root<Subject> sr = q.from(Subject.class);
@@ -62,10 +52,7 @@ public class SearchBuilderImpl implements ISearch  {
     }
 
     public List<Subject> searchByWordMessage(String w) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Subject> q = cb.createQuery(Subject.class);
         Root<Subject> sr = q.from(Subject.class);
@@ -78,10 +65,7 @@ public class SearchBuilderImpl implements ISearch  {
     }
 
     public List<Subject> searchAll() {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Subject> q = cb.createQuery(Subject.class);
         Root<Subject> sr = q.from(Subject.class);
@@ -92,10 +76,7 @@ public class SearchBuilderImpl implements ISearch  {
     }
 
     public void updateMessageByUserId(Integer u) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         em.getTransaction().begin();
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaUpdate<Subject> update = cb.
@@ -110,10 +91,7 @@ public class SearchBuilderImpl implements ISearch  {
     }
 
     public void deleteMessageByUserId(Integer u) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         em.getTransaction().begin();
         CriteriaBuilder cb = em.getCriteriaBuilder();
 

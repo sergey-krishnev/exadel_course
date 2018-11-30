@@ -1,6 +1,7 @@
 package jpa;
 
 import jpa.Factories.FactorySearchImpl;
+import jpa.Factories.InputTypeReader;
 import jpa.Implementations.DisplayImpl;
 import jpa.Implementations.SearchBuilderImpl;
 import jpa.Implementations.SearchImpl;
@@ -30,39 +31,16 @@ public class Main {
     final static Logger log = Logger.getLogger(Main.class);
 
     public static void main(String[] args) throws IOException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date date = null;
-        try {
-            date = sdf.parse("2017-11-23");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
-
 
         BasicConfigurator.configure();
 
         log.info("log4j is work");
 
-        String strNum = null;
-
-        BufferedReader bis = null;
-
         FactorySearchImpl factorySearch = new FactorySearchImpl();
-        try {
-        bis = new BufferedReader(new InputStreamReader(System.in));
 
-            strNum = bis.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (bis != null) bis.close();
-        }
-
-        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(strNum));
+        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(InputTypeReader.getStrNum()));
 
         IDisplay displayBy = new DisplayImpl();
-
 
         log.info("Search by subject");
 
@@ -74,7 +52,7 @@ public class Main {
 
         log.info("Search by user and date");
 
-        displayBy.display(searchBy.searchByUserIdAndDate(107, sqlDate));
+        displayBy.display(searchBy.searchByUserIdAndDate(107, StringAsDate("2017-11-23") ));
 
         log.info("Search by word in message");
 
@@ -92,6 +70,17 @@ public class Main {
 
         displayBy.display(searchBy.searchAll());
 
+    }
+
+    private static java.sql.Date StringAsDate(String s) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date date = null;
+        try {
+            date = sdf.parse(s);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return  new java.sql.Date(date.getTime());
     }
 
 }

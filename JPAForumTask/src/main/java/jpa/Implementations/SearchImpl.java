@@ -1,22 +1,16 @@
 package jpa.Implementations;
 
+import jpa.Factories.EntityManagerCreator;
 import jpa.Interfaces.ISearch;
 import jpa.Subject;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import java.sql.Date;
 import java.util.List;
 
 public class SearchImpl implements ISearch {
 
     public List<Subject> searchBySubject(String s) {
-
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         return em.createNamedQuery(
                 "findBySubject", Subject.class)
                 .setParameter("name", s)
@@ -24,10 +18,7 @@ public class SearchImpl implements ISearch {
     }
 
     public List<Subject> searchByUserId(Integer u) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         return em.createNamedQuery(
                 "findById", Subject.class)
                 .setParameter("id", u)
@@ -35,10 +26,7 @@ public class SearchImpl implements ISearch {
     }
 
     public List<Subject> searchByUserIdAndDate(Integer u, java.sql.Date d) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         return em.createNamedQuery(
                 "findByUserAndDate", Subject.class)
                 .setParameter("id", u)
@@ -47,10 +35,7 @@ public class SearchImpl implements ISearch {
     }
 
     public List<Subject> searchByWordMessage(String w) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         return em.createNamedQuery(
                 "findByWordMessage", Subject.class)
                 .setParameter("message", w)
@@ -58,20 +43,14 @@ public class SearchImpl implements ISearch {
     }
 
     public List<Subject> searchAll() {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         return em.createNamedQuery(
                 "findAll", Subject.class)
                 .getResultList();
     }
 
     public void updateMessageByUserId(Integer u) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         em.getTransaction().begin();
         em.createNamedQuery(
                 "updateMessageById", Subject.class)
@@ -81,10 +60,7 @@ public class SearchImpl implements ISearch {
     }
 
     public void deleteMessageByUserId(Integer u) {
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("ForumTask");
-
-        EntityManager em = emf.createEntityManager();
+        EntityManager em = EntityManagerCreator.getEntityManager();
         em.getTransaction().begin();
         em.createNamedQuery(
                 "deleteMessageById", Subject.class)
