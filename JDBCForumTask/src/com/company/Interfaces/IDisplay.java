@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IDisplay {
     void display(List<Results> results);
+
+    void display(int[] changed);
 }

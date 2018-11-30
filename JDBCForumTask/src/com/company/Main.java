@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.Exceptions.MyJdbcException;
+import com.company.FileDataReader.ScvReader;
 import com.company.Implementations.DisplayImpl;
 import com.company.Implementations.SearchImpl;
 import com.company.Interfaces.IDisplay;
@@ -9,13 +10,14 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class Main {
 
-    public static void main(String[] argv) throws SQLException {
+    public static void main(String[] argv) throws SQLException, IOException {
 
         final Logger log = Logger.getLogger(Main.class);
 
@@ -25,6 +27,10 @@ public class Main {
 
             ISearch searchBy = new SearchImpl();
             IDisplay displayBy = new DisplayImpl();
+
+            ScvReader scvReader = new ScvReader("DataSubjects.csv");
+
+            Integer PARAM_CONFIGURATION = 10;
 
             log.info("Search by subject");
 
@@ -54,9 +60,9 @@ public class Main {
 //
 //            displayBy.display(searchBy.searchAll());
 
-            log.info("Update and delete by user");
+            log.info("Insert new data");
 
-            searchBy.updateAndDeleteMessageByUserId("103",108);
+            searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
 
             displayBy.display(searchBy.searchAll());
 

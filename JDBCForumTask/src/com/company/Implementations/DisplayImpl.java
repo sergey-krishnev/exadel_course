@@ -14,4 +14,9 @@ public class DisplayImpl implements IDisplay {
     public void display(List<Results> results) {
         for (Results result : results ) logger.info(result);
     }
+
+    @Override
+    public void display(int[] changed) {
+        logger.info(changed);
+    }
 }

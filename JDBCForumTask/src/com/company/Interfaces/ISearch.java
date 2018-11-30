@@ -1,5 +1,6 @@
 package com.company.Interfaces;
 
+import com.company.FileDataReader.ScvReader;
 import com.company.ForumParts.Results;
 
 import java.sql.Date;
@@ -23,5 +24,7 @@ public interface ISearch {
 
     void deleteMessageByUserId(Integer u) throws SQLException;
 
-    void updateAndDeleteMessageByUserId(String u, Integer w) throws  SQLException;
+//    void updateAndDeleteMessageByUserId(String u, Integer w) throws  SQLException;
+
+    void batchInsertSubject(ScvReader scvReader, Integer numConf) throws SQLException;
 }

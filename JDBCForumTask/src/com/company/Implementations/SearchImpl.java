@@ -1,6 +1,7 @@
 package com.company.Implementations;
 
 import com.company.Exceptions.MyJdbcException;
+import com.company.FileDataReader.ScvReader;
 import com.company.ForumParts.Connector;
 import com.company.ForumParts.Results;
 import com.company.Interfaces.ISearch;
@@ -27,6 +28,10 @@ public class SearchImpl implements ISearch {
             "WHERE user_id = ?;";
     private final static String DELETE_SQL_MESSAGE_BY_USER_ID ="DELETE FROM forum_schema.subject " +
             "WHERE user_id = ?;";
+
+    private final static String INSERT_SUBJECTS = "INSERT INTO forum_schema.subject (id, name, message, date_sending, user_id, topic_id)" +
+            " VALUES (NEXTVAL('forum_id_subject_seq'), ?, ?, ?, ?, ?)";
+
     private final static Logger logger = Logger.getLogger(Connector.class);
 
     @Override
@@ -99,17 +104,33 @@ public class SearchImpl implements ISearch {
         preparedStTransactionOneSetInt(u,DELETE_SQL_MESSAGE_BY_USER_ID);
     }
 
+//    @Override
+//    public void updateAndDeleteMessageByUserId(String u, Integer w) throws SQLException {
+//        try (Connection connection = Connector.connect();
+//             PreparedStatement updatePreparedStatement = connection.prepareStatement(UPDATE_SQL_MESSAGE_BY_USER_ID);
+//             PreparedStatement deletePreparedStatement = connection.prepareStatement(DELETE_SQL_MESSAGE_BY_USER_ID)) {
+//             connection.setAutoCommit(false);
+//             deletePreparedStatement.setInt(1,w);
+//             deletePreparedStatement.executeUpdate();
+//             updatePreparedStatement.setString(1,u);
+//             updatePreparedStatement.executeUpdate();
+//             connection.commit();
+//        }
+//    }
+
     @Override
-    public void updateAndDeleteMessageByUserId(String u, Integer w) throws SQLException {
+    public void batchInsertSubject(ScvReader scvReader, Integer numConf) throws SQLException {
         try (Connection connection = Connector.connect();
-             PreparedStatement updatePreparedStatement = connection.prepareStatement(UPDATE_SQL_MESSAGE_BY_USER_ID);
-             PreparedStatement deletePreparedStatement = connection.prepareStatement(DELETE_SQL_MESSAGE_BY_USER_ID)) {
-             connection.setAutoCommit(false);
-             deletePreparedStatement.setInt(1,w);
-             deletePreparedStatement.executeUpdate();
-             updatePreparedStatement.setString(1,u);
-             updatePreparedStatement.executeUpdate();
-             connection.commit();
+             PreparedStatement insertPreparedStatement = connection.prepareStatement(INSERT_SUBJECTS)) {
+            for(int i = 0; i < numConf; i++) {
+                insertPreparedStatement.setString(1, scvReader.getNames().get(i));
+                insertPreparedStatement.setString(2,  scvReader.getMessages().get(i));
+                insertPreparedStatement.setDate(3, scvReader.getDatesSending().get(i));
+                insertPreparedStatement.setInt(4, scvReader.getUsersId().get(i));
+                insertPreparedStatement.setInt(5, scvReader.getTopicsId().get(i));
+                insertPreparedStatement.addBatch();
+            }
+            insertPreparedStatement.executeBatch();
         }
     }
 
@@ -135,4 +156,6 @@ public class SearchImpl implements ISearch {
             connection.commit();
         }
     }
+
+
 }
