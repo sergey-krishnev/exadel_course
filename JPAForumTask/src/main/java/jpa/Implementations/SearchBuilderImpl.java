@@ -1,6 +1,7 @@
 package jpa.Implementations;
 
 import jpa.Factories.EntityManagerCreator;
+import jpa.FileDataReader.ScvReader;
 import jpa.Interfaces.ISearch;
 import jpa.Subject;
 
@@ -102,6 +103,11 @@ public class SearchBuilderImpl implements ISearch  {
         delete.where(cb.equal(sr.get("users").get("id"), u));
         em.createQuery(delete).executeUpdate();
         em.getTransaction().commit();
+
+    }
+
+    @Override
+    public void batchInsertSubject(ScvReader scvReader, Integer numConf) {
 
     }
 }

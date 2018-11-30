@@ -1,10 +1,14 @@
 package jpa.Implementations;
 
 import jpa.Factories.EntityManagerCreator;
+import jpa.FileDataReader.ScvReader;
 import jpa.Interfaces.ISearch;
 import jpa.Subject;
+import jpa.Topic;
+import jpa.Users;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import java.util.List;
 
 public class SearchImpl implements ISearch {
@@ -67,5 +71,56 @@ public class SearchImpl implements ISearch {
                 .setParameter("id", u)
                 .executeUpdate();
         em.getTransaction().commit();
+    }
+
+    @Override
+    public void batchInsertSubject(ScvReader scvReader, Integer numConf) {
+        EntityManager em = EntityManagerCreator.getEntityManager();
+        EntityTransaction entityTransaction = em
+                .getTransaction();
+        try {
+            entityTransaction.begin();
+
+            for (int i = 0; i < scvReader.getSizeFile(); i++) {
+                if (i > 0 && i % numConf == 0) {
+                    entityTransaction.commit();
+                    entityTransaction.begin();
+
+                    em.clear();
+                }
+                Users users = new Users(scvReader.getUsersId().get(i));
+                Topic topic = new Topic(scvReader.getTopicsId().get(i)));
+                Subject subject = new Subject(scvReader.getNames().get(i), scvReader.getMessages().get(i), scvReader.getDatesSending().get(i),
+                        users, topic;
+
+                em.persist(subject);
+            }
+
+            entityTransaction.commit();
+        } catch (RuntimeException e) {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            throw e;
+        } finally {
+            em.close();
+        }
+//        Connection connection =null;
+//        try {
+//            connection = Connector.connect();
+//            PreparedStatement insertPreparedStatement = connection.prepareStatement(INSERT_SUBJECTS);
+//            for(int i = 0; i < numConf; i++) {
+//                insertPreparedStatement.setString(1, scvReader.getNames().get(i));
+//                insertPreparedStatement.setString(2,  scvReader.getMessages().get(i));
+//                insertPreparedStatement.setDate(3, scvReader.getDatesSending().get(i));
+//                insertPreparedStatement.setInt(4, scvReader.getUsersId().get(i));
+//                insertPreparedStatement.setInt(5, scvReader.getTopicsId().get(i));
+//                insertPreparedStatement.addBatch();
+//            }
+//            insertPreparedStatement.executeBatch();
+//        } catch (SQLException e) {
+//            doRollback(connection);
+//            e.printStackTrace();
+        }
     }
 }

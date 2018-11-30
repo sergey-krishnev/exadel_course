@@ -1,5 +1,6 @@
 package jpa.Interfaces;
 
+import jpa.FileDataReader.ScvReader;
 import jpa.Subject;
 
 import java.util.List;
@@ -19,4 +20,5 @@ public interface ISearch {
 
     void deleteMessageByUserId(Integer u);
 
+    void batchInsertSubject(ScvReader scvReader, Integer numConf);
 }

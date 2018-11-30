@@ -109,6 +109,14 @@ public class Subject implements Serializable {
         this.topic = topic;
     }
 
+    public Subject(String name, String message, Date dateSending, Users users, Topic topic) {
+        this.name = name;
+        this.message = message;
+        this.dateSending = dateSending;
+        this.users = users;
+        this.topic = topic;
+    }
+
     @Override
     public String toString() {
         return "Subject{" +

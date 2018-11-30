@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1e82cd0-35a1-4e49-980e-7fa7f233ec58" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../JDBCForumTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchBuilderImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/Implementations/SearchImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/Implementations/SearchImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Interfaces/ISearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Interfaces/ISearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Subject.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,29 +21,30 @@
     <session id="-825873519">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3139" />
+          <entry key="java" value="3310" />
           <entry key="xml" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3139" />
+          <entry key="JAVA" value="3310" />
           <entry key="XML" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="22" />
+          <entry key="java" value="26" />
           <entry key="properties" value="3" />
           <entry key="xml" value="2" />
         </counts>
@@ -50,7 +52,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="22" />
+          <entry key="JAVA" value="26" />
           <entry key="Properties" value="3" />
           <entry key="XML" value="2" />
         </counts>
@@ -90,10 +92,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Users.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Interfaces/ISearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="374">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Subject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+            <state relative-caret-position="920">
+              <caret line="111" column="93" selection-start-line="111" selection-start-column="93" selection-end-line="111" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,10 +128,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="937">
+              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#1039#1040#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            <state relative-caret-position="546">
+              <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Topic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -125,32 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchBuilderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Factories/EntityManagerCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Interfaces/IDisplay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            <state relative-caret-position="818">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,20 +186,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Factories/InputTypeReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="28" />
+            <state relative-caret-position="136">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -225,22 +232,23 @@
         <option value="$PROJECT_DIR$/src/main/java/jpa/Log4jPropertiesConfigurationExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/EntityManagerConnector.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/jpa/Topic.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Interfaces/IDisplay.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jpa/Interfaces/ISearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Abstract/SearchA.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Abstract/SearchB.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Abstract/AbstractSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Factory.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Factories/FactorySearchImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jpa/Subject.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Implementations/DisplayImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Factories/EntityManagerCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchBuilderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Factories/InputTypeReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/Interfaces/ISearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchBuilderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/Subject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/Topic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java" />
       </list>
     </option>
   </component>
@@ -293,6 +301,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -342,6 +351,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jpa" type="462c0819:PsiDirectoryNode" />
+              <item name="FileDataReader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JPAForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JPAForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jpa" type="462c0819:PsiDirectoryNode" />
               <item name="Implementations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -372,14 +390,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543568341415" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543579178740" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -459,18 +477,19 @@
       <workItem from="1543326649286" duration="372000" />
       <workItem from="1543389014117" duration="4806000" />
       <workItem from="1543481747016" duration="654000" />
-      <workItem from="1543566573706" duration="1729000" />
+      <workItem from="1543566573706" duration="2307000" />
+      <workItem from="1543575209543" duration="498000" />
+      <workItem from="1543576471879" duration="2696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46161000" />
+    <option name="totallyTimeSpent" value="49933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18230277" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -480,7 +499,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37193328" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37193328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39842984" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -541,13 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
@@ -566,57 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Factories/FactorySearchImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Interfaces/ISearch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Factories/EntityManagerCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/DisplayImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -633,10 +598,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Factories/EntityManagerCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="476">
+          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Factories/InputTypeReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Factories/FactorySearchImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="937">
+          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/DisplayImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Interfaces/ISearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -645,28 +659,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchBuilderImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="818">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Factories/InputTypeReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="28" />
+        <state relative-caret-position="920">
+          <caret line="111" column="93" selection-start-line="111" selection-start-column="93" selection-end-line="111" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
+        <state relative-caret-position="459">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Topic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
