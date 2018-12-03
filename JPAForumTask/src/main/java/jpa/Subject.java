@@ -38,6 +38,8 @@ import java.util.List;
 
 public class Subject implements Serializable {
     @Id
+    @GeneratedValue(generator = "subject_id__generator", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name="subject_id__generator", sequenceName = "forum_schema.forum_id_subject_seq", allocationSize=1)
     @Column(name = "id", unique = true)
     private int id;
 
@@ -48,7 +50,7 @@ public class Subject implements Serializable {
     private String message;
 
     @Column(name = "date_sending", nullable = false)
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dateSending;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -123,9 +125,12 @@ public class Subject implements Serializable {
     @Override
     public String toString() {
         return "Subject{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", message='" + message + '\'' +
                 ", dateSending=" + dateSending +
+                ", users=" + users +
+                ", topic=" + topic +
                 '}';
     }
 }

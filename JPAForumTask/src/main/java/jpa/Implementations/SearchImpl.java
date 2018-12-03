@@ -1,5 +1,6 @@
 package jpa.Implementations;
 
+import jpa.Exceptions.MyBatchException;
 import jpa.Factories.EntityManagerCreator;
 import jpa.FileDataReader.ScvReader;
 import jpa.Interfaces.ISearch;
@@ -7,7 +8,6 @@ import jpa.Subject;
 import jpa.Topic;
 import jpa.Users;
 
-import javax.jws.soap.SOAPBinding;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.util.List;
@@ -57,14 +57,14 @@ public class SearchImpl implements ISearch {
     public  List<Users> searchAllUsers() {
         EntityManager em = EntityManagerCreator.getEntityManager();
         return em.createNamedQuery(
-                "findAll", Users.class)
+                "findAllUsers", Users.class)
                 .getResultList();
     }
 
     public List<Topic> searchAllTopic() {
         EntityManager em = EntityManagerCreator.getEntityManager();
         return em.createNamedQuery(
-                "findAll", Topic.class)
+                "findAllTopics", Topic.class)
                 .getResultList();
     }
 
@@ -97,6 +97,7 @@ public class SearchImpl implements ISearch {
             entityTransaction.begin();
 
             for (int i = 0; i < scvReader.getSizeFile(); i++) {
+                Integer numComplConf = 0;
                 if (i > 0 && i % numConf == 0) {
                     entityTransaction.commit();
                     entityTransaction.begin();
@@ -104,18 +105,20 @@ public class SearchImpl implements ISearch {
                     em.clear();
                 }
                 List<Users> users = searchAllUsers();
-                List<Topic> topics = searchAllTopic();
                 for (Users user : users) {
+                    List<Topic> topics = searchAllTopic();
                     for (Topic topic : topics) {
                         if ((topic.getId() == scvReader.getTopicsId().get(i)) &&
-                                (topic.getId() == scvReader.getTopicsId().get(i))) {
+                                (user.getId() == scvReader.getUsersId().get(i))) {
                             Subject subject = new Subject(scvReader.getNames().get(i), scvReader.getMessages().get(i), scvReader.getDatesSending().get(i),
                                     user, topic);
+                            numComplConf++;
 
                             em.persist(subject);
                         }
                     }
                 }
+                if (numComplConf != i) throw new MyBatchException("No batch");
             }
 
             entityTransaction.commit();

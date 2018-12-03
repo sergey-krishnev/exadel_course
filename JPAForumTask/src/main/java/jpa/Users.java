@@ -7,6 +7,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "users", schema = "forum_schema")
+
+@NamedQuery(name = "findAllUsers",
+        query = "SELECT u FROM Users u")
+
 public class Users implements Serializable {
     @Id
     @Column(name = "id", unique = true)

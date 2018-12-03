@@ -1,5 +1,6 @@
 package jpa;
 
+import jpa.Exceptions.MyBatchException;
 import jpa.Factories.FactorySearchImpl;
 import jpa.Factories.InputTypeReader;
 import jpa.FileDataReader.ScvReader;
@@ -77,7 +78,11 @@ public class Main {
 
         log.info("Insert new objects");
 
-       // searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
+        try {
+            searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
+        } catch (MyBatchException e) {
+            log.error(e);
+        }
 
         displayBy.display(searchBy.searchAll());
 

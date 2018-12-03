@@ -7,6 +7,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "topic", schema = "forum_schema")
+
+@NamedQuery(name = "findAllTopics",
+        query = "SELECT t FROM Topic t")
+
 public class Topic implements Serializable {
 
     @Id
