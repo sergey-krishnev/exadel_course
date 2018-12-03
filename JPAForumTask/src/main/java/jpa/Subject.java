@@ -59,6 +59,9 @@ public class Subject implements Serializable {
     @JoinColumn(name = "topic_id")
     private Topic topic;
 
+    public Subject() {
+    }
+
     public int getId() {
         return id;
     }

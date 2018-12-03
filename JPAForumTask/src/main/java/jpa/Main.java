@@ -2,6 +2,7 @@ package jpa;
 
 import jpa.Factories.FactorySearchImpl;
 import jpa.Factories.InputTypeReader;
+import jpa.FileDataReader.ScvReader;
 import jpa.Implementations.DisplayImpl;
 import jpa.Implementations.SearchBuilderImpl;
 import jpa.Implementations.SearchImpl;
@@ -42,6 +43,10 @@ public class Main {
 
         IDisplay displayBy = new DisplayImpl();
 
+        ScvReader scvReader = new ScvReader("DataSubjects.csv");
+
+        Integer PARAM_CONFIGURATION = 10;
+
         log.info("Search by subject");
 
         displayBy.display(searchBy.searchBySubject("Capitals"));
@@ -67,6 +72,12 @@ public class Main {
         log.info("Delete by user");
 
         searchBy.deleteMessageByUserId(103);
+
+        displayBy.display(searchBy.searchAll());
+
+        log.info("Insert new objects");
+
+       // searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
 
         displayBy.display(searchBy.searchAll());
 

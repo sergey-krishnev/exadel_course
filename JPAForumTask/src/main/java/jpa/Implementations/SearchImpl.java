@@ -7,6 +7,7 @@ import jpa.Subject;
 import jpa.Topic;
 import jpa.Users;
 
+import javax.jws.soap.SOAPBinding;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.util.List;
@@ -53,6 +54,20 @@ public class SearchImpl implements ISearch {
                 .getResultList();
     }
 
+    public  List<Users> searchAllUsers() {
+        EntityManager em = EntityManagerCreator.getEntityManager();
+        return em.createNamedQuery(
+                "findAll", Users.class)
+                .getResultList();
+    }
+
+    public List<Topic> searchAllTopic() {
+        EntityManager em = EntityManagerCreator.getEntityManager();
+        return em.createNamedQuery(
+                "findAll", Topic.class)
+                .getResultList();
+    }
+
     public void updateMessageByUserId(Integer u) {
         EntityManager em = EntityManagerCreator.getEntityManager();
         em.getTransaction().begin();
@@ -88,12 +103,19 @@ public class SearchImpl implements ISearch {
 
                     em.clear();
                 }
-                Users users = new Users(scvReader.getUsersId().get(i));
-                Topic topic = new Topic(scvReader.getTopicsId().get(i)));
-                Subject subject = new Subject(scvReader.getNames().get(i), scvReader.getMessages().get(i), scvReader.getDatesSending().get(i),
-                        users, topic;
+                List<Users> users = searchAllUsers();
+                List<Topic> topics = searchAllTopic();
+                for (Users user : users) {
+                    for (Topic topic : topics) {
+                        if ((topic.getId() == scvReader.getTopicsId().get(i)) &&
+                                (topic.getId() == scvReader.getTopicsId().get(i))) {
+                            Subject subject = new Subject(scvReader.getNames().get(i), scvReader.getMessages().get(i), scvReader.getDatesSending().get(i),
+                                    user, topic);
 
-                em.persist(subject);
+                            em.persist(subject);
+                        }
+                    }
+                }
             }
 
             entityTransaction.commit();
@@ -105,6 +127,7 @@ public class SearchImpl implements ISearch {
         } finally {
             em.close();
         }
+    }
 //        Connection connection =null;
 //        try {
 //            connection = Connector.connect();
@@ -121,6 +144,5 @@ public class SearchImpl implements ISearch {
 //        } catch (SQLException e) {
 //            doRollback(connection);
 //            e.printStackTrace();
-        }
-    }
 }
+
