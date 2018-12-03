@@ -124,6 +124,7 @@ public class SearchImpl implements ISearch {
         try {
             connection = Connector.connect();
              PreparedStatement insertPreparedStatement = connection.prepareStatement(INSERT_SUBJECTS);
+            connection.setAutoCommit(false);
             for(int i = 0; i < numConf; i++) {
                 insertPreparedStatement.setString(1, scvReader.getNames().get(i));
                 insertPreparedStatement.setString(2,  scvReader.getMessages().get(i));
@@ -133,9 +134,10 @@ public class SearchImpl implements ISearch {
                 insertPreparedStatement.addBatch();
             }
             insertPreparedStatement.executeBatch();
+            connection.commit();
         } catch (SQLException e) {
             doRollback(connection);
-            e.printStackTrace();
+            logger.error(e);
         }
     }
 
@@ -166,7 +168,7 @@ public class SearchImpl implements ISearch {
         try {
             c.rollback();
         } catch (SQLException ex) {
-            ex.printStackTrace();
+            logger.error(ex);
         }
     }
 
