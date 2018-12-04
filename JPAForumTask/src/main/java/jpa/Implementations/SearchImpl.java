@@ -7,12 +7,15 @@ import jpa.Interfaces.ISearch;
 import jpa.Subject;
 import jpa.Topic;
 import jpa.Users;
+import org.apache.log4j.Logger;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.util.List;
 
 public class SearchImpl implements ISearch {
+
+    private final static Logger logger = Logger.getLogger(SearchImpl.class);
 
     public List<Subject> searchBySubject(String s) {
         EntityManager em = EntityManagerCreator.getEntityManager();
@@ -89,7 +92,7 @@ public class SearchImpl implements ISearch {
     }
 
     @Override
-    public void batchInsertSubject(ScvReader scvReader, Integer numConf) {
+    public void batchInsertSubject(ScvReader scvReader, Integer numConf) throws MyBatchException {
         EntityManager em = EntityManagerCreator.getEntityManager();
         EntityTransaction entityTransaction = em
                 .getTransaction();
@@ -97,7 +100,6 @@ public class SearchImpl implements ISearch {
             entityTransaction.begin();
 
             for (int i = 0; i < scvReader.getSizeFile(); i++) {
-                Integer numComplConf = 0;
                 if (i > 0 && i % numConf == 0) {
                     entityTransaction.commit();
                     entityTransaction.begin();
@@ -112,13 +114,10 @@ public class SearchImpl implements ISearch {
                                 (user.getId() == scvReader.getUsersId().get(i))) {
                             Subject subject = new Subject(scvReader.getNames().get(i), scvReader.getMessages().get(i), scvReader.getDatesSending().get(i),
                                     user, topic);
-                            numComplConf++;
-
                             em.persist(subject);
                         }
                     }
                 }
-                if (numComplConf != i) throw new MyBatchException("No batch");
             }
 
             entityTransaction.commit();
@@ -126,11 +125,13 @@ public class SearchImpl implements ISearch {
             if (entityTransaction.isActive()) {
                 entityTransaction.rollback();
             }
-            throw e;
+            logger.error("Batch processing error: " + e.getMessage());
+            throw new MyBatchException(e.getMessage(), e);
         } finally {
             em.close();
         }
     }
+
 //        Connection connection =null;
 //        try {
 //            connection = Connector.connect();

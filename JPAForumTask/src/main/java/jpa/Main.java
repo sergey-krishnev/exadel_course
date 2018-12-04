@@ -33,7 +33,7 @@ public class Main {
     final static Logger log = Logger.getLogger(Main.class);
 
     public static void main(String[] args) throws IOException {
-
+        try {
         BasicConfigurator.configure();
 
         log.info("log4j is work");
@@ -78,14 +78,12 @@ public class Main {
 
         log.info("Insert new objects");
 
-        try {
+
             searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
+            displayBy.display(searchBy.searchAll());
         } catch (MyBatchException e) {
-            log.error(e);
+            log.error("JPA error : " + e.getMessage(), e);
         }
-
-        displayBy.display(searchBy.searchAll());
-
     }
 
     private static java.sql.Date StringAsDate(String s) {

@@ -1,5 +1,7 @@
 package jpa.FileDataReader;
 
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -75,7 +77,10 @@ public class ScvReader {
         this.topicsId = topicsId;
     }
 
-    public ScvReader(String nameFile) {
+    private final static Logger logger = Logger.getLogger(ScvReader.class);
+
+    public ScvReader(String nameFile) throws RuntimeException {
+
         List<String> dataSubject = null;
         try {
             dataSubject = Files.readAllLines(Paths.get(nameFile), StandardCharsets.UTF_8);
@@ -89,8 +94,8 @@ public class ScvReader {
             }
             this.nameFile = nameFile;
             this.sizeFile = dataSubject.size();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException | NumberFormatException e) {
+            logger.error("JPA error : " + e.getMessage(), e);
         }
     }
     private static java.sql.Date stringAsDate(String s) {

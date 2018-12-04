@@ -5,20 +5,21 @@
       <change beforePath="$PROJECT_DIR$/../ForumTask/aggregation_forum_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../ForumTask/aggregation_forum_db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JDBCForumTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JDBCForumTask/DataSubjects.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/DataSubjects.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCForumTask/out/production/JDBCForumTask/com/company/Exceptions/MyJdbcException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/out/production/JDBCForumTask/com/company/Exceptions/MyJdbcException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JDBCForumTask/out/production/JDBCForumTask/com/company/Implementations/SearchImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/out/production/JDBCForumTask/com/company/Implementations/SearchImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCForumTask/out/production/JDBCForumTask/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/out/production/JDBCForumTask/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCForumTask/src/com/company/Exceptions/MyJdbcException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/src/com/company/Exceptions/MyJdbcException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JDBCForumTask/src/com/company/Implementations/SearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/src/com/company/Implementations/SearchImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCForumTask/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCForumTask/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataSubjects.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DataSubjects.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Exceptions/MyBatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Exceptions/MyBatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Topic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jpa/Exceptions/MyBatchException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/Exceptions/MyBatchException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jpa/Implementations/SearchImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/Implementations/SearchImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jpa/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/Subject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/Topic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/Topic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/Users.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,33 +33,34 @@
     <session id="-825873519">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.10" value="4" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.10" value="5" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.8" value="4" />
+          <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3716" />
+          <entry key="java" value="3899" />
           <entry key="xml" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3716" />
+          <entry key="JAVA" value="3899" />
           <entry key="XML" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="32" />
+          <entry key="java" value="33" />
           <entry key="properties" value="3" />
           <entry key="xml" value="3" />
         </counts>
@@ -66,7 +68,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="32" />
+          <entry key="JAVA" value="33" />
           <entry key="Properties" value="3" />
           <entry key="XML" value="3" />
         </counts>
@@ -129,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="112" column="101" selection-start-line="112" selection-start-column="101" selection-end-line="112" selection-end-column="101" />
+            <state relative-caret-position="289">
+              <caret line="17" column="76" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,11 +143,24 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Exceptions/MyBatchException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            <state relative-caret-position="119">
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+              <folding>
+                <element signature="e#126#127#0" expanded="true" />
+                <element signature="e#156#157#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,8 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+            <state relative-caret-position="323">
+              <caret line="84" column="58" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -235,15 +250,15 @@
         <option value="$PROJECT_DIR$/src/main/java/jpa/Implementations/DisplayImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Factories/EntityManagerCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Factories/InputTypeReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Interfaces/ISearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchBuilderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Topic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jpa/Exceptions/MyBatchException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jpa/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Subject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/Exceptions/MyBatchException.java" />
         <option value="$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java" />
       </list>
     </option>
   </component>
@@ -296,8 +311,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -395,6 +408,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -494,16 +509,21 @@
       <workItem from="1543839506568" duration="1703000" />
       <workItem from="1543841396097" duration="1783000" />
       <workItem from="1543843323394" duration="321000" />
+      <workItem from="1543915132144" duration="654000" />
+      <workItem from="1543916951659" duration="594000" />
+      <workItem from="1543918922018" duration="1777000" />
+      <workItem from="1543920731142" duration="1179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63549000" />
+    <option name="totallyTimeSpent" value="67753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21641791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -513,7 +533,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32973504" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37193328" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37193328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39842984" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -599,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -617,9 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,20 +657,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Exceptions/MyBatchException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -701,13 +697,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="84" column="58" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Exceptions/MyBatchException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jpa/Implementations/SearchImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="112" column="101" selection-start-line="112" selection-start-column="101" selection-end-line="112" selection-end-column="101" />
+        <state relative-caret-position="289">
+          <caret line="17" column="76" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jpa/FileDataReader/ScvReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
         </state>
       </provider>
     </entry>
