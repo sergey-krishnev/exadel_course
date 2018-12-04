@@ -125,13 +125,25 @@ public class SearchImpl implements ISearch {
             connection = Connector.connect();
              PreparedStatement insertPreparedStatement = connection.prepareStatement(INSERT_SUBJECTS);
             connection.setAutoCommit(false);
-            for(int i = 0; i < numConf; i++) {
-                insertPreparedStatement.setString(1, scvReader.getNames().get(i));
-                insertPreparedStatement.setString(2,  scvReader.getMessages().get(i));
-                insertPreparedStatement.setDate(3, scvReader.getDatesSending().get(i));
-                insertPreparedStatement.setInt(4, scvReader.getUsersId().get(i));
-                insertPreparedStatement.setInt(5, scvReader.getTopicsId().get(i));
-                insertPreparedStatement.addBatch();
+            for (int i = 0; i < scvReader.getSizeFile(); i++) {
+                try {
+                    insertPreparedStatement.setString(1, scvReader.getNames().get(i));
+                    insertPreparedStatement.setString(2, scvReader.getMessages().get(i));
+                    insertPreparedStatement.setDate(3, scvReader.getDatesSending().get(i));
+                    insertPreparedStatement.setInt(4, scvReader.getUsersId().get(i));
+                    insertPreparedStatement.setInt(5, scvReader.getTopicsId().get(i));
+                    insertPreparedStatement.addBatch();
+                } catch (SQLException e) {
+                    doRollback(connection);
+                    logger.error(e);
+                    if (i < numConf) {
+                        i = numConf -1;
+                    } else i = i + ((numConf-1) - (i % numConf));
+                }
+                if (i > 0 && (i+1) % numConf == 0) {
+                    insertPreparedStatement.executeBatch();
+                    connection.commit();
+                }
             }
             insertPreparedStatement.executeBatch();
             connection.commit();
@@ -167,6 +179,7 @@ public class SearchImpl implements ISearch {
     private void doRollback(Connection c) {
         try {
             c.rollback();
+            c.close();
         } catch (SQLException ex) {
             logger.error(ex);
         }
