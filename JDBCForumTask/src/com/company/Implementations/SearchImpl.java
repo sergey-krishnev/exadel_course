@@ -119,27 +119,21 @@ public class SearchImpl implements ISearch {
 //    }
 
     @Override
-    public void batchInsertSubject(ScvReader scvReader, Integer numConf){
+    public void batchInsertSubject(ScvReader scvReader, Integer numConf) {
         Connection connection =null;
         try {
             connection = Connector.connect();
-             PreparedStatement insertPreparedStatement = connection.prepareStatement(INSERT_SUBJECTS);
+            PreparedStatement insertPreparedStatement = connection.prepareStatement(INSERT_SUBJECTS);
             connection.setAutoCommit(false);
+
             for (int i = 0; i < scvReader.getSizeFile(); i++) {
-                try {
                     insertPreparedStatement.setString(1, scvReader.getNames().get(i));
                     insertPreparedStatement.setString(2, scvReader.getMessages().get(i));
                     insertPreparedStatement.setDate(3, scvReader.getDatesSending().get(i));
                     insertPreparedStatement.setInt(4, scvReader.getUsersId().get(i));
                     insertPreparedStatement.setInt(5, scvReader.getTopicsId().get(i));
                     insertPreparedStatement.addBatch();
-                } catch (SQLException e) {
-                    doRollback(connection);
-                    logger.error(e);
-                    if (i < numConf) {
-                        i = numConf -1;
-                    } else i = i + ((numConf-1) - (i % numConf));
-                }
+
                 if (i > 0 && (i+1) % numConf == 0) {
                     insertPreparedStatement.executeBatch();
                     connection.commit();
@@ -149,7 +143,8 @@ public class SearchImpl implements ISearch {
             connection.commit();
         } catch (SQLException e) {
             doRollback(connection);
-            logger.error(e);
+            logger.error("Batch processing error: " + e.getMessage());
+            throw new MyJdbcException(e.getMessage(), e);
         }
     }
 

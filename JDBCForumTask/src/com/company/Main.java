@@ -62,6 +62,8 @@ public class Main {
 
             log.info("Insert new data");
 
+
+
             searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
 
             displayBy.display(searchBy.searchAll());
