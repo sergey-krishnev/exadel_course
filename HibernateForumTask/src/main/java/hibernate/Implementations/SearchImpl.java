@@ -1,8 +1,10 @@
 package hibernate.Implementations;
 
+import hibernate.Factories.HibernateSessionFactory;
 import hibernate.FileDataReader.ScvReader;
 import hibernate.Interfaces.ISearch;
 import hibernate.Subject;
+import org.hibernate.Session;
 
 import java.sql.Date;
 import java.util.List;
@@ -10,7 +12,11 @@ import java.util.List;
 public class SearchImpl implements ISearch {
     @Override
     public List<Subject> searchBySubject(String s) {
-        return null;
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        return session.createQuery(
+                "findBySubject", Subject.class)
+                .setParameter("name", s)
+                .getResultList();
     }
 
     @Override
