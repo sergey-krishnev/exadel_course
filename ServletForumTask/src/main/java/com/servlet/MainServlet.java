@@ -1,13 +1,10 @@
 package com.servlet;
 
-import hibernate.Exceptions.MyBatchException;
-import hibernate.Factories.FactorySearchImpl;
-import hibernate.Factories.HibernateSessionFactory;
-import hibernate.Factories.InputTypeReader;
-import hibernate.FileDataReader.ScvReader;
 import hibernate.Implementations.DisplayImpl;
+import hibernate.Implementations.SearchImpl;
 import hibernate.Interfaces.IDisplay;
 import hibernate.Interfaces.ISearch;
+import hibernate.Subject;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -20,6 +17,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 
 @WebServlet("/MainServlet")
@@ -28,72 +26,68 @@ public class MainServlet extends HttpServlet {
     final static Logger log = Logger.getLogger(MainServlet.class);
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("Hello Word!");
+        execute(request, response);
+//        try {
 
-        try {
+//            BasicConfigurator.configure();
 
-            BasicConfigurator.configure();
 
-            out.println("log4j is work");
-
-            FactorySearchImpl factorySearch = new FactorySearchImpl();
+            //FactorySearchImpl factorySearch = new FactorySearchImpl();
 
             //InputTypeReader.getStrNum()
 
-            ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
+            //factorySearch.getSearchImpl(Integer.valueOf("0"))
 
-            IDisplay displayBy = new DisplayImpl();
+//            ISearch searchBy = new SearchImpl();
+//
+//            IDisplay displayBy = new DisplayImpl();
 
-            ScvReader scvReader = new ScvReader("DataSubjects.csv");
+            //ScvReader scvReader = new ScvReader("DataSubjects.csv");
 
-            Integer PARAM_CONFIGURATION = 10;
+            //Integer PARAM_CONFIGURATION = 10;
 
-            out.println("Search by subject");
+//            out.println(displayBy.displayToListString(searchBy.searchBySubject("Capitals")));
+//
+//            out.println("\n Search by subject ignore register");
+//
+//            out.println(displayBy.displayToListString(searchBy.searchBySubjectIgnoreRegister("тема")));
 
-            out.println(displayBy.displayToListString(searchBy.searchBySubject("Capitals")));
-
-            out.println("Search by subject ignore register");
-
-            out.println(displayBy.displayToListString(searchBy.searchBySubjectIgnoreRegister("тема")));
-
-            out.println("Search by user");
-
-            out.println(displayBy.displayToListString(searchBy.searchByUserId(107)));
-
-            out.println("Search by user and date");
-
-            out.println(displayBy.displayToListString(searchBy.searchByUserIdAndDate(107, StringAsDate("2017-11-23"))));
-
-            out.println("Search by word in message");
-
-            out.println(displayBy.displayToListString(searchBy.searchByWordMessage("%co%")));
-
-            out.println("Update by user");
-
-            searchBy.updateMessageByUserId(103);
-
-            out.println(displayBy.displayToListString(searchBy.searchAll()));
-
-            out.println("Delete by user");
-
-            searchBy.deleteMessageByUserId(103);
-
-            out.println(displayBy.displayToListString(searchBy.searchAll()));
-
-            out.println("Insert new objects");
-
-            searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
-
-            out.println(displayBy.displayToListString(searchBy.searchAll()));
-
-
-        } catch (MyBatchException e) {
-            log.error("Hibernate error : " + e.getMessage(), e);
-        } finally {
-            if (HibernateSessionFactory.getSessionFactory().openSession().isOpen()) HibernateSessionFactory.shutdown();
-        }
+//            out.println("Search by user");
+//
+//            out.println(displayBy.displayToListString(searchBy.searchByUserId(107)));
+//
+//            out.println("Search by user and date");
+//
+//            out.println(displayBy.displayToListString(searchBy.searchByUserIdAndDate(107, StringAsDate("2017-11-23"))));
+//
+//            out.println("Search by word in message");
+//
+//            out.println(displayBy.displayToListString(searchBy.searchByWordMessage("%co%")));
+//
+//            out.println("Update by user");
+//
+//            searchBy.updateMessageByUserId(103);
+//
+//            out.println(displayBy.displayToListString(searchBy.searchAll()));
+//
+//            out.println("Delete by user");
+//
+//            searchBy.deleteMessageByUserId(103);
+//
+//            out.println(displayBy.displayToListString(searchBy.searchAll()));
+//
+//            out.println("Insert new objects");
+//
+//            searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
+//
+//            out.println(displayBy.displayToListString(searchBy.searchAll()));
+//
+//
+//        } catch (MyBatchException e) {
+//            log.error("Hibernate error : " + e.getMessage(), e);
+//        } finally {
+//            if (HibernateSessionFactory.getSessionFactory().openSession().isOpen()) HibernateSessionFactory.shutdown();
+//        }
 
 
     }
@@ -106,5 +100,16 @@ public class MainServlet extends HttpServlet {
             e.printStackTrace();
         }
         return  new java.sql.Date(date.getTime());
+    }
+
+    private void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        ISearch searchBy = new SearchImpl();
+
+        IDisplay displayBy = new DisplayImpl();
+
+        List<String> theSubjectList = displayBy.displayToListString(searchBy.searchByUserId(107));
+            request.setAttribute("searchBySubject", theSubjectList);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }

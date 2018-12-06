@@ -8,4 +8,6 @@ public interface IDisplay {
     void display(List<Subject> list);
 
     List<String> displayToListString(List<Subject> list);
+
+    String displayAll();
 }

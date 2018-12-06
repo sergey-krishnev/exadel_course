@@ -32,5 +32,9 @@ public class DisplayImpl implements IDisplay {
         return display;
     }
 
+    @Override
+    public String displayAll() {
+        return null;
+    }
 
 }
