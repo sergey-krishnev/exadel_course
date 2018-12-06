@@ -60,6 +60,14 @@ public class SearchBuilderImpl implements ISearch {
     }
 
     @Override
+    public List<Subject> searchBySubjectIgnoreRegister(String s) {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Criteria cr = session.createCriteria(Subject.class);
+        cr.add(Restrictions.ilike("name", s));
+        return cr.list();
+    }
+
+    @Override
     public void updateMessageByUserId(Integer u) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Transaction tx = null;

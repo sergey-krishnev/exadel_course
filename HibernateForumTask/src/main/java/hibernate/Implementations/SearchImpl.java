@@ -78,6 +78,11 @@ public class SearchImpl implements ISearch {
         return result;
     }
 
+    @Override
+    public List<Subject> searchBySubjectIgnoreRegister(String s) {
+        return searchAll();
+    }
+
     public  List<Users> searchAllUsers() {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         List<Users> result = session.createQuery(

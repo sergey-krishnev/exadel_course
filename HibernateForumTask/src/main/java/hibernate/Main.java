@@ -41,6 +41,10 @@ public class Main {
 
                     displayBy.display(searchBy.searchBySubject("Capitals"));
 
+                    log.info("Search by subject ignore register");
+
+                    displayBy.display(searchBy.searchBySubjectIgnoreRegister("тема"));
+
                     log.info("Search by user");
 
                     displayBy.display(searchBy.searchByUserId(107));

@@ -16,6 +16,8 @@ public interface ISearch {
 
     List<Subject> searchAll();
 
+    List<Subject> searchBySubjectIgnoreRegister (String s);
+
     void updateMessageByUserId(Integer u);
 
     void deleteMessageByUserId(Integer u);
