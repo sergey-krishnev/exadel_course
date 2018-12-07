@@ -21,7 +21,7 @@ public class SearchImpl implements ISearch {
     final static String SEARCH_BY_SUBJECT = "from Subject where name = :name";
     final static String SEARCH_BY_USER_ID = "from Subject where users.id = :id";
     final static String SEARCH_BY_USER_ID_AND_DATE = "from Subject where users.id = :id and dateSending = :dateSending";
-    final static String SEARCH_BY_WORD_MESSAGE = "from Subject where message = :message";
+    final static String SEARCH_BY_WORD_MESSAGE = "from Subject where message like :message";
     final static String SEARCH_ALL = "from Subject";
     final static String SEARCH_ALL_USERS = "from Users";
     final static String SEARCH_ALL_TOPICS = "from Topic";
