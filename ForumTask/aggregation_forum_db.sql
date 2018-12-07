@@ -1,3 +1,4 @@
+SET search_path TO forum_schema;
 CREATE SEQUENCE forum_id_users_seq
 		INCREMENT BY 1
 		START WITH 100;
