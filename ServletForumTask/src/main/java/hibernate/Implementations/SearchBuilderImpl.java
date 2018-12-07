@@ -48,7 +48,7 @@ public class SearchBuilderImpl implements ISearch {
     public List<Subject> searchByWordMessage(String w) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Criteria cr = session.createCriteria(Subject.class);
-        cr.add(Restrictions.eq("message", w));
+        cr.add(Restrictions.ilike("message", w));
         return cr.list();
     }
 

@@ -1,5 +1,7 @@
 package com.servlet;
 
+import com.sun.xml.internal.bind.v2.model.core.ID;
+import hibernate.Implementations.AllSubjectDisplayImpl;
 import hibernate.Implementations.DisplayImpl;
 import hibernate.Implementations.SearchImpl;
 import hibernate.Interfaces.IDisplay;
@@ -26,29 +28,34 @@ public class MainServlet extends HttpServlet {
     final static Logger log = Logger.getLogger(MainServlet.class);
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        execute(request, response);
+
+        IDisplay d = new AllSubjectDisplayImpl();
+
+        execute(request,response,d.displayAll(),"searchByAll");
 //        try {
 
 //            BasicConfigurator.configure();
 
 
-            //FactorySearchImpl factorySearch = new FactorySearchImpl();
-
-            //InputTypeReader.getStrNum()
-
-            //factorySearch.getSearchImpl(Integer.valueOf("0"))
+//            FactorySearchImpl factorySearch = new FactorySearchImpl();
+//
+//            InputTypeReader.getStrNum()
+//
+//            factorySearch.getSearchImpl(Integer.valueOf("0"))
 
 //            ISearch searchBy = new SearchImpl();
 //
 //            IDisplay displayBy = new DisplayImpl();
 
-            //ScvReader scvReader = new ScvReader("DataSubjects.csv");
+//            ScvReader scvReader = new ScvReader("DataSubjects.csv");
 
-            //Integer PARAM_CONFIGURATION = 10;
+            Integer PARAM_CONFIGURATION = 10;
+
+//            out.println("Search by subject");
 
 //            out.println(displayBy.displayToListString(searchBy.searchBySubject("Capitals")));
 //
-//            out.println("\n Search by subject ignore register");
+//            out.println("Search by subject ignore register");
 //
 //            out.println(displayBy.displayToListString(searchBy.searchBySubjectIgnoreRegister("тема")));
 
@@ -91,25 +98,11 @@ public class MainServlet extends HttpServlet {
 
 
     }
-    private static java.sql.Date StringAsDate(String s) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date date = null;
-        try {
-            date = sdf.parse(s);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return  new java.sql.Date(date.getTime());
-    }
 
-    private void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void execute(HttpServletRequest request, HttpServletResponse response, List<String> theSubjectList,
+                         String attribute ) throws ServletException, IOException {
 
-        ISearch searchBy = new SearchImpl();
-
-        IDisplay displayBy = new DisplayImpl();
-
-        List<String> theSubjectList = displayBy.displayToListString(searchBy.searchByUserId(107));
-            request.setAttribute("searchBySubject", theSubjectList);
+            request.setAttribute(attribute, theSubjectList);
             request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }

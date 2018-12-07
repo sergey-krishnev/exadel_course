@@ -33,7 +33,7 @@ public class DisplayImpl implements IDisplay {
     }
 
     @Override
-    public String displayAll() {
+    public List<String> displayAll() {
         return null;
     }
 
