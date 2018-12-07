@@ -7,29 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90447ee2-b024-4e23-a99c-f2d8bb2cc773" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ForumTask/aggregation_forum_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../ForumTask/aggregation_forum_db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HibernateForumTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateForumTask/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateForumTask/src/main/java/hibernate/Implementations/SearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateForumTask/src/main/java/hibernate/Implementations/SearchImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateForumTask/target/classes/hibernate/Implementations/SearchImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateForumTask/target/classes/hibernate/Implementations/SearchImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServletForumTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ServletForumTask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlet/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/DisplayImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/DisplayImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Interfaces/IDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Interfaces/IDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ServletForumTask/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServletForumTask/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/FileDataReader/ScvReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/FileDataReader/ScvReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/AllSubjectDisplayImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/AllSubjectDisplayImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/com/servlet/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/com/servlet/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/DisplayImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/DisplayImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/SearchBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/SearchBuilderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/Interfaces/IDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/Interfaces/IDisplay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ServletForumTask/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServletForumTask/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/FileDataReader/ScvReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/FileDataReader/ScvReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/AllSubjectDisplayImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/AllSubjectDisplayImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/servlet/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlet/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Implementations/DisplayImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Implementations/DisplayImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Implementations/SearchBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Implementations/SearchBuilderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Interfaces/IDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Interfaces/IDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/FileDataReader/ScvReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/FileDataReader/ScvReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Implementations/AllSubjectDisplayImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Implementations/AllSubjectDisplayImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,20 +31,23 @@
     <session id="1561980617">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
+          <entry key="csv" value="1" />
+          <entry key="java" value="11" />
           <entry key="jsp" value="1" />
           <entry key="properties" value="1" />
           <entry key="xml" value="1" />
@@ -63,22 +55,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="11" />
           <entry key="JSP" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="623" />
+          <entry key="java" value="753" />
           <entry key="jsp" value="85" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="623" />
+          <entry key="JAVA" value="753" />
           <entry key="JSP" value="85" />
           <entry key="XML" value="13" />
         </counts>
@@ -123,20 +116,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -148,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/MainServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+            <state relative-caret-position="102">
+              <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -166,8 +145,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1445">
-              <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+            <state relative-caret-position="1836">
+              <caret line="126" selection-start-line="126" selection-end-line="126" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/FileDataReader/ScvReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="85" column="129" selection-start-line="85" selection-start-column="129" selection-end-line="85" selection-end-column="129" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataSubjects.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -184,8 +181,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/AllSubjectDisplayImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="490">
+              <caret line="98" column="2" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,10 +229,11 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Interfaces/IDisplay.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/DisplayImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/AllSubjectDisplayImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/servlet/MainServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/FileDataReader/ScvReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/AllSubjectDisplayImpl.java" />
       </list>
     </option>
   </component>
@@ -264,7 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,6 +310,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="FileDataReader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ServletForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ServletForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
               <item name="Implementations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -343,12 +349,13 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544136405385" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544180113775" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../HibernateForumTask" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -524,11 +531,16 @@
       <workItem from="1544174899749" duration="643000" />
       <workItem from="1544175586465" duration="320000" />
       <workItem from="1544176086384" duration="1206000" />
+      <workItem from="1544178328417" duration="1781000" />
+      <workItem from="1544180150502" duration="23000" />
+      <workItem from="1544180261198" duration="52000" />
+      <workItem from="1544180563738" duration="156000" />
+      <workItem from="1544180745800" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18436000" />
+    <option name="totallyTimeSpent" value="20450000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -542,7 +554,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28997868" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -554,7 +566,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.25907752" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39842984" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32973504" />
@@ -563,7 +575,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010661" side_tool="true" weight="0.25907752" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32777232" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -585,16 +597,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Main.java" />
-    <entry file="file://$PROJECT_DIR$/DataSubjects.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/FileDataReader/ScvReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1000">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/AllDisplayImpl.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -606,24 +608,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Interfaces/IDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="45" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -634,17 +629,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlet/MainServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        <state relative-caret-position="1836">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/FileDataReader/ScvReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1445">
-          <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+        <state relative-caret-position="799">
+          <caret line="85" column="129" selection-start-line="85" selection-start-column="129" selection-end-line="85" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataSubjects.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -655,10 +657,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Interfaces/IDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/AllSubjectDisplayImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="490">
+          <caret line="98" column="2" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

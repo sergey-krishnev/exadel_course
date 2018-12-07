@@ -83,7 +83,7 @@ public class ScvReader {
 
         List<String> dataSubject = null;
         try {
-            dataSubject = Files.readAllLines(Paths.get(nameFile), StandardCharsets.UTF_8);
+            dataSubject = Files.readAllLines(Paths.get("C:\\Users\\skryshneu\\IdeaProjects\\exadel_course\\ServletForumTask\\" + nameFile), StandardCharsets.UTF_8);
             for (Integer i = 0; i < dataSubject.size(); i++) {
                 String[] splitLineSubject = dataSubject.get(i).split(" ; ");
                 this.names.add(splitLineSubject[0]);

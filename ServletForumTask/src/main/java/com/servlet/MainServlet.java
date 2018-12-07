@@ -25,8 +25,6 @@ import java.util.List;
 @WebServlet("/MainServlet")
 public class MainServlet extends HttpServlet {
 
-    final static Logger log = Logger.getLogger(MainServlet.class);
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         IDisplay d = new AllSubjectDisplayImpl();

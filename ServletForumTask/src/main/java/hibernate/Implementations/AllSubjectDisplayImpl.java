@@ -1,8 +1,13 @@
 package hibernate.Implementations;
 
+import com.servlet.MainServlet;
+import hibernate.Exceptions.MyBatchException;
+import hibernate.Factories.HibernateSessionFactory;
+import hibernate.FileDataReader.ScvReader;
 import hibernate.Interfaces.IDisplay;
 import hibernate.Interfaces.ISearch;
 import hibernate.Subject;
+import org.apache.log4j.Logger;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -10,6 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AllSubjectDisplayImpl implements IDisplay {
+
+    final static Logger log = Logger.getLogger(MainServlet.class);
+
     @Override
     public void display(List<Subject> list) {
 
@@ -25,9 +33,19 @@ public class AllSubjectDisplayImpl implements IDisplay {
 
         List<String> s = new ArrayList<>();
 
+        try {
+
+        ScvReader scvReader = new ScvReader("DataSubjects.csv");
+
+        Integer PARAM_CONFIGURATION = 10;
+
         ISearch searchBy = new SearchImpl();
 
+        ISearch searchByBuilder = new SearchBuilderImpl();
+
         IDisplay displayBy = new DisplayImpl();
+
+        s.add("OUTPUT USING HQL:");
 
         s.add("SEARCH BY SUBJECT:");
 
@@ -56,6 +74,21 @@ public class AllSubjectDisplayImpl implements IDisplay {
         searchBy.deleteMessageByUserId(103);
 
         s.addAll(displayBy.displayToListString(searchBy.searchAll()));
+
+        s.add("INSERT NEW OBJECTS USING BATCH:");
+
+        searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
+
+        s.addAll(displayBy.displayToListString(searchBy.searchAll()));
+
+        return s;
+
+        } catch (MyBatchException e) {
+            log.error("Hibernate error : " + e.getMessage(), e);
+       }
+// finally {
+//            if (HibernateSessionFactory.getSessionFactory().openSession().isOpen()) HibernateSessionFactory.shutdown();
+//        }
 
 //
 //            out.println("\n Search by subject ignore register");
