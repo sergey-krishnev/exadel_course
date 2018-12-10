@@ -14,6 +14,11 @@
         <servlet-class>com.servlet.MainServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>outputServlet</servlet-name>
+        <servlet-class>com.servlet.OutputServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>mainOnlyServlet</servlet-name>
         <url-pattern>/MainOnlyServlet</url-pattern>
@@ -22,6 +27,11 @@
     <servlet-mapping>
         <servlet-name>mainServlet</servlet-name>
         <url-pattern>/MainServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>outputServlet</servlet-name>
+        <url-pattern>/OutputServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
