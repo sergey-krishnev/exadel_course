@@ -9,5 +9,5 @@ public interface IDisplay {
 
     List<String> displayToListString(List<Subject> list);
 
-    List<String> displayAll();
+    List<String> displayAll(String choice);
 }

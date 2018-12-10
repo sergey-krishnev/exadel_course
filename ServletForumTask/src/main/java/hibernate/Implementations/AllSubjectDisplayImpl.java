@@ -2,6 +2,7 @@ package hibernate.Implementations;
 
 import com.servlet.MainServlet;
 import hibernate.Exceptions.MyBatchException;
+import hibernate.Factories.FactorySearchImpl;
 import hibernate.Factories.HibernateSessionFactory;
 import hibernate.FileDataReader.ScvReader;
 import hibernate.Interfaces.IDisplay;
@@ -29,23 +30,23 @@ public class AllSubjectDisplayImpl implements IDisplay {
     }
 
     @Override
-    public List<String> displayAll() {
+    public List<String> displayAll(String choice) {
 
         List<String> s = new ArrayList<>();
 
         try {
 
+        FactorySearchImpl factorySearch = new FactorySearchImpl();
+
         ScvReader scvReader = new ScvReader("DataSubjects.csv");
 
         Integer PARAM_CONFIGURATION = 10;
 
-        ISearch searchBy = new SearchImpl();
-
-        ISearch searchByBuilder = new SearchBuilderImpl();
+        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(choice));
 
         IDisplay displayBy = new DisplayImpl();
 
-        s.add("OUTPUT USING HQL:");
+        s.add("OUTPUT USING " + (choice.equals("0") ? "HQL":"BUILDER") + ":");
 
         s.add("SEARCH BY SUBJECT:");
 
@@ -80,6 +81,7 @@ public class AllSubjectDisplayImpl implements IDisplay {
         searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
 
         s.addAll(displayBy.displayToListString(searchBy.searchAll()));
+
 
         return s;
 

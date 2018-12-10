@@ -1,35 +1,22 @@
 package com.servlet;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import hibernate.Implementations.AllSubjectDisplayImpl;
-import hibernate.Implementations.DisplayImpl;
-import hibernate.Implementations.SearchImpl;
 import hibernate.Interfaces.IDisplay;
-import hibernate.Interfaces.ISearch;
-import hibernate.Subject;
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
-
-@WebServlet("/MainServlet")
 public class MainServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         IDisplay d = new AllSubjectDisplayImpl();
 
-        execute(request,response,d.displayAll(),"searchByAll");
+        execute(request,response,d.displayAll("0"),"searchByAll");
 //        try {
 
 //            BasicConfigurator.configure();
@@ -47,7 +34,7 @@ public class MainServlet extends HttpServlet {
 
 //            ScvReader scvReader = new ScvReader("DataSubjects.csv");
 
-            Integer PARAM_CONFIGURATION = 10;
+//            Integer PARAM_CONFIGURATION = 10;
 
 //            out.println("Search by subject");
 
