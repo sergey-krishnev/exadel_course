@@ -9,9 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.List;
 
 public class OutputServlet extends HttpServlet {
     @Override
@@ -51,7 +49,7 @@ public class OutputServlet extends HttpServlet {
 
                 for (String dAll : d.displayAll(choice)) {
                     out.append("<tr>\n" +
-                            "        <td>" + dAll + "</td>\n" +
+                            "        <td><pre>" + dAll + "</pre></td>\n" +
                             "        <br/>");
                 }
             } else {

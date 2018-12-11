@@ -26,8 +26,9 @@ public class DisplayImpl implements IDisplay {
     public List<String> displayToListString(List<Subject> entityList) {
         List<String> display = new ArrayList<>();
         for (Subject entity : entityList) {
-        display.add(entity.getUsers().getNickname() + "|" + entity.getTopic().getName() + "|" + entity.getName() +
-                "|" + entity.getMessage() + "|" + df.format(entity.getDateSending()));
+        display.add(String.format(" %-15s | %-25s | %-70s | %-175s | %-10s ",entity.getUsers().getNickname(),
+                entity.getTopic().getName(), entity.getName(),
+                entity.getMessage(),df.format(entity.getDateSending())));
         }
         return display;
     }
