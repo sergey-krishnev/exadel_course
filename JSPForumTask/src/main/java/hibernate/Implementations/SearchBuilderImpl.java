@@ -27,6 +27,11 @@ public class SearchBuilderImpl implements ISearch {
     }
 
     @Override
+    public Subject searchBySubjectId(Integer u) {
+        return null;
+    }
+
+    @Override
     public List<Subject> searchByUserId(Integer u) {
 
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
@@ -83,6 +88,11 @@ public class SearchBuilderImpl implements ISearch {
         }finally {
             session.close();
         }
+    }
+
+    @Override
+    public void deleteSubjectById(Integer u) {
+
     }
 
     @Override

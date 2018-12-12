@@ -19,6 +19,7 @@ public class SearchImpl implements ISearch {
     private final static Logger logger = Logger.getLogger(SearchImpl.class);
 
     final static String SEARCH_BY_SUBJECT = "from Subject where name = :name";
+    final static String SEARCH_BY_SUBJECT_ID = "from Subject where id = :id";
     final static String SEARCH_BY_USER_ID = "from Subject where users.id = :id";
     final static String SEARCH_BY_USER_ID_AND_DATE = "from Subject where users.id = :id and dateSending = :dateSending";
     final static String SEARCH_BY_WORD_MESSAGE = "from Subject where message like :message";
@@ -27,6 +28,7 @@ public class SearchImpl implements ISearch {
     final static String SEARCH_ALL_TOPICS = "from Topic";
     final static String UPDATE_MESSAGE_BY_ID = "update Subject set message = '[Blocked by moderator]' where users.id = :id";
     final static String DELETE_MESSAGE_BY_ID = "delete Subject where users.id = :id";
+    final static String DELETE_SUBJECT_BY_ID = "delete Subject where id = :id";
 
     @Override
     public List<Subject> searchBySubject(String s) {
@@ -36,6 +38,16 @@ public class SearchImpl implements ISearch {
                 .setParameter("name", s)
                 .list();
         return result;
+    }
+
+    @Override
+    public Subject searchBySubjectId(Integer u) {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        List<Subject> result = session.createQuery(
+                SEARCH_BY_SUBJECT_ID, Subject.class)
+                .setParameter("id", u)
+                .list();
+        return result.get(0);
     }
 
     @Override
@@ -102,6 +114,11 @@ public class SearchImpl implements ISearch {
     @Override
     public void updateMessageByUserId(Integer u) {
         workingWithMessageByUserId(UPDATE_MESSAGE_BY_ID, u);
+    }
+
+    @Override
+    public void deleteSubjectById(Integer u) {
+        workingWithMessageByUserId(DELETE_SUBJECT_BY_ID, u);
     }
 
     @Override

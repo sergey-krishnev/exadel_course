@@ -1,28 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>Data Page</title>
 </head>
 <body>
-<table border="1" width="303">
+<h1>JSP Forum Task</h1>
+<table border="1" width="1200">
     <tr>
         <td width="15"><b>Nickname</b></td>
         <td width="25"><b>Topic</b></td>
         <td width="70"><b>Subject</b></td>
         <td width="175"><b>Message</b></td>
-        <td width="10"><b>Date</b></td>
+        <td width="15"><b>Date</b></td>
+        <td colspan=2><b>Action</b></td>
     </tr>
-
-        <c:forEach var="subject" items="${searchByAll}">
-    <tr>
-        <td>${subject.users.name}</td>
-        <td>${subject.topic.name}</td>
-        <td>${subject.name}</td>
-        <td>${subject.message}</td>
-        <td>${subject.dateSending}</td>
-    </tr>
+    <c:forEach var="subject" items="${searchAll}">
+        <tr>
+            <td>${subject.users.nickname}</td>
+            <td>${subject.topic.name}</td>
+            <td>${subject.name}</td>
+            <td>${subject.message}</td>
+            <td><fmt:formatDate pattern = "MM-dd-yyyy"
+                                value = "${subject.dateSending}" /></td>
+            <td><a href="MainServlet?action=edit&subjectId=<c:out value="${subject.id}"/>">Update</a></td>
+            <td><a href="MainServlet?action=delete&subjectId=<c:out value="${subject.id}"/>">Delete</a></td>
+        </tr>
     </c:forEach>
 </table>
+<p><a href="MainServlet?action=insert">Add record</a></p>
 </body>
 </html>
+
