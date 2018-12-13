@@ -24,6 +24,10 @@ public interface ISearch {
 
     void deleteSubjectById(Integer u);
 
+    void updateSubjectById(Integer u, String nickname, String tName, String sName, String message, java.sql.Date d);
+
+    void insertSubject(String nickname, String tName, String sName, String message, java.sql.Date d);
+
     void deleteMessageByUserId(Integer u);
 
     void batchInsertSubject(ScvReader scvReader, Integer numConf);

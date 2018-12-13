@@ -5,12 +5,12 @@
          version="3.0">
 
   <servlet>
-    <servlet-name>MainServlet</servlet-name>
+    <servlet-name>mainServlet</servlet-name>
     <servlet-class>com.jsp.MainServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>MainServlet</servlet-name>
-    <url-pattern>/MainServlet</url-pattern>
+    <servlet-name>mainServlet</servlet-name>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -96,6 +96,16 @@ public class SearchBuilderImpl implements ISearch {
     }
 
     @Override
+    public void updateSubjectById(Integer u, String nickname, String tName, String sName, String message, java.sql.Date d) {
+
+    }
+
+    @Override
+    public void insertSubject(String nickname, String tName, String sName, String message, Date d) {
+
+    }
+
+    @Override
     public void deleteMessageByUserId(Integer u) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Transaction tx = null;
