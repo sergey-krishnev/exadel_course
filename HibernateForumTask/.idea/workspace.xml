@@ -2,28 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb921bff-5032-4725-89ff-c0b53bd46dcd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ForumTask/aggregation_forum_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../ForumTask/aggregation_forum_db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Interfaces/ISearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Interfaces/ISearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Implementations/SearchBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Implementations/SearchBuilderImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Implementations/SearchImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Implementations/SearchImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Interfaces/ISearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Interfaces/ISearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/JSPForumTask.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/src/main/java/com/jsp/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/src/main/java/com/jsp/MainServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/src/main/java/hibernate/Implementations/SearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/src/main/java/hibernate/Implementations/SearchImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/src/main/java/hibernate/Interfaces/ISearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/src/main/java/hibernate/Interfaces/ISearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/src/main/webapp/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/src/main/webapp/table.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/com/jsp/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/com/jsp/MainServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/SearchBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/SearchBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/SearchImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/SearchImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Interfaces/ISearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Interfaces/ISearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/table.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/classes/com/jsp/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/classes/com/jsp/MainServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/classes/hibernate/Implementations/SearchBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/classes/hibernate/Implementations/SearchBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/classes/hibernate/Implementations/SearchImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/classes/hibernate/Implementations/SearchImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/classes/hibernate/Interfaces/ISearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/classes/hibernate/Interfaces/ISearch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServletForumTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/ServletForumTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/ServletForumTask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/src/main/java/com/servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/src/main/java/com/servlet/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/src/main/java/hibernate/Implementations/DisplayImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/src/main/java/hibernate/Implementations/DisplayImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/src/main/java/hibernate/Interfaces/IDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/src/main/java/hibernate/Interfaces/IDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/WEB-INF/classes/com/servlet/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/WEB-INF/classes/com/servlet/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/DisplayImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/DisplayImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/SearchBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/WEB-INF/classes/hibernate/Implementations/SearchBuilderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/WEB-INF/classes/hibernate/Interfaces/IDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/WEB-INF/classes/hibernate/Interfaces/IDisplay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/ServletForumTask/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/com/servlet/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/classes/com/servlet/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Implementations/DisplayImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Implementations/DisplayImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Implementations/SearchBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Implementations/SearchBuilderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Interfaces/IDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Interfaces/IDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/com/servlet/MainOnlyServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/com/servlet/MainServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/com/servlet/OutputServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Exceptions/MyBatchException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Factories/FactorySearchImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Factories/HibernateSessionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Factories/InputTypeReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/FileDataReader/ScvReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Implementations/AllSubjectDisplayImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Implementations/DisplayImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Implementations/SearchBuilderImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Implementations/SearchImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Interfaces/IDisplay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Interfaces/ISearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Topic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/target/classes/hibernate/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/RELEASE-NOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/asf-logo-wide.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/bg-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/bg-middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/bg-nav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/bg-upper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/tomcat-power.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/tomcat.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/tomcat.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/tomcat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServletForumTask/tomcat/webapps/ROOT/tomcat.svg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,19 +130,31 @@
     <session id="1207768244">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="116" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="116" />
         </counts>
       </usages-collector>
     </session>
@@ -109,8 +164,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Interfaces/ISearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="28" column="101" selection-start-line="28" selection-start-column="101" selection-end-line="28" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -121,27 +185,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HibernateForumTask.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/DisplayImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="220">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -149,8 +196,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="82" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="82" />
+            <state relative-caret-position="1220">
+              <caret line="77" column="69" selection-start-line="77" selection-start-column="69" selection-end-line="77" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,7 +208,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Factories/HibernateSessionFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="80">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -175,7 +222,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="340">
               <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
             </state>
           </provider>
@@ -184,7 +231,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Topic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="100">
               <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -224,8 +271,8 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Factories/InputTypeReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Factories/FactorySearchImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Interfaces/ISearch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java" />
       </list>
     </option>
@@ -237,9 +284,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="14" />
-    <option name="width" value="976" />
-    <option name="height" value="1168" />
+    <option name="x" value="11" />
+    <option name="width" value="979" />
+    <option name="height" value="1170" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -248,93 +295,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="Factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="FileDataReader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="Implementations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HibernateForumTask" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="HibernateForumTask" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
@@ -343,13 +307,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544017236171" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JSPForumTask" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -424,16 +389,19 @@
       <workItem from="1544176690377" duration="94000" />
       <workItem from="1544176964969" duration="33000" />
       <workItem from="1544177004961" duration="79000" />
+      <workItem from="1544641899329" duration="252000" />
+      <workItem from="1544674977080" duration="1539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24019000" />
+    <option name="totallyTimeSpent" value="25810000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16950959" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17583893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -443,7 +411,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32973504" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32844576" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,7 +421,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32973504" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32844576" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -515,27 +483,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/SharedSessionContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="117" column="7" lean-forward="true" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.jar!/org/hibernate/Criteria.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/Criteria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/SharedSessionContract.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.jar!/org/hibernate/Criteria.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/Criteria.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Exceptions/MyBatchException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -557,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Interfaces/ISearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Factories/FactorySearchImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -582,43 +525,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final.jar!/org/hibernate/criterion/MatchMode.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/criterion/MatchMode.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/criterion/MatchMode.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/criterion/LikeExpression.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/criterion/Restrictions.java" />
+    <entry file="file://$PROJECT_DIR$/HibernateForumTask.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+        <state relative-caret-position="320">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/criterion/LikeExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+        <state relative-caret-position="340">
+          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar!/org/hibernate/criterion/Restrictions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Interfaces/ISearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
+        <state relative-caret-position="500">
+          <caret line="28" column="101" selection-start-line="28" selection-start-column="101" selection-end-line="28" selection-end-column="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataSubjects.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/DisplayImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="82" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="82" />
+        <state relative-caret-position="1220">
+          <caret line="77" column="69" selection-start-line="77" selection-start-column="69" selection-end-line="77" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -627,7 +580,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Factories/HibernateSessionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="80">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -639,45 +592,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="340">
           <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Topic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="100">
           <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HibernateForumTask.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/DisplayImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchBuilderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Implementations/SearchImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
         </state>
       </provider>
     </entry>

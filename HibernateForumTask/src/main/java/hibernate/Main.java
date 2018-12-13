@@ -14,6 +14,7 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -33,45 +34,50 @@ public class Main {
 
                     IDisplay displayBy = new DisplayImpl();
 
-                    ScvReader scvReader = new ScvReader("DataSubjects.csv");
+//                    ScvReader scvReader = new ScvReader("DataSubjects.csv");
+//
+//                    Integer PARAM_CONFIGURATION = 10;
+//
+//                    log.info("Search by subject");
+//
+//                    displayBy.display(searchBy.searchBySubject("Capitals"));
+//
+//                    log.info("Search by subject ignore register");
+//
+//                    displayBy.display(searchBy.searchBySubjectIgnoreRegister("тема"));
+//
+//                    log.info("Search by user");
+//
+//                    displayBy.display(searchBy.searchByUserId(107));
+//
+//                    log.info("Search by user and date");
+//
+//                    displayBy.display(searchBy.searchByUserIdAndDate(107, StringAsDate("2017-11-23")));
+//
+//                    log.info("Search by word in message");
+//
+//                    displayBy.display(searchBy.searchByWordMessage("%co%"));
+//
+//                    log.info("Update by user");
+//
+//                    searchBy.updateMessageByUserId(103);
+//
+//                    displayBy.display(searchBy.searchAll());
+//
+//                    log.info("Delete by user");
+//
+//                    searchBy.deleteMessageByUserId(103);
+//
+//                    displayBy.display(searchBy.searchAll());
+//
+//                    log.info("Insert new objects");
+//
+//                    searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
+            SimpleDateFormat dr = new SimpleDateFormat("MM-dd-yyyy");
 
-                    Integer PARAM_CONFIGURATION = 10;
+                    searchBy.updateSubjectById(101, "a", "b", "c", "d", StringAsDate("03-07-2008") );
 
-                    log.info("Search by subject");
-
-                    displayBy.display(searchBy.searchBySubject("Capitals"));
-
-                    log.info("Search by subject ignore register");
-
-                    displayBy.display(searchBy.searchBySubjectIgnoreRegister("тема"));
-
-                    log.info("Search by user");
-
-                    displayBy.display(searchBy.searchByUserId(107));
-
-                    log.info("Search by user and date");
-
-                    displayBy.display(searchBy.searchByUserIdAndDate(107, StringAsDate("2017-11-23")));
-
-                    log.info("Search by word in message");
-
-                    displayBy.display(searchBy.searchByWordMessage("%co%"));
-
-                    log.info("Update by user");
-
-                    searchBy.updateMessageByUserId(103);
-
-                    displayBy.display(searchBy.searchAll());
-
-                    log.info("Delete by user");
-
-                    searchBy.deleteMessageByUserId(103);
-
-                    displayBy.display(searchBy.searchAll());
-
-                    log.info("Insert new objects");
-
-                    searchBy.batchInsertSubject(scvReader, PARAM_CONFIGURATION);
+                    //searchBy.insertSubject("ewf", "eever", "recwv", "wcsbrbteggtrer", StringAsDate("03-07-2008"));
 
                     displayBy.display(searchBy.searchAll());
 

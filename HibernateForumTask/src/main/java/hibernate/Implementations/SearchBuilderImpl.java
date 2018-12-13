@@ -103,6 +103,21 @@ public class SearchBuilderImpl implements ISearch {
     }
 
     @Override
+    public void deleteSubjectById(Integer u) {
+
+    }
+
+    @Override
+    public void updateSubjectById(Integer u, String nickname, String tName, String sName, String message, Date d) {
+
+    }
+
+    @Override
+    public void insertSubject(String nickname, String tName, String sName, String message, Date d) {
+
+    }
+
+    @Override
     public void batchInsertSubject(ScvReader scvReader, Integer numConf) {
     }
 }
