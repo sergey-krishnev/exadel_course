@@ -124,11 +124,11 @@ public class SearchImpl implements ISearch {
     }
 
     @Override
-    public void updateSubjectById(Integer u, String nickname, String tName, String sName, String message, java.sql.Date d) {
+    public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Transaction trans = session.beginTransaction();
         session.createQuery(UPDATE_SUBJECT_BY_ID)
-                .setParameter("id", u)
+                .setParameter("id", id)
                 .setParameter("nickname", nickname)
                 .setParameter("tname", tName)
                 .setParameter("sname", sName)
@@ -149,8 +149,8 @@ public class SearchImpl implements ISearch {
         exit: for (Users user : users) {
             List<Topic> topics = searchAllTopic();
             for (Topic topic : topics) {
-                if (topic.getName() == tName &&
-                        (user.getNickname() == nickname)) {
+                if ((topic.getName().equals(tName)) &&
+                        (user.getNickname().equals(nickname))) {
                     Subject subject = new Subject(sName, message, d,
                             user, topic);
                     session.save(subject);

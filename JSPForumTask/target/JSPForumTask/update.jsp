@@ -14,17 +14,27 @@
 <body>
 <c:if test="${subject != null}">
 <h1>Update record</h1>
-<form action="update">
+<form action="/ActionServlet" method="post">
+    <input type="hidden" value="update" name="action" />
     </c:if>
 <c:if test="${subject == null}">
 <h1>Add new record</h1>
-     <form action="add">
+     <form action="/ActionServlet" method="post">
+         <input type="hidden" value="add" name="action" />
     </c:if>
-    Nickname : <input type="text" name="nickname"
-                      value="<c:out value="${subject.users.nickname}"/>" /> <br />
-    Topic name : <input
-        type="text" name="topic"
-        value="<c:out value="${subject.topic.name}" />" /> <br />
+
+
+    Nickname : <select name="nickname">
+    <c:forEach var="username" items="${users}">
+         <option value="${username.nickname}">${username.nickname}</option>
+    </c:forEach>
+     </select> <br />
+    Topic name :  <select name="topic">
+         <c:forEach var="topicname" items="${topics}">
+             <option value="${topicname.name}">${topicname.name}</option>
+         </c:forEach>
+     </select> <br />
+         <c:if test="${subject != null}">
     Subject name : <input
         type="text" name="subject"
         value="<c:out value="${subject.name}" />" /> <br />
@@ -34,6 +44,19 @@
     Date : <input
         type="text" name="date"
         value="<fmt:formatDate pattern="MM-dd-yyyy" value="${subject.dateSending}" />" />   <br />
+</c:if>
+         <c:if test="${subject == null}">
+         Subject name : <input
+             type="text" name="subject"
+             value="<c:out value="" />" /> <br />
+         Message name : <input
+             type="text" name="message"
+             value="<c:out value="" />" /> <br />
+         Date : <input
+             type="text" name="date"
+             value="" />   <br />
+         </c:if>
+
 
     <input type="submit" value="Submit" />
 </form>

@@ -1,20 +1,24 @@
 package com.jsp.Implementations;
 
 import com.jsp.Interfaces.Action;
+import hibernate.Factories.FactorySearchImpl;
+import hibernate.Interfaces.ISearch;
+import hibernate.Topic;
+import hibernate.Users;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 public class NewFormAction implements Action {
     @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        try {
-            request.getRequestDispatcher("update.jsp").forward(request, response);
-            return "success";
-        } catch (RuntimeException e) {
-            request.setAttribute("errorMessage", e.getMessage());// to show exception msg in jsp.
-            //log exception to console or file here..
-            return "failure";
-        }
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        FactorySearchImpl factorySearch = new FactorySearchImpl();
+        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
+        List<Users> users = searchBy.searchAllUsers();
+        request.setAttribute("users", users);
+        List<Topic> topics = searchBy.searchAllTopic();
+        request.setAttribute("topics", topics);
+        request.getRequestDispatcher("update.jsp").forward(request, response);
     }
 }

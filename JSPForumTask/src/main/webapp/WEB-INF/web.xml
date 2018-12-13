@@ -9,8 +9,18 @@
     <servlet-class>com.jsp.MainServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>actionServlet</servlet-name>
+    <servlet-class>com.jsp.ActionServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>mainServlet</servlet-name>
     <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>actionServlet</servlet-name>
+    <url-pattern>/ActionServlet</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -24,12 +24,12 @@
             <td>${subject.message}</td>
             <td><fmt:formatDate pattern = "MM-dd-yyyy"
                                 value = "${subject.dateSending}" /></td>
-            <td><a href="MainServlet?action=editForm&subjectId=<c:out value="${subject.id}"/>">Update</a></td>
-            <td><a href="MainServlet?action=delete&subjectId=<c:out value="${subject.id}"/>">Delete</a></td>
+            <td><a href="ActionServlet?action=editForm&subjectId=<c:out value="${subject.id}"/>">Update</a></td>
+            <td><a href="ActionServlet?action=delete&subjectId=<c:out value="${subject.id}"/>">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
-<p><a href="MainServlet?action=newForm">Add record</a></p>
+<p><a href="ActionServlet?action=newForm">Add record</a></p>
 </body>
 </html>
 

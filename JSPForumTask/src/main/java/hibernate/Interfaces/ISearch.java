@@ -2,6 +2,8 @@ package hibernate.Interfaces;
 
 import hibernate.FileDataReader.ScvReader;
 import hibernate.Subject;
+import hibernate.Topic;
+import hibernate.Users;
 
 import java.util.List;
 
@@ -18,13 +20,17 @@ public interface ISearch {
 
     List<Subject> searchAll();
 
+    List<Users> searchAllUsers();
+
+    List<Topic> searchAllTopic();
+
     List<Subject> searchBySubjectIgnoreRegister (String s);
 
     void updateMessageByUserId(Integer u);
 
     void deleteSubjectById(Integer u);
 
-    void updateSubjectById(Integer u, String nickname, String tName, String sName, String message, java.sql.Date d);
+    void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d);
 
     void insertSubject(String nickname, String tName, String sName, String message, java.sql.Date d);
 

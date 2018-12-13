@@ -4,6 +4,8 @@ import hibernate.Factories.HibernateSessionFactory;
 import hibernate.FileDataReader.ScvReader;
 import hibernate.Interfaces.ISearch;
 import hibernate.Subject;
+import hibernate.Topic;
+import hibernate.Users;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -62,6 +64,16 @@ public class SearchBuilderImpl implements ISearch {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Criteria cr = session.createCriteria(Subject.class);
         return cr.list();
+    }
+
+    @Override
+    public List<Users> searchAllUsers() {
+        return null;
+    }
+
+    @Override
+    public List<Topic> searchAllTopic() {
+        return null;
     }
 
     @Override
