@@ -8,9 +8,12 @@ import hibernate.Subject;
 import hibernate.Topic;
 import hibernate.Users;
 import org.apache.log4j.Logger;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
+import javax.jws.soap.SOAPBinding;
 import java.sql.Date;
 import java.util.List;
 
@@ -135,16 +138,47 @@ public class SearchImpl implements ISearch {
     public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Transaction trans = session.beginTransaction();
-        session.createQuery(UPDATE_RECORD_BY_ID)
-                .setParameter("nickname", nickname)
-                .setParameter("tname", tName)
-                .setParameter("sname", sName)
-                .setParameter("message", message)
-                .setParameter("d", d)
-                .setParameter("id", id)
-                .executeUpdate();
-        trans.commit();
+//        Query q = session.createSQLQuery(UPDATE_RECORD_BY_ID);
+//                q.setParameter("nickname", nickname);
+//                q.setParameter("tname", tName);
+//                q.setParameter("sname", sName);
+//                q.setParameter("message", message);
+//                q.setParameter("d", d);
+//                q.setParameter("id", id);
+//                q.executeUpdate();
 
+        try{
+        Subject sub = session.get(Subject.class, id);
+        Users us = null;
+        Topic tp = null;
+        List<Users> users = searchAllUsers();
+        for (Users user : users) {
+            List<Topic> topics = searchAllTopic();
+            for (Topic topic : topics) {
+                if ((topic.getName().equals(tName)) &&
+                        (user.getNickname().equals(nickname))) {
+                        us = user;
+                        tp = topic;
+                }
+            }
+        }
+        sub.setUsers(us);
+        session.update(sub);
+        sub.setTopic(tp);
+        session.update(sub);
+        sub.setName(sName);
+        session.update(sub);
+        sub.setMessage(message);
+        session.update(sub);
+        sub.setDateSending(d);
+        session.update(sub);
+        trans.commit();
+        }catch (HibernateException e) {
+            if (trans!=null) trans.rollback();
+            logger.error(e.getMessage());
+        }finally {
+            session.close();
+        }
     }
 
     @Override
