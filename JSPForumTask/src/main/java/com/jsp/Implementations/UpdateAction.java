@@ -21,7 +21,7 @@ public class UpdateAction implements Action {
         searchBy.updateSubjectById(searchId,request.getParameter("nickname"),
                 request.getParameter("topic"),request.getParameter("subject"),request.getParameter("message"),
                 stringAsDate(request.getParameter("date")));
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("/MainServlet");
     }
     private static java.sql.Date stringAsDate(String s) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

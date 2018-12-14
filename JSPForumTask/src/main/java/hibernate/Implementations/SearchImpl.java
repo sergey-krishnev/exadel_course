@@ -8,9 +8,11 @@ import hibernate.Subject;
 import hibernate.Topic;
 import hibernate.Users;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 import org.hibernate.query.Query;
 
 import javax.jws.soap.SOAPBinding;
@@ -22,6 +24,8 @@ public class SearchImpl implements ISearch {
     private final static Logger logger = Logger.getLogger(SearchImpl.class);
 
     final static String SEARCH_BY_SUBJECT = "from Subject where name = :name";
+    final static String SEARCH_BY_NICKNAME = "from Users where nickname = :nickname";
+    final static String SEARCH_BY_TOPICNAME = "from Topic where name = :name";
     final static String SEARCH_BY_SUBJECT_ID = "from Subject where id = :id";
     final static String SEARCH_BY_USER_ID = "from Subject where users.id = :id";
     final static String SEARCH_BY_USER_ID_AND_DATE = "from Subject where users.id = :id and dateSending = :dateSending";
@@ -116,6 +120,22 @@ public class SearchImpl implements ISearch {
         return result;
     }
 
+    @Override
+    public Users searchByUserName(String s) {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Criteria cr = session.createCriteria(Users.class);
+        cr.add(Restrictions.eq("nickname", s));
+        return (Users) cr.list().get(0);
+    }
+
+    @Override
+    public Topic searchByTopicName(String s) {
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Criteria cr = session.createCriteria(Topic.class);
+        cr.add(Restrictions.eq("name", s));
+        return (Topic) cr.list().get(0);
+    }
+
     public List<Topic> searchAllTopic() {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         List<Topic> result = session.createQuery(
@@ -149,27 +169,12 @@ public class SearchImpl implements ISearch {
 
         try{
         Subject sub = session.get(Subject.class, id);
-        Users us = null;
-        Topic tp = null;
-        List<Users> users = searchAllUsers();
-        for (Users user : users) {
-            List<Topic> topics = searchAllTopic();
-            for (Topic topic : topics) {
-                if ((topic.getName().equals(tName)) &&
-                        (user.getNickname().equals(nickname))) {
-                        us = user;
-                        tp = topic;
-                }
-            }
-        }
-        sub.setUsers(us);
-        session.update(sub);
-        sub.setTopic(tp);
-        session.update(sub);
+        Users user = searchByUserName(nickname);
+        Topic topic = searchByTopicName(tName);
+        sub.setUsers(user);
+        sub.setTopic(topic);
         sub.setName(sName);
-        session.update(sub);
         sub.setMessage(message);
-        session.update(sub);
         sub.setDateSending(d);
         session.update(sub);
         trans.commit();

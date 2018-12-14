@@ -22,6 +22,10 @@ public interface ISearch {
 
     List<Users> searchAllUsers();
 
+    Users searchByUserName(String s);
+
+    Topic searchByTopicName(String s);
+
     List<Topic> searchAllTopic();
 
     List<Subject> searchBySubjectIgnoreRegister (String s);

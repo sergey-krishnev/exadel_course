@@ -20,7 +20,7 @@ public class AddAction implements Action {
         searchBy.insertSubject(request.getParameter("nickname"),
                 request.getParameter("topic"), request.getParameter("subject"), request.getParameter("message"),
                 stringAsDate(request.getParameter("date")));
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("/MainServlet");
     }
 
     private static java.sql.Date stringAsDate(String s) {

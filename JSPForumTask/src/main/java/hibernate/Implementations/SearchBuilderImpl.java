@@ -72,6 +72,16 @@ public class SearchBuilderImpl implements ISearch {
     }
 
     @Override
+    public Users searchByUserName(String s) {
+        return null;
+    }
+
+    @Override
+    public Topic searchByTopicName(String s) {
+        return null;
+    }
+
+    @Override
     public List<Topic> searchAllTopic() {
         return null;
     }
