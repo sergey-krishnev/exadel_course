@@ -5,6 +5,7 @@ import hibernate.Factories.FactorySearchImpl;
 import hibernate.Interfaces.ISearch;
 import hibernate.Subject;
 import hibernate.Topic;
+import hibernate.Type;
 import hibernate.Users;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,11 +24,12 @@ public class EditFormAction implements Action {
         SUBJECT_ID = subjectId;
     }
 
+
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         FactorySearchImpl factorySearch = new FactorySearchImpl();
-
-        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
+        Type.setTypePosition(request.getParameter("type"));
+        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(Type.getTypePosition()));
         String subjectId = request.getParameter("subjectId");
         setSubjectId(Integer.valueOf(subjectId));
         List<Users> users = searchBy.searchAllUsers();

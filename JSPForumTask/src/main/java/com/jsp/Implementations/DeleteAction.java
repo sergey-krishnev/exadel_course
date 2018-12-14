@@ -4,6 +4,7 @@ import com.jsp.Interfaces.Action;
 import hibernate.Factories.FactorySearchImpl;
 import hibernate.Interfaces.ISearch;
 import hibernate.Subject;
+import hibernate.Type;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,8 +14,8 @@ public class DeleteAction implements Action {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         FactorySearchImpl factorySearch = new FactorySearchImpl();
-
-        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
+        Type.setTypePosition(request.getParameter("type"));
+        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(Type.getTypePosition()));
         String subjectId = request.getParameter("subjectId");
         searchBy.deleteSubjectById(Integer.valueOf(subjectId));
         List<Subject> searchAll = searchBy.searchAll();

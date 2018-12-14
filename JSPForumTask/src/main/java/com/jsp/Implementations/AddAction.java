@@ -2,8 +2,10 @@ package com.jsp.Implementations;
 
 import com.jsp.Interfaces.Action;
 import hibernate.Factories.FactorySearchImpl;
+import hibernate.Implementations.UpdateAndInsertImpl;
 import hibernate.Interfaces.ISearch;
 import hibernate.Topic;
+import hibernate.Type;
 import hibernate.Users;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +18,7 @@ public class AddAction implements Action {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         FactorySearchImpl factorySearch = new FactorySearchImpl();
-        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
+        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(Type.getTypePosition()));
         searchBy.insertSubject(request.getParameter("nickname"),
                 request.getParameter("topic"), request.getParameter("subject"), request.getParameter("message"),
                 stringAsDate(request.getParameter("date")));

@@ -4,6 +4,7 @@ import com.jsp.Interfaces.Action;
 import hibernate.Factories.FactorySearchImpl;
 import hibernate.Interfaces.ISearch;
 import hibernate.Topic;
+import hibernate.Type;
 import hibernate.Users;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +15,8 @@ public class NewFormAction implements Action {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         FactorySearchImpl factorySearch = new FactorySearchImpl();
-        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
+        Type.setTypePosition(request.getParameter("type"));
+        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(Type.getTypePosition()));
         List<Users> users = searchBy.searchAllUsers();
         request.setAttribute("users", users);
         List<Topic> topics = searchBy.searchAllTopic();

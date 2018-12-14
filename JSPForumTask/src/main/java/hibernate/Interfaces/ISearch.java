@@ -7,7 +7,7 @@ import hibernate.Users;
 
 import java.util.List;
 
-public interface ISearch {
+public interface ISearch extends IUpdateAndInsert {
     List<Subject> searchBySubject(String s);
 
     Subject searchBySubjectId(Integer u);
@@ -22,10 +22,6 @@ public interface ISearch {
 
     List<Users> searchAllUsers();
 
-    Users searchByUserName(String s);
-
-    Topic searchByTopicName(String s);
-
     List<Topic> searchAllTopic();
 
     List<Subject> searchBySubjectIgnoreRegister (String s);
@@ -33,12 +29,6 @@ public interface ISearch {
     void updateMessageByUserId(Integer u);
 
     void deleteSubjectById(Integer u);
-
-    void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d);
-
-    void insertSubject(String nickname, String tName, String sName, String message, java.sql.Date d);
-
-    void deleteMessageByUserId(Integer u);
 
     void batchInsertSubject(ScvReader scvReader, Integer numConf);
 }

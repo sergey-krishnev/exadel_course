@@ -16,7 +16,7 @@ import org.hibernate.criterion.Restrictions;
 import java.sql.Date;
 import java.util.List;
 
-public class SearchBuilderImpl implements ISearch {
+public class SearchBuilderImpl extends UpdateAndInsertImpl implements ISearch {
 
     private final static Logger logger = Logger.getLogger(SearchBuilderImpl.class);
 
@@ -68,22 +68,16 @@ public class SearchBuilderImpl implements ISearch {
 
     @Override
     public List<Users> searchAllUsers() {
-        return null;
-    }
-
-    @Override
-    public Users searchByUserName(String s) {
-        return null;
-    }
-
-    @Override
-    public Topic searchByTopicName(String s) {
-        return null;
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Criteria cr = session.createCriteria(Users.class);
+        return cr.list();
     }
 
     @Override
     public List<Topic> searchAllTopic() {
-        return null;
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Criteria cr = session.createCriteria(Topic.class);
+        return cr.list();
     }
 
     @Override
@@ -114,30 +108,15 @@ public class SearchBuilderImpl implements ISearch {
 
     @Override
     public void deleteSubjectById(Integer u) {
-
-    }
-
-    @Override
-    public void updateSubjectById(Integer u, String nickname, String tName, String sName, String message, java.sql.Date d) {
-
-    }
-
-    @Override
-    public void insertSubject(String nickname, String tName, String sName, String message, Date d) {
-
-    }
-
-    @Override
-    public void deleteMessageByUserId(Integer u) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
-        Transaction tx = null;
+        Transaction trans = null;
         try{
-            tx = session.beginTransaction();
+            trans = session.beginTransaction();
             Subject subject = session.get(Subject.class, u);
             session.delete(subject);
-            tx.commit();
+            trans.commit();
         }catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
+            if (trans!=null) trans.rollback();
             logger.error(e.getMessage());
         }finally {
             session.close();

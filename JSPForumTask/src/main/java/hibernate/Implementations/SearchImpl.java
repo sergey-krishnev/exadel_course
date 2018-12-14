@@ -13,27 +13,27 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.query.Query;
 
 import javax.jws.soap.SOAPBinding;
+import javax.persistence.Query;
 import java.sql.Date;
 import java.util.List;
 
-public class SearchImpl implements ISearch {
+public class SearchImpl extends UpdateAndInsertImpl implements ISearch {
 
     private final static Logger logger = Logger.getLogger(SearchImpl.class);
 
-    final static String SEARCH_BY_SUBJECT = "from Subject where name = :name";
-    final static String SEARCH_BY_NICKNAME = "from Users where nickname = :nickname";
-    final static String SEARCH_BY_TOPICNAME = "from Topic where name = :name";
-    final static String SEARCH_BY_SUBJECT_ID = "from Subject where id = :id";
-    final static String SEARCH_BY_USER_ID = "from Subject where users.id = :id";
-    final static String SEARCH_BY_USER_ID_AND_DATE = "from Subject where users.id = :id and dateSending = :dateSending";
-    final static String SEARCH_BY_WORD_MESSAGE = "from Subject where message like :message";
-    final static String SEARCH_ALL = "from Subject";
-    final static String SEARCH_ALL_USERS = "from Users";
-    final static String SEARCH_ALL_TOPICS = "from Topic";
-    final static String UPDATE_MESSAGE_BY_ID = "update Subject set message = '[Blocked by moderator]' where users.id = :id";
+    private final static String SEARCH_BY_SUBJECT = "from Subject where name = :name";
+    private final static String SEARCH_BY_NICKNAME = "from Users where nickname = :nickname";
+    private final static String SEARCH_BY_TOPICNAME = "from Topic where name = :name";
+    private final static String SEARCH_BY_SUBJECT_ID = "from Subject where id = :id";
+    private final static String SEARCH_BY_USER_ID = "from Subject where users.id = :id";
+    private final static String SEARCH_BY_USER_ID_AND_DATE = "from Subject where users.id = :id and dateSending = :dateSending";
+    private final static String SEARCH_BY_WORD_MESSAGE = "from Subject where message like :message";
+    private final static String SEARCH_ALL = "from Subject";
+    private final static String SEARCH_ALL_USERS = "from Users";
+    private final static String SEARCH_ALL_TOPICS = "from Topic";
+    private final static String UPDATE_MESSAGE_BY_ID = "update Subject set message = '[Blocked by moderator]' where users.id = :id";
 
     final static String UPDATE_NICKNAME_BY_ID = "update Users set nickname = :nickname where Subject.id = :id";
     final static String UPDATE_TOPIC_BY_ID = "update Subject set topic.name = :tname where id = :id";
@@ -123,17 +123,19 @@ public class SearchImpl implements ISearch {
     @Override
     public Users searchByUserName(String s) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
-        Criteria cr = session.createCriteria(Users.class);
-        cr.add(Restrictions.eq("nickname", s));
-        return (Users) cr.list().get(0);
+        List<Users> result = session.createQuery(
+                SEARCH_BY_NICKNAME, Users.class)
+                .getResultList();
+        return result.get(0);
     }
 
     @Override
     public Topic searchByTopicName(String s) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
-        Criteria cr = session.createCriteria(Topic.class);
-        cr.add(Restrictions.eq("name", s));
-        return (Topic) cr.list().get(0);
+        List<Topic> result = session.createQuery(
+                SEARCH_BY_TOPICNAME, Topic.class)
+                .getResultList();
+        return result.get(0);
     }
 
     public List<Topic> searchAllTopic() {
@@ -155,71 +157,10 @@ public class SearchImpl implements ISearch {
     }
 
     @Override
-    public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d) {
-        Session session = HibernateSessionFactory.getSessionFactory().openSession();
-        Transaction trans = session.beginTransaction();
-//        Query q = session.createSQLQuery(UPDATE_RECORD_BY_ID);
-//                q.setParameter("nickname", nickname);
-//                q.setParameter("tname", tName);
-//                q.setParameter("sname", sName);
-//                q.setParameter("message", message);
-//                q.setParameter("d", d);
-//                q.setParameter("id", id);
-//                q.executeUpdate();
-
-        try{
-        Subject sub = session.get(Subject.class, id);
-        Users user = searchByUserName(nickname);
-        Topic topic = searchByTopicName(tName);
-        sub.setUsers(user);
-        sub.setTopic(topic);
-        sub.setName(sName);
-        sub.setMessage(message);
-        sub.setDateSending(d);
-        session.update(sub);
-        trans.commit();
-        }catch (HibernateException e) {
-            if (trans!=null) trans.rollback();
-            logger.error(e.getMessage());
-        }finally {
-            session.close();
-        }
-    }
+    public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d) { }
 
     @Override
-    public void insertSubject(String nickname, String tName, String sName, String message, Date d) {
-        Session session = HibernateSessionFactory.getSessionFactory().openSession();
-        Transaction trans = session.beginTransaction();
-        try
-    {
-        List<Users> users = searchAllUsers();
-        exit: for (Users user : users) {
-            List<Topic> topics = searchAllTopic();
-            for (Topic topic : topics) {
-                if ((topic.getName().equals(tName)) &&
-                        (user.getNickname().equals(nickname))) {
-                    Subject subject = new Subject(sName, message, d,
-                            user, topic);
-                    session.save(subject);
-                    break exit;
-                }
-            }
-        }
-        trans.commit();
-    } catch(RuntimeException e) {
-        if (trans.isActive()) {
-            trans.rollback();
-        }
-    } finally {
-            session.close();
-        }
-
-}
-
-    @Override
-    public void deleteMessageByUserId(Integer u) {
-        workingWithMessageByUserId(DELETE_MESSAGE_BY_ID, u);
-    }
+    public void insertSubject(String nickname, String tName, String sName, String message, Date d) { }
 
     public void workingWithMessageByUserId(String query, Integer u) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();

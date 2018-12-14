@@ -11,9 +11,12 @@ import java.util.List;
 
 public class HomeAction implements Action {
     private static String LIST_RECORDS = "index.jsp";
+
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         FactorySearchImpl factorySearch = new FactorySearchImpl();
+
+
 
         ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
 
