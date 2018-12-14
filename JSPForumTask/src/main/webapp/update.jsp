@@ -43,7 +43,7 @@
         value="<c:out value="${subject.message}" />" /> <br />
     Date : <input
         type="text" name="date"
-        value="<fmt:formatDate pattern="MM-dd-yyyy" value="${subject.dateSending}" />" />   <br />
+        value="<fmt:formatDate pattern="yyyy-MM-dd" value="${subject.dateSending}" />" />   <br />
 </c:if>
          <c:if test="${subject == null}">
          Subject name : <input

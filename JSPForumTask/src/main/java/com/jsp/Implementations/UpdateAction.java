@@ -16,7 +16,8 @@ public class UpdateAction implements Action {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         FactorySearchImpl factorySearch = new FactorySearchImpl();
         ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
-        Integer searchId = Integer.valueOf(request.getParameter("subjectId"));
+        request.getParameter("subjectId");
+        Integer searchId = EditFormAction.getSubjectId();
         searchBy.updateSubjectById(searchId,request.getParameter("nickname"),
                 request.getParameter("topic"),request.getParameter("subject"),request.getParameter("message"),
                 stringAsDate(request.getParameter("date")));

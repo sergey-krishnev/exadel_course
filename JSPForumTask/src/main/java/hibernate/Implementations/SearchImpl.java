@@ -27,8 +27,16 @@ public class SearchImpl implements ISearch {
     final static String SEARCH_ALL_USERS = "from Users";
     final static String SEARCH_ALL_TOPICS = "from Topic";
     final static String UPDATE_MESSAGE_BY_ID = "update Subject set message = '[Blocked by moderator]' where users.id = :id";
-    final static String UPDATE_SUBJECT_BY_ID = "update Subject set users.nickname = :nickname, topic.name = :tname, " +
-            "name = :sname, message = :message, dateSending = :dateSending where id = :id";
+
+    final static String UPDATE_NICKNAME_BY_ID = "update Users set nickname = :nickname where Subject.id = :id";
+    final static String UPDATE_TOPIC_BY_ID = "update Subject set topic.name = :tname where id = :id";
+    final static String UPDATE_SUBJECT_BY_ID = "update Subject set name = :sname where id = :id";
+    final static String UPDATE_MES_BY_ID = "update Subject set message = :message where id = :id";
+    final static String UPDATE_DATE_BY_ID = "update Subject set dateSending = :d where id = :id";
+
+    final static String UPDATE_RECORD_BY_ID = "update Subject set users.nickname = :nickname, topic.name = :tname, " +
+            "name = :sname, message = :message, dateSending = :d where id = :id";
+
     final static String DELETE_MESSAGE_BY_ID = "delete Subject where users.id = :id";
     final static String DELETE_SUBJECT_BY_ID = "delete Subject where id = :id";
 
@@ -127,13 +135,13 @@ public class SearchImpl implements ISearch {
     public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Transaction trans = session.beginTransaction();
-        session.createQuery(UPDATE_SUBJECT_BY_ID)
-                .setParameter("id", id)
+        session.createQuery(UPDATE_RECORD_BY_ID)
                 .setParameter("nickname", nickname)
                 .setParameter("tname", tName)
                 .setParameter("sname", sName)
                 .setParameter("message", message)
-                .setParameter("dateSending", d)
+                .setParameter("d", d)
+                .setParameter("id", id)
                 .executeUpdate();
         trans.commit();
 
