@@ -13,8 +13,10 @@ import java.util.List;
 public class DeleteAction implements Action {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        if (Type.getTypePosition().equals("0")) {
+            request.setAttribute("type", "Query");
+        } else request.setAttribute("type", "Criteria");
         FactorySearchImpl factorySearch = new FactorySearchImpl();
-        Type.setTypePosition(request.getParameter("type"));
         ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(Type.getTypePosition()));
         String subjectId = request.getParameter("subjectId");
         searchBy.deleteSubjectById(Integer.valueOf(subjectId));

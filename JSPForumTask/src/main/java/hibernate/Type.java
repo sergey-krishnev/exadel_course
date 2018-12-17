@@ -1,7 +1,7 @@
 package hibernate;
 
 public class Type {
-    private static String typePosition;
+    private static String typePosition = "0";
 
     public static String getTypePosition() {
         return typePosition;

@@ -30,7 +30,7 @@ public class SearchImpl extends UpdateAndInsertImpl implements ISearch {
     private final static String SEARCH_BY_USER_ID = "from Subject where users.id = :id";
     private final static String SEARCH_BY_USER_ID_AND_DATE = "from Subject where users.id = :id and dateSending = :dateSending";
     private final static String SEARCH_BY_WORD_MESSAGE = "from Subject where message like :message";
-    private final static String SEARCH_ALL = "from Subject";
+    private final static String SEARCH_ALL = "from Subject order by name";
     private final static String SEARCH_ALL_USERS = "from Users";
     private final static String SEARCH_ALL_TOPICS = "from Topic";
     private final static String UPDATE_MESSAGE_BY_ID = "update Subject set message = '[Blocked by moderator]' where users.id = :id";
@@ -125,6 +125,7 @@ public class SearchImpl extends UpdateAndInsertImpl implements ISearch {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         List<Users> result = session.createQuery(
                 SEARCH_BY_NICKNAME, Users.class)
+                .setParameter("nickname", s)
                 .getResultList();
         return result.get(0);
     }
@@ -134,6 +135,7 @@ public class SearchImpl extends UpdateAndInsertImpl implements ISearch {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         List<Topic> result = session.createQuery(
                 SEARCH_BY_TOPICNAME, Topic.class)
+                .setParameter("name", s)
                 .getResultList();
         return result.get(0);
     }
@@ -155,12 +157,6 @@ public class SearchImpl extends UpdateAndInsertImpl implements ISearch {
     public void deleteSubjectById(Integer u) {
         workingWithMessageByUserId(DELETE_SUBJECT_BY_ID, u);
     }
-
-    @Override
-    public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d) { }
-
-    @Override
-    public void insertSubject(String nickname, String tName, String sName, String message, Date d) { }
 
     public void workingWithMessageByUserId(String query, Integer u) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();

@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>JSP Forum Task</h1>
-<form>
+    <h2>Selected type: <c:out value="${type}"/></h2>
 <table border="1" width="1200">
     <tr>
         <td width="15"><b>Nickname</b></td>
@@ -30,12 +30,8 @@
         </tr>
     </c:forEach>
 </table>
-Choose the type : <select name="type">
-    <option value="0">Query</option>
-    <option value="1">Criteria</option>
-</select> <br />
-<p><a href="ActionServlet?action=newForm&type=type">Add record</a></p>
-</form>
+<p><a href="ActionServlet?action=choiceForm">Select the type</a></p>
+<p><a href="ActionServlet?action=newForm">Add record</a></p>
 </body>
 </html>
 

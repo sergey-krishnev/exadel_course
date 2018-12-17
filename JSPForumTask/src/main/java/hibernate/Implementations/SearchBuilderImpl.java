@@ -11,6 +11,7 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 import java.sql.Date;
@@ -63,6 +64,7 @@ public class SearchBuilderImpl extends UpdateAndInsertImpl implements ISearch {
     public List<Subject> searchAll() {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Criteria cr = session.createCriteria(Subject.class);
+        cr.addOrder(Order.asc("name"));
         return cr.list();
     }
 

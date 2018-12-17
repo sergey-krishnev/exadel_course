@@ -2,9 +2,6 @@ package com.jsp;
 
 import com.jsp.Implementations.*;
 import com.jsp.Interfaces.Action;
-import hibernate.Factories.FactorySearchImpl;
-import hibernate.Interfaces.ISearch;
-import hibernate.Subject;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -13,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ActionServlet extends HttpServlet {
@@ -28,6 +24,8 @@ public class ActionServlet extends HttpServlet {
         actionMap.put("delete", new DeleteAction());
         actionMap.put("editForm", new EditFormAction());
         actionMap.put("newForm", new NewFormAction());
+        actionMap.put("choiceForm", new ChoiceFormAction());
+        actionMap.put("selectType", new SelectAction());
     }
 
     @Override
@@ -39,6 +37,7 @@ public class ActionServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
 
         //Here, if view is if failure then, forward to jsp, to available request attributes in jsp.

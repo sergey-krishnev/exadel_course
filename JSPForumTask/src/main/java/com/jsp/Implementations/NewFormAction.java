@@ -15,7 +15,6 @@ public class NewFormAction implements Action {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         FactorySearchImpl factorySearch = new FactorySearchImpl();
-        Type.setTypePosition(request.getParameter("type"));
         ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(Type.getTypePosition()));
         List<Users> users = searchBy.searchAllUsers();
         request.setAttribute("users", users);
