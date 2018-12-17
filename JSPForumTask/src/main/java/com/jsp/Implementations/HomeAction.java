@@ -17,9 +17,7 @@ public class HomeAction implements Action {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         FactoryCRUD factoryCrud = new FactoryCRUD();
         CRUDDao crudDao = factoryCrud.getTypeOperation(Integer.valueOf(Type.getTypePosition()));
-        if (Type.getTypePosition().equals("0")) {
-            request.setAttribute("type", "Query");
-        } else request.setAttribute("type", "Criteria");
+        request.setAttribute("type", crudDao.getType());
 
         List<Subject> searchAll = crudDao.searchAll();
         request.setAttribute("searchAll", searchAll);

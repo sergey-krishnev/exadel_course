@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface CRUDDao extends UpdateOperation, InsertOperation{
 
+    String getType();
+
     Subject searchBySubjectId(Integer id);
 
     List<Subject> searchAll();

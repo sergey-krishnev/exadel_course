@@ -20,7 +20,8 @@ import java.util.List;
 
 public class CriteriaDaoImpl implements CRUDDao {
 
-    private final static Logger logger = Logger.getLogger(CriteriaDaoImpl.class);
+    private final static Logger LOGGER = Logger.getLogger(CriteriaDaoImpl.class);
+    private final static String TYPE = "Criteria";
 
     private UpdateOperation updateOperation;
 
@@ -32,6 +33,11 @@ public class CriteriaDaoImpl implements CRUDDao {
     public CriteriaDaoImpl(UpdateOperation updateOperation, InsertOperation insertOperation) {
         this.updateOperation = updateOperation;
         this.insertOperation = insertOperation;
+    }
+
+    @Override
+    public String getType() {
+        return TYPE;
     }
 
     @Override
@@ -75,7 +81,7 @@ public class CriteriaDaoImpl implements CRUDDao {
             trans.commit();
         }catch (HibernateException e) {
             if (trans!=null) trans.rollback();
-            logger.error(e.getMessage());
+            LOGGER.error(e.getMessage());
         }finally {
             session.close();
         }

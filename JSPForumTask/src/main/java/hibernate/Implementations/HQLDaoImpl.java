@@ -22,10 +22,12 @@ public class HQLDaoImpl implements CRUDDao {
     private final static String SEARCH_ALL_USERS = "from Users";
     private final static String SEARCH_ALL_TOPICS = "from Topic";
     private final static String DELETE_SUBJECT_BY_ID = "delete Subject where id = :id";
+    private final static String TYPE = "Query";
 
     private UpdateOperation updateOperation;
 
     private InsertOperation insertOperation;
+
 
     public HQLDaoImpl() {
     }
@@ -33,6 +35,11 @@ public class HQLDaoImpl implements CRUDDao {
     public HQLDaoImpl(UpdateOperation updateOperation, InsertOperation insertOperation) {
         this.updateOperation = updateOperation;
         this.insertOperation = insertOperation;
+    }
+
+    @Override
+    public String getType() {
+        return TYPE;
     }
 
     @Override
