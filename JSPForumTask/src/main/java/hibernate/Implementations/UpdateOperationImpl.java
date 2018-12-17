@@ -6,14 +6,11 @@ import hibernate.Factories.HibernateSessionFactory;
 import hibernate.Subject;
 import hibernate.Topic;
 import hibernate.Users;
-import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 public class UpdateOperationImpl implements UpdateOperation {
-
-    private final static Logger logger = Logger.getLogger(UpdateOperationImpl.class);
 
     private CRUDDao crudDao;
 
@@ -22,23 +19,24 @@ public class UpdateOperationImpl implements UpdateOperation {
     }
 
     @Override
-    public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, java.sql.Date d) {
+    public void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, java.sql.Date date) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
-        Transaction trans = session.beginTransaction();
+        Transaction transaction = session.beginTransaction();
         try{
-            Subject sub = session.get(Subject.class, id);
-            Users user = crudDao.searchByUserName(nickname);
-            Topic topic = crudDao.searchByTopicName(tName);
-            sub.setUsers(user);
-            sub.setTopic(topic);
-            sub.setName(sName);
-            sub.setMessage(message);
-            sub.setDateSending(d);
-            session.update(sub);
-            trans.commit();
+            Subject subject = session.get(Subject.class, id);
+            Users user = crudDao.searchByUserName(username);
+            Topic topic = crudDao.searchByTopicName(topicName);
+            subject.setUsers(user);
+            subject.setTopic(topic);
+            subject.setName(subjectName);
+            subject.setMessage(message);
+            subject.setDateSending(date);
+            session.update(subject);
+            transaction.commit();
         }catch (HibernateException e) {
-            if (trans!=null) trans.rollback();
-            logger.error(e.getMessage());
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
         }finally {
             session.close();
         }

@@ -15,10 +15,8 @@ public class HomeAction implements Action {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-//        FactorySearchImpl factorySearch = new FactorySearchImpl();
-//        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
         FactoryCRUD factoryCrud = new FactoryCRUD();
-        CRUDDao crudDao = factoryCrud.getTypeOperation(Integer.valueOf("0"));
+        CRUDDao crudDao = factoryCrud.getTypeOperation(Integer.valueOf(Type.getTypePosition()));
         if (Type.getTypePosition().equals("0")) {
             request.setAttribute("type", "Query");
         } else request.setAttribute("type", "Criteria");

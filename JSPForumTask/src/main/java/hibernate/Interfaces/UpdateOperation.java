@@ -4,5 +4,5 @@ import java.sql.Date;
 
 public interface UpdateOperation {
 
-    void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, Date d);
+    void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, Date date);
 }

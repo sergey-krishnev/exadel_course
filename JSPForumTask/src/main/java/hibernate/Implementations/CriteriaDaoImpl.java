@@ -35,10 +35,10 @@ public class CriteriaDaoImpl implements CRUDDao {
     }
 
     @Override
-    public Subject searchBySubjectId(Integer u) {
+    public Subject searchBySubjectId(Integer id) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Criteria cr = session.createCriteria(Subject.class);
-        cr.add(Restrictions.eq("id", u));
+        cr.add(Restrictions.eq("id", id));
         return (Subject) cr.list().get(0);
     }
 
@@ -65,12 +65,12 @@ public class CriteriaDaoImpl implements CRUDDao {
     }
 
     @Override
-    public void deleteSubjectById(Integer u) {
+    public void deleteSubjectById(Integer id) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Transaction trans = null;
         try{
             trans = session.beginTransaction();
-            Subject subject = session.get(Subject.class, u);
+            Subject subject = session.get(Subject.class, id);
             session.delete(subject);
             trans.commit();
         }catch (HibernateException e) {
@@ -82,28 +82,28 @@ public class CriteriaDaoImpl implements CRUDDao {
     }
 
     @Override
-    public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, Date d) {
-        updateOperation.updateSubjectById(id, nickname, tName, sName, message, d);
+    public void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, Date date) {
+        updateOperation.updateSubjectById(id, username, topicName, subjectName, message, date);
     }
 
     @Override
-    public void insertSubject(String nickname, String tName, String sName, String message, Date d) {
-        insertOperation.insertSubject(nickname,tName,sName,message,d);
+    public void insertSubject(String username, String topicName, String subjectName, String message, Date date) {
+        insertOperation.insertSubject(username, topicName, subjectName,message, date);
     }
 
     @Override
-    public Users searchByUserName(String s) {
+    public Users searchByUserName(String username) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Criteria cr = session.createCriteria(Users.class);
-        cr.add(Restrictions.eq("nickname", s));
+        cr.add(Restrictions.eq("nickname", username));
         return (Users) cr.list().get(0);
     }
 
     @Override
-    public Topic searchByTopicName(String s) {
+    public Topic searchByTopicName(String topicName) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Criteria cr = session.createCriteria(Topic.class);
-        cr.add(Restrictions.eq("name", s));
+        cr.add(Restrictions.eq("name", topicName));
         return (Topic) cr.list().get(0);
     }
 }

@@ -7,8 +7,8 @@ import hibernate.Implementations.UpdateOperationImpl;
 import hibernate.Interfaces.CRUDDao;
 
 public class FactoryCRUD {
-    public CRUDDao getTypeOperation(Integer i) {
-        if (i == 0) {
+    public CRUDDao getTypeOperation(Integer type) {
+        if (type == 0) {
             return new HQLDaoImpl(new UpdateOperationImpl(new HQLDaoImpl()), new InsertOperationImpl(new HQLDaoImpl()));
         }
         else return new CriteriaDaoImpl(new UpdateOperationImpl(new CriteriaDaoImpl()), new InsertOperationImpl(new CriteriaDaoImpl()));

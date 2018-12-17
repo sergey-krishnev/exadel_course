@@ -16,8 +16,6 @@ public class DeleteAction implements Action {
         if (Type.getTypePosition().equals("0")) {
             request.setAttribute("type", "Query");
         } else request.setAttribute("type", "Criteria");
-//        FactorySearchImpl factorySearch = new FactorySearchImpl();
-//        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(Type.getTypePosition()));
         FactoryCRUD factoryCrud = new FactoryCRUD();
         CRUDDao crudDao = factoryCrud.getTypeOperation(Integer.valueOf(Type.getTypePosition()));
         String subjectId = request.getParameter("subjectId");

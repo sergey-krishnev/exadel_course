@@ -29,37 +29,13 @@ public class ActionServlet extends HttpServlet {
     }
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String actionKey = req.getParameter("action");
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String actionKey = request.getParameter("action");
         Action action = actionMap.get(actionKey);
         try {
-            action.execute(req, resp);
+            action.execute(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-        //Here, if view is if failure then, forward to jsp, to available request attributes in jsp.
-        //      if view is success redirect to jsp..
     }
-
-//        String forward = "";
-//
-//        String action = req.getParameter("action");
-
-//        if (action.equalsIgnoreCase("delete")) {
-//            String subjectId = req.getParameter("subjectId");
-//            searchBy.deleteSubjectById(Integer.valueOf(subjectId));
-//            forward = LIST_RECORDS;
-//            List<Subject> searchAll = searchBy.searchAll();
-//            req.setAttribute("searchAll", searchAll);
-//        } else if (action.equalsIgnoreCase("edit")){
-//            forward = INSERT_OR_EDIT;
-//            String subjectId = req.getParameter("subjectId");
-//            Subject subject = searchBy.searchBySubjectId(Integer.valueOf(subjectId));
-//            req.setAttribute("subject", subject);
-//        } else {
-//            forward = INSERT_OR_EDIT;
-//        }
 }

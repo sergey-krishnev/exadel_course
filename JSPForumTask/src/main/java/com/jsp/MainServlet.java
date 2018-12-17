@@ -15,10 +15,10 @@ import java.util.Map;
 public class MainServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Action action = new HomeAction();
         try {
-            action.execute(req, resp);
+            action.execute(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         }

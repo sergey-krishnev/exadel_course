@@ -6,15 +6,12 @@ import hibernate.Factories.HibernateSessionFactory;
 import hibernate.Subject;
 import hibernate.Topic;
 import hibernate.Users;
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.sql.Date;
 
 public class InsertOperationImpl implements InsertOperation {
-
-    private final static Logger logger = Logger.getLogger(InsertOperationImpl.class);
 
     private CRUDDao crudDao;
 
@@ -23,14 +20,14 @@ public class InsertOperationImpl implements InsertOperation {
     }
 
     @Override
-    public void insertSubject(String nickname, String tName, String sName, String message, Date d) {
+    public void insertSubject(String username, String topicName, String subjectName, String message, Date date) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Transaction trans = session.beginTransaction();
         try
         {
-            Users user = crudDao.searchByUserName(nickname);
-            Topic topic = crudDao.searchByTopicName(tName);
-            Subject subject = new Subject(sName, message, d, user, topic);
+            Users user = crudDao.searchByUserName(username);
+            Topic topic = crudDao.searchByTopicName(topicName);
+            Subject subject = new Subject(subjectName, message, date, user, topic);
             session.save(subject);
             trans.commit();
         } catch(RuntimeException e) {

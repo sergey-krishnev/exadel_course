@@ -14,8 +14,6 @@ import java.util.List;
 public class NewFormAction implements Action {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-//        FactorySearchImpl factorySearch = new FactorySearchImpl();
-//        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf(Type.getTypePosition()));
         FactoryCRUD factoryCrud = new FactoryCRUD();
         CRUDDao crudDao = factoryCrud.getTypeOperation(Integer.valueOf(Type.getTypePosition()));
         List<Users> users = crudDao.searchAllUsers();

@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface CRUDDao extends UpdateOperation, InsertOperation{
 
-    Subject searchBySubjectId(Integer u);
+    Subject searchBySubjectId(Integer id);
 
     List<Subject> searchAll();
 
@@ -16,10 +16,10 @@ public interface CRUDDao extends UpdateOperation, InsertOperation{
 
     List<Topic> searchAllTopic();
 
-    void deleteSubjectById(Integer u);
+    void deleteSubjectById(Integer id);
 
-    Users searchByUserName(String s);
+    Users searchByUserName(String username);
 
-    Topic searchByTopicName(String s);
+    Topic searchByTopicName(String topicName);
 
 }

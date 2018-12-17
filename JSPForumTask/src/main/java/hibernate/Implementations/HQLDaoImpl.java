@@ -15,8 +15,8 @@ import java.util.List;
 
 public class HQLDaoImpl implements CRUDDao {
 
-    private final static String SEARCH_BY_NICKNAME = "from Users where nickname = :nickname";
-    private final static String SEARCH_BY_TOPICNAME = "from Topic where name = :name";
+    private final static String SEARCH_BY_USERNAME = "from Users where nickname = :nickname";
+    private final static String SEARCH_BY_TOPIC_NAME = "from Topic where name = :name";
     private final static String SEARCH_BY_SUBJECT_ID = "from Subject where id = :id";
     private final static String SEARCH_ALL = "from Subject order by name";
     private final static String SEARCH_ALL_USERS = "from Users";
@@ -36,11 +36,11 @@ public class HQLDaoImpl implements CRUDDao {
     }
 
     @Override
-    public Subject searchBySubjectId(Integer u) {
+    public Subject searchBySubjectId(Integer id) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         List<Subject> result = session.createQuery(
                 SEARCH_BY_SUBJECT_ID, Subject.class)
-                .setParameter("id", u)
+                .setParameter("id", id)
                 .list();
         return result.get(0);
     }
@@ -71,41 +71,41 @@ public class HQLDaoImpl implements CRUDDao {
     }
 
     @Override
-    public void deleteSubjectById(Integer u) {
+    public void deleteSubjectById(Integer id) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         Transaction trans = session.beginTransaction();
         session.createQuery(DELETE_SUBJECT_BY_ID)
-                .setParameter("id", u)
+                .setParameter("id", id)
                 .executeUpdate();
         trans.commit();
     }
 
     @Override
-    public void insertSubject(String nickname, String tName, String sName, String message, Date d) {
-        insertOperation.insertSubject(nickname,tName,sName,message,d);
+    public void insertSubject(String username, String topicName, String subjectName, String message, Date date) {
+        insertOperation.insertSubject(username, topicName, subjectName,message, date);
     }
 
     @Override
-    public void updateSubjectById(Integer id, String nickname, String tName, String sName, String message, Date d) {
-        updateOperation.updateSubjectById(id, nickname, tName, sName, message, d);
+    public void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, Date date) {
+        updateOperation.updateSubjectById(id, username, topicName, subjectName, message, date);
     }
 
     @Override
-    public Users searchByUserName(String s) {
+    public Users searchByUserName(String username) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         List<Users> result = session.createQuery(
-                SEARCH_BY_NICKNAME, Users.class)
-                .setParameter("nickname", s)
+                SEARCH_BY_USERNAME, Users.class)
+                .setParameter("nickname", username)
                 .getResultList();
         return result.get(0);
     }
 
     @Override
-    public Topic searchByTopicName(String s) {
+    public Topic searchByTopicName(String topicName) {
         Session session = HibernateSessionFactory.getSessionFactory().openSession();
         List<Topic> result = session.createQuery(
-                SEARCH_BY_TOPICNAME, Topic.class)
-                .setParameter("name", s)
+                SEARCH_BY_TOPIC_NAME, Topic.class)
+                .setParameter("name", topicName)
                 .getResultList();
         return result.get(0);
     }
