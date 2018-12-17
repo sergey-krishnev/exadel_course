@@ -1,11 +1,10 @@
 package com.jsp.Implementations;
 
 import com.jsp.Interfaces.Action;
-import hibernate.Factories.FactorySearchImpl;
-import hibernate.Interfaces.ISearch;
+import hibernate.Factories.FactoryCRUD;
+import hibernate.Interfaces.CRUDDao;
 import hibernate.Subject;
 import hibernate.Topic;
-import hibernate.Type;
 import hibernate.Users;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,15 +26,17 @@ public class EditFormAction implements Action {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        FactorySearchImpl factorySearch = new FactorySearchImpl();
-        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
+//        FactorySearchImpl factorySearch = new FactorySearchImpl();
+//        ISearch searchBy = factorySearch.getSearchImpl(Integer.valueOf("0"));
         String subjectId = request.getParameter("subjectId");
         setSubjectId(Integer.valueOf(subjectId));
-        List<Users> users = searchBy.searchAllUsers();
+        FactoryCRUD factoryCrud = new FactoryCRUD();
+        CRUDDao crudDao = factoryCrud.getTypeOperation(Integer.valueOf("0"));
+        List<Users> users = crudDao.searchAllUsers();
         request.setAttribute("users", users);
-        List<Topic> topics = searchBy.searchAllTopic();
+        List<Topic> topics = crudDao.searchAllTopic();
         request.setAttribute("topics", topics);
-        Subject subject = searchBy.searchBySubjectId(Integer.valueOf(subjectId));
+        Subject subject = crudDao.searchBySubjectId(Integer.valueOf(subjectId));
         request.setAttribute("subject", subject);
         request.getRequestDispatcher("update.jsp").forward(request, response);
     }
