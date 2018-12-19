@@ -1,14 +1,12 @@
-package hibernate.dao.Implementations;
+package hibernate.dao.implementations;
 
-import hibernate.dao.Abstract.AbstractDAO;
-import hibernate.dao.Interfaces.CRUDDao;
+import hibernate.dao.abstraction.AbstractDAO;
+import hibernate.dao.interfaces.CRUDDao;
 import hibernate.model.Subject;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

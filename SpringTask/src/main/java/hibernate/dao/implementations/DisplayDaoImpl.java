@@ -1,9 +1,8 @@
-package hibernate.dao.Implementations;
+package hibernate.dao.implementations;
 
-import hibernate.dao.Interfaces.DisplayDao;
+import hibernate.dao.interfaces.DisplayDao;
 import hibernate.model.Subject;
 import org.apache.log4j.Logger;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
 import java.util.List;

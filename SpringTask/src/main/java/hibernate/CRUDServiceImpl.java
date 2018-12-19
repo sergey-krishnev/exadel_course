@@ -1,10 +1,7 @@
 package hibernate;
 
-import hibernate.dao.Interfaces.CRUDDao;
+import hibernate.dao.interfaces.CRUDDao;
 import hibernate.model.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

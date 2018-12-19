@@ -1,4 +1,4 @@
-package hibernate.dao.Abstract;
+package hibernate.dao.abstraction;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

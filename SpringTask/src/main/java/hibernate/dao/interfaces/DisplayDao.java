@@ -1,4 +1,4 @@
-package hibernate.dao.Interfaces;
+package hibernate.dao.interfaces;
 
 import hibernate.model.Subject;
 
