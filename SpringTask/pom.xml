@@ -14,7 +14,23 @@
 		<hibernate.version>5.3.7.Final</hibernate.version>
 		<postgresql.version>9.1-901-1.jdbc4</postgresql.version>
 		<log4j.version>1.2.17</log4j.version>
+		<apache-dbcp.version>2.0</apache-dbcp.version>
+
 	</properties>
+
+	<dependencyManagement>
+		<!-- Ensure all Spring dependencies are of the same version (Bill of Materials) -->
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>${springframework.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 
 	<dependencies>
 
@@ -60,6 +76,14 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
+
+		<!--Apache Commons DBCP dependency (for database connection pooling)-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>${apache-dbcp.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
