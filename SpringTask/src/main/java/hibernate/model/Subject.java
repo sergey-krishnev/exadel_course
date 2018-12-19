@@ -99,16 +99,16 @@ public class Subject implements Serializable {
         this.topic = topic;
     }
 
-    @Override
-    public String toString() {
-        return "Subject{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", message='" + message + '\'' +
-                ", dateSending=" + dateSending +
-                ", users=" + users +
-                ", topic=" + topic +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Subject{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", message='" + message + '\'' +
+//                ", dateSending=" + dateSending +
+//                ", users=" + users +
+//                ", topic=" + topic +
+//                '}';
+//    }
 }
 

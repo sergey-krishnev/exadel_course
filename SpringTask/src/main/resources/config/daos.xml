@@ -4,11 +4,15 @@
         http://www.springframework.org/schema/beans
 	    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="crudDao" class="hibernate.dao.Implementations.HQLDaoImpl">
+    <bean id="crudDao" class="hibernate.dao.Implementations.CriteriaDaoImpl">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
-    <bean id="displayDao" class="hibernate.dao.Implementations.HQLDaoImpl">
-        <property name="sessionFactory" ref="sessionFactory" />
+    <bean id="crudService" class="hibernate.CRUDServiceImpl">
+        <property name="crudDao" ref="crudDao"/>
+    </bean>
+
+
+    <bean id="displayDao" class="hibernate.dao.Implementations.DisplayDaoImpl">
     </bean>
 
 </beans>

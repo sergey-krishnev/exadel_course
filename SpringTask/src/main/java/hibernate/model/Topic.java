@@ -44,10 +44,10 @@ public class Topic implements Serializable {
         this.subjects = subjects;
     }
 
-    @Override
-    public String toString() {
-        return "Topic{" +
-                "name='" + name + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Topic{" +
+//                "name='" + name + '\'' +
+//                '}';
+//    }
 }

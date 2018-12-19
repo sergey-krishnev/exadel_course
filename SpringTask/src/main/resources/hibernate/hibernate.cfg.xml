@@ -5,14 +5,22 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.password">postgres</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/forum</property>
-        <property name="hibernate.connection.username">postgres</property>
+        <!--<property name="hibernate.connection.password">postgres</property>-->
+        <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/forum</property>-->
+        <!--<property name="hibernate.connection.username">postgres</property>-->
 
         <property name="hibernate.current_session_context_class">thread</property>
 
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">false</property>
+
+        <!--<mapping resource="hibernate/model/Subject.hbm.xml"></mapping>-->
+        <!--<mapping resource="hibernate/model/Users.hbm.xml"></mapping>-->
+        <!--<mapping resource="hibernate/model/Topic.hbm.xml"></mapping>-->
         <mapping class="hibernate.model.Users"/>
         <mapping class="hibernate.model.Subject"/>
         <mapping class="hibernate.model.Topic"/>
+
     </session-factory>
 </hibernate-configuration>

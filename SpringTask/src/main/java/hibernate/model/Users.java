@@ -86,15 +86,15 @@ public class Users implements Serializable {
         this.subjects = subjects;
     }
 
-    @Override
-    public String toString() {
-        return "Users{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Users{" +
+//                "id=" + id +
+//                ", nickname='" + nickname + '\'' +
+//                ", password='" + password + '\'' +
+//                ", email='" + email + '\'' +
+//                ", firstName='" + firstName + '\'' +
+//                ", lastName='" + lastName + '\'' +
+//                '}';
+//    }
 }

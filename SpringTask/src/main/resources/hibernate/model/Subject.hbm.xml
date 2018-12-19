@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="hibernate.model.Subject" schema="forum_schema" table="subject">
+        <meta attribute="class-description">
+            This class contains the Subject details.
+        </meta>
+        <id name="id" type="int">
+            <column name="id" precision="5" scale="0"/>
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="100" not-null="true"/>
+        </property>
+        <property name="message" type="string">
+            <column name="message" precision="256" not-null="true"/>
+        </property>
+        <property name="dateSending" type="java.sql.Date">
+            <column name="date_sending" not-null="true"/>
+        </property>
+        <property name="users" type="hibernate.model.Users">
+            <column name="user_id" not-null="true"/>
+        </property>
+        <property name="topic" type="hibernate.model.Topic">
+            <column name="topic_id" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
