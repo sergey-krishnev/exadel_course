@@ -1,4 +1,4 @@
-package hibernate;
+package hibernate.service;
 
 import hibernate.model.Subject;
 

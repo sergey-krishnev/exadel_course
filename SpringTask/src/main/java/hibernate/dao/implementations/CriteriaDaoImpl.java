@@ -21,7 +21,6 @@ public class CriteriaDaoImpl extends AbstractDAO implements CRUDDao {
         Session session = getSessionFactory();
         Criteria cr = session.createCriteria(Subject.class);
         cr.addOrder(Order.asc("name"));
-        setSessionFactory(session.getSessionFactory());
         return cr.list();
     }
 
