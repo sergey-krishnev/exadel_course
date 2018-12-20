@@ -4,6 +4,9 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import hibernate.model.Subject;
+import hibernate.model.Topic;
+import hibernate.model.Users;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -17,44 +20,42 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "hibernate.configuration" })
-public class HibernateConfiguration {
-
-    @Autowired
-    private Environment environment;
+@ComponentScan({"hibernate"})
+public class AppConfig {
 
     @Bean
-    public LocalSessionFactoryBean sessionFactory() {
+    public DataSource getDataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("org.postgresql.Driver");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/forum");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("postgres");
+        return dataSource;
+    }
+
+    @Bean
+    @Autowired
+    public LocalSessionFactoryBean sessionFactory(DataSource dataSource) {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-        sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] { "hibernate.model" });
+        sessionFactory.setDataSource(dataSource);
         sessionFactory.setHibernateProperties(hibernateProperties());
+        sessionFactory.setAnnotatedClasses(Subject.class, Topic.class, Users.class);
         return sessionFactory;
     }
 
     @Bean
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(environment.getRequiredProperty("org.postgresql.Driver"));
-        dataSource.setUrl(environment.getRequiredProperty("jdbc:postgresql://localhost:5432/forum"));
-        dataSource.setUsername(environment.getRequiredProperty("postgres"));
-        dataSource.setPassword(environment.getRequiredProperty("postgres"));
-        return dataSource;
-    }
-
-    private Properties hibernateProperties() {
-        Properties properties = new Properties();
-        properties.put("hibernate.dialect", environment.getRequiredProperty("org.hibernate.dialect.PostgreSQL9Dialect"));
-        properties.put("hibernate.show_sql", environment.getRequiredProperty("false"));
-        properties.put("hibernate.format_sql", environment.getRequiredProperty("false"));
-        return properties;
-    }
-
-    @Bean
     @Autowired
-    public HibernateTransactionManager transactionManager(SessionFactory s) {
-        HibernateTransactionManager txManager = new HibernateTransactionManager();
-        txManager.setSessionFactory(s);
-        return txManager;
+    public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
+        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+        transactionManager.setSessionFactory(sessionFactory);
+        return transactionManager;
+    }
+
+    public Properties hibernateProperties() {
+        Properties dialect = new Properties();
+        dialect.setProperty("hibernate.dialect",
+                "org.hibernate.dialect.PostgreSQL9Dialect");
+        dialect.setProperty("hibernate.enable_lazy_load_no_trans","true");
+        return dialect;
     }
 }
