@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class IndexController {
 
-    @RequestMapping(value = "/MainServlet", method = RequestMethod.GET)
+    @RequestMapping(value = "/MainServlet/home", method = RequestMethod.GET)
     public String index(Model m) {
         m.addAttribute("someAttribute", "someValue");
         return "index";

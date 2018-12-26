@@ -26,7 +26,7 @@ based on the recommendations of the Application Developer’s Guide.
     </servlet>
 <servlet-mapping>
 <servlet-name>dispatcher</servlet-name>
-<url-pattern>/MainServlet</url-pattern>
+<url-pattern>/</url-pattern>
 </servlet-mapping>
 
 </web-app>
