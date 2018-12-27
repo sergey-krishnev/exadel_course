@@ -4,9 +4,10 @@ import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
 
+import java.sql.Date;
 import java.util.List;
 
-public interface CRUDDao extends UpdateOperation, InsertOperation{
+public interface CRUDDao{
 
     String getType();
 
@@ -24,4 +25,7 @@ public interface CRUDDao extends UpdateOperation, InsertOperation{
 
     Topic searchByTopicName(String topicName);
 
+    void insertSubject(String username, String topicName, String subjectName, String message, Date date);
+
+    void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, java.sql.Date date);
 }

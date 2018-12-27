@@ -1,8 +1,6 @@
 package hibernate.dao.implementations;
 
 import hibernate.dao.interfaces.CRUDDao;
-import hibernate.dao.interfaces.InsertOperation;
-import hibernate.dao.interfaces.UpdateOperation;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
@@ -22,20 +20,12 @@ public class CriteriaDaoImpl implements CRUDDao {
     private final static Logger LOGGER = Logger.getLogger(CriteriaDaoImpl.class);
     private final static String TYPE = "Criteria";
 
-    private UpdateOperation updateOperation;
-
-    private InsertOperation insertOperation;
-
     @Autowired
     private SessionFactory sessionFactory;
 
     public CriteriaDaoImpl() {
     }
 
-    public CriteriaDaoImpl(UpdateOperation updateOperation, InsertOperation insertOperation) {
-        this.updateOperation = updateOperation;
-        this.insertOperation = insertOperation;
-    }
 
     @Override
     public String getType() {
@@ -85,15 +75,7 @@ public class CriteriaDaoImpl implements CRUDDao {
         }
     }
 
-    @Override
-    public void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, Date date) {
-        updateOperation.updateSubjectById(id, username, topicName, subjectName, message, date);
-    }
 
-    @Override
-    public void insertSubject(String username, String topicName, String subjectName, String message, Date date) {
-        insertOperation.insertSubject(username, topicName, subjectName,message, date);
-    }
 
     @Override
     public Users searchByUserName(String username) {
@@ -109,5 +91,49 @@ public class CriteriaDaoImpl implements CRUDDao {
         Criteria cr = session.createCriteria(Topic.class);
         cr.add(Restrictions.eq("name", topicName));
         return (Topic) cr.list().get(0);
+    }
+
+    @Override
+    public void insertSubject(String username, String topicName, String subjectName, String message, Date date) {
+        Session session = sessionFactory.openSession();
+        Transaction trans = session.beginTransaction();
+        try
+        {
+            Users user = searchByUserName(username);
+            Topic topic = searchByTopicName(topicName);
+            Subject subject = new Subject(subjectName, message, date, user, topic);
+            session.save(subject);
+            trans.commit();
+        } catch(RuntimeException e) {
+            if (trans.isActive()) {
+                trans.rollback();
+            }
+        } finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, Date date) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            Subject subject = (Subject) session.get(Subject.class, id);
+            Users user = searchByUserName(username);
+            Topic topic = searchByTopicName(topicName);
+            subject.setUsers(user);
+            subject.setTopic(topic);
+            subject.setName(subjectName);
+            subject.setMessage(message);
+            subject.setDateSending(date);
+            session.update(subject);
+            transaction.commit();
+        }catch (HibernateException e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+        }finally {
+            session.close();
+        }
     }
 }

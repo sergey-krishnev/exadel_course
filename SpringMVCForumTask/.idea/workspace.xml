@@ -7,16 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4472d323-eb17-4887-a0f3-ac88475430e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/CRUDDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/InsertOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/UpdateOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Topic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/CriteriaDaoImpl.class" afterDir="false" />
@@ -38,81 +28,32 @@
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/FileDataReader/ScvReader.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Type.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/tomcat/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/tomcat/webapps/ROOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/CRUDDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/CRUDDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/InsertOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/InsertOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/UpdateOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/UpdateOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Topic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Exceptions/MyBatchException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainServlet-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Exceptions/MyBatchException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Factories/HibernateSessionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/CriteriaDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/HQLDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/InsertOperationImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/UpdateOperationImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Interfaces/CRUDDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Interfaces/InsertOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Interfaces/UpdateOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Topic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/config/WebAppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/implementations/InsertOperationImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/implementations/UpdateOperationImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/interfaces/CRUDDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/interfaces/InsertOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/interfaces/UpdateOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/model/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/model/Topic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/model/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/interfaces/CRUDService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/interfaces/InsertOperationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/interfaces/UpdateOperationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/byte-buddy-1.8.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/hibernate-commons-annotations-5.0.4.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/hibernate-core-5.3.7.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/jandex-2.0.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/javassist-3.23.1-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/postgresql-9.1-901-1.jdbc4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/pages/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/pages/update.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/selectType.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/update.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Exceptions/MyBatchException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/config/WebAppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controller/CRUDController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/InsertOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/UpdateOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/dao/implementations/InsertOperationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/dao/implementations/InsertOperationImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/dao/implementations/UpdateOperationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/dao/implementations/UpdateOperationImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/InsertOperationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/InsertOperationImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/UpdateOperationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/UpdateOperationImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/InsertOperationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/InsertOperationImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/UpdateOperationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/UpdateOperationImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringMVCHello/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringMVCHello/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringMVCHello/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCHello/.idea/workspace.xml" afterDir="false" />
@@ -966,14 +907,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="1220" />
+          <entry key="java" value="1269" />
           <entry key="jsp" value="83" />
           <entry key="xml" value="166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1220" />
+          <entry key="JAVA" value="1269" />
           <entry key="JSP" value="83" />
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="XML" value="166" />
@@ -982,7 +923,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="55" />
+          <entry key="java" value="57" />
           <entry key="jsp" value="8" />
           <entry key="properties" value="2" />
           <entry key="xml" value="13" />
@@ -991,7 +932,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="55" />
+          <entry key="JAVA" value="57" />
           <entry key="JSP" value="8" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="13" />
@@ -1039,7 +980,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
+            <state relative-caret-position="393">
               <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1051,8 +992,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+            <state relative-caret-position="391">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1060,26 +1004,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            <state relative-caret-position="391">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="493">
+              <caret line="29" column="130" selection-start-line="29" selection-start-column="130" selection-end-line="29" selection-end-column="130" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+            <state relative-caret-position="408">
+              <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -1105,8 +1055,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="214">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1123,11 +1073,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+            <state relative-caret-position="371">
+              <caret line="122" column="26" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -1150,7 +1100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/AddAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/EditFormAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/NewFormAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/UpdateAction.java" />
@@ -1194,13 +1143,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -1318,6 +1268,16 @@
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
               <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringMVCForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
@@ -1448,7 +1408,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545911544558" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545914628040" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JSPForumTask" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1740,18 +1700,18 @@
       <workItem from="1545907931872" duration="1776000" />
       <workItem from="1545909768812" duration="1780000" />
       <workItem from="1545911584176" duration="1781000" />
-      <workItem from="1545913409589" duration="18000" />
+      <workItem from="1545913409589" duration="887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143270000" />
+    <option name="totallyTimeSpent" value="144139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21481876" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25426438" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1762,7 +1722,7 @@
       <window_info id="Persistence" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32679096" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3218842" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3218842" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4013739" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1826,18 +1786,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java</url>
-          <line>8</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
@@ -1899,23 +1847,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Type.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/FileDataReader/ScvReader.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Factories/FactoryCRUD.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/InsertOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jsp/Implementations/ChoiceFormAction.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml" />
@@ -1972,30 +1903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -2017,10 +1924,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="408">
+          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2034,17 +1948,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+        <state relative-caret-position="214">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/InsertOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="130" selection-start-line="29" selection-start-column="130" selection-end-line="29" selection-end-column="130" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="122" column="26" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
         </state>
       </provider>
     </entry>
