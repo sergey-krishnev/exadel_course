@@ -54,20 +54,13 @@ public class WebAppConfig {
         return transactionManager;
     }
 
+
+
     public Properties hibernateProperties() {
         Properties dialect = new Properties();
         dialect.setProperty("hibernate.dialect",
                 "org.hibernate.dialect.PostgreSQL9Dialect");
         dialect.setProperty("hibernate.enable_lazy_load_no_trans","true");
         return dialect;
-    }
-
-    @Bean
-    public InternalResourceViewResolver setupViewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/pages/");
-        resolver.setSuffix(".jsp");
-        resolver.setViewClass(JstlView.class);
-        return resolver;
     }
 }

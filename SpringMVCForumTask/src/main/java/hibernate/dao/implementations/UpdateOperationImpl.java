@@ -24,7 +24,7 @@ public class UpdateOperationImpl implements UpdateOperation {
 
     @Override
     public void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, java.sql.Date date) {
-        Session session = sessionFactory.getCurrentSession();
+        Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         try{
             Subject subject = (Subject) session.get(Subject.class, id);

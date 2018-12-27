@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.sql.Date;
 import java.util.List;
 
-@Service("crudService")
+@Service
 public class CRUDServiceImpl implements CRUDService {
 
     @Autowired

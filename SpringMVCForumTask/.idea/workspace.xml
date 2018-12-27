@@ -7,7 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4472d323-eb17-4887-a0f3-ac88475430e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/CRUDDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/InsertOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/dao/interfaces/UpdateOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Topic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVCCrudTask/src/main/java/hibernate/model/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/CriteriaDaoImpl.class" afterDir="false" />
@@ -30,112 +39,796 @@
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Type.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSPForumTask/tomcat/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSPForumTask/tomcat/webapps/ROOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/ActionServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/AddAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/DeleteAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/EditFormAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/HomeAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/NewFormAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/SelectAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/UpdateAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/Interfaces/Action.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jsp/MainServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Exceptions/MyBatchException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/selectType.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSPForumTask.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/ActionServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Implementations/AddAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Implementations/ChoiceFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Implementations/DeleteAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Implementations/EditFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Implementations/HomeAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Implementations/NewFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Implementations/SelectAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Implementations/UpdateAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/Interfaces/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/com/jsp/MainServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Factories/FactoryCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/FileDataReader/ScvReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/configuration/WebAppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/implementations/HQLDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/pages/selectType.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/ActionServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Implementations/AddAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Implementations/ChoiceFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Implementations/DeleteAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Implementations/EditFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Implementations/HomeAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Implementations/NewFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Implementations/SelectAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Implementations/UpdateAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/Interfaces/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jsp/MainServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Factories/FactoryCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/FileDataReader/ScvReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/configuration/WebAppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/HQLDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/service/implementations/CRUDServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/catalina.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/catalina.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/ciphers.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/ciphers.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/configtest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/configtest.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/daemon.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/daemon.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/digest.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/digest.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/makebase.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/makebase.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/setclasspath.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/setclasspath.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/shutdown.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/shutdown.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/startup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/tool-wrapper.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/tool-wrapper.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/bin/version.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/bin/version.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/ActionServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Implementations/AddAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Implementations/ChoiceFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Implementations/DeleteAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Implementations/EditFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Implementations/HomeAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Implementations/NewFormAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Implementations/SelectAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Implementations/UpdateAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/Interfaces/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/com/jsp/MainServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Factories/FactoryCRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Factories/HibernateSessionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/FileDataReader/ScvReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Implementations/CriteriaDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Implementations/HQLDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Implementations/InsertOperationImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Implementations/UpdateOperationImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Interfaces/CRUDDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Interfaces/InsertOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Interfaces/UpdateOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Topic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/byte-buddy-1.8.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/hibernate-commons-annotations-5.0.4.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/hibernate-core-5.3.7.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/jandex-2.0.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/javassist-3.23.1-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainServlet-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Exceptions/MyBatchException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Factories/HibernateSessionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/CriteriaDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/HQLDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/InsertOperationImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Implementations/UpdateOperationImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Interfaces/CRUDDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Interfaces/InsertOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Interfaces/UpdateOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Topic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/config/WebAppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/implementations/InsertOperationImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/implementations/UpdateOperationImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/interfaces/CRUDDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/interfaces/InsertOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/dao/interfaces/UpdateOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/model/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/model/Topic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/model/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/interfaces/CRUDService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/interfaces/InsertOperationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/hibernate/service/interfaces/UpdateOperationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/byte-buddy-1.8.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/hibernate-commons-annotations-5.0.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/hibernate-core-5.3.7.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/jandex-2.0.5.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/javassist-3.23.1-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/lib/postgresql-9.1-901-1.jdbc4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/pages/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/pages/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/selectType.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSPForumTask/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/Exceptions/MyBatchException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/config/WebAppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controller/CRUDController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/InsertOperationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/InsertOperationImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/UpdateOperationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/UpdateOperationImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/selectType.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVCHello/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/SpringMVCCrudTask.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/src/main/java/hibernate/controllers/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/classes/hibernate/controllers/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-4.0.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-4.3.5.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/jandex-1.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.18.1-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.1.3.GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-annotations-1.2.0.Beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/postgresql-9.1-901-1.jdbc4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-orm-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/lib/xml-apis-1.0.b2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/SpringMVCHello-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/target/classes/hibernate/controllers/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/BUILDING.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/RELEASE-NOTES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/RUNNING.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/bootstrap.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/catalina-tasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/catalina.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/catalina.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/ciphers.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/ciphers.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/commons-daemon-native.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/commons-daemon.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/configtest.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/configtest.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/daemon.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/digest.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/digest.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/makebase.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/makebase.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/service.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/setclasspath.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/setclasspath.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/shutdown.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/shutdown.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/startup.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/startup.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/tcnative-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/tomcat-juli.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/tomcat-native.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/tomcat9.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/tomcat9w.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/tool-wrapper.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/tool-wrapper.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/version.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/bin/version.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/catalina.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/catalina.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/jaspic-providers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/jaspic-providers.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/tomcat-users.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/annotations-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/catalina-ant.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/catalina-ha.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/catalina-storeconfig.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/catalina-tribes.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/catalina.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/ecj-4.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/el-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/jasper-el.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/jasper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/jaspic-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/jsp-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/servlet-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-coyote.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-dbcp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-i18n-de.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-i18n-es.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-i18n-fr.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-i18n-ja.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-i18n-ko.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-i18n-pt-BR.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-i18n-ru.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-i18n-zh-CN.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-jdbc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-jni.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-util-scan.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-util.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/tomcat-websocket.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/lib/websocket-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/temp/safeToDelete.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/META-INF/war-tracker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controllers/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/hibernate-commons-annotations-4.0.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/hibernate-core-4.3.5.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/jandex-1.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/javassist-3.18.1-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/jboss-logging-3.1.3.GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/jboss-logging-annotations-1.2.0.Beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/postgresql-9.1-901-1.jdbc4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-aop-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-beans-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-context-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-core-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-expression-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-jdbc-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-orm-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-tx-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-web-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/spring-webmvc-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/lib/xml-apis-1.0.b2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/BUILDING.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/RELEASE-NOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/RUNNING.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/aio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/api/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/build.xml.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/deployment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/installation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/processes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/docs/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/sample.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/src/mypackage/Hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/web/hello.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/web/images/tomcat.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/sample/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/appdev/web.xml.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/apr.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/architecture/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/architecture/overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/architecture/requestProcess.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/architecture/requestProcess/authentication-process.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/architecture/requestProcess/request-process.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/architecture/startup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/architecture/startup/serverStartup.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/architecture/startup/serverStartup.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/balancer-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/building.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/cgi-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/changelog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/class-loader-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/cluster-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/comments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/ajp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/automatic-deployment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-channel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-deployer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-interceptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-listener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-manager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-membership.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-receiver.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-sender.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster-valve.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cluster.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/context.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/cookie-processor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/credentialhandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/engine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/executor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/globalresources.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/host.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/http.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/http2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/jar-scan-filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/jar-scanner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/jaspic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/listeners.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/loader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/manager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/realm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/resources.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/server.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/sessionidgenerator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/systemprops.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/config/valve.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/connectors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/default-servlet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/deployer-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/developers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/elapi/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/extras.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/fs-admin-apps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/fs-admin-objects.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/fs-admin-opers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/fs-default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/fs-jdbc-realm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/fs-jndi-realm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/fs-memory-realm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/funcspecs/mbean-names.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/host-manager-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/html-host-manager-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/html-manager-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/add.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/asf-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/code.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/cors-flowchart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/design.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/docs-stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/docs.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/fix.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/fonts/OpenSans400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/fonts/OpenSans400italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/fonts/OpenSans600.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/fonts/OpenSans600italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/fonts/OpenSans700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/fonts/OpenSans700italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/fonts/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/tomcat.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/tomcat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/update.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/images/void.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/jasper-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/jdbc-pool.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/jndi-datasource-examples-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/jndi-resources-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/jspapi/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/logging.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/manager-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/maven-jars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/mbeans-descriptors-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/mbeans-descriptors.dtd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/monitoring.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/proxy-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/realm-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/rewrite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/security-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/security-manager-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/servletapi/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/setup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/ssi-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/ssl-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/tribes/developers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/tribes/faq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/tribes/interceptors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/tribes/introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/tribes/membership.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/tribes/setup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/tribes/status.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/tribes/transport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/virtual-hosting-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/web-socket-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/websocketapi/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/windows-auth-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/docs/windows-service-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/CookieExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/CookieExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_de.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_es.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_fr.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ja.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ko.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_pt.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_pt_BR.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_zh_CN.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/RequestHeaderExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/RequestHeaderExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/RequestInfoExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/RequestInfoExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/RequestParamExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/RequestParamExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/ServletToJsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/ServletToJsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/SessionExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/SessionExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async0$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Async3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockContextListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/AsyncStockServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Stockticker$Stock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Stockticker$TickListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Stockticker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/async/Stockticker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/cal/Entries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/cal/Entries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/cal/Entry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/cal/Entry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/cal/JspCalendar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/cal/JspCalendar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/cal/TableBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/cal/TableBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/checkbox/CheckTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/checkbox/CheckTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/colors/ColorGameBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/colors/ColorGameBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilterTestServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/compressionFilters/CompressionFilterTestServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/compressionFilters/CompressionResponseStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/compressionFilters/CompressionResponseStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/compressionFilters/CompressionServletResponseWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/compressionFilters/CompressionServletResponseWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/dates/JspCalendar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/dates/JspCalendar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/error/Smart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/error/Smart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/ExampleTagBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/ExampleTagBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/FooTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/FooTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/FooTagExtraInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/LogTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/LogTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/ShowSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/ShowSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/ValuesTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/examples/ValuesTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/filters/ExampleFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/filters/ExampleFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/http2/SimpleImagePush.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/http2/SimpleImagePush.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/BookBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/BookBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/FooBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/FooBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/ValuesBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/ValuesBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/el/Functions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/el/Functions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/EchoAttributesTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/EchoAttributesTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/FindBookSimpleTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/FindBookSimpleTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/HelloWorldSimpleTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/HelloWorldSimpleTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/RepeatSimpleTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/RepeatSimpleTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/ShuffleSimpleTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/ShuffleSimpleTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/TileSimpleTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/TileSimpleTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/listeners/ContextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/listeners/ContextListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/listeners/SessionListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/listeners/SessionListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter$CounterListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/nonblocking/ByteCounter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter$NumberWriterListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/nonblocking/NumberWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/num/NumberGuessBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/num/NumberGuessBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/sessions/DummyCart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/sessions/DummyCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/trailers/ResponseTrailers$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/trailers/ResponseTrailers$TrailerFieldSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/trailers/ResponseTrailers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/trailers/ResponseTrailers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/util/CookieFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/util/CookieFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/util/HTMLFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/util/HTMLFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/validators/DebugValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/validators/DebugValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/ExamplesConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/ExamplesConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/chat/ChatAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/chat/ChatAnnotation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Client$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage$ParseException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardContextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardContextListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/DrawboardEndpoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$MessageType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Room$Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/AbstractWebsocketMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/AbstractWebsocketMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/BinaryWebsocketMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/BinaryWebsocketMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/CloseWebsocketMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/CloseWebsocketMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/StringWebsocketMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/StringWebsocketMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoAnnotation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation$CompletedFuture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoAsyncAnnotation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandlerBinary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandlerText.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoStreamAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoStreamAnnotation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/servers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Location$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Snake.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Snake.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeAnnotation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/jsp/applet/Clock2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/jsp/debug-taglib.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/jsp/example-taglib.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/jsp2/jsp2-example-taglib.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/tags/displayProducts.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/tags/helloWorld.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/tags/panel.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/async/async1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/async/async1.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/async/async3.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/async/async3.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/async/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/async/index.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/Entries.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/Entry.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/JspCalendar.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/TableBean.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/cal1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/cal1.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/cal2.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/cal2.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/calendar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/cal/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/checkbox/CheckTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/checkbox/check.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/checkbox/checkresult.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/checkbox/checkresult.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/checkbox/cresult.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/colors/ColorGameBean.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/colors/clr.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/colors/colors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/colors/colrs.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/colors/colrs.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/dates/date.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/dates/date.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/dates/date.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/error/er.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/error/err.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/error/err.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/error/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/error/errorpge.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/error/errorpge.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/forward/forward.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/forward/forward.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/forward/fwd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/forward/one.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/forward/one.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/forward/two.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/images/code.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/images/execute.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/images/return.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/include/foo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/include/foo.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/include/foo.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/include/inc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/include/include.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/include/include.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/Functions.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/ValuesBean.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/ValuesTag.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/basic-arithmetic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/basic-arithmetic.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/basic-arithmetic.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/basic-comparisons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/basic-comparisons.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/basic-comparisons.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/composite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/composite.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/composite.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/functions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/functions.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/functions.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/implicit-objects.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/implicit-objects.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/el/implicit-objects.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/FooBean.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/HelloWorldSimpleTag.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/ShuffleSimpleTag.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/TileSimpleTag.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/jspattribute.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/jspattribute.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/jspattribute.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/shuffle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/shuffle.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspattribute/shuffle.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspx/basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspx/basic.jspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspx/basic.jspx.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspx/svgexample.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspx/textRotate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspx/textRotate.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspx/textRotate.jspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/jspx/textRotate.jspx.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/EchoAttributesTag.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/coda.jspf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/coda.jspf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/config.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/config.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/config.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/dynamicattrs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/dynamicattrs.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/dynamicattrs.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/prelude.jspf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/misc/prelude.jspf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/BookBean.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/FindBookSimpleTag.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/Functions.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/HelloWorldSimpleTag.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/RepeatSimpleTag.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/book.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/book.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/book.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/hello.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/hello.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/repeat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/repeat.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/simpletag/repeat.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/displayProducts.tag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/hello.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/hello.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/helloWorld.tag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/panel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/panel.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/panel.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/panel.tag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/products.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsp2/tagfiles/products.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsptoserv/ServletToJsp.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsptoserv/hello.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsptoserv/hello.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsptoserv/jsptoservlet.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsptoserv/jsptoservlet.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/jsptoserv/jts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/num/numguess.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/num/numguess.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/num/numguess.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/plugin/applet/Clock2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/plugin/applet/Clock2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/plugin/plugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/plugin/plugin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/plugin/plugin.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/security/protected/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/security/protected/error.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/security/protected/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/security/protected/index.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/security/protected/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/security/protected/login.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/sessions/DummyCart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/sessions/carts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/sessions/carts.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/sessions/carts.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/sessions/crt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/simpletag/foo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/simpletag/foo.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/simpletag/foo.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/snp/snoop.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/snp/snoop.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/snp/snoop.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/source.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/source.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/choose.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/choose.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/choose.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/foreach.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/foreach.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/foreach.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/if.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/if.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/if.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/tagplugin/notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/xml/xml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/xml/xml.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/jsp/xml/xml.jsp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/cookies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/helloworld.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/images/code.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/images/execute.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/images/return.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/nonblocking/bytecounter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/reqheaders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/reqinfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/reqparams.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/servlets/sessions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/websocket/chat.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/websocket/drawboard.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/websocket/echo.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/websocket/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/examples/websocket/snake.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/WEB-INF/jsp/401.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/WEB-INF/jsp/403.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/WEB-INF/jsp/404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/images/asf-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/images/tomcat.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/host-manager/manager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/jsp/401.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/jsp/403.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/jsp/404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/jsp/connectorCerts.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/jsp/connectorCiphers.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/jsp/connectorTrustedCerts.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/images/asf-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/images/tomcat.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/status.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHello/tomcat/webapps/manager/xform.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHelloWorld/src/controllers/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHelloWorld/web/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVCHelloWorld/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TestSpringMVC/src/main/java/spring/WebAppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TestSpringMVC/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../TestSpringMVC/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TestSpringMVC/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../TestSpringMVC/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TestSpringMVCTask/src/main/java/mvc/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TestSpringMVCTask/src/main/java/mvc/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TestSpringMVCTask/src/main/webapp/WEB-INF/spitter-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TestSpringMVCTask/src/main/webapp/WEB-INF/spitter-servlet.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -257,49 +950,51 @@
     <session id="-313278933">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.11" value="4" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="2" />
+          <entry key="project.closed" value="26" />
+          <entry key="project.open.time.0" value="5" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="7" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="1005" />
-          <entry key="jsp" value="31" />
-          <entry key="xml" value="116" />
+          <entry key="java" value="1220" />
+          <entry key="jsp" value="83" />
+          <entry key="xml" value="166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1005" />
-          <entry key="JSP" value="31" />
+          <entry key="JAVA" value="1220" />
+          <entry key="JSP" value="83" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="XML" value="116" />
+          <entry key="XML" value="166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="51" />
+          <entry key="class" value="4" />
+          <entry key="java" value="55" />
           <entry key="jsp" value="8" />
-          <entry key="properties" value="1" />
-          <entry key="xml" value="10" />
+          <entry key="properties" value="2" />
+          <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="51" />
+          <entry key="CLASS" value="4" />
+          <entry key="JAVA" value="55" />
           <entry key="JSP" value="8" />
-          <entry key="Properties" value="1" />
-          <entry key="XML" value="10" />
+          <entry key="Properties" value="2" />
+          <entry key="XML" value="13" />
         </counts>
       </usages-collector>
     </session>
@@ -344,8 +1039,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+            <state relative-caret-position="952">
+              <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -353,25 +1048,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationConfig.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -379,8 +1087,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="527">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -388,8 +1096,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="357">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -397,8 +1105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="646">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -409,8 +1117,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            <state relative-caret-position="357">
+              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -433,10 +1150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/UpdateOperationImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/CRUDDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/HQLDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/CriteriaDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/AddAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/EditFormAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/NewFormAction.java" />
@@ -456,11 +1169,8 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/CriteriaDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/confuguration/WebAppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/UpdateOperation.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/HQLDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/UpdateOperationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/InsertOperationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/InsertOperation.java" />
@@ -473,17 +1183,24 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CriteriaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jsp/ActionServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/WebAppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/config/Initializer.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/actionServlet-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainServlet-servlet.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml" />
       </list>
     </option>
   </component>
@@ -505,6 +1222,26 @@
     <option name="width" value="980" />
     <option name="height" value="1105" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring MVCSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringMVCViewInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -512,8 +1249,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -572,6 +1307,34 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringMVCForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringMVCForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringMVCForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -583,6 +1346,16 @@
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringMVCForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
@@ -622,39 +1395,60 @@
             <path>
               <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
             </path>
             <path>
               <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+              <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545479899136" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545911544558" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JSPForumTask" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -664,6 +1458,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCForumTask\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCForumTask\src\main\webapp\WEB-INF\pages" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -691,8 +1486,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="SpringMVCForumTask" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.13" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/MainServlet?action=home" />
+    <configuration name="SpringMVCForumTask" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/home" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="SpringMVCForumTask:war">
@@ -931,18 +1726,32 @@
       <workItem from="1545473754695" duration="1773000" />
       <workItem from="1545475563185" duration="1796000" />
       <workItem from="1545477390798" duration="1781000" />
-      <workItem from="1545479203880" duration="572000" />
+      <workItem from="1545479203880" duration="1010000" />
+      <workItem from="1545813288568" duration="2000" />
+      <workItem from="1545813489190" duration="183000" />
+      <workItem from="1545818340047" duration="1009000" />
+      <workItem from="1545819392281" duration="1910000" />
+      <workItem from="1545821341115" duration="1365000" />
+      <workItem from="1545828488391" duration="114000" />
+      <workItem from="1545902659149" duration="74000" />
+      <workItem from="1545903949299" duration="308000" />
+      <workItem from="1545904284290" duration="1777000" />
+      <workItem from="1545906122231" duration="1778000" />
+      <workItem from="1545907931872" duration="1776000" />
+      <workItem from="1545909768812" duration="1780000" />
+      <workItem from="1545911584176" duration="1781000" />
+      <workItem from="1545913409589" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128957000" />
+    <option name="totallyTimeSpent" value="143270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18496802" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21481876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -953,7 +1762,7 @@
       <window_info id="Persistence" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32679096" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3218842" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3218842" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4013739" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1026,12 +1835,6 @@
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java</url>
-          <line>35</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1045,15 +1848,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/Exceptions/MyBatchException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jsp/Interfaces/Action.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1084,13 +1878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/UpdateOperationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1105,13 +1892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1136,25 +1916,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jsp/Implementations/ChoiceFormAction.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="81" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="61" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jsp/ActionServlet.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jsp/Implementations/AddAction.java" />
@@ -1175,71 +1938,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppInitializer.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/Initializer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/actionServlet-servlet.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationConfig.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainServlet-servlet.xml" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.2.RELEASE/spring-core-4.2.2.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/actionServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="46" />
+        <state relative-caret-position="195">
+          <caret line="120" selection-start-line="120" selection-end-line="120" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+        <state relative-caret-position="952">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.2.RELEASE/spring-web-4.2.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="425">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state relative-caret-position="952">
+          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationConfig.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="255">
+          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1297,7 +2102,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|SpringMVCForumTask</last-edited>
+          <last-edited>Web|SpringMVCForumTask</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

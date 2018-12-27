@@ -14,12 +14,12 @@
 <body>
 <c:if test="${subject != null}">
 <h1>Update record</h1>
-<form action="/ActionServlet" method="post">
+<form action="/home" method="post">
     <input type="hidden" value="update" name="action" />
     </c:if>
 <c:if test="${subject == null}">
 <h1>Add new record</h1>
-     <form action="/ActionServlet" method="post">
+     <form action="/home" method="post">
          <input type="hidden" value="add" name="action" />
     </c:if>
 

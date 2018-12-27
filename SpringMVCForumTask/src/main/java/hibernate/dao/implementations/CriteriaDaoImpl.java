@@ -70,7 +70,7 @@ public class CriteriaDaoImpl implements CRUDDao {
 
     @Override
     public void deleteSubjectById(Integer id) {
-        Session session = sessionFactory.getCurrentSession();
+        Session session = sessionFactory.openSession();
         Transaction trans = null;
         try{
             trans = session.beginTransaction();

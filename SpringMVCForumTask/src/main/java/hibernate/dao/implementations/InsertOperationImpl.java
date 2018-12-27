@@ -25,7 +25,7 @@ public class InsertOperationImpl implements InsertOperation {
 
     @Override
     public void insertSubject(String username, String topicName, String subjectName, String message, Date date) {
-        Session session = sessionFactory.getCurrentSession();
+        Session session = sessionFactory.openSession();
         Transaction trans = session.beginTransaction();
         try
         {

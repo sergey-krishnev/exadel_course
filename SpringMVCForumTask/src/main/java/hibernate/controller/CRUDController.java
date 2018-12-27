@@ -18,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Controller
+@RequestMapping("/")
 public class CRUDController {
 
     private final static Logger LOGGER = Logger.getLogger(CRUDController.class);
@@ -35,61 +36,59 @@ public class CRUDController {
         this.searchId = searchId;
     }
 
-    @RequestMapping(value = "/MainServlet?action=home", method = RequestMethod.GET)
+    @RequestMapping(value = "/home",method = RequestMethod.GET)
     public String home(Model model) {
         List<Subject> searchAll = crudService.searchAll();
         model.addAttribute("searchAll", searchAll);
         LOGGER.debug("home");
-        return "forward:index";
+        return "index";
     }
 
-    @RequestMapping(value = "/ActionServlet?action=newForm", method = RequestMethod.GET)
+    @RequestMapping(value = "/home", params = {"action=newForm"})
     public String newForm(Model model) {
         List<Users> users = crudService.searchAllUsers();
         model.addAttribute("users", users);
         List<Topic> topics = crudService.searchAllTopic();
         model.addAttribute("topics", topics);
         LOGGER.debug("showAllUsers()");
-        model.addAttribute("users", crudService.searchAll());
-        return "forward:update";
+        model.addAttribute("searchAll", crudService.searchAll());
+        return "update";
     }
-
-    @RequestMapping(value = "/ActionServlet?action=editForm", method = RequestMethod.GET)
-    public String editForm(@RequestParam("subjectId") int subjectId, Model model) {
-
-        List<Users> users = crudService.searchAllUsers();
-        model.addAttribute("users", users);
-        List<Topic> topics = crudService.searchAllTopic();
-        model.addAttribute("topics", topics);
-        Subject subject = crudService.searchBySubjectId(subjectId);
-        model.addAttribute("subject", subject);
-        return "forward:update";
-    }
-
-    @RequestMapping(value = "/ActionServlet?action=delete&subjectId={subjectId}", method = RequestMethod.GET)
-    public String delete(@PathVariable("subjectId") int subjectId, Model model) {
+//
+//    @RequestMapping(value = "/ActionServlet?action=editForm", method = RequestMethod.GET)
+//    public String editForm(@RequestParam("subjectId") int subjectId, Model model) {
+//
+//        List<Users> users = crudService.searchAllUsers();
+//        model.addAttribute("users", users);
+//        List<Topic> topics = crudService.searchAllTopic();
+//        model.addAttribute("topics", topics);
+//        Subject subject = crudService.searchBySubjectId(subjectId);
+//        model.addAttribute("subject", subject);
+//        return "forward:update";
+//    }
+//
+    @RequestMapping(value = "/delete/{subjectId}")
+    public String delete(@PathVariable("subjectId") int subjectId) {
         crudService.deleteSubjectById(subjectId);
-        List<Subject> searchAll = crudService.searchAll();
-        model.addAttribute("searchAll", searchAll);
-        return "forward:index";
+        return "redirect:/home";
     }
-
-    @RequestMapping(value = "/ActionServlet", method = RequestMethod.GET)
+//
+    @RequestMapping(value = "/home", method = RequestMethod.POST)
     public String add(@RequestParam("nickname") String nickname,
                       @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
         crudService.insertSubject(nickname, topic, subject, message, stringAsDate(date));
-        return "redirect:/MainServlet";
+        return "redirect:/home";
     }
-
-    @RequestMapping(value = "/ActionServlet", method = RequestMethod.GET)
-    public String update(@RequestParam("nickname") String nickname,
-                         @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
-        Integer searchId = getSearchId();
-        crudService.updateSubjectById(searchId,nickname,
-                topic, subject, message,
-                stringAsDate(date));
-        return "redirect:/MainServlet";
-    }
+//
+//    @RequestMapping(value = "/ActionServlet", method = RequestMethod.GET)
+//    public String update(@RequestParam("nickname") String nickname,
+//                         @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
+//        Integer searchId = getSearchId();
+//        crudService.updateSubjectById(searchId,nickname,
+//                topic, subject, message,
+//                stringAsDate(date));
+//        return "redirect:/MainServlet";
+//    }
 
     private static java.sql.Date stringAsDate(String s) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
