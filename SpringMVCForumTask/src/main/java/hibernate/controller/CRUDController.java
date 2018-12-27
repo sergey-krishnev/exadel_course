@@ -55,18 +55,18 @@ public class CRUDController {
         return "update";
     }
 //
-//    @RequestMapping(value = "/ActionServlet?action=editForm", method = RequestMethod.GET)
-//    public String editForm(@RequestParam("subjectId") int subjectId, Model model) {
-//
-//        List<Users> users = crudService.searchAllUsers();
-//        model.addAttribute("users", users);
-//        List<Topic> topics = crudService.searchAllTopic();
-//        model.addAttribute("topics", topics);
-//        Subject subject = crudService.searchBySubjectId(subjectId);
-//        model.addAttribute("subject", subject);
-//        return "forward:update";
-//    }
-//
+    @RequestMapping(value = "/home",params = {"action=editForm"})
+    public String editForm(@RequestParam("subjectId") int subjectId, Model model) {
+        setSearchId(subjectId);
+        List<Users> users = crudService.searchAllUsers();
+        model.addAttribute("users", users);
+        List<Topic> topics = crudService.searchAllTopic();
+        model.addAttribute("topics", topics);
+        Subject subject = crudService.searchBySubjectId(subjectId);
+        model.addAttribute("subject", subject);
+        return "update";
+    }
+
     @RequestMapping(value = "/delete/{subjectId}")
     public String delete(@PathVariable("subjectId") int subjectId) {
         crudService.deleteSubjectById(subjectId);
@@ -75,19 +75,19 @@ public class CRUDController {
 //
     @RequestMapping(value = "/home", method = RequestMethod.POST)
     public String add(@RequestParam("nickname") String nickname,
-                      @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
+                      @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date) {
         crudService.insertSubject(nickname, topic, subject, message, stringAsDate(date));
         return "redirect:/home";
     }
 //
-//    @RequestMapping(value = "/ActionServlet", method = RequestMethod.GET)
+//    @RequestMapping(value = "/home", method = RequestMethod.POST)
 //    public String update(@RequestParam("nickname") String nickname,
 //                         @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
 //        Integer searchId = getSearchId();
 //        crudService.updateSubjectById(searchId,nickname,
 //                topic, subject, message,
 //                stringAsDate(date));
-//        return "redirect:/MainServlet";
+//        return "redirect:/home";
 //    }
 
     private static java.sql.Date stringAsDate(String s) {

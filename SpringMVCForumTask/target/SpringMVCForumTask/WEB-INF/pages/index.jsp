@@ -24,7 +24,7 @@
             <td>${subject.message}</td>
             <td><fmt:formatDate pattern = "MM-dd-yyyy"
                                 value = "${subject.dateSending}" /></td>
-            <td><a href="ActionServlet?action=editForm&subjectId=<c:out value="${subject.id}"/>">Update</a></td>
+            <td><a href="home?action=editForm&subjectId=<c:out value="${subject.id}"/>">Update</a></td>
             <td><a href="delete/<c:out value="${subject.id}"/>">Delete</a></td>
         </tr>
     </c:forEach>
