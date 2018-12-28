@@ -72,23 +72,23 @@ public class CRUDController {
         crudService.deleteSubjectById(subjectId);
         return "redirect:/home";
     }
-//
-    @RequestMapping(value = "/home", method = RequestMethod.POST)
+
+    @RequestMapping(value = "/home",params = {"action=add"},method = RequestMethod.POST)
     public String add(@RequestParam("nickname") String nickname,
                       @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date) {
         crudService.insertSubject(nickname, topic, subject, message, stringAsDate(date));
         return "redirect:/home";
     }
-//
-//    @RequestMapping(value = "/home", method = RequestMethod.POST)
-//    public String update(@RequestParam("nickname") String nickname,
-//                         @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
-//        Integer searchId = getSearchId();
-//        crudService.updateSubjectById(searchId,nickname,
-//                topic, subject, message,
-//                stringAsDate(date));
-//        return "redirect:/home";
-//    }
+
+    @RequestMapping(value = "/home",params = {"action=update"}, method = RequestMethod.POST)
+    public String update(@RequestParam("nickname") String nickname,
+                         @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
+        Integer searchId = getSearchId();
+        crudService.updateSubjectById(searchId,nickname,
+                topic, subject, message,
+                stringAsDate(date));
+        return "redirect:/home";
+    }
 
     private static java.sql.Date stringAsDate(String s) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
