@@ -16,7 +16,7 @@
         <td width="15"><b>Date</b></td>
         <td colspan=2><b>Action</b></td>
     </tr>
-    <c:forEach var="subject" items="${searchAll}">
+    <c:forEach var="subject" items="${subjects}">
         <tr>
             <td>${subject.users.nickname}</td>
             <td>${subject.topic.name}</td>

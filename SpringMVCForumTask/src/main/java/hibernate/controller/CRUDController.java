@@ -1,5 +1,6 @@
 package hibernate.controller;
 
+import hibernate.dto.SubjectDTO;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
@@ -8,10 +9,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -38,8 +36,8 @@ public class CRUDController {
 
     @RequestMapping(value = "/home",method = RequestMethod.GET)
     public String home(Model model) {
-        List<Subject> searchAll = crudService.searchAll();
-        model.addAttribute("searchAll", searchAll);
+        List<Subject> subjects = crudService.searchAll();
+        model.addAttribute("subjects", subjects);
         LOGGER.debug("home");
         return "index";
     }
@@ -50,8 +48,8 @@ public class CRUDController {
         model.addAttribute("users", users);
         List<Topic> topics = crudService.searchAllTopic();
         model.addAttribute("topics", topics);
-        LOGGER.debug("showAllUsers()");
-        model.addAttribute("searchAll", crudService.searchAll());
+        List<Subject> subjects = crudService.searchAll();
+        model.addAttribute("subjects", subjects);
         return "update";
     }
 //
@@ -74,21 +72,34 @@ public class CRUDController {
     }
 
     @RequestMapping(value = "/home",params = {"action=add"},method = RequestMethod.POST)
-    public String add(@RequestParam("nickname") String nickname,
-                      @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date) {
-        crudService.insertSubject(nickname, topic, subject, message, stringAsDate(date));
+    public String add(@ModelAttribute("subjectDTO") SubjectDTO subjectDto) {
+        crudService.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
         return "redirect:/home";
     }
 
+//    @RequestMapping(value = "/home",params = {"action=add"},method = RequestMethod.POST)
+//    public String add(@RequestParam("nickname") String nickname,
+//                      @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date) {
+//        crudService.insertSubject(nickname, topic, subject, message, stringAsDate(date));
+//        return "redirect:/home";
+//    }
+
     @RequestMapping(value = "/home",params = {"action=update"}, method = RequestMethod.POST)
-    public String update(@RequestParam("nickname") String nickname,
-                         @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
+    public String update(@ModelAttribute("subjectDTO") SubjectDTO subjectDto) {
         Integer searchId = getSearchId();
-        crudService.updateSubjectById(searchId,nickname,
-                topic, subject, message,
-                stringAsDate(date));
+        crudService.updateSubjectById(searchId,subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
         return "redirect:/home";
     }
+
+//    @RequestMapping(value = "/home",params = {"action=update"}, method = RequestMethod.POST)
+//    public String update(@RequestParam("nickname") String nickname,
+//                         @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
+//        Integer searchId = getSearchId();
+//        crudService.updateSubjectById(searchId,nickname,
+//                topic, subject, message,
+//                stringAsDate(date));
+//        return "redirect:/home";
+//    }
 
     private static java.sql.Date stringAsDate(String s) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
