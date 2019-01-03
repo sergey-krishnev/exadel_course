@@ -7,21 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4472d323-eb17-4887-a0f3-ac88475430e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/validator/SubjectValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/controller/CRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/pages/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/pages/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/controller/CRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controller/CRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/pages/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -143,30 +132,31 @@
     <session id="-313278933">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="29" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.0" value="5" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="9" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="1446" />
+          <entry key="java" value="1685" />
           <entry key="jsp" value="145" />
           <entry key="xml" value="166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1446" />
+          <entry key="JAVA" value="1685" />
           <entry key="JSP" value="145" />
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="XML" value="166" />
@@ -175,7 +165,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="59" />
+          <entry key="java" value="60" />
           <entry key="jsp" value="8" />
           <entry key="properties" value="2" />
           <entry key="xml" value="13" />
@@ -184,7 +174,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="59" />
+          <entry key="JAVA" value="60" />
           <entry key="JSP" value="8" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="13" />
@@ -234,8 +224,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+            <state relative-caret-position="442">
+              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+              <folding>
+                <element signature="e#1123#1124#0" expanded="true" />
+                <element signature="e#1144#1145#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,83 +237,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Users.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <caret line="7" column="24" selection-start-line="3" selection-start-column="19" selection-end-line="7" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/validator/SubjectValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="21" column="52" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="136">
+              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="121" column="26" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -342,7 +273,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/NewFormAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jsp/Implementations/UpdateAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Factories/HibernateSessionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/Implementations/InsertOperationImpl.java" />
@@ -392,6 +322,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/validator/SubjectValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" />
       </list>
     </option>
@@ -410,9 +341,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="225" />
-    <option name="width" value="980" />
-    <option name="height" value="1105" />
+    <option name="x" value="-7" />
+    <option name="width" value="1627" />
+    <option name="height" value="1167" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -575,6 +506,15 @@
               <item name="SpringMVCForumTask" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringMVCForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -659,7 +599,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546513010391" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546515680863" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -957,16 +897,18 @@
       <workItem from="1545982145827" duration="22000" />
       <workItem from="1546511401117" duration="1774000" />
       <workItem from="1546513207408" duration="359000" />
+      <workItem from="1546513895756" duration="1781000" />
+      <workItem from="1546515710202" duration="676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149079000" />
+    <option name="totallyTimeSpent" value="151536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20309168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14232409" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1051,13 +993,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Topic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1163,13 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1196,22 +1124,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="121">
           <caret line="21" column="52" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/validator/SubjectValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="119">
+          <caret line="7" column="24" selection-start-line="3" selection-start-column="19" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+        <state relative-caret-position="442">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

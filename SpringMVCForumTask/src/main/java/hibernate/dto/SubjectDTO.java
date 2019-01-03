@@ -1,7 +1,5 @@
 package hibernate.dto;
 
-import java.sql.Date;
-
 public class SubjectDTO {
     private String nickname;
     private String topic;

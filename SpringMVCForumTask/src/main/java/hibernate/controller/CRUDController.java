@@ -5,10 +5,13 @@ import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
 import hibernate.service.interfaces.CRUDService;
+import hibernate.validator.SubjectValidator;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -24,6 +27,9 @@ public class CRUDController {
     @Autowired
     private CRUDService crudService;
 
+    @Autowired
+    private SubjectValidator subjectValidator;
+
     private int searchId;
 
     public Integer getSearchId() {
@@ -32,6 +38,11 @@ public class CRUDController {
 
     public void setSearchId(Integer searchId) {
         this.searchId = searchId;
+    }
+
+    @InitBinder
+    protected void initBinder(WebDataBinder binder) {
+        binder.addValidators(subjectValidator);
     }
 
     @RequestMapping(value = "/home",method = RequestMethod.GET)
@@ -72,7 +83,7 @@ public class CRUDController {
     }
 
     @RequestMapping(value = "/home",params = {"action=add"},method = RequestMethod.POST)
-    public String add(@ModelAttribute("subjectDTO") SubjectDTO subjectDto) {
+    public String add(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto) {
         crudService.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
         return "redirect:/home";
     }
