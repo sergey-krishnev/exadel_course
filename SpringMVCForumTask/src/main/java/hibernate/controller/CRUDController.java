@@ -60,8 +60,8 @@ public class CRUDController {
         model.addAttribute("users", users);
         List<Topic> topics = crudService.searchAllTopic();
         model.addAttribute("topics", topics);
-        List<Subject> subjects = crudService.searchAll();
-        model.addAttribute("subjects", subjects);
+        SubjectDTO subjectDto = new SubjectDTO();
+        model.addAttribute("subjectsDTO", subjectDto);
         return "update";
     }
 //
