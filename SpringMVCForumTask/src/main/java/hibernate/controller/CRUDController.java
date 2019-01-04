@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
@@ -82,8 +83,11 @@ public class CRUDController {
         return "redirect:/home";
     }
 
-    @RequestMapping(value = "/home",params = {"action=add"},method = RequestMethod.POST)
-    public String add(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto) {
+    @RequestMapping(value = "/home",params = {"action=add"}, method = RequestMethod.POST)
+    public String add(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            return newForm(model);
+        }
         crudService.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
         return "redirect:/home";
     }

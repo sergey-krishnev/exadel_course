@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -10,6 +11,11 @@
     <c:if test="${subject == null}">
         <title>New record</title>
     </c:if>
+    <style type="text/css">
+        .error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <c:if test="${subject != null}">
@@ -37,10 +43,12 @@
          <c:if test="${subject != null}">
     Subject name : <input
         type="text" name="subject"
-        value="<c:out value="${subject.name}" />" /> <br />
+        value="<c:out value="${subject.name}" />" />
+             <br />
     Message name : <input
         type="text" name="message"
-        value="<c:out value="${subject.message}" />" /> <br />
+        value="<c:out value="${subject.message}" />" />
+             <br />
     Date : <input
         type="text" name="date"
         value="<fmt:formatDate pattern="yyyy-MM-dd" value="${subject.dateSending}" />" />   <br />
@@ -48,13 +56,16 @@
          <c:if test="${subject == null}">
          Subject name : <input
              type="text" name="subject"
-             value="<c:out value="" />" /> <br />
+             value="<c:out value="" />" />
+             <form:errors path="subject" cssClass="error"/><br />
          Message name : <input
              type="text" name="message"
-             value="<c:out value="" />" /> <br />
+             value="<c:out value="" />" />
+             <form:errors path="message" cssClass="error"/><br />
          Date : <input
              type="text" name="date"
-             value="" />   <br />
+             value="" />
+             <form:errors path="date" cssClass="error"/><br />
          </c:if>
 
 

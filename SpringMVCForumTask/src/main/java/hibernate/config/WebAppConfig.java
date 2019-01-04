@@ -63,4 +63,6 @@ public class WebAppConfig {
         dialect.setProperty("hibernate.enable_lazy_load_no_trans","true");
         return dialect;
     }
+
+
 }
