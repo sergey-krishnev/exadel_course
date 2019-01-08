@@ -30,21 +30,17 @@
     <table>
         <tr>
             <td>Subject name :</td>
-            <td><input type="text" name="subject"
-                       value="<c:out value="${subjectDTO.subject}" />"/></td>
+            <td><form:input path="subject"/></td>
             <td><form:errors path="subject" cssClass="error"/></td>
         </tr>
         <tr>
             <td>Message name :</td>
-            <td><input type="text" name="message"
-                       value="<c:out value="${subjectDTO.message}" />"/>
-            </td>
+            <td><form:input path="message"/></td>
             <td><form:errors path="message" cssClass="error"/></td>
         </tr>
         <tr>
             <td>Date :</td>
-            <td><input type="text" name="date"
-                       value="<c:out value="${subjectDTO.date}" />"/></td>
+            <td><form:input path="date"/></td>
             <td><form:errors path="date" cssClass="error"/></td>
         </tr>
         <tr>

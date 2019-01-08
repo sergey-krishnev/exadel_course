@@ -1,6 +1,8 @@
 package hibernate.validator;
 
 import hibernate.dto.SubjectDTO;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.WordUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -28,6 +30,11 @@ public class SubjectValidator implements Validator {
         if (!(pattern.matcher(subjectDTO.getDate()).matches())) {
             errors.rejectValue("date","enter.invalid.date");
         }
-
+        if (!(StringUtils.capitalize(subjectDTO.getMessage()).equals(subjectDTO.getMessage()))) {
+            errors.rejectValue("message", "enter.invalid.message");
+        }
+        if (!(WordUtils.capitalize(subjectDTO.getSubject()).equals(subjectDTO.getSubject()))) {
+            errors.rejectValue("subject", "enter.invalid.subject");
+        }
     }
 }

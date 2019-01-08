@@ -73,8 +73,11 @@ public class CRUDController {
         List<Topic> topics = crudService.searchAllTopic();
         model.addAttribute("topics", topics);
         Subject subject = crudService.searchBySubjectId(subjectId);
-        SubjectDTO subjectDto = new SubjectDTO(subject.getName(),subject.getMessage(),subject.getFormattedDateSending());
-        model.addAttribute("subjectsDTO", subjectDto);
+        SubjectDTO subjectDto = new SubjectDTO();
+        subjectDto.setSubject(subject.getName());
+        subjectDto.setMessage(subject.getMessage());
+        subjectDto.setDate(subject.getFormattedDateSending());
+        model.addAttribute("subjectDTO", subjectDto);
         return "update";
     }
 
@@ -87,8 +90,12 @@ public class CRUDController {
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String add(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
+            List<Users> users = crudService.searchAllUsers();
+            model.addAttribute("users", users);
+            List<Topic> topics = crudService.searchAllTopic();
+            model.addAttribute("topics", topics);
 
-            return newForm(model);
+            return "add";
         }
         crudService.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
         return "redirect:/";
@@ -104,8 +111,11 @@ public class CRUDController {
     @RequestMapping(value = "/editForm/update", method = RequestMethod.POST)
     public String update(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto,BindingResult result, Model model) {
         if (result.hasErrors()) {
-
-            return editForm(getSearchId(),model);
+            List<Users> users = crudService.searchAllUsers();
+            model.addAttribute("users", users);
+            List<Topic> topics = crudService.searchAllTopic();
+            model.addAttribute("topics", topics);
+            return "update";
         }
         Integer searchId = getSearchId();
         crudService.updateSubjectById(searchId,subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));

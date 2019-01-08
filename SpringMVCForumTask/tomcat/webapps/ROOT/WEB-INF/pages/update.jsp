@@ -5,12 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <c:if test="${subject != null}">
-        <title>Edit record</title>
-    </c:if>
-    <c:if test="${subject == null}">
-        <title>New record</title>
-    </c:if>
+    <title>Edit record</title>
     <style type="text/css">
         .error {
             color: red;
@@ -19,69 +14,39 @@
 </head>
 <body>
 
-<c:if test="${subject != null}">
-<h1>Update record</h1>
-<form action="/home" modelAttribute="subjectDTO" method="post">
-    <input type="hidden" value="update" name="action"/>
-    </c:if>
+<h1>Edit record</h1>
+<form:form action="update" modelAttribute="subjectDTO" method="post">
 
-    <c:if test="${subject == null}">
-    <h1>Add new record</h1>
-    <form action="/home" modelAttribute="subjectDTO" method="post">
-        <input type="hidden" value="add" name="action"/>
-        </c:if>
-
-        Nickname : <select name="nickname">
-        <c:forEach var="username" items="${users}">
-            <option value="${username.nickname}">${username.nickname}</option>
-        </c:forEach>
-    </select> <br/>
-        Topic name : <select name="topic">
-        <c:forEach var="topicname" items="${topics}">
-            <option value="${topicname.name}">${topicname.name}</option>
-        </c:forEach>
-    </select> <br/>
-        <c:if test="${subject != null}">
-            Subject name : <input
-                type="text" name="subject"
-                value="<c:out value="${subject.name}" />"/>
-            <br/>
-            Message name : <input
-                type="text" name="message"
-                value="<c:out value="${subject.message}" />"/>
-            <br/>
-            Date : <input
-                type="text" name="date"
-                value="<fmt:formatDate pattern="yyyy-MM-dd" value="${subject.dateSending}" />"/> <br/>
-        </c:if>
-        <c:if test="${subject == null}">
-        <table>
-            <tr>
-                <td>Subject name :</td>
-                <td><input type="text" name="subject"
-                           value=""/></td>
-                <td><form:errors path="subject" cssClass="error"/></td>
-            </tr>
-            <tr>
-                <td>Message name :</td>
-                <td><input type="text" name="message"
-                           value=""/>
-                </td>
-                <td><form:errors path="message" cssClass="error"/></td>
-            </tr>
-            <tr>
-                <td>Date :</td>
-                <td><input type="text" name="date"
-                           value=""/></td>
-                <td><form:errors path="date" cssClass="error"/></td>
-            </tr>
-            </c:if>
-
-            <tr>
-                <td><input type="submit" value="Submit"/></td>
-            </tr>
-        </table>
-    </form>
+    Nickname : <select name="nickname">
+    <c:forEach var="username" items="${users}">
+        <option value="${username.nickname}">${username.nickname}</option>
+    </c:forEach>
+</select> <br/>
+    Topic name : <select name="topic">
+    <c:forEach var="topicname" items="${topics}">
+        <option value="${topicname.name}">${topicname.name}</option>
+    </c:forEach>
+</select> <br/>
+    <table>
+        <tr>
+            <td>Subject name :</td>
+            <td><form:input path="subject"/></td>
+            <td><form:errors path="subject" cssClass="error"/></td>
+        </tr>
+        <tr>
+            <td>Message name :</td>
+            <td><form:input path="message"/></td>
+            <td><form:errors path="message" cssClass="error"/></td>
+        </tr>
+        <tr>
+            <td>Date :</td>
+            <td><form:input path="date"/></td>
+            <td><form:errors path="date" cssClass="error"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+        </tr>
+    </table>
+</form:form>
 </body>
 </html>
-

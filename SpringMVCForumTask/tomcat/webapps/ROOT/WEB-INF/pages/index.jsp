@@ -24,12 +24,12 @@
             <td>${subject.message}</td>
             <td><fmt:formatDate pattern = "MM-dd-yyyy"
                                 value = "${subject.dateSending}" /></td>
-            <td><a href="home?action=editForm&subjectId=<c:out value="${subject.id}"/>">Update</a></td>
+            <td><a href="editForm/<c:out value="${subject.id}"/>">Update</a></td>
             <td><a href="delete/<c:out value="${subject.id}"/>">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
-<p><a href="home?action=newForm">Add record</a></p>
+<p><a href="newForm">Add record</a></p>
 </body>
 </html>
 
