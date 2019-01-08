@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Edit record</title>
+    <title>New record</title>
     <style type="text/css">
         .error {
             color: red;
@@ -14,8 +14,8 @@
 </head>
 <body>
 
-<h1>Edit record</h1>
-<form:form action="update" modelAttribute="subjectDTO" method="post">
+<h1>Add new record</h1>
+<form:form action="add" modelAttribute="subjectDTO" method="post">
 
     Nickname : <select name="nickname">
     <c:forEach var="username" items="${users}">
@@ -31,20 +31,20 @@
         <tr>
             <td>Subject name :</td>
             <td><input type="text" name="subject"
-                       value="<c:out value="${subjectDTO.subject}" />"/></td>
+                       value=""/></td>
             <td><form:errors path="subject" cssClass="error"/></td>
         </tr>
         <tr>
             <td>Message name :</td>
             <td><input type="text" name="message"
-                       value="<c:out value="${subjectDTO.message}" />"/>
+                       value=""/>
             </td>
             <td><form:errors path="message" cssClass="error"/></td>
         </tr>
         <tr>
             <td>Date :</td>
             <td><input type="text" name="date"
-                       value="<c:out value="${subjectDTO.date}" />"/></td>
+                       value=""/></td>
             <td><form:errors path="date" cssClass="error"/></td>
         </tr>
         <tr>
@@ -54,3 +54,4 @@
 </form:form>
 </body>
 </html>
+

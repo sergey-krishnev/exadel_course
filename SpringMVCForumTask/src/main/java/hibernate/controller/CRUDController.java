@@ -46,7 +46,7 @@ public class CRUDController {
         binder.addValidators(subjectValidator);
     }
 
-    @RequestMapping(value = "/home",method = RequestMethod.GET)
+    @RequestMapping(value = "/",method = RequestMethod.GET)
     public String home(Model model) {
         List<Subject> subjects = crudService.searchAll();
         model.addAttribute("subjects", subjects);
@@ -54,7 +54,7 @@ public class CRUDController {
         return "index";
     }
 
-    @RequestMapping(value = "/home", params = {"action=newForm"})
+    @RequestMapping(value = "/newForm", method = RequestMethod.GET)
     public String newForm(Model model) {
         List<Users> users = crudService.searchAllUsers();
         model.addAttribute("users", users);
@@ -62,34 +62,36 @@ public class CRUDController {
         model.addAttribute("topics", topics);
         SubjectDTO subjectDto = new SubjectDTO();
         model.addAttribute("subjectsDTO", subjectDto);
-        return "update";
+        return "add";
     }
 //
-    @RequestMapping(value = "/home",params = {"action=editForm"})
-    public String editForm(@RequestParam("subjectId") int subjectId, Model model) {
+    @RequestMapping(value = "/editForm/{subjectId}",method = RequestMethod.GET)
+    public String editForm(@PathVariable("subjectId") int subjectId, Model model) {
         setSearchId(subjectId);
         List<Users> users = crudService.searchAllUsers();
         model.addAttribute("users", users);
         List<Topic> topics = crudService.searchAllTopic();
         model.addAttribute("topics", topics);
         Subject subject = crudService.searchBySubjectId(subjectId);
-        model.addAttribute("subject", subject);
+        SubjectDTO subjectDto = new SubjectDTO(subject.getName(),subject.getMessage(),subject.getFormattedDateSending());
+        model.addAttribute("subjectsDTO", subjectDto);
         return "update";
     }
 
     @RequestMapping(value = "/delete/{subjectId}")
     public String delete(@PathVariable("subjectId") int subjectId) {
         crudService.deleteSubjectById(subjectId);
-        return "redirect:/home";
+        return "redirect:/";
     }
 
-    @RequestMapping(value = "/home",params = {"action=add"}, method = RequestMethod.POST)
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String add(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
+
             return newForm(model);
         }
         crudService.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
-        return "redirect:/home";
+        return "redirect:/";
     }
 
 //    @RequestMapping(value = "/home",params = {"action=add"},method = RequestMethod.POST)
@@ -99,11 +101,15 @@ public class CRUDController {
 //        return "redirect:/home";
 //    }
 
-    @RequestMapping(value = "/home",params = {"action=update"}, method = RequestMethod.POST)
-    public String update(@ModelAttribute("subjectDTO") SubjectDTO subjectDto) {
+    @RequestMapping(value = "/editForm/update", method = RequestMethod.POST)
+    public String update(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto,BindingResult result, Model model) {
+        if (result.hasErrors()) {
+
+            return editForm(getSearchId(),model);
+        }
         Integer searchId = getSearchId();
         crudService.updateSubjectById(searchId,subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
-        return "redirect:/home";
+        return "redirect:/";
     }
 
 //    @RequestMapping(value = "/home",params = {"action=update"}, method = RequestMethod.POST)

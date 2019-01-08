@@ -46,4 +46,18 @@ public class SubjectDTO {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public SubjectDTO(String name, String message, String formattedDateSending) {
+    }
+
+    public SubjectDTO() {
+    }
+
+    public SubjectDTO(String nickname, String topic, String subject, String message, String date) {
+        this.subject = subject;
+        this.message = message;
+        this.date = date;
+    }
 }
+
+
