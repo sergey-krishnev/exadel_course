@@ -13,3 +13,5 @@ Example with hibernate validator
 http://www.mkyong.com/spring-mvc/spring-3-mvc-and-jsr303-valid-example/
 Example with hibernate validator 2
 https://stackoverflow.com/questions/27017029/adding-custom-error-messages-for-validation-in-spring-mvc
+Own validation bean annotation
+http://dolszewski.com/spring/custom-validation-annotation-in-spring/
