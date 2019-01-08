@@ -1,5 +1,7 @@
 package hibernate.dto;
 
+import hibernate.annotations.CapitalizeMessage;
+import hibernate.annotations.CapitalizeSubject;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Pattern;
@@ -8,8 +10,10 @@ public class SubjectDTO {
     private String nickname;
     private String topic;
     @NotEmpty
+    @CapitalizeSubject
     private String subject;
     @NotEmpty
+    @CapitalizeMessage
     private String message;
     @NotEmpty
     @Pattern(regexp = "[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])")
