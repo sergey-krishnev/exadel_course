@@ -15,6 +15,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -28,9 +29,6 @@ public class CRUDController {
     @Autowired
     private CRUDService crudService;
 
-    @Autowired
-    private SubjectValidator subjectValidator;
-
     private int searchId;
 
     public Integer getSearchId() {
@@ -39,11 +37,6 @@ public class CRUDController {
 
     public void setSearchId(Integer searchId) {
         this.searchId = searchId;
-    }
-
-    @InitBinder
-    protected void initBinder(WebDataBinder binder) {
-        binder.addValidators(subjectValidator);
     }
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
@@ -88,7 +81,7 @@ public class CRUDController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String add(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto, BindingResult result, Model model) {
+    public String add(@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
             List<Users> users = crudService.searchAllUsers();
             model.addAttribute("users", users);
@@ -109,7 +102,7 @@ public class CRUDController {
 //    }
 
     @RequestMapping(value = "/editForm/update", method = RequestMethod.POST)
-    public String update(@ModelAttribute("subjectDTO") @Validated SubjectDTO subjectDto,BindingResult result, Model model) {
+    public String update(@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
             List<Users> users = crudService.searchAllUsers();
             model.addAttribute("users", users);
