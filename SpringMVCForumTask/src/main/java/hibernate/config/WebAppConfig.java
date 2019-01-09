@@ -13,6 +13,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
@@ -56,12 +57,13 @@ public class WebAppConfig {
         return transactionManager;
     }
 
-//    @Bean
-//    public MessageSource messageSource() {
-//        ResourceBundleMessageSource source = new ResourceBundleMessageSource();
-//        source.setBasename("messages");
-//        return source;
-//    }
+    @Bean
+    public MessageSource messageSource() {
+        ResourceBundleMessageSource source = new ResourceBundleMessageSource();
+        source.setBasename("messages");
+        source.setDefaultEncoding("UTF-8");
+        return source;
+    }
 
     public Properties hibernateProperties() {
         Properties dialect = new Properties();

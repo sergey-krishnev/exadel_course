@@ -8,6 +8,7 @@ import hibernate.service.interfaces.CRUDService;
 import hibernate.validator.SubjectValidator;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,6 +20,7 @@ import javax.validation.Valid;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 @RequestMapping("/")
@@ -28,6 +30,9 @@ public class CRUDController {
 
     @Autowired
     private CRUDService crudService;
+
+    @Autowired
+    MessageSource messageSource;
 
     private int searchId;
 
@@ -40,15 +45,14 @@ public class CRUDController {
     }
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String home(Model model) {
+    public String home(Locale locale, Model model) {
         List<Subject> subjects = crudService.searchAll();
         model.addAttribute("subjects", subjects);
-        LOGGER.debug("home");
         return "index";
     }
 
     @RequestMapping(value = "/newForm", method = RequestMethod.GET)
-    public String newForm(Model model) {
+    public String newForm(Locale locale, Model model) {
         List<Users> users = crudService.searchAllUsers();
         model.addAttribute("users", users);
         List<Topic> topics = crudService.searchAllTopic();
@@ -59,7 +63,7 @@ public class CRUDController {
     }
 //
     @RequestMapping(value = "/editForm/{subjectId}",method = RequestMethod.GET)
-    public String editForm(@PathVariable("subjectId") int subjectId, Model model) {
+    public String editForm(@PathVariable("subjectId") int subjectId,Locale locale, Model model) {
         setSearchId(subjectId);
         List<Users> users = crudService.searchAllUsers();
         model.addAttribute("users", users);
@@ -75,13 +79,13 @@ public class CRUDController {
     }
 
     @RequestMapping(value = "/delete/{subjectId}")
-    public String delete(@PathVariable("subjectId") int subjectId) {
+    public String delete(@PathVariable("subjectId") int subjectId,Locale locale) {
         crudService.deleteSubjectById(subjectId);
         return "redirect:/";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String add(@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
+    public String add(Locale locale,@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
             List<Users> users = crudService.searchAllUsers();
             model.addAttribute("users", users);
@@ -102,7 +106,7 @@ public class CRUDController {
 //    }
 
     @RequestMapping(value = "/editForm/update", method = RequestMethod.POST)
-    public String update(@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
+    public String update(Locale locale,@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
             List<Users> users = crudService.searchAllUsers();
             model.addAttribute("users", users);

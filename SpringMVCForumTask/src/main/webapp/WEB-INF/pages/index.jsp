@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8;" pageEncoding="UTF-8" language="java" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -8,11 +8,12 @@
 </head>
 <body>
 <h1>Spring MVC Forum Task</h1>
-<span style="float: right">
-    <a href="?lang=en">en</a>
+<span style="float: left">
+    <a href="?lang=en_US">English</a>
     |
-    <a href="?lang=ru">ru</a>
-</span>
+    <a href="?lang=ru">Russian</a>
+</span> </br>
+Current Locale : ${pageContext.response.locale}
 <table border="1" width="1200">
     <tr>
         <td width="15"><b><spring:message code="nickname"/></b></td>
