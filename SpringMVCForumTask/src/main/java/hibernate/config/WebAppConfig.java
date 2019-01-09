@@ -56,12 +56,12 @@ public class WebAppConfig {
         return transactionManager;
     }
 
-    @Bean
-    public MessageSource messageSource() {
-        ResourceBundleMessageSource source = new ResourceBundleMessageSource();
-        source.setBasename("messages");
-        return source;
-    }
+//    @Bean
+//    public MessageSource messageSource() {
+//        ResourceBundleMessageSource source = new ResourceBundleMessageSource();
+//        source.setBasename("messages");
+//        return source;
+//    }
 
     public Properties hibernateProperties() {
         Properties dialect = new Properties();
