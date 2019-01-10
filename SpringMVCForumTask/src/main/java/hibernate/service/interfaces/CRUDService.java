@@ -1,5 +1,6 @@
 package hibernate.service.interfaces;
 
+import hibernate.dto.SubjectDTO;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
@@ -24,9 +25,7 @@ public interface CRUDService {
 
     Topic searchByTopicName(String topicName);
 
-    void updateSubjectById(Integer id, String username, String topicName, String subjectName,
-                           String message, Date date);
+    void updateSubjectById(Integer id, SubjectDTO subjectDTO);
 
-    void insertSubject(String username, String topicName, String subjectName, String message,
-                       Date date);
+    void insertSubject(SubjectDTO subjectDTO);
 }

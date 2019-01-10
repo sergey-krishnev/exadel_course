@@ -1,6 +1,7 @@
 package hibernate.service.implementations;
 
 import hibernate.dao.interfaces.CRUDDao;
+import hibernate.dto.SubjectDTO;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Service
@@ -71,13 +74,24 @@ public class CRUDServiceImpl implements CRUDService {
 
     @Transactional
     @Override
-    public void insertSubject(String username, String topicName, String subjectName, String message, Date date) {
-        crudDao.insertSubject(username,topicName,subjectName,message,date);
+    public void insertSubject(SubjectDTO subjectDto) {
+        crudDao.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
     }
 
     @Transactional
     @Override
-    public void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, Date date) {
-        crudDao.updateSubjectById(id, username, topicName, subjectName, message, date);
+    public void updateSubjectById(Integer id, SubjectDTO subjectDto) {
+        crudDao.updateSubjectById(id, subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
+    }
+
+    private static java.sql.Date stringAsDate(String s) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date date = null;
+        try {
+            date = sdf.parse(s);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return new java.sql.Date(date.getTime());
     }
 }

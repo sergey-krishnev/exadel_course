@@ -13,8 +13,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
 
@@ -26,7 +24,7 @@ public class CRUDController {
     private CRUDService crudService;
 
     @Autowired
-    MessageSource messageSource;
+    private MessageSource messageSource;
 
     private int searchId;
 
@@ -88,7 +86,7 @@ public class CRUDController {
 
             return "add";
         }
-        crudService.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
+        crudService.insertSubject(subjectDto);
         return "redirect:/";
     }
 
@@ -102,18 +100,7 @@ public class CRUDController {
             return "update";
         }
         Integer searchId = getSearchId();
-        crudService.updateSubjectById(searchId,subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
+        crudService.updateSubjectById(searchId,subjectDto);
         return "redirect:/";
-    }
-
-    private static java.sql.Date stringAsDate(String s) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date date = null;
-        try {
-            date = sdf.parse(s);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return new java.sql.Date(date.getTime());
     }
 }
