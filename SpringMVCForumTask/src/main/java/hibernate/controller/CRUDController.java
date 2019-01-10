@@ -5,15 +5,11 @@ import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
 import hibernate.service.interfaces.CRUDService;
-import hibernate.validator.SubjectValidator;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -25,8 +21,6 @@ import java.util.Locale;
 @Controller
 @RequestMapping("/")
 public class CRUDController {
-
-    private final static Logger LOGGER = Logger.getLogger(CRUDController.class);
 
     @Autowired
     private CRUDService crudService;
@@ -61,7 +55,7 @@ public class CRUDController {
         model.addAttribute("subjectsDTO", subjectDto);
         return "add";
     }
-//
+
     @RequestMapping(value = "/editForm/{subjectId}",method = RequestMethod.GET)
     public String editForm(@PathVariable("subjectId") int subjectId,Locale locale, Model model) {
         setSearchId(subjectId);
@@ -98,13 +92,6 @@ public class CRUDController {
         return "redirect:/";
     }
 
-//    @RequestMapping(value = "/home",params = {"action=add"},method = RequestMethod.POST)
-//    public String add(@RequestParam("nickname") String nickname,
-//                      @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date) {
-//        crudService.insertSubject(nickname, topic, subject, message, stringAsDate(date));
-//        return "redirect:/home";
-//    }
-
     @RequestMapping(value = "/editForm/update", method = RequestMethod.POST)
     public String update(Locale locale,@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -118,16 +105,6 @@ public class CRUDController {
         crudService.updateSubjectById(searchId,subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
         return "redirect:/";
     }
-
-//    @RequestMapping(value = "/home",params = {"action=update"}, method = RequestMethod.POST)
-//    public String update(@RequestParam("nickname") String nickname,
-//                         @RequestParam("topic") String topic, @RequestParam("subject") String subject, @RequestParam("message") String message, @RequestParam("date") String date,  Model model) {
-//        Integer searchId = getSearchId();
-//        crudService.updateSubjectById(searchId,nickname,
-//                topic, subject, message,
-//                stringAsDate(date));
-//        return "redirect:/home";
-//    }
 
     private static java.sql.Date stringAsDate(String s) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
