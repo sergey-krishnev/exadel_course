@@ -60,19 +60,9 @@ public class CriteriaDaoImpl implements CRUDDao {
 
     @Override
     public void deleteSubjectById(Integer id) {
-        Session session = sessionFactory.openSession();
-        Transaction trans = null;
-        try{
-            trans = session.beginTransaction();
+        Session session = sessionFactory.getCurrentSession();
             Subject subject = (Subject) session.get(Subject.class, id);
             session.delete(subject);
-            trans.commit();
-        }catch (HibernateException e) {
-            if (trans!=null) trans.rollback();
-            LOGGER.error(e.getMessage());
-        }finally {
-            session.close();
-        }
     }
 
 
@@ -95,29 +85,16 @@ public class CriteriaDaoImpl implements CRUDDao {
 
     @Override
     public void insertSubject(String username, String topicName, String subjectName, String message, Date date) {
-        Session session = sessionFactory.openSession();
-        Transaction trans = session.beginTransaction();
-        try
-        {
+        Session session = sessionFactory.getCurrentSession();
             Users user = searchByUserName(username);
             Topic topic = searchByTopicName(topicName);
             Subject subject = new Subject(subjectName, message, date, user, topic);
             session.save(subject);
-            trans.commit();
-        } catch(RuntimeException e) {
-            if (trans.isActive()) {
-                trans.rollback();
-            }
-        } finally {
-            session.close();
-        }
     }
 
     @Override
     public void updateSubjectById(Integer id, String username, String topicName, String subjectName, String message, Date date) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        try{
+        Session session = sessionFactory.getCurrentSession();
             Subject subject = (Subject) session.get(Subject.class, id);
             Users user = searchByUserName(username);
             Topic topic = searchByTopicName(topicName);
@@ -127,13 +104,5 @@ public class CriteriaDaoImpl implements CRUDDao {
             subject.setMessage(message);
             subject.setDateSending(date);
             session.update(subject);
-            transaction.commit();
-        }catch (HibernateException e) {
-            if (transaction.isActive()) {
-                transaction.rollback();
-            }
-        }finally {
-            session.close();
-        }
     }
 }

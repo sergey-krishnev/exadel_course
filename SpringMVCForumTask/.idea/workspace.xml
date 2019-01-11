@@ -8,13 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4472d323-eb17-4887-a0f3-ac88475430e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/controller/CRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/controller/CRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/controller/CRUDController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCForumTask/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/webapps/ROOT/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -136,10 +134,10 @@
     <session id="-313278933">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="52" />
+          <entry key="project.closed" value="53" />
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.10" value="9" />
-          <entry key="project.open.time.11" value="14" />
+          <entry key="project.open.time.11" value="15" />
           <entry key="project.open.time.12" value="5" />
           <entry key="project.open.time.13" value="5" />
           <entry key="project.open.time.14" value="4" />
@@ -147,7 +145,7 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="9" />
-          <entry key="project.opened" value="54" />
+          <entry key="project.opened" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -253,20 +251,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+            <state relative-caret-position="227">
+              <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="83" column="171" selection-start-line="83" selection-start-column="171" selection-end-line="83" selection-end-column="171" />
+            <state relative-caret-position="901">
+              <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -310,7 +308,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
+            <state relative-caret-position="544">
               <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
             </state>
           </provider>
@@ -388,7 +386,6 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/InsertOperationImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/UpdateOperationImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/validator/SubjectValidator.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -413,6 +410,7 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -440,7 +438,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="655" />
     <option name="y" value="20" />
     <option name="width" value="1085" />
@@ -473,6 +471,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -635,8 +635,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -988,18 +986,19 @@
       <workItem from="1547026766958" duration="1794000" />
       <workItem from="1547107879094" duration="701000" />
       <workItem from="1547113521516" duration="1385000" />
-      <workItem from="1547116210762" duration="1005000" />
+      <workItem from="1547116210762" duration="1735000" />
+      <workItem from="1547197026331" duration="360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212776000" />
+    <option name="totallyTimeSpent" value="213866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20149253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20149253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1011,7 +1010,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32482827" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.26005888" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4465162" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4465162" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1259,10 +1258,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1921">
           <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1287,45 +1314,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="901">
+          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="83" column="171" selection-start-line="83" selection-start-column="171" selection-end-line="83" selection-end-column="171" />
+        <state relative-caret-position="227">
+          <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
         </state>
       </provider>
     </entry>
