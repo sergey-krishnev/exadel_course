@@ -2,6 +2,8 @@ package hibernate.service.implementations;
 
 import hibernate.dao.interfaces.CRUDDao;
 import hibernate.dto.SubjectDTO;
+import hibernate.dto.TopicDTO;
+import hibernate.dto.UsersDTO;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
@@ -44,6 +46,7 @@ public class CRUDServiceImpl implements CRUDService {
         List<SubjectDTO> subjectDTOList = new ArrayList<>();
         for (Subject subject : subjectList) {
             SubjectDTO subjectDTO = new SubjectDTO();
+            subjectDTO.setId(subject.getId());
             subjectDTO.setNickname(subject.getUsers().getNickname());
             subjectDTO.setTopic(subject.getTopic().getName());
             subjectDTO.setSubject(subject.getName());
@@ -56,14 +59,28 @@ public class CRUDServiceImpl implements CRUDService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Users> searchAllUsers() {
-        return crudDao.searchAllUsers();
+    public List<UsersDTO> searchAllUsers() {
+        List<Users> usersList = crudDao.searchAllUsers();
+        List<UsersDTO> usersDTOList = new ArrayList<>();
+        for (Users users : usersList) {
+            UsersDTO usersDTO = new UsersDTO();
+            usersDTO.setName(users.getNickname());
+            usersDTOList.add(usersDTO);
+        }
+        return usersDTOList;
     }
 
     @Transactional(readOnly = true)
     @Override
-    public List<Topic> searchAllTopic() {
-        return crudDao.searchAllTopic();
+    public List<TopicDTO> searchAllTopic() {
+        List<Topic> topicList = crudDao.searchAllTopic();
+        List<TopicDTO> topicDTOList = new ArrayList<>();
+        for (Topic topic : topicList) {
+            TopicDTO topicDTO = new TopicDTO();
+            topicDTO.setName(topic.getName());
+            topicDTOList.add(topicDTO);
+        }
+        return topicDTOList;
     }
 
     @Transactional

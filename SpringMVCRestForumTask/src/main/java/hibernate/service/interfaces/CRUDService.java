@@ -1,6 +1,8 @@
 package hibernate.service.interfaces;
 
 import hibernate.dto.SubjectDTO;
+import hibernate.dto.TopicDTO;
+import hibernate.dto.UsersDTO;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
@@ -15,9 +17,9 @@ public interface CRUDService {
 
     List<SubjectDTO> searchAll();
 
-    List<Users> searchAllUsers();
+    List<UsersDTO> searchAllUsers();
 
-    List<Topic> searchAllTopic();
+    List<TopicDTO> searchAllTopic();
 
     void deleteSubjectById(Integer id);
 

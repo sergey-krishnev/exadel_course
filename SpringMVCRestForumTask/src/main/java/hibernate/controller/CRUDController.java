@@ -7,8 +7,6 @@ import hibernate.model.Users;
 import hibernate.service.interfaces.CRUDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,7 +16,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Locale;
 
-@RestController
+@Controller
 @RequestMapping("/")
 public class CRUDController {
 
@@ -38,25 +36,16 @@ public class CRUDController {
         this.searchId = searchId;
     }
 
-    //Get all subjects
-    @RequestMapping(value = "/",method = RequestMethod.GET, headers="Accept=application/json")
-    public List<SubjectDTO> home() {
-        return crudService.searchAll();
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public String home() {
+        return "index";
     }
 
-//    //Get empty subject
 //    @RequestMapping(value = "/newForm", method = RequestMethod.GET)
-//    public String newForm(Locale locale, Model model) {
-//        List<Users> users = crudService.searchAllUsers();
-//        model.addAttribute("users", users);
-//        List<Topic> topics = crudService.searchAllTopic();
-//        model.addAttribute("topics", topics);
-//        SubjectDTO subjectDto = new SubjectDTO();
-//        model.addAttribute("subjectsDTO", subjectDto);
+//    public String newForm(Locale locale) {
 //        return "add";
 //    }
 //
-//    //Get subject by id
 //    @RequestMapping(value = "/editForm/{subjectId}",method = RequestMethod.GET)
 //    public String editForm(@PathVariable("subjectId") int subjectId,Locale locale, Model model) {
 //        setSearchId(subjectId);
@@ -73,14 +62,11 @@ public class CRUDController {
 //        return "update";
 //    }
 //
-//    //Delete subject by id
-//    @RequestMapping(value = "/delete/{subjectId}")
-//    public String delete(@PathVariable("subjectId") int subjectId,Locale locale) {
-//        crudService.deleteSubjectById(subjectId);
-//        return "redirect:/";
-//    }
+    @RequestMapping(value = "subjects/delete/{subjectId}", method = RequestMethod.POST)
+    public String delete(@PathVariable("subjectId") int subjectId) {
+        return "redirect:/";
+    }
 //
-//    //Create subject
 //    @RequestMapping(value = "/add", method = RequestMethod.POST)
 //    public String add(Locale locale,@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
 //        if (result.hasErrors()) {
@@ -95,7 +81,6 @@ public class CRUDController {
 //        return "redirect:/";
 //    }
 //
-//    //Update subject
 //    @RequestMapping(value = "/editForm/update", method = RequestMethod.POST)
 //    public String update(Locale locale,@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
 //        if (result.hasErrors()) {

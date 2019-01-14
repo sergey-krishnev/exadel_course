@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
 public class SubjectDTO {
+    private int id;
     private String nickname;
     private String topic;
     @NotEmpty
@@ -18,6 +19,14 @@ public class SubjectDTO {
     @NotEmpty
     @Pattern(regexp = "[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])")
     private String date;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNickname() {
         return nickname;

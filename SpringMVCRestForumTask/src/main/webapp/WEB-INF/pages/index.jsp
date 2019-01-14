@@ -5,27 +5,45 @@
 <html>
 <head>
     <title>Data Page</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-<h1>Spring MVC Forum Task</h1>
+<h1>Spring MVC REST Forum Task</h1>
 <span style="float: left">
     <a href="?lang=en_US">English</a>
     |
     <a href="?lang=ru">Russian</a>
 </span> </br>
 Current Locale : ${pageContext.response.locale}
-<table border="1" width="1200">
+<table border="1" width="1200" id="subject_table">
     <tr>
-        <td width="15"><b><spring:message code="nickname"/></b></td>
-        <td width="25"><b><spring:message code="topic.name"/></b></td>
-        <td width="70"><b><spring:message code="subject.name"/></b></td>
-        <td width="175"><b><spring:message code="message"/></b></td>
-        <td width="15"><b><spring:message code="date"/></b></td>
-        <td colspan=2><b><spring:message code="action.page"/></b></td>
+        <th width="15"><b><spring:message code="nickname"/></b></th>
+        <th width="25"><b><spring:message code="topic.name"/></b></th>
+        <th width="70"><b><spring:message code="subject.name"/></b></th>
+        <th width="175"><b><spring:message code="message"/></b></th>
+        <th width="15"><b><spring:message code="date"/></b></th>
+        <th colspan=2><b><spring:message code="action.page"/></b></th>
     </tr>
-    <script>
-
+</table>
+<p><a href="newForm"><spring:message code="index.add"/></a></p>
+    <script type="text/javascript">
+$(document).ready(function () {
+    $.getJSON("http://localhost:8080/subjects", function (data) {
+        var subjectDTO_data = '';
+        $.each(data, function (key, value) {
+            subjectDTO_data += '<tr>';
+            subjectDTO_data += '<td>'+value.nickname+'</td>';
+            subjectDTO_data += '<td>'+value.topic+'</td>';
+            subjectDTO_data += '<td>'+value.subject+'</td>';
+            subjectDTO_data += '<td>'+value.message+'</td>';
+            subjectDTO_data += '<td>'+value.date+'</td>';
+            subjectDTO_data += '<td><a href="editForm/'+value.id+'"><spring:message code="index.update"/></a></td>';
+            subjectDTO_data += '<td><a href="subjects/delete/'+value.id+'"><spring:message code="index.delete"/></a></td>';
+            subjectDTO_data += '<tr>';
+        })
+        $('#subject_table').append(subjectDTO_data)
+    })
+});
     </script>
 </body>
 </html>

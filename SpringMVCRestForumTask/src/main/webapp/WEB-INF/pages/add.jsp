@@ -7,6 +7,7 @@
 <html>
 <head>
     <title><spring:message code="add.page"/></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style type="text/css">
         .error {
             color: red;
@@ -18,15 +19,9 @@
 <h1><spring:message code="add.page"/></h1>
 <form:form action="add" modelAttribute="subjectDTO" method="post">
 
-    <spring:message code="nickname"/> : <select name="nickname">
-    <c:forEach var="username" items="${users}">
-        <option value="${username.nickname}">${username.nickname}</option>
-    </c:forEach>
+    <spring:message code="nickname"/> : <select id="nickname">
 </select> <br/>
-    <spring:message code="topic.name"/> : <select name="topic">
-    <c:forEach var="topicname" items="${topics}">
-        <option value="${topicname.name}">${topicname.name}</option>
-    </c:forEach>
+    <spring:message code="topic.name"/> : <select id="topic">
 </select> <br/>
     <table>
         <tr>
@@ -53,6 +48,25 @@
         </tr>
     </table>
 </form:form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.getJSON("http://localhost:8080/users", function (data) {
+            var usersDTO_data = '';
+            $.each(data, function (key, value) {
+                usersDTO_data += '<option value="'+value.name+'">'+value.name+'</option>';
+            })
+            $('#nickname').append(usersDTO_data)
+        })
+
+        $.getJSON("http://localhost:8080/topics", function (data) {
+            var topicDTO_data = '';
+            $.each(data, function (key, value) {
+                topicDTO_data += '<option value="'+value.name+'">'+value.name+'</option>';
+            })
+            $('#topic').append(topicDTO_data)
+        })
+    });
+</script>
 </body>
 </html>
 
