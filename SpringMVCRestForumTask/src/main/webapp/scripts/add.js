@@ -5,8 +5,22 @@ $(document).ready(function () {
         var subject = $("#subject").val();
         var message = $("#message").val();
         var date = $("#date").val();
-        alert(nickname + " : " + topic + " : " + subject + " : " + message + " : " + date);
-        alert({"id":108,"nickname":"Tulio","topic":"Television Stars","subject":"Capitals","message":"We if prosperous comparison middletons at.","date":"2014-11-27"})
-        var jsonPost = '{ "id":1,"nickname":"'+ nickname +'",'
+        var jsonPost = '{ "id":1,"nickname":"'+ nickname +'","topic":"' + topic + '","subject":"' + subject +
+            '","message":"' + message + '","date":"' + date +'"}';
+        alert(jsonPost);
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/subjects",
+            data: jsonPost,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                alert(data);
+                location.reload();
+            },
+            failure: function (errMsg) {
+                alert(errMsg);
+            }
+        })
     });
 });

@@ -5,6 +5,21 @@ $(document).ready(function () {
         var subject = $("#subject").val();
         var message = $("#message").val();
         var date = $("#date").val();
-        alert(nickname + " : " + topic + " : " + subject + " : " + message + " : " + date);
+        var jsonPost = '{ "id":1,"nickname":"'+ nickname +'","topic":"' + topic + '","subject":"' + subject +
+            '","message":"' + message + '","date":"' + date +'"}';
+        alert(jsonPost);
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/subjects",
+            data: jsonPost,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                alert(data);
+            },
+            failure: function (errMsg) {
+                alert(errMsg);
+            }
+        })
     });
 });
