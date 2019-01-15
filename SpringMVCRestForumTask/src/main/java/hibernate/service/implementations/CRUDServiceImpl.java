@@ -35,8 +35,16 @@ public class CRUDServiceImpl implements CRUDService {
 
     @Transactional(readOnly = true)
     @Override
-    public Subject searchBySubjectId(Integer id) {
-        return crudDao.searchBySubjectId(id);
+    public SubjectDTO searchBySubjectId(Integer id) {
+        Subject subject = crudDao.searchBySubjectId(id);
+        SubjectDTO subjectDTO = new SubjectDTO();
+        subjectDTO.setId(subject.getId());
+        subjectDTO.setNickname(subject.getUsers().getNickname());
+        subjectDTO.setTopic(subject.getTopic().getName());
+        subjectDTO.setSubject(subject.getName());
+        subjectDTO.setMessage(subject.getMessage());
+        subjectDTO.setDate(subject.getFormattedDateSending());
+        return subjectDTO;
     }
 
     @Transactional(readOnly = true)

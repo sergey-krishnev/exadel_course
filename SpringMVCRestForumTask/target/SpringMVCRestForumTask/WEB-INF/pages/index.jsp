@@ -25,26 +25,40 @@ Current Locale : ${pageContext.response.locale}
         <th colspan=2><b><spring:message code="action.page"/></b></th>
     </tr>
 </table>
-<p><a href="newForm"><spring:message code="index.add"/></a></p>
-    <script type="text/javascript">
-$(document).ready(function () {
-    $.getJSON("http://localhost:8080/subjects", function (data) {
-        var subjectDTO_data = '';
-        $.each(data, function (key, value) {
-            subjectDTO_data += '<tr>';
-            subjectDTO_data += '<td>'+value.nickname+'</td>';
-            subjectDTO_data += '<td>'+value.topic+'</td>';
-            subjectDTO_data += '<td>'+value.subject+'</td>';
-            subjectDTO_data += '<td>'+value.message+'</td>';
-            subjectDTO_data += '<td>'+value.date+'</td>';
-            subjectDTO_data += '<td><a href="editForm/'+value.id+'"><spring:message code="index.update"/></a></td>';
-            subjectDTO_data += '<td><a href="subjects/delete/'+value.id+'"><spring:message code="index.delete"/></a></td>';
-            subjectDTO_data += '<tr>';
-        })
-        $('#subject_table').append(subjectDTO_data)
-    })
-});
-    </script>
+<h1><spring:message code="add.page"/></h1>
+
+<table>
+    <tr>
+        <td><spring:message code="nickname"/> :</td>
+        <td><select id="nickname"></select></td>
+    </tr>
+    <tr>
+    <td><spring:message code="topic.name"/> :</td>
+        <td><select id="topic"></select></td>
+    </tr>
+    <tr>
+    <td><spring:message code="subject.name"/> :</td>
+    <td><input type="text" id="subject"
+    value=""/></td>
+    </tr>
+    <tr>
+    <td><spring:message code="message"/> :</td>
+    <td><input type="text" id="message"
+    value=""/>
+    </td>
+    </tr>
+    <tr>
+    <td><spring:message code="date"/> :</td>
+    <td><input type="text" id="date"
+    value=""/></td>
+    </tr>
+    <tr>
+        <td><button type="button" class ="add"><spring:message code="index.add"/></button></td>
+    </tr>
+</table>
+    <script src="scripts/subject.js"></script>
+    <script src="scripts/add.js"></script>
+    <script src="scripts/delete.js"></script>
 </body>
 </html>
 

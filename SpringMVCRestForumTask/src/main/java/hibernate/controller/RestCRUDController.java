@@ -30,78 +30,44 @@ public class RestCRUDController {
     @Autowired
     private MessageSource messageSource;
 
-    private int searchId;
-
-    public Integer getSearchId() {
-        return searchId;
-    }
-
-    public void setSearchId(Integer searchId) {
-        this.searchId = searchId;
-    }
-
     //Get all subjects
     @RequestMapping(value = "/subjects",method = RequestMethod.GET, headers="Accept=application/json")
-    public List<SubjectDTO> subjects() {
+    public List<SubjectDTO> getSubjectsDTO() {
         return crudService.searchAll();
     }
 
-//    @RequestMapping(value = "/users",method = RequestMethod.GET, headers="Accept=application/json")
-//    public List<UsersDTO> users() {
-//        return crudService.searchAllUsers();
-//    }
-//
-//    @RequestMapping(value = "/topics",method = RequestMethod.GET, headers="Accept=application/json")
-//    public List<TopicDTO> topic() {
-//        return crudService.searchAllTopic();
-//    }
+    @RequestMapping(value = "/users",method = RequestMethod.GET, headers="Accept=application/json")
+    public List<UsersDTO> users() {
+        return crudService.searchAllUsers();
+    }
 
-//
-//    //Get subject by id
-//    @RequestMapping(value = "/editForm/{subjectId}",method = RequestMethod.GET)
-//    public String editForm(@PathVariable("subjectId") int subjectId,Locale locale, Model model) {
-//        setSearchId(subjectId);
-//        List<Users> users = crudService.searchAllUsers();
-//        model.addAttribute("users", users);
-//        List<Topic> topics = crudService.searchAllTopic();
-//        model.addAttribute("topics", topics);
-//        Subject subject = crudService.searchBySubjectId(subjectId);
-//        SubjectDTO subjectDto = new SubjectDTO();
-//        subjectDto.setSubject(subject.getName());
-//        subjectDto.setMessage(subject.getMessage());
-//        subjectDto.setDate(subject.getFormattedDateSending());
-//        model.addAttribute("subjectDTO", subjectDto);
-//        return "update";
-//    }
-//
-//    //Delete subject by id
-    @RequestMapping(value = "/subjects/delete/{subjectId}", headers="Accept=application/json")
-    public void delete(@PathVariable("subjectId") int subjectId,Locale locale) {
+    @RequestMapping(value = "/topics",method = RequestMethod.GET, headers="Accept=application/json")
+    public List<TopicDTO> topic() {
+        return crudService.searchAllTopic();
+    }
+
+    //add subject
+    @RequestMapping(value = "/subjects",method = RequestMethod.POST, headers = "Accept=application/json")
+    public void addSubjectDTO(@RequestBody SubjectDTO subjectDTO) {
+        crudService.insertSubject(subjectDTO);
+    }
+
+    //get subject by id
+    @RequestMapping(value = "/subjects/{subjectId}",method = RequestMethod.GET, headers = "Accept=application/json")
+    public SubjectDTO getSubjectDTOById(@PathVariable int subjectId) {
+        return crudService.searchBySubjectId(subjectId);
+    }
+
+    //update subject
+    @RequestMapping(value = "/subjects{subjectId}", method = RequestMethod.PUT, headers = "Accept=application/json")
+    public void updateSubjectDTO(@RequestBody SubjectDTO subjectDTO, @PathVariable int subjectId) {
+        crudService.updateSubjectById(subjectId, subjectDTO);
+    }
+
+    //delete subject by id
+    @RequestMapping(value = "/subjects/{subjectId}",method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public void delete(@PathVariable("subjectId") int subjectId) {
         crudService.deleteSubjectById(subjectId);
     }
-//
-//    //Create subject
-//    @RequestMapping(value = "/add", method = RequestMethod.POST)
-//    public String add(Locale locale,@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
-//        if (result.hasErrors()) {
-//            return "add";
-//        }
-//        crudService.insertSubject(subjectDto);
-//        return "redirect:/";
-//    }
-//
-//    //Update subject
-//    @RequestMapping(value = "/editForm/update", method = RequestMethod.POST)
-//    public String update(Locale locale,@ModelAttribute("subjectDTO") @Valid SubjectDTO subjectDto, BindingResult result, Model model) {
-//        if (result.hasErrors()) {
-//            List<Users> users = crudService.searchAllUsers();
-//            model.addAttribute("users", users);
-//            List<Topic> topics = crudService.searchAllTopic();
-//            model.addAttribute("topics", topics);
-//            return "update";
-//        }
-//        Integer searchId = getSearchId();
-//        crudService.updateSubjectById(searchId,subjectDto);
-//        return "redirect:/";
-//    }
+
 }

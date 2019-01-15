@@ -13,7 +13,7 @@ import java.util.List;
 public interface CRUDService {
     String getType();
 
-    Subject searchBySubjectId(Integer id);
+    SubjectDTO searchBySubjectId(Integer id);
 
     List<SubjectDTO> searchAll();
 
