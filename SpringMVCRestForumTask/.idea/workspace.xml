@@ -8,10 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4472d323-eb17-4887-a0f3-ac88475430e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/pages/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/update.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -302,36 +304,39 @@
     <session id="1974944587">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.23" value="2" />
+          <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.31" value="3" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.33" value="3" />
-          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.34" value="2" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
           <entry key="java" value="504" />
-          <entry key="js" value="107" />
-          <entry key="jsp" value="384" />
+          <entry key="js" value="606" />
+          <entry key="jsp" value="398" />
           <entry key="xml" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="504" />
-          <entry key="JSP" value="384" />
-          <entry key="JavaScript" value="107" />
+          <entry key="JSP" value="398" />
+          <entry key="JavaScript" value="606" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="62" />
         </counts>
@@ -339,6 +344,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="11" />
+          <entry key="js" value="1" />
           <entry key="jsp" value="2" />
           <entry key="xml" value="2" />
         </counts>
@@ -347,6 +353,7 @@
         <counts>
           <entry key="JAVA" value="11" />
           <entry key="JSP" value="2" />
+          <entry key="JavaScript" value="1" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -354,21 +361,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#679#680#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -381,7 +373,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="560">
               <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
@@ -399,8 +391,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/delete.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+            <state relative-caret-position="40">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -408,7 +400,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="318">
               <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -421,8 +413,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="210">
+              <caret line="41" column="14" selection-start-line="40" selection-start-column="8" selection-end-line="41" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="21" column="69" lean-forward="true" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -430,17 +431,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/subject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="50" />
+            <state relative-caret-position="-43">
+              <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/add.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="20">
+              <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -473,7 +474,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/service/InsertOperationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/InsertOperation.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/CRUDService.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDService.java" />
@@ -522,8 +522,9 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/delete.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/subject.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/add.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/update.js" />
       </list>
     </option>
   </component>
@@ -584,6 +585,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -750,61 +752,11 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1206,18 +1158,23 @@
       <workItem from="1547553363472" duration="1409000" />
       <workItem from="1547555237471" duration="1776000" />
       <workItem from="1547557575180" duration="1102000" />
-      <workItem from="1547588456853" duration="1058000" />
+      <workItem from="1547588456853" duration="1693000" />
+      <workItem from="1547590227933" duration="593000" />
+      <workItem from="1547592100043" duration="1743000" />
+      <workItem from="1547593918163" duration="1749000" />
+      <workItem from="1547595758296" duration="1751000" />
+      <workItem from="1547597582703" duration="1779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281477000" />
+    <option name="totallyTimeSpent" value="289727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24362417" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1399,12 +1356,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/validator/SubjectValidator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en_US.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DataSubjects.csv">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1467,15 +1424,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages_ru.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1509,12 +1463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1527,7 +1475,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="560">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
@@ -1536,13 +1484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1555,7 +1496,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="318">
           <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1564,24 +1505,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/subject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/delete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        <state relative-caret-position="40">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="20">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/subject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="41" column="14" selection-start-line="40" selection-start-column="8" selection-end-line="41" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="21" column="69" lean-forward="true" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
         </state>
       </provider>
     </entry>

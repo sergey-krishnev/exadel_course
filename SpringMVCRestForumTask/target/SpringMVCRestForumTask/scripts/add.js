@@ -16,6 +16,7 @@ $(document).ready(function () {
             dataType: "json",
             success: function (data) {
                 alert(data);
+                location.reload();
             },
             failure: function (errMsg) {
                 alert(errMsg);
