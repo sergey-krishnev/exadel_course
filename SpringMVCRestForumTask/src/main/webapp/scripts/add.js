@@ -7,19 +7,20 @@ $(document).ready(function () {
         var date = $("#date").val();
         var jsonPost = '{ "id":1,"nickname":"'+ nickname +'","topic":"' + topic + '","subject":"' + subject +
             '","message":"' + message + '","date":"' + date +'"}';
-        alert(jsonPost);
+        //alert(jsonPost);
         $.ajax({
             type: "POST",
             url: "http://localhost:8080/subjects",
             data: jsonPost,
-            contentType: "application/json; charset=utf-8",
+            contentType : 'application/json',
             dataType: "json",
-            success: function (data) {
-                location.reload();
+            success: function (data, textStatus, xhr) {
+                location.reload() //Change
             },
-            failure: function (errMsg) {
-                alert(errMsg);
+            error: function (xhr, textStatus, errorThrown) {
+                alert('Error in Operation');
+                location.reload()
             }
-        })
+        });
     });
 });
