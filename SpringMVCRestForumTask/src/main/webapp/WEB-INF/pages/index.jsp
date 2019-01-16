@@ -59,6 +59,7 @@ Current Locale : ${pageContext.response.locale}
     <script src="scripts/subject.js"></script>
     <script src="scripts/add.js"></script>
     <script src="scripts/delete.js"></script>
+    <script src="scripts/updateForm.js"></script>
     <script src="scripts/update.js"></script>
 </body>
 </html>

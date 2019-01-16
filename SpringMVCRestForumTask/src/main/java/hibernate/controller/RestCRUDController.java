@@ -60,7 +60,7 @@ public class RestCRUDController {
 
     //update subject
     @RequestMapping(value = "/subjects{subjectId}", method = RequestMethod.PUT, headers = "Accept=application/json")
-    public void updateSubjectDTO(@RequestBody SubjectDTO subjectDTO, @PathVariable int subjectId) {
+    public void updateSubjectDTO(@RequestBody SubjectDTO subjectDTO, @PathVariable("subjectId") int subjectId) {
         crudService.updateSubjectById(subjectId, subjectDTO);
     }
 

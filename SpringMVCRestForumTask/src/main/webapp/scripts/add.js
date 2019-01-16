@@ -15,7 +15,6 @@ $(document).ready(function () {
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (data) {
-                alert(data);
                 location.reload();
             },
             failure: function (errMsg) {
