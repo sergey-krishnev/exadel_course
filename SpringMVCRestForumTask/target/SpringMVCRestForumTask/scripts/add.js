@@ -15,9 +15,6 @@ $(document).ready(function () {
         data["message"] = $("#message").val();
         data["date"] = $("#date").val();
 
-        alert(JSON.stringify(data));
-        // alert(jsonPost);
-
         $.ajax({
             type: "POST",
             url: "http://localhost:8080/subjects",
@@ -28,8 +25,8 @@ $(document).ready(function () {
                 location.reload(); //Change
                 alert("success")
             },
-            error: function (xhr, textStatus, errorThrown) {
-                alert(xhr);
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(jqXHR.status);
                 alert(textStatus);
                 alert(errorThrown);
 

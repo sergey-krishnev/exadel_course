@@ -2,7 +2,6 @@ $(document).ready(function () {
     $(document).on('click', '.delete', function() {
         var id = $(this).attr("id");
         var path = "http://localhost:8080/subjects/" + id;
-        alert(path);
         $.ajax({
             url: path   ,
             type: "DELETE",

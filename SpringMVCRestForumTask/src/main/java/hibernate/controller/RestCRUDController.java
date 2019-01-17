@@ -3,22 +3,15 @@ package hibernate.controller;
 import hibernate.dto.SubjectDTO;
 import hibernate.dto.TopicDTO;
 import hibernate.dto.UsersDTO;
-import hibernate.model.Subject;
-import hibernate.model.Topic;
-import hibernate.model.Users;
 import hibernate.service.interfaces.CRUDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Locale;
 
 @RestController
 @RequestMapping("/")
@@ -49,7 +42,7 @@ public class RestCRUDController {
 
     //add subject
     @RequestMapping(value = "/subjects",method = RequestMethod.POST)
-    public void addSubjectDTO(@RequestBody SubjectDTO subjectDTO) {
+    public void addSubjectDTO(@Valid @RequestBody SubjectDTO subjectDTO) {
         crudService.insertSubject(subjectDTO);
     }
 
@@ -61,7 +54,7 @@ public class RestCRUDController {
 
     //update subject
     @RequestMapping(value = "/subjects/{subjectId}", method = RequestMethod.PUT)
-    public void updateSubjectDTO(@RequestBody SubjectDTO subjectDTO, @PathVariable("subjectId") int subjectId) {
+    public void updateSubjectDTO(@Valid @RequestBody SubjectDTO subjectDTO, @PathVariable("subjectId") int subjectId) {
         crudService.updateSubjectById(subjectId, subjectDTO);
     }
 

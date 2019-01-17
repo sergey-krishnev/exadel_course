@@ -1,4 +1,38 @@
 $(document).ready(function () {
+
+    var lang = $("#lang").text();
+    var deleteButton ='';
+    var updateButton ='';
+
+    $.i18n.properties({
+        name: 'messages',
+        path: '/bundle',
+        mode: 'both',
+        language: lang,
+        callback: function () {
+            $(".nicknameLocale").text($.i18n.prop('nickname'));
+            $(".topicLocale").text($.i18n.prop('topic.name'));
+            $(".subjectLocale").text($.i18n.prop('subject.name'));
+            $(".messageLocale").text($.i18n.prop('message'));
+            $(".dateLocale").text($.i18n.prop('date'));
+            $(".actionLocale").text($.i18n.prop('action.page'));
+
+            $("#addPageLocale").text($.i18n.prop('add.page'));
+            $(".add").text($.i18n.prop('submit.page'));
+            deleteButton = $.i18n.prop('index.delete');
+            updateButton = $.i18n.prop('index.update');
+            // action.page = Action
+            // submit.page = Submit
+            //
+            // nickname = Nickname
+            // topic.name = Topic
+            // subject.name = Subject
+            // message = Message
+            // date = Date
+        }
+    });
+    // var lang = $("#lang");
+
     $.ajax({
         url: "http://localhost:8080/subjects",
         type: "GET"
@@ -12,13 +46,13 @@ $(document).ready(function () {
                 subjectDTO_data += '<td>' + value.subject + '</td>';
                 subjectDTO_data += '<td>' + value.message + '</td>';
                 subjectDTO_data += '<td>' + value.date + '</td>';
-                subjectDTO_data += '<td><button type="button" class = "update" id ="' + value.id + '">Update</button></td>';
-                subjectDTO_data += '<td><button type="button" class = "delete" id ="' + value.id + '">Delete</button></td>';
+                subjectDTO_data += '<td><button type="button" class = "update" id ="' + value.id + '">'+ updateButton +'</button></td>';
+                subjectDTO_data += '<td><button type="button" class = "delete" id ="' + value.id + '">'+ deleteButton +'</button></td>';
                 subjectDTO_data += '</tr>';
             });
             $('#subject_table').append(subjectDTO_data)
         })
-    })
+    });
     $.getJSON("http://localhost:8080/users", function (data) {
         var usersDTO_data = '';
         $.each(data, function (key, value) {

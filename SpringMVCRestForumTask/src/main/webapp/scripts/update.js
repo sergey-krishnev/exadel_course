@@ -12,8 +12,7 @@ $(document).ready(function () {
         var pathPut = "http://localhost:8080/subjects/" + $(this).attr("id");
         var jsonPut = '{ "id":1,"nickname":"'+ nicknameUpdate +'","topic":"' + topicUpdate + '","subject":"' + subjectUpdate +
             '","message":"' + messageUpdate + '","date":"' + dateUpdate +'"}';
-        alert(jsonPut);
-        alert(pathPut);
+
         $.ajax({
             type: "PUT",
             url: pathPut,
