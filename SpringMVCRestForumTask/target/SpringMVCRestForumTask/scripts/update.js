@@ -18,13 +18,16 @@ $(document).ready(function () {
             type: "PUT",
             url: pathPut,
             data: jsonPut,
-            contentType : 'application/json',
-            dataType: "json",
+            contentType : 'application/json; charset=UTF-8',
+            dataType: "html",
             success: function (data, textStatus, xhr) {
-                location.reload() //Change
+                location.reload(); //Change
+                alert("success")
             },
             error: function (xhr, textStatus, errorThrown) {
-                alert('Error in Operation');
+                alert(xhr);
+                alert(textStatus);
+                alert(errorThrown);
                 location.reload()
             }
         })
