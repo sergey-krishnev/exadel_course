@@ -1,6 +1,5 @@
 package hibernate.annotations;
 
-import hibernate.annotationsImpl.CapitalizeMessageValidator;
 import hibernate.annotationsImpl.CapitalizeSubjectValidator;
 
 import javax.validation.Constraint;

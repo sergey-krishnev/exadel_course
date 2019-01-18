@@ -27,7 +27,8 @@ $(document).ready(function () {
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 alert(jqXHR.responseText);
-
+                var obj = JSON.parse(jqXHR.responseText);
+                alert(obj.errors);
                 location.reload()
             }
         });

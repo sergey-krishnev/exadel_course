@@ -1,7 +1,6 @@
 package hibernate.dto;
 
-import hibernate.annotations.CapitalizeMessage;
-import hibernate.annotations.CapitalizeSubject;
+import hibernate.annotations.*;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Pattern;
@@ -10,14 +9,14 @@ public class SubjectDTO {
     private int id;
     private String nickname;
     private String topic;
-    @NotEmpty
+    @NotEmpty(message = "{NotEmpty.subjectDTO.subject}")
     @CapitalizeSubject
     private String subject;
-    @NotEmpty
+    @NotEmpty(message = "{NotEmpty.subjectDTO.message}")
     @CapitalizeMessage
     private String message;
-    @NotEmpty
-    @Pattern(regexp = "[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])")
+    @NotEmpty(message = "{NotEmpty.subjectDTO.date}")
+    @Pattern(regexp = "[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])", message = "{Pattern.subjectDTO.date}")
     private String date;
 
     public int getId() {
