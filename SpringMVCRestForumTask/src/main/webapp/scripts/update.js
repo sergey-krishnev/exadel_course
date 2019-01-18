@@ -3,30 +3,28 @@ $(document).ready(function () {
         location.reload();
     });
     $(document).on('click', '.ok', function() {
+        var dataUpdate = {};
+        dataUpdate["id"] = 1;
+        dataUpdate["nickname"] = $("#nicknameUpdate").val();
+        dataUpdate["topic"] = $("#topicUpdate").val();
+        dataUpdate["subject"] = $("#subjectUpdate").val();
+        dataUpdate["message"] = $("#messageUpdate").val();
+        dataUpdate["date"] = $("#dateUpdate").val();
 
-        var nicknameUpdate = $("#nicknameUpdate").val();
-        var topicUpdate = $("#topicUpdate").val();
-        var subjectUpdate = $("#subjectUpdate").val();
-        var messageUpdate = $("#messageUpdate").val();
-        var dateUpdate = $("#dateUpdate").val();
         var pathPut = "http://localhost:8080/subjects/" + $(this).attr("id");
-        var jsonPut = '{ "id":1,"nickname":"'+ nicknameUpdate +'","topic":"' + topicUpdate + '","subject":"' + subjectUpdate +
-            '","message":"' + messageUpdate + '","date":"' + dateUpdate +'"}';
 
         $.ajax({
             type: "PUT",
             url: pathPut,
-            data: jsonPut,
+            data: JSON.stringify(dataUpdate),
             contentType : 'application/json; charset=UTF-8',
-            dataType: "html",
+            dataType: "json",
             success: function (data, textStatus, xhr) {
                 location.reload(); //Change
                 alert("success")
             },
-            error: function (xhr, textStatus, errorThrown) {
-                alert(xhr);
-                alert(textStatus);
-                alert(errorThrown);
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(jqXHR.responseText);
                 location.reload()
             }
         })

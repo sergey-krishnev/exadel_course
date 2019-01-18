@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -42,8 +44,12 @@ public class RestCRUDController {
 
     //add subject
     @RequestMapping(value = "/subjects",method = RequestMethod.POST)
-    public void addSubjectDTO(@Valid @RequestBody SubjectDTO subjectDTO) {
+    public ResponseEntity addSubjectDTO(@Valid @RequestBody SubjectDTO subjectDTO, Errors errors) {
+        if (errors.hasErrors()) {
+            return ResponseEntity.badRequest().body(ValidationErrorBuilder.fromBindingErrors(errors));
+        }
         crudService.insertSubject(subjectDTO);
+        return ResponseEntity.ok(subjectDTO);
     }
 
     //get subject by id
@@ -54,8 +60,12 @@ public class RestCRUDController {
 
     //update subject
     @RequestMapping(value = "/subjects/{subjectId}", method = RequestMethod.PUT)
-    public void updateSubjectDTO(@Valid @RequestBody SubjectDTO subjectDTO, @PathVariable("subjectId") int subjectId) {
+    public ResponseEntity updateSubjectDTO(@Valid @RequestBody SubjectDTO subjectDTO, @PathVariable("subjectId") int subjectId, Errors errors) {
+        if (errors.hasErrors()) {
+            return ResponseEntity.badRequest().body(ValidationErrorBuilder.fromBindingErrors(errors));
+        }
         crudService.updateSubjectById(subjectId, subjectDTO);
+        return ResponseEntity.ok(subjectDTO);
     }
 
     //delete subject by id

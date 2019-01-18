@@ -20,15 +20,13 @@ $(document).ready(function () {
             url: "http://localhost:8080/subjects",
             data: JSON.stringify(data),
             contentType : 'application/json; charset=UTF-8',
-            dataType: "html",
+            dataType: "json",
             success: function (data, textStatus, xhr) {
                 location.reload(); //Change
                 alert("success")
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                alert(jqXHR.status);
-                alert(textStatus);
-                alert(errorThrown);
+                alert(jqXHR.responseText);
 
                 location.reload()
             }

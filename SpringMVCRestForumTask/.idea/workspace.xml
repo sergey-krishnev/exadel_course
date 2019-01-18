@@ -7,33 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4472d323-eb17-4887-a0f3-ac88475430e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationError.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en_US.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/delete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/subject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/subject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/updateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/updateForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/classes/hibernate/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/classes/hibernate/config/WebAppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/classes/hibernate/controller/RestCRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/classes/hibernate/controller/RestCRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/classes/messages_en_US.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/classes/messages_ru.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/pages/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/delete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/subject.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/subject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/updateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/updateForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/config/WebAppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate/controller/RestCRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/controller/RestCRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages_en_US.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages_ru.properties" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -272,23 +255,23 @@
     <session id="493533938">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="53" />
+          <entry key="project.closed" value="57" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="17" />
+          <entry key="project.open.time.10" value="19" />
           <entry key="project.open.time.11" value="10" />
           <entry key="project.open.time.12" value="8" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="15" />
-          <entry key="project.opened" value="53" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="16" />
+          <entry key="project.opened" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
+          <entry key="class" value="4" />
           <entry key="csv" value="1" />
-          <entry key="java" value="27" />
-          <entry key="js" value="21" />
+          <entry key="java" value="33" />
+          <entry key="js" value="22" />
           <entry key="jsp" value="1" />
           <entry key="messages" value="7" />
           <entry key="properties" value="10" />
@@ -298,10 +281,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="27" />
+          <entry key="CLASS" value="4" />
+          <entry key="JAVA" value="33" />
           <entry key="JSP" value="1" />
-          <entry key="JavaScript" value="21" />
+          <entry key="JavaScript" value="22" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="10" />
           <entry key="ResourceBundle" value="7" />
@@ -310,8 +293,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1254" />
-          <entry key="js" value="1907" />
+          <entry key="java" value="1398" />
+          <entry key="js" value="1937" />
           <entry key="jsp" value="811" />
           <entry key="properties" value="159" />
           <entry key="xml" value="38" />
@@ -319,9 +302,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1254" />
+          <entry key="JAVA" value="1398" />
           <entry key="JSP" value="811" />
-          <entry key="JavaScript" value="1907" />
+          <entry key="JavaScript" value="1937" />
           <entry key="Properties" value="159" />
           <entry key="XML" value="38" />
         </counts>
@@ -388,42 +371,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/updateForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/delete.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -432,11 +379,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/add.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+            <state relative-caret-position="340">
+              <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -461,15 +417,34 @@
           <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+            <state relative-caret-position="750">
+              <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationErrorBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1360#1361#0" expanded="true" />
-                <element signature="e#1413#1414#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationError.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -503,11 +478,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/WebAppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/TestWeb-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/config/Initializer.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/actionServlet-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainServlet-servlet.xml" />
@@ -538,7 +508,6 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/scripts/update.js" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/Messages.java" />
@@ -552,8 +521,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/bundle/messages_ru.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/updateForm.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/delete.js" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/CustomRestExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/ApiError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/ApiErrors.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationErrorBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/add.js" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/update.js" />
       </list>
     </option>
   </component>
@@ -615,7 +590,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -648,6 +622,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringMVCRestForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="annotationsImpl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
@@ -761,6 +744,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource Bundle 'messages'" type="a6c14932:ResourceBundleNode" />
+            </path>
+            <path>
+              <item name="SpringMVCRestForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringMVCRestForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -784,12 +776,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547732821282" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547811304835" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test/SpringRestfulWebServicesCRUDExample" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1220,17 +1213,20 @@
       <workItem from="1547732906434" duration="300000" />
       <workItem from="1547733231582" duration="1759000" />
       <workItem from="1547735046559" duration="1764000" />
+      <workItem from="1547805822084" duration="1781000" />
+      <workItem from="1547807639201" duration="1779000" />
+      <workItem from="1547809514215" duration="1759000" />
+      <workItem from="1547811359094" duration="1377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329002000" />
+    <option name="totallyTimeSpent" value="335698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2707889" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27665246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1242,7 +1238,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32482827" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.26005888" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" visible="true" weight="0.40431795" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.40431795" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1323,30 +1319,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar!/org/apache/commons/lang3/text/WordUtils.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.3.2.Final/hibernate-validator-4.3.2.Final.jar!/org/hibernate/validator/constraints/NotEmpty.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotationsImpl/CapitalizeStringMessageValidator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeStringMessage.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeSubject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotationsImpl/CapitalizeSubjectValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1506,6 +1478,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/updateForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/delete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1520,28 +1499,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.2.RELEASE/spring-context-4.2.2.RELEASE.jar!/org/springframework/validation/Errors.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="102">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_en_US.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ApiErrors.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ApiError.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CustomRestExceptionHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_ru.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
         </state>
       </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1550,36 +1524,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/updateForm.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_en_US.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationError.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+        <state relative-caret-position="170">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1413#1414#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationErrorBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        <state relative-caret-position="340">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
         </state>
       </provider>
     </entry>
