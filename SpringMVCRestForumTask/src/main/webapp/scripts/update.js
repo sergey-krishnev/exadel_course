@@ -23,9 +23,8 @@ $(document).ready(function () {
                 location.reload(); //Change
                 alert("success")
             },
-            error: function (jqXHR2, textStatus, errorThrown) {
-                alert(jqXHR2.responseText);
-                location.reload()
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(jqXHR.responseText);
             }
         })
     });

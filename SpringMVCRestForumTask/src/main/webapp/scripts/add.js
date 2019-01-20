@@ -28,8 +28,31 @@ $(document).ready(function () {
             error: function (jqXHR, textStatus, errorThrown) {
                 alert(jqXHR.responseText);
                 var obj = JSON.parse(jqXHR.responseText);
-                alert(obj.errors);
-                location.reload()
+                var objStr = obj.errors.toString();
+                alert(objStr);
+                var array = objStr.split(',');
+                alert(array[1]);
+                // var validationUpdate = {};
+                // validationUpdate["NotEmpty.subjectDTO.subject"] ='';
+                // validationUpdate["NotEmpty.subjectDTO.message"] ='';
+                // validationUpdate["NotEmpty.subjectDTO.date"] ='';
+                // validationUpdate["Pattern.subjectDTO.date"] ='';
+                // validationUpdate["CapitalizeMessage.subjectDTO.message"] ='';
+                // validationUpdate["CapitalizeSubject.subjectDTO.subject"] ='';
+                var lang = $("#lang").text();
+                $.i18n.properties({
+                    name: 'messages',
+                    path: '/bundle',
+                    mode: 'both',
+                    language: lang,
+                    callback: function () {
+                        $.each(array, function (index, value) {
+                            var hashvalue = "#" + value;
+                            $(hashvalue).text($.i18n.prop(value));
+                            // $("#NotEmpty.subjectDTO.subject").text($.i18n.prop("NotEmpty.subjectDTO.subject"));
+                        })
+                    }
+                })
             }
         });
     });

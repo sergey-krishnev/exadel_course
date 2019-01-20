@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = CapitalizeMessageValidator.class)
 public @interface CapitalizeMessage {
-    String message() default "{CapitalizeMessage.subjectDTO.message}";
+    String message() default "CapitalizeMessage-subjectDTO-message";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

@@ -4,6 +4,11 @@
 <html>
 <head>
     <title>Data Page</title>
+    <style type="text/css">
+        .error {
+            color: red;
+        }
+    </style>
     <meta charset="utf-8">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -49,22 +54,24 @@ Current Locale :
         <td>:</td>
     <td><input type="text" id="subject"
     value=""/></td>
-        <td id = "NotEmpty.subjectDTO.subject"></td>
+        <td class="error" id = "NotEmpty-subjectDTO-subject"></td>
+        <td class="error" id = "CapitalizeSubject-subjectDTO-subject"></td>
     </tr>
     <tr>
     <td class = "messageLocale"></td>
         <td>:</td>
     <td><input type="text" id="message"
-    value=""/>
-    </td>
-        <td id = "NotEmpty.subjectDTO.message"></td>
+    value=""/></td>
+        <td class="error" id = "NotEmpty-subjectDTO-message"></td>
+        <td class="error" id = "CapitalizeMessage-subjectDTO-message"></td>
     </tr>
     <tr>
     <td class = "dateLocale"></td>
         <td>:</td>
     <td><input type="text" id="date"
     value=""/></td>
-        <td id = "NotEmpty.subjectDTO.date"></td>
+        <td class="error" id = "NotEmpty-subjectDTO-date"></td>
+        <td class="error" id = "Pattern-subjectDTO-date"></td>
     </tr>
     <tr>
         <td><button type="button" class ="add"></button></td>
