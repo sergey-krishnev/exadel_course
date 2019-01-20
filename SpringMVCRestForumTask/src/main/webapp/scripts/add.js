@@ -26,12 +26,9 @@ $(document).ready(function () {
                 alert("success")
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                alert(jqXHR.responseText);
                 var obj = JSON.parse(jqXHR.responseText);
                 var objStr = obj.errors.toString();
-                alert(objStr);
                 var array = objStr.split(',');
-                alert(array[1]);
                 // var validationUpdate = {};
                 // validationUpdate["NotEmpty.subjectDTO.subject"] ='';
                 // validationUpdate["NotEmpty.subjectDTO.message"] ='';
@@ -46,6 +43,12 @@ $(document).ready(function () {
                     mode: 'both',
                     language: lang,
                     callback: function () {
+                        $("#NotEmpty-subjectDTO-subject").text("");
+                        $("#NotEmpty-subjectDTO-message").text("");
+                        $("#NotEmpty-subjectDTO-date").text("");
+                        $("#Pattern-subjectDTO-date").text("");
+                        $("#CapitalizeMessage-subjectDTO-message").text("");
+                        $("#CapitalizeSubject-subjectDTO-subject").text("");
                         $.each(array, function (index, value) {
                             var hashvalue = "#" + value;
                             $(hashvalue).text($.i18n.prop(value));
