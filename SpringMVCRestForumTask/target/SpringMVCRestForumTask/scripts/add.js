@@ -19,7 +19,7 @@ $(document).ready(function () {
             type: "POST",
             url: "http://localhost:8080/subjects",
             data: JSON.stringify(data),
-            contentType : 'application/json; charset=UTF-8',
+            contentType: 'application/json; charset=UTF-8',
             dataType: "json",
             success: function (data, textStatus, xhr) {
                 location.reload(); //Change

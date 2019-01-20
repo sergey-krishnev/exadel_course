@@ -3,7 +3,6 @@ $(document).ready(function () {
     $(document).on('click', '.update', function() {
 
         var lang = $("#lang").text();
-        alert(lang);
         var ok = '';
         var cancel = '';
         $.i18n.properties({

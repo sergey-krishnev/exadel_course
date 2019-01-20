@@ -60,7 +60,7 @@ public class RestCRUDController {
 
     //update subject
     @RequestMapping(value = "/subjects/{subjectId}", method = RequestMethod.PUT)
-    public ResponseEntity updateSubjectDTO(@Valid @RequestBody SubjectDTO subjectDTO, @PathVariable("subjectId") int subjectId, Errors errors) {
+    public ResponseEntity updateSubjectDTO(@PathVariable("subjectId") int subjectId, @Valid @RequestBody SubjectDTO subjectDTO, Errors errors) {
         if (errors.hasErrors()) {
             return ResponseEntity.badRequest().body(ValidationErrorBuilder.fromBindingErrors(errors));
         }

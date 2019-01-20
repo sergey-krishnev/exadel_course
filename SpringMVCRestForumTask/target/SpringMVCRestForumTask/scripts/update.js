@@ -17,14 +17,14 @@ $(document).ready(function () {
             type: "PUT",
             url: pathPut,
             data: JSON.stringify(dataUpdate),
-            contentType : 'application/json; charset=UTF-8',
+            contentType: 'application/json; charset=UTF-8',
             dataType: "json",
             success: function (data, textStatus, xhr) {
                 location.reload(); //Change
                 alert("success")
             },
-            error: function (jqXHR, textStatus, errorThrown) {
-                alert(jqXHR.responseText);
+            error: function (jqXHR2, textStatus, errorThrown) {
+                alert(jqXHR2.responseText);
                 location.reload()
             }
         })

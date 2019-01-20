@@ -49,6 +49,7 @@ Current Locale :
         <td>:</td>
     <td><input type="text" id="subject"
     value=""/></td>
+        <td id = "NotEmpty.subjectDTO.subject"></td>
     </tr>
     <tr>
     <td class = "messageLocale"></td>
@@ -56,12 +57,14 @@ Current Locale :
     <td><input type="text" id="message"
     value=""/>
     </td>
+        <td id = "NotEmpty.subjectDTO.message"></td>
     </tr>
     <tr>
     <td class = "dateLocale"></td>
         <td>:</td>
     <td><input type="text" id="date"
     value=""/></td>
+        <td id = "NotEmpty.subjectDTO.date"></td>
     </tr>
     <tr>
         <td><button type="button" class ="add"></button></td>
