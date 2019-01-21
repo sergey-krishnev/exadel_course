@@ -25,7 +25,26 @@
     <a href="?lang=ru">Russian</a>
 </span> </br>
 Current Locale :
-<div id ="lang">${pageContext.response.locale}</div>
+<div id ="lang">${pageContext.response.locale}</div></br>
+<table border="0" width="1200" id="error_table">
+<tr>
+    <td width="79"></td>
+    <td width="187"></td>
+    <td width="170" class="error" id = "subjectValidationUpdate">
+        <div id ="Update-NotEmpty-subjectDTO-subject"></div>
+        <div id ="Update-CapitalizeSubject-subjectDTO-subject"></div>
+    </td>
+    <td width="430" class="error" id = "messageValidationUpdate">
+        <div id ="Update-NotEmpty-subjectDTO-message"></div>
+        <div id ="Update-CapitalizeMessage-subjectDTO-message"></div>
+    </td>
+    <td width="164" class="error" id = "dateValidationUpdate">
+        <div id ="Update-NotEmpty-subjectDTO-date"></div>
+        <div id ="Update-Pattern-subjectDTO-date"></div>
+    </td>
+    <td colspan=2></td>
+</tr>
+</table>
 <table border="1" width="1200" id="subject_table">
     <tr>
         <th width="15"><div class = "nicknameLocale"></div></th>
@@ -54,17 +73,17 @@ Current Locale :
         <td>:</td>
     <td><input type="text" id="subject"
     value=""/></td>
-        <td class="error" id = "NotEmpty-subjectDTO-subject"></td>
-        <td class="error" id = "CapitalizeSubject-subjectDTO-subject"></td>
     </tr>
+    <tr class="error" id = "NotEmpty-subjectDTO-subject"></tr>
+    <tr class="error" id = "CapitalizeSubject-subjectDTO-subject"></tr>
     <tr>
     <td class = "messageLocale"></td>
         <td>:</td>
     <td><input type="text" id="message"
     value=""/></td>
-        <td class="error" id = "NotEmpty-subjectDTO-message"></td>
-        <td class="error" id = "CapitalizeMessage-subjectDTO-message"></td>
     </tr>
+    <tr class="error" id = "NotEmpty-subjectDTO-message"></tr>
+    <tr class="error" id = "CapitalizeMessage-subjectDTO-message"></tr>
     <tr>
     <td class = "dateLocale"></td>
         <td>:</td>

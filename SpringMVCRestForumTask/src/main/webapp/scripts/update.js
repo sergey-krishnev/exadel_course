@@ -24,7 +24,29 @@ $(document).ready(function () {
                 alert("success")
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                alert(jqXHR.responseText);
+                var obj = JSON.parse(jqXHR.responseText);
+                var objStr = obj.errors.toString();
+                var arrayUpdate = objStr.split(',');
+                $("#Update-NotEmpty-subjectDTO-subject").text("");
+                $("#Update-NotEmpty-subjectDTO-message").text("");
+                $("#Update-NotEmpty-subjectDTO-date").text("");
+                $("#Update-Pattern-subjectDTO-date").text("");
+                $("#Update-CapitalizeMessage-subjectDTO-message").text("");
+                $("#Update-CapitalizeSubject-subjectDTO-subject").text("");
+                var lang = $("#lang").text();
+                $.i18n.properties({
+                    name: 'messages',
+                    path: '/bundle',
+                    mode: 'both',
+                    language: lang,
+                    callback: function () {
+                        $.each(arrayUpdate, function (index, value) {
+                            var hashvalueUpdate = "#Update-" + value;
+                            $(hashvalueUpdate).text($.i18n.prop(value));
+                            // $("#NotEmpty.subjectDTO.subject").text($.i18n.prop("NotEmpty.subjectDTO.subject"));
+                        })
+                    }
+                })
             }
         })
     });

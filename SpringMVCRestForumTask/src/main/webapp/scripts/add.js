@@ -29,13 +29,12 @@ $(document).ready(function () {
                 var obj = JSON.parse(jqXHR.responseText);
                 var objStr = obj.errors.toString();
                 var array = objStr.split(',');
-                // var validationUpdate = {};
-                // validationUpdate["NotEmpty.subjectDTO.subject"] ='';
-                // validationUpdate["NotEmpty.subjectDTO.message"] ='';
-                // validationUpdate["NotEmpty.subjectDTO.date"] ='';
-                // validationUpdate["Pattern.subjectDTO.date"] ='';
-                // validationUpdate["CapitalizeMessage.subjectDTO.message"] ='';
-                // validationUpdate["CapitalizeSubject.subjectDTO.subject"] ='';
+                $("#NotEmpty-subjectDTO-subject").text("");
+                $("#NotEmpty-subjectDTO-message").text("");
+                $("#NotEmpty-subjectDTO-date").text("");
+                $("#Pattern-subjectDTO-date").text("");
+                $("#CapitalizeMessage-subjectDTO-message").text("");
+                $("#CapitalizeSubject-subjectDTO-subject").text("");
                 var lang = $("#lang").text();
                 $.i18n.properties({
                     name: 'messages',
@@ -43,12 +42,6 @@ $(document).ready(function () {
                     mode: 'both',
                     language: lang,
                     callback: function () {
-                        $("#NotEmpty-subjectDTO-subject").text("");
-                        $("#NotEmpty-subjectDTO-message").text("");
-                        $("#NotEmpty-subjectDTO-date").text("");
-                        $("#Pattern-subjectDTO-date").text("");
-                        $("#CapitalizeMessage-subjectDTO-message").text("");
-                        $("#CapitalizeSubject-subjectDTO-subject").text("");
                         $.each(array, function (index, value) {
                             var hashvalue = "#" + value;
                             $(hashvalue).text($.i18n.prop(value));
