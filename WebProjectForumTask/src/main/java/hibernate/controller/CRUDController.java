@@ -28,6 +28,6 @@ public class CRUDController {
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
     public String home() {
-        return "index3";
+        return "index2";
     }
 }

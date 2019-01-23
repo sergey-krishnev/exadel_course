@@ -9,11 +9,6 @@ body {
   font-family: 'Allerta Stencil';font-size: 22px;
 }
 
-[class*="col-"] {
-  background-color: #f6f6f6;
-  border: 1px solid #000000;
-}
-
 header {
   background-color: #4e555b;
   padding: 154px 0 100px;

@@ -38,13 +38,34 @@
 </header>
 
 <!-- Page Content -->
-
-
-
-
-
-
-
+<div class="row justify-content-center">
+    <div class="col-lg-9">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Forums
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Forum</th>
+                            <th>Subjects</th>
+                            <th>Messages</th>
+                            <th>Freshness</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+</div>
 
 <!-- /.container -->
 
@@ -60,5 +81,6 @@
 <!-- Bootstrap core JavaScript -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="scripts/forum.js"></script>
 </body>
 </html>

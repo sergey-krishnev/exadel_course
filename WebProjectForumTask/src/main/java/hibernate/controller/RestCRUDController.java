@@ -1,5 +1,6 @@
 package hibernate.controller;
 
+import hibernate.dto.ForumDTO;
 import hibernate.dto.SubjectDTO;
 import hibernate.dto.TopicDTO;
 import hibernate.dto.UsersDTO;
@@ -41,6 +42,9 @@ public class RestCRUDController {
     public List<TopicDTO> topic() {
         return crudService.searchAllTopic();
     }
+
+    @RequestMapping(value = "/forums",method = RequestMethod.GET)
+    public List<ForumDTO> forum() { return crudService.searchAllForum();}
 
     //add subject
     @RequestMapping(value = "/subjects",method = RequestMethod.POST)

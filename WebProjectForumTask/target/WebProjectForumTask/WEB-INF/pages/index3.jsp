@@ -11,18 +11,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-    <script>(function (html) {
-        html.className = html.className.replace(/\bno-js\b/, 'js')
-    })(document.documentElement);</script>
     <title>Bootstrap Studio &#8211; A powerful web design tool for creating responsive websites using the Bootstrap
         framework.</title>
-    <link rel='dns-prefetch' href='//fonts.googleapis.com'/>
-    <link rel='dns-prefetch' href='//s.w.org'/>
-    <link rel="alternate" type="application/rss+xml" title="Bootstrap Studio &raquo; Feed"
-          href="https://bootstrapstudio.io/forums/feed/"/>
-    <link rel="alternate" type="application/rss+xml" title="Bootstrap Studio &raquo; Comments Feed"
-          href="https://bootstrapstudio.io/forums/comments/feed/"/>
     <style type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -75,17 +65,6 @@
     <script type='text/javascript'
             src='https://bootstrapstudio.io/forums/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3'></script>
     <![endif]-->
-    <link rel='https://api.w.org/' href='https://bootstrapstudio.io/forums/wp-json/'/>
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bootstrapstudio.io/forums/xmlrpc.php?rsd"/>
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
-          href="https://bootstrapstudio.io/forums/wp-includes/wlwmanifest.xml"/>
-    <meta name="generator" content="WordPress 4.9.9"/>
-    <link rel="canonical" href="https://bootstrapstudio.io/forums/"/>
-    <link rel='shortlink' href='https://bootstrapstudio.io/forums/'/>
-    <link rel="alternate" type="application/json+oembed"
-          href="https://bootstrapstudio.io/forums/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbootstrapstudio.io%2Fforums%2F"/>
-    <link rel="alternate" type="text/xml+oembed"
-          href="https://bootstrapstudio.io/forums/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbootstrapstudio.io%2Fforums%2F&#038;format=xml"/>
 
     <div class="bstudio-forum-header">
         <div class="limiter">
@@ -224,11 +203,10 @@
                                                             href="https://bootstrapstudio.io/forums/users/martin/"
                                                             title="View Martin Angelov&#039;s profile"
                                                             class="bbp-author-avatar" rel="nofollow"><img alt=''
-                                                                                                          src='https://secure.gravatar.com/avatar/6ce343a96a0245f2fcbcd65dfcc22fb2?s=14&#038;d=mm&#038;r=g'
-                                                                                                          srcset='https://secure.gravatar.com/avatar/6ce343a96a0245f2fcbcd65dfcc22fb2?s=28&#038;d=mm&#038;r=g 2x'
-                                                                                                          class='avatar avatar-14 photo'
-                                                                                                          height='14'
-                                                                                                          width='14'/></a>&nbsp;<a
+                                                            src='https://secure.gravatar.com/avatar/6ce343a96a0245f2fcbcd65dfcc22fb2?s=14&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6ce343a96a0245f2fcbcd65dfcc22fb2?s=28&#038;d=mm&#038;r=g 2x'
+                                                            class='avatar avatar-14 photo'
+                                                            height='14'
+                                                            width='14'/></a>&nbsp;<a
                                                             href="https://bootstrapstudio.io/forums/users/martin/"
                                                             title="View Martin Angelov&#039;s profile"
                                                             class="bbp-author-name"
