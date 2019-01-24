@@ -1,6 +1,5 @@
 package hibernate.service.interfaces;
 
-import hibernate.dto.ForumDTO;
 import hibernate.dto.SubjectDTO;
 import hibernate.dto.TopicDTO;
 import hibernate.dto.UsersDTO;
@@ -31,6 +30,4 @@ public interface CRUDService {
     void updateSubjectById(Integer id, SubjectDTO subjectDTO);
 
     void insertSubject(SubjectDTO subjectDTO);
-
-    List<ForumDTO> searchAllForum();
 }

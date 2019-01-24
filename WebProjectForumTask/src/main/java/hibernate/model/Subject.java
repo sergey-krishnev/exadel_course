@@ -3,7 +3,9 @@ package hibernate.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "subject", schema = "forum_schema")
@@ -18,12 +20,9 @@ public class Subject implements Serializable {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "message", nullable = false)
-    private String message;
-
-    @Column(name = "date_sending", nullable = false)
+    @Column(name = "date", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
-    private Date dateSending;
+    private Date date;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
@@ -32,6 +31,9 @@ public class Subject implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "topic_id")
     private Topic topic;
+
+    @OneToMany(mappedBy = "subject")
+    private List<Comment> comments = new ArrayList<>();
 
     public Subject() {
     }
@@ -52,25 +54,17 @@ public class Subject implements Serializable {
         this.name = name;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Date getDateSending() {
-        return dateSending;
+    public Date getDate() {
+        return date;
     }
 
     public String getFormattedDateSending() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        return df.format(dateSending);
+        return df.format(date);
     }
 
-    public void setDateSending(Date dateSending) {
-        this.dateSending = dateSending;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
 
@@ -91,10 +85,9 @@ public class Subject implements Serializable {
         this.topic = topic;
     }
 
-    public Subject(String name, String message, Date dateSending, Users users, Topic topic) {
+    public Subject(String name, Date dateSending, Users users, Topic topic) {
         this.name = name;
-        this.message = message;
-        this.dateSending = dateSending;
+        this.date = dateSending;
         this.users = users;
         this.topic = topic;
     }
@@ -104,8 +97,7 @@ public class Subject implements Serializable {
         return "Subject{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", message='" + message + '\'' +
-                ", dateSending=" + dateSending +
+                ", date=" + date +
                 ", users=" + users +
                 ", topic=" + topic +
                 '}';

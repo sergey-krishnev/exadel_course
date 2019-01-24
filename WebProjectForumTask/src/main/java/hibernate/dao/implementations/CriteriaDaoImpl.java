@@ -102,7 +102,7 @@ public class CriteriaDaoImpl implements CRUDDao {
             subject.setTopic(topic);
             subject.setName(subjectName);
             subject.setMessage(message);
-            subject.setDateSending(date);
+            subject.setDate(date);
             session.update(subject);
     }
 }

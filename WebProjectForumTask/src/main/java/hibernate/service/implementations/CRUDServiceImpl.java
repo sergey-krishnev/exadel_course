@@ -1,7 +1,6 @@
 package hibernate.service.implementations;
 
 import hibernate.dao.interfaces.CRUDDao;
-import hibernate.dto.ForumDTO;
 import hibernate.dto.SubjectDTO;
 import hibernate.dto.TopicDTO;
 import hibernate.dto.UsersDTO;
@@ -13,9 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class CRUDServiceImpl implements CRUDService {
@@ -112,35 +113,6 @@ public class CRUDServiceImpl implements CRUDService {
     @Override
     public void insertSubject(SubjectDTO subjectDto) {
         crudDao.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
-    }
-
-    @Transactional(readOnly = true)
-    @Override
-    public List<ForumDTO> searchAllForum() {
-        List<Topic> topicList = crudDao.searchAllTopic();
-        List<ForumDTO> forumDTOList = new ArrayList<>();
-        for (Topic topic : topicList) {
-            ForumDTO forumDTO = new ForumDTO();
-            forumDTO.setId(topic.getId());
-            forumDTO.setTopicName(topic.getName());
-
-            Set<String> subjectNameSet = new HashSet<>();
-            List<String> dateList = new ArrayList<>();
-            List<Subject> subjectList = topic.getSubjects();
-            for (Subject subject : subjectList) {
-                subjectNameSet.add(subject.getName());
-                dateList.add(subject.getFormattedDateSending());
-            }
-            String maxDate = (dateList.isEmpty()) ? "" : Collections.max(dateList);
-            forumDTO.setNumSubjects(subjectNameSet.size());
-            forumDTO.setNumMessages(topic.getSubjects().size());
-            forumDTO.setLastDate(maxDate);
-
-
-
-            forumDTOList.add(forumDTO);
-        }
-        return forumDTOList;
     }
 
     @Transactional
