@@ -1,10 +1,12 @@
 package hibernate.dto;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class SubjectDTO {
     private int id;
     private String subjectName;
+    private String description;
     private String userName;
     private String date;
     private List<CommentDTO> comments;
@@ -23,6 +25,17 @@ public class SubjectDTO {
 
     public void setSubjectName(String subjectName) {
         this.subjectName = subjectName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(List<CommentDTO> comments) {
+        if (!(comments.isEmpty())) {
+            String firstComment = comments.get(0).getMessage();
+            this.description = firstComment.split(Pattern.quote("."))[0];
+        } else this.description = "";
     }
 
     public String getUserName() {

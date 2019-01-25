@@ -50,7 +50,7 @@ public class CRUDServiceImpl implements CRUDService {
             subjectDTO.setUserName(subject.getUsers().getNickname());
             subjectDTO.setSubjectName(subject.getName());
             subjectDTO.setDate(subject.getFormattedDateSending());
-
+            subjectDTO.setDescription(searchCommentBySubject(subject));
             subjectDTO.setComments(searchCommentBySubject(subject));
             subjects.add(subjectDTO);
         }
