@@ -25,7 +25,7 @@ SET search_path TO forum_schema;
 	CREATE TABLE comment
 	(
 		id BIGINT PRIMARY KEY,
-		message CHARACTER VARYING(256) NOT NULL,
+		message CHARACTER VARYING(4000) NOT NULL,
 		date DATE NOT NULL,
 		subject_id BIGINT NOT NULL,
 		user_id BIGINT NOT NULL
