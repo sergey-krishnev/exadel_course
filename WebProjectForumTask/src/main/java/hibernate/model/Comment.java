@@ -2,6 +2,7 @@ package hibernate.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -50,6 +51,11 @@ public class Comment implements Serializable {
 
     public Date getDate() {
         return date;
+    }
+
+    public String getFormattedDateSending() {
+        SimpleDateFormat df = new SimpleDateFormat();
+        return df.format(date);
     }
 
     public void setDate(Date date) {

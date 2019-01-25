@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import hibernate.model.Comment;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
 import hibernate.model.Users;
@@ -45,7 +46,7 @@ public class WebAppConfig {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
         sessionFactory.setHibernateProperties(hibernateProperties());
-        sessionFactory.setAnnotatedClasses(Subject.class, Topic.class, Users.class);
+        sessionFactory.setAnnotatedClasses(Subject.class, Topic.class, Users.class, Comment.class);
         return sessionFactory;
     }
 

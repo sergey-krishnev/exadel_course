@@ -7,69 +7,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4472d323-eb17-4887-a0f3-ac88475430e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dto/ForumDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dto/TopicDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dto/UsersDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dto/TopicDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dto/TopicDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/model/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/model/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index3.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/forum.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/forum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/add.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/delete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/jquery.i18n.properties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/subject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/updateForm.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/config/WebAppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/controller/CRUDController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/controller/RestCRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/controller/RestCRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dto/ForumDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dao/interfaces/CRUDDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dao/interfaces/CRUDDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dto/SubjectDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dto/SubjectDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dto/TopicDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/dto/TopicDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/model/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/model/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/model/Users.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/service/implementations/CRUDServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/service/interfaces/CRUDService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/classes/hibernate/service/interfaces/CRUDService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/pages/index2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/WEB-INF/pages/index3.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/css/forum.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/scripts/forum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/scripts/add.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/scripts/delete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/scripts/jquery.i18n.properties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/scripts/subject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/scripts/update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProjectForumTask/scripts/updateForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/config/WebAppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate/controller/CRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/controller/CRUDController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate/controller/RestCRUDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/controller/RestCRUDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dto/ForumDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/interfaces/CRUDDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dao/interfaces/CRUDDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dto/SubjectDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dto/SubjectDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dto/TopicDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dto/TopicDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/model/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/model/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/model/Users.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/service/implementations/CRUDServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate/service/interfaces/CRUDService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/service/interfaces/CRUDService.class" afterDir="false" />
     </list>
@@ -436,34 +419,46 @@
     <session id="796827393">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="5" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="37" />
+          <entry key="js" value="2" />
+          <entry key="jsp" value="4" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="5" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="37" />
+          <entry key="JSP" value="4" />
+          <entry key="JavaScript" value="2" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="164" />
+          <entry key="java" value="1216" />
+          <entry key="js" value="3" />
+          <entry key="jsp" value="60" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="164" />
+          <entry key="JAVA" value="1216" />
+          <entry key="JSP" value="60" />
+          <entry key="JavaScript" value="3" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
@@ -472,31 +467,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+            <state relative-caret-position="170">
+              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="35" column="55" lean-forward="true" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Topic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="374">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -504,8 +487,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Comment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="74" column="77" selection-start-line="74" selection-start-column="77" selection-end-line="74" selection-end-column="77" />
+            <state relative-caret-position="408">
+              <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#940#941#0" expanded="true" />
@@ -533,62 +516,49 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Users.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+            <state relative-caret-position="357">
+              <caret line="63" column="5" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="63" selection-end-column="5" />
               <folding>
-                <element signature="e#1896#1897#0" expanded="true" />
-                <element signature="e#1927#1928#0" expanded="true" />
-                <element signature="e#1982#1983#0" expanded="true" />
-                <element signature="e#2022#2023#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1901#1902#0" expanded="true" />
+                <element signature="e#1932#1933#0" expanded="true" />
+                <element signature="e#1987#1988#0" expanded="true" />
+                <element signature="e#2027#2028#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2244">
-              <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
+            <state relative-caret-position="340">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding>
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/subject.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index2.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -600,9 +570,9 @@
       <list>
         <option value="jsf" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -612,24 +582,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/annotationsImpl/CapitalizeStringValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/annotationsImpl/CapitalizeStringMessageValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeStringMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/annotationsImpl/CapitalizeSubjectValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/annotationsImpl/CapitalizeMessageValidator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/lable_en.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/lable_ru.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dto/TopicDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/dto/UsersDTO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/service/Messages.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_ru.properties" />
@@ -650,9 +609,7 @@
         <option value="$PROJECT_DIR$/src/main/java/hibernate/annotations/NotEmptyDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/annotationsImpl/NotEmptyDateValidator.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/updateForm.js" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bundle/messages_en_US.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/bundle/messages_ru.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/add.js" />
@@ -660,9 +617,22 @@
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/update.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/model/Comment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/model/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dto/CommentDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index3.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/model/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/dto/TopicDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/script.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index2.jsp" />
       </list>
     </option>
   </component>
@@ -771,6 +741,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProjectForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProjectForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -782,6 +770,63 @@
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
               <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProjectForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProjectForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProjectForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProjectForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProjectForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProjectForumTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebProjectForumTask" type="b2602c69:ProjectViewProjectNode" />
@@ -826,7 +871,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548335199780" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548412268170" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test/SpringRestfulWebServicesCRUDExample" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -836,12 +881,12 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCRestForumTask\src\main\webapp" />
-      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCRestForumTask\src\main\webapp\scripts" />
-      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCRestForumTask\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCForumTask\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCForumTask\src\main\webapp\WEB-INF\pages" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="hibernate.dto" />
+      <recent name="hibernate.annotationsImpl" />
+      <recent name="hibernate.annotations" />
+      <recent name="hibernate.service.implementations" />
+      <recent name="com.jsp.Implementations" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="hibernate.Interfaces" />
@@ -853,11 +898,12 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jsp" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="hibernate.annotationsImpl" />
-      <recent name="hibernate.annotations" />
-      <recent name="hibernate.service.implementations" />
-      <recent name="com.jsp.Implementations" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCRestForumTask\src\main\webapp" />
+      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCRestForumTask\src\main\webapp\scripts" />
+      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCRestForumTask\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCForumTask\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\skryshneu\IdeaProjects\exadel_course\SpringMVCForumTask\src\main\webapp\WEB-INF\pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1280,16 +1326,23 @@
       <workItem from="1548327085150" duration="1646000" />
       <workItem from="1548328959122" duration="624000" />
       <workItem from="1548334477501" duration="1291000" />
+      <workItem from="1548401351843" duration="1195000" />
+      <workItem from="1548403158069" duration="1781000" />
+      <workItem from="1548404965569" duration="1781000" />
+      <workItem from="1548406772997" duration="1807000" />
+      <workItem from="1548408671264" duration="1538000" />
+      <workItem from="1548410491968" duration="1787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363358000" />
+    <option name="totallyTimeSpent" value="373247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33848614" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1300,8 +1353,8 @@
       <window_info id="Persistence" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32482827" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.44259077" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.4032258" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.44259077" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.40235525" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1375,57 +1428,12 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven.jar!/schemas/maven-4.0.0.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="742" column="41" lean-forward="true" selection-start-line="742" selection-start-column="41" selection-end-line="742" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/messages.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mainServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/Messages.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/jquery.i18n.properties.min.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages_ru.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en_US.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/message.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/jquery.i18n.properties.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1785" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/localeButtons.js" />
@@ -1446,20 +1454,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ApiErrors.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ApiError.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CustomRestExceptionHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="61" column="79" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/TopicDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/NotEmptySubject.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/NotEmptyMessage.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/NotEmptyDate.java" />
@@ -1478,13 +1472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="132" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="62" column="144" selection-start-line="62" selection-start-column="144" selection-end-line="62" selection-end-column="144" />
         </state>
       </provider>
     </entry>
@@ -1510,20 +1497,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_en_US.properties">
+      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
-      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_ru.properties">
+      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="147" selection-start-line="3" selection-start-column="147" selection-end-line="3" selection-end-column="147" />
         </state>
       </provider>
-      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationError.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1543,13 +1530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1574,13 +1554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/subject.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1588,20 +1561,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/UsersDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="35" column="55" lean-forward="true" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/config/WebAppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="48" column="99" lean-forward="true" selection-start-line="48" selection-start-column="99" selection-end-line="48" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/interfaces/CRUDDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index3.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/CRUDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1612,23 +1617,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Users.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+        <state relative-caret-position="357">
+          <caret line="63" column="5" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="63" selection-end-column="5" />
           <folding>
-            <element signature="e#1896#1897#0" expanded="true" />
-            <element signature="e#1927#1928#0" expanded="true" />
-            <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="e#2022#2023#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#1987#1988#0" expanded="true" />
+            <element signature="e#2027#2028#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/model/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="77" selection-start-line="74" selection-start-column="77" selection-end-line="74" selection-end-column="77" />
+        <state relative-caret-position="408">
+          <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#940#941#0" expanded="true" />
@@ -1655,10 +1668,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dao/implementations/CriteriaDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/interfaces/CRUDService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+        <state relative-caret-position="170">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/service/implementations/CRUDServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/CommentDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/TopicDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/RestCRUDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1681,7 +1783,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web (SpringMVCRestForumTask)|Web</last-edited>
+          <last-edited>Web (WebProjectForumTask)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1717,7 +1819,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SpringMVCRestForumTask</last-edited>
+          <last-edited>WebProjectForumTask</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

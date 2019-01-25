@@ -1,18 +1,17 @@
 package hibernate.service.implementations;
 
 import hibernate.dao.interfaces.CRUDDao;
+import hibernate.dto.CommentDTO;
 import hibernate.dto.SubjectDTO;
 import hibernate.dto.TopicDTO;
-import hibernate.dto.UsersDTO;
+import hibernate.model.Comment;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
-import hibernate.model.Users;
 import hibernate.service.interfaces.CRUDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -28,101 +27,9 @@ public class CRUDServiceImpl implements CRUDService {
         this.crudDao = crudDao;
     }
 
-    @Override
-    public String getType() {
-        return null;
-    }
-
-    @Transactional(readOnly = true)
-    @Override
-    public SubjectDTO searchBySubjectId(Integer id) {
-        Subject subject = crudDao.searchBySubjectId(id);
-        SubjectDTO subjectDTO = new SubjectDTO();
-        subjectDTO.setId(subject.getId());
-        subjectDTO.setNickname(subject.getUsers().getNickname());
-        subjectDTO.setTopic(subject.getTopic().getName());
-        subjectDTO.setSubject(subject.getName());
-        subjectDTO.setMessage(subject.getMessage());
-        subjectDTO.setDate(subject.getFormattedDateSending());
-        return subjectDTO;
-    }
-
-    @Transactional(readOnly = true)
-    @Override
-    public List<SubjectDTO> searchAll() {
-        List<Subject> subjectList = crudDao.searchAll();
-        List<SubjectDTO> subjectDTOList = new ArrayList<>();
-        for (Subject subject : subjectList) {
-            SubjectDTO subjectDTO = new SubjectDTO();
-            subjectDTO.setId(subject.getId());
-            subjectDTO.setNickname(subject.getUsers().getNickname());
-            subjectDTO.setTopic(subject.getTopic().getName());
-            subjectDTO.setSubject(subject.getName());
-            subjectDTO.setMessage(subject.getMessage());
-            subjectDTO.setDate(subject.getFormattedDateSending());
-            subjectDTOList.add(subjectDTO);
-        }
-        return subjectDTOList;
-    }
-
-    @Transactional(readOnly = true)
-    @Override
-    public List<UsersDTO> searchAllUsers() {
-        List<Users> usersList = crudDao.searchAllUsers();
-        List<UsersDTO> usersDTOList = new ArrayList<>();
-        for (Users users : usersList) {
-            UsersDTO usersDTO = new UsersDTO();
-            usersDTO.setName(users.getNickname());
-            usersDTOList.add(usersDTO);
-        }
-        return usersDTOList;
-    }
-
-    @Transactional(readOnly = true)
-    @Override
-    public List<TopicDTO> searchAllTopic() {
-        List<Topic> topicList = crudDao.searchAllTopic();
-        List<TopicDTO> topicDTOList = new ArrayList<>();
-        for (Topic topic : topicList) {
-            TopicDTO topicDTO = new TopicDTO();
-            topicDTO.setName(topic.getName());
-            topicDTOList.add(topicDTO);
-        }
-        return topicDTOList;
-    }
-
-    @Transactional
-    @Override
-    public void deleteSubjectById(Integer id) {
-        crudDao.deleteSubjectById(id);
-    }
-
-    @Transactional(readOnly = true)
-    @Override
-    public Users searchByUserName(String username) {
-        return crudDao.searchByUserName(username);
-    }
-
-    @Transactional(readOnly = true)
-    @Override
-    public Topic searchByTopicName(String topicName) {
-        return crudDao.searchByTopicName(topicName);
-    }
-
-    @Transactional
-    @Override
-    public void insertSubject(SubjectDTO subjectDto) {
-        crudDao.insertSubject(subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
-    }
-
-    @Transactional
-    @Override
-    public void updateSubjectById(Integer id, SubjectDTO subjectDto) {
-        crudDao.updateSubjectById(id, subjectDto.getNickname(), subjectDto.getTopic(), subjectDto.getSubject(), subjectDto.getMessage(), stringAsDate(subjectDto.getDate()));
-    }
 
     private static java.sql.Date stringAsDate(String s) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat();
         java.util.Date date = null;
         try {
             date = sdf.parse(s);
@@ -130,5 +37,54 @@ public class CRUDServiceImpl implements CRUDService {
             e.printStackTrace();
         }
         return new java.sql.Date(date.getTime());
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<SubjectDTO> searchSubjectByTopic(Topic topic) {
+        List<Subject> subjectList = topic.getSubjects();
+        List<SubjectDTO> subjects = new ArrayList<>();
+        for (Subject subject : subjectList) {
+            SubjectDTO subjectDTO = new SubjectDTO();
+            subjectDTO.setId(subject.getId());
+            subjectDTO.setUserName(subject.getUsers().getNickname());
+            subjectDTO.setSubjectName(subject.getName());
+            subjectDTO.setDate(subject.getFormattedDateSending());
+
+            subjectDTO.setComments(searchCommentBySubject(subject));
+            subjects.add(subjectDTO);
+        }
+        return subjects;
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<TopicDTO> searchAllTopic() {
+        List<Topic> topicList = crudDao.searchAllTopic();
+        List<TopicDTO> topics = new ArrayList<>();
+        for (Topic topic : topicList) {
+            TopicDTO topicDTO = new TopicDTO();
+            topicDTO.setId(topic.getId());
+            topicDTO.setTopicName(topic.getName());
+            topicDTO.setSubjects(searchSubjectByTopic(topic));
+            topics.add(topicDTO);
+        }
+        return topics;
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<CommentDTO> searchCommentBySubject(Subject subject) {
+        List<Comment> commentList = subject.getComments();
+        List<CommentDTO> comments = new ArrayList<>();
+        for (Comment comment : commentList) {
+            CommentDTO commentDTO = new CommentDTO();
+            commentDTO.setId(comment.getId());
+            commentDTO.setUserName(comment.getUsers().getNickname());
+            commentDTO.setMessage(comment.getMessage());
+            commentDTO.setDate(comment.getFormattedDateSending());
+            comments.add(commentDTO);
+        }
+        return comments;
     }
 }

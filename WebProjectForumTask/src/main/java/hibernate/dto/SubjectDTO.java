@@ -1,23 +1,13 @@
 package hibernate.dto;
 
-import hibernate.annotations.*;
-import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.validation.constraints.Pattern;
+import java.util.List;
 
 public class SubjectDTO {
     private int id;
-    private String nickname;
-    private String topic;
-    @NotEmpty(message = "NotEmpty-subjectDTO-subject")
-    @CapitalizeSubject
-    private String subject;
-    @NotEmpty(message = "NotEmpty-subjectDTO-message")
-    @CapitalizeMessage
-    private String message;
-    @NotEmpty(message = "NotEmpty-subjectDTO-date")
-    @Pattern(regexp = "[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])", message = "Pattern-subjectDTO-date")
+    private String subjectName;
+    private String userName;
     private String date;
+    private List<CommentDTO> comments;
 
     public int getId() {
         return id;
@@ -27,36 +17,20 @@ public class SubjectDTO {
         this.id = id;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getSubjectName() {
+        return subjectName;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
     }
 
-    public String getTopic() {
-        return topic;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setTopic(String topic) {
-        this.topic = topic;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getDate() {
@@ -67,16 +41,12 @@ public class SubjectDTO {
         this.date = date;
     }
 
-    public SubjectDTO(String name, String message, String formattedDateSending) {
+    public List<CommentDTO> getComments() {
+        return comments;
     }
 
-    public SubjectDTO() {
-    }
-
-    public SubjectDTO(String nickname, String topic, String subject, String message, String date) {
-        this.subject = subject;
-        this.message = message;
-        this.date = date;
+    public void setComments(List<CommentDTO> comments) {
+        this.comments = comments;
     }
 }
 

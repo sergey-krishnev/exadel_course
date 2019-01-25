@@ -59,7 +59,7 @@ public class Subject implements Serializable {
     }
 
     public String getFormattedDateSending() {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat df = new SimpleDateFormat();
         return df.format(date);
     }
 
@@ -83,6 +83,14 @@ public class Subject implements Serializable {
 
     public void setTopic(Topic topic) {
         this.topic = topic;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     public Subject(String name, Date dateSending, Users users, Topic topic) {
