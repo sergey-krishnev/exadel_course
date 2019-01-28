@@ -33,13 +33,13 @@ public class CRUDController {
 
     @RequestMapping(value = "/{topicId}", method = RequestMethod.GET)
     public String getSpecificTopic(@PathVariable int topicId) {
+        crudService.searchTopicById(topicId); //create exception
         return "index2";
     }
 
-//    @RequestMapping(value = "/subjects/")
-
-    @RequestMapping(value = "/test",method = RequestMethod.GET)
-    public String post() {
+    @RequestMapping(value = "/post/{subjectId}", method = RequestMethod.GET)
+    public String getSpecificSubject(@PathVariable int subjectId) {
+        crudService.searchSubjectById(subjectId);
         return "index3";
     }
 

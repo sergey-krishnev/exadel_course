@@ -9,6 +9,7 @@ public class SubjectDTO {
     private String description;
     private String userName;
     private String date;
+    private String text;
     private List<CommentDTO> comments;
 
     public int getId() {
@@ -31,11 +32,8 @@ public class SubjectDTO {
         return description;
     }
 
-    public void setDescription(List<CommentDTO> comments) {
-        if (!(comments.isEmpty())) {
-            String firstComment = comments.get(0).getMessage();
-            this.description = firstComment.split(Pattern.quote("."))[0];
-        } else this.description = "";
+    public void setDescription(String text) {
+            this.description = text.split(Pattern.quote("."))[0];
     }
 
     public String getUserName() {
@@ -52,6 +50,14 @@ public class SubjectDTO {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 
     public List<CommentDTO> getComments() {

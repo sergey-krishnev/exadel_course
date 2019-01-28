@@ -24,6 +24,9 @@ public class Subject implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
+    @Column(name = "text", nullable = false)
+    private String text;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private Users users;
@@ -67,7 +70,13 @@ public class Subject implements Serializable {
         this.date = date;
     }
 
+    public String getText() {
+        return text;
+    }
 
+    public void setText(String text) {
+        this.text = text;
+    }
 
     public Users getUsers() {
         return users;
