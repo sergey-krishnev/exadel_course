@@ -44,17 +44,33 @@ public class CRUDServiceImpl implements CRUDService {
     public List<SubjectDTO> searchSubjectByTopic(Topic topic) {
         List<Subject> subjectList = topic.getSubjects();
         List<SubjectDTO> subjects = new ArrayList<>();
-        for (Subject subject : subjectList) {
-            SubjectDTO subjectDTO = new SubjectDTO();
-            subjectDTO.setId(subject.getId());
-            subjectDTO.setUserName(subject.getUsers().getNickname());
-            subjectDTO.setSubjectName(subject.getName());
-            subjectDTO.setDate(subject.getFormattedDateSending());
-            subjectDTO.setDescription(searchCommentBySubject(subject));
-            subjectDTO.setComments(searchCommentBySubject(subject));
-            subjects.add(subjectDTO);
-        }
+        subjectToSubjectDTO(subjectList, subjects);
         return subjects;
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public TopicDTO searchTopicById(int topicId) {
+        Topic topic = crudDao.searchTopicById(topicId);
+        TopicDTO topicDTO = new TopicDTO();
+        topicDTO.setId(topic.getId());
+        topicDTO.setTopicName(topic.getName());
+        topicDTO.setSubjects(searchSubjectByTopic(topic));
+        return topicDTO;
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public SubjectDTO searchSubjectById(int subjectId) {
+        Subject subject = crudDao.searchSubjectById(subjectId);
+        SubjectDTO subjectDTO = new SubjectDTO();
+        subjectDTO.setId(subject.getId());
+        subjectDTO.setUserName(subject.getUsers().getNickname());
+        subjectDTO.setSubjectName(subject.getName());
+        subjectDTO.setDate(subject.getFormattedDateSending());
+        subjectDTO.setDescription(searchCommentBySubject(subject));
+        subjectDTO.setComments(searchCommentBySubject(subject));
+        return subjectDTO;
     }
 
     @Transactional(readOnly = true)
@@ -70,6 +86,28 @@ public class CRUDServiceImpl implements CRUDService {
             topics.add(topicDTO);
         }
         return topics;
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<SubjectDTO> searchAllSubject() {
+        List<Subject> subjects = crudDao.searchAllSubject();
+        List<SubjectDTO> subjectDTOList = new ArrayList<>();
+        subjectToSubjectDTO(subjects, subjectDTOList);
+        return subjectDTOList;
+    }
+
+    private void subjectToSubjectDTO(List<Subject> subjects, List<SubjectDTO> subjectDTOList) {
+        for (Subject subject : subjects) {
+            SubjectDTO subjectDTO = new SubjectDTO();
+            subjectDTO.setId(subject.getId());
+            subjectDTO.setUserName(subject.getUsers().getNickname());
+            subjectDTO.setSubjectName(subject.getName());
+            subjectDTO.setDate(subject.getFormattedDateSending());
+            subjectDTO.setDescription(searchCommentBySubject(subject));
+            subjectDTO.setComments(searchCommentBySubject(subject));
+            subjectDTOList.add(subjectDTO);
+        }
     }
 
     @Transactional(readOnly = true)

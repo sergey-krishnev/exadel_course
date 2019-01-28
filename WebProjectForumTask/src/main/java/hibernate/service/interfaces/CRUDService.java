@@ -15,7 +15,13 @@ public interface CRUDService {
 
     List<SubjectDTO> searchSubjectByTopic(Topic topic);
 
+    TopicDTO searchTopicById(int topicId);
+
+    SubjectDTO searchSubjectById(int subjectId);
+
     List<TopicDTO> searchAllTopic();
+
+    List<SubjectDTO> searchAllSubject();
 
     List<CommentDTO> searchCommentBySubject(Subject subject);
 }

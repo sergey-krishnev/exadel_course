@@ -11,4 +11,10 @@ import java.util.List;
 public interface CRUDDao{
 
     List<Topic> searchAllTopic();
+
+    List<Subject> searchAllSubject();
+
+    Topic searchTopicById(int topicId);
+
+    Subject searchSubjectById(int subjectId);
 }

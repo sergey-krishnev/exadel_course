@@ -35,4 +35,6 @@ public class CRUDController {
     public String post() {
         return "index3";
     }
+
+
 }

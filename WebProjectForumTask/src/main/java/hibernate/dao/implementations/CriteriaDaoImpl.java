@@ -31,7 +31,29 @@ public class CriteriaDaoImpl implements CRUDDao {
     @Override
     public List<Topic> searchAllTopic() {
         Criteria cr = sessionFactory.getCurrentSession().createCriteria(Topic.class);
+        cr.addOrder(Order.asc("name"));
         return cr.list();
+    }
+
+    @Override
+    public List<Subject> searchAllSubject() {
+        Criteria cr = sessionFactory.getCurrentSession().createCriteria(Subject.class);
+        cr.addOrder(Order.asc("name"));
+        return cr.list();
+    }
+
+    @Override
+    public Topic searchTopicById(int topicId) {
+        Criteria cr = sessionFactory.getCurrentSession().createCriteria(Topic.class);
+        cr.add(Restrictions.eq("id", topicId));
+        return (Topic) cr.list().get(0);
+    }
+
+    @Override
+    public Subject searchSubjectById(int subjectId) {
+        Criteria cr = sessionFactory.getCurrentSession().createCriteria(Subject.class);
+        cr.add(Restrictions.eq("id", subjectId));
+        return (Subject) cr.list().get(0);
     }
 
 }

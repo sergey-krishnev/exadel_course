@@ -1,5 +1,6 @@
 package hibernate.controller;
 
+import hibernate.dto.CommentDTO;
 import hibernate.dto.SubjectDTO;
 import hibernate.dto.TopicDTO;
 import hibernate.dto.UsersDTO;
@@ -33,4 +34,30 @@ public class RestCRUDController {
         return crudService.searchAllTopic();
     }
 
+    @RequestMapping(value = "/topics/{topicId}", method = RequestMethod.GET)
+    public TopicDTO getTopicDTO(@PathVariable int topicId) {
+        return crudService.searchTopicById(topicId);
+    }
+
+    @RequestMapping(value = "/topics/{topicId}/subjects", method = RequestMethod.GET)
+    public List<SubjectDTO> getSubjectsByTopicId(@PathVariable int topicId) {
+        TopicDTO topicDTO = crudService.searchTopicById(topicId);
+        return topicDTO.getSubjects();
+    }
+
+    @RequestMapping(value = "/subjects", method = RequestMethod.GET)
+    public List<SubjectDTO> getAllSubjectDTO() {
+        return crudService.searchAllSubject();
+    }
+
+    @RequestMapping(value = "/subjects/{subjectId}", method = RequestMethod.GET)
+    public SubjectDTO getSubjectDTO(@PathVariable int subjectId) {
+        return crudService.searchSubjectById(subjectId);
+    }
+
+    @RequestMapping(value = "/subject/{subjectId}/comments", method = RequestMethod.GET)
+    public List<CommentDTO> getCommentsDTO(@PathVariable int subjectId) {
+        SubjectDTO subjectDTO = crudService.searchSubjectById(subjectId);
+        return subjectDTO.getComments();
+    }
 }
