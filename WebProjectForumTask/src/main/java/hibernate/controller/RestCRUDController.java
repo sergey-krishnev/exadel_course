@@ -45,7 +45,7 @@ public class RestCRUDController {
         return topicDTO.getSubjects();
     }
 
-    @RequestMapping(value = "/subjects", method = RequestMethod.GET)
+    @RequestMapping(value = "/topics/subjects", method = RequestMethod.GET)
     public List<SubjectDTO> getAllSubjectDTO() {
         return crudService.searchAllSubject();
     }
@@ -59,5 +59,10 @@ public class RestCRUDController {
     public List<CommentDTO> getCommentsDTO(@PathVariable int subjectId) {
         SubjectDTO subjectDTO = crudService.searchSubjectById(subjectId);
         return subjectDTO.getComments();
+    }
+
+    @RequestMapping(value = "/test2", method = RequestMethod.GET)
+    public String getPage() {
+        return "index3";
     }
 }

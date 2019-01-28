@@ -31,6 +31,13 @@ public class CRUDController {
         return "index2";
     }
 
+    @RequestMapping(value = "/{topicId}", method = RequestMethod.GET)
+    public String getSpecificTopic(@PathVariable int topicId) {
+        return "index2";
+    }
+
+//    @RequestMapping(value = "/subjects/")
+
     @RequestMapping(value = "/test",method = RequestMethod.GET)
     public String post() {
         return "index3";
