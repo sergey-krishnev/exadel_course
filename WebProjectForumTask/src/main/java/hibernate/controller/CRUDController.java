@@ -47,4 +47,9 @@ public class CRUDController {
     public String getAdminPanel() {
         return "admin";
     }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+        return "login";
+    }
 }
