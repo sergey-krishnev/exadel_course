@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +47,12 @@
                     <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a>
+                    <sec:authorize access="!isAuthenticated()">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a>
+                    </sec:authorize>
+                    <sec:authorize access="isAuthenticated()">
+                        <a class="nav-link" href="<c:url value="/logout" />">Logout</a>
+                    </sec:authorize>
                 </li>
             </ul>
         </div>

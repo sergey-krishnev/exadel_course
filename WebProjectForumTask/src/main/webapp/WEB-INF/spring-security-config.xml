@@ -15,7 +15,7 @@
         <form-login login-page="/login"
                     authentication-failure-url="/login.jsp?login_error=1"/>
         <http-basic/>
-        <logout logout-success-url="/exitUser"/>
+        <logout logout-success-url="/login"/>
         <remember-me />
         <headers/>
         <csrf/>
@@ -26,9 +26,9 @@
             <user-service>
                 <user name="admin" password="admin" authorities="ROLE_USER, ROLE_ADMIN" />
                 <user name="user" password="user" authorities="ROLE_USER" />
-                <user name="guest" password="guest" authorities="ROLE_GUEST" />
             </user-service>
         </authentication-provider>
     </authentication-manager>
-
+    <global-method-security secured-annotations="enabled" />
+    <b:bean id="webSecurityExpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
 </b:beans>
