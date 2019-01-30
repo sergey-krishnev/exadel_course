@@ -4,6 +4,8 @@ public class CommentDTO {
 
     private int id;
     private String userName;
+    private String topicName;
+    private String subjectName;
     private String message;
     private String date;
 
@@ -21,6 +23,22 @@ public class CommentDTO {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getTopicName() {
+        return topicName;
+    }
+
+    public void setTopicName(String topicName) {
+        this.topicName = topicName;
+    }
+
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
     }
 
     public String getMessage() {

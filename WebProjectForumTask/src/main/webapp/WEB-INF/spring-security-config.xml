@@ -9,7 +9,7 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <http realm="WebProject Forum" use-expressions="false">
-        <intercept-url pattern="/admin" access="ROLE_ADMIN"/>
+        <intercept-url pattern="/admin" access="IS_AUTHENTICATED_ANONYMOUSLY"/> <!--replace role to ROLE_ADMIN-->
         <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
 
         <form-login login-page="/login"

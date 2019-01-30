@@ -48,10 +48,23 @@ public class CRUDController {
         return "index3";
     }
 
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
-    public String getAdminPanel() {
+    @RequestMapping(value = "/admin/dashboard", method = RequestMethod.GET)
+    public String getAdminDashBoard() {
         return "admin";
     }
+
+    @RequestMapping(value = "/admin/comments", method = RequestMethod.GET)
+    public String getAdminComments() { return "admin";}
+
+    @RequestMapping(value = "/admin/subjects", method = RequestMethod.GET)
+    public String getAdminSubjects() { return "admin";}
+
+    @RequestMapping(value = "/admin/users", method = RequestMethod.GET)
+    public String getAdminUsers() { return "admin";}
+
+    @RequestMapping(value = "/admin/topics", method = RequestMethod.GET)
+    public String getAdminTopics() { return "admin";}
+
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {

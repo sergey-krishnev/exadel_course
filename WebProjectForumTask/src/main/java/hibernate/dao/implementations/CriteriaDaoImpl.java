@@ -56,4 +56,11 @@ public class CriteriaDaoImpl implements CRUDDao {
         return (Subject) cr.list().get(0);
     }
 
+    @Override
+    public List<Comment> searchAllComment() {
+        Criteria cr = sessionFactory.getCurrentSession().createCriteria(Comment.class);
+        cr.addOrder(Order.asc("message"));
+        return cr.list();
+    }
+
 }

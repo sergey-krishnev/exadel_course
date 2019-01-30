@@ -17,4 +17,6 @@ public interface CRUDDao{
     Topic searchTopicById(int topicId);
 
     Subject searchSubjectById(int subjectId);
+
+    List<Comment> searchAllComment();
 }

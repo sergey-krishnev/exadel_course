@@ -117,14 +117,29 @@ public class CRUDServiceImpl implements CRUDService {
     public List<CommentDTO> searchCommentBySubject(Subject subject) {
         List<Comment> commentList = subject.getComments();
         List<CommentDTO> comments = new ArrayList<>();
+        commentToCommentDTO(commentList, comments);
+        return comments;
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<CommentDTO> searchAllComment() {
+        List<Comment> commentList = crudDao.searchAllComment();
+        List<CommentDTO> comments = new ArrayList<>();
+        commentToCommentDTO(commentList, comments);
+        return comments;
+    }
+
+    private void commentToCommentDTO(List<Comment> commentList, List<CommentDTO> comments) {
         for (Comment comment : commentList) {
             CommentDTO commentDTO = new CommentDTO();
             commentDTO.setId(comment.getId());
             commentDTO.setUserName(comment.getUsers().getNickname());
+            commentDTO.setSubjectName(comment.getSubject().getName());
+            commentDTO.setTopicName(comment.getSubject().getTopic().getName());
             commentDTO.setMessage(comment.getMessage());
             commentDTO.setDate(comment.getFormattedDateSending());
             comments.add(commentDTO);
         }
-        return comments;
     }
 }

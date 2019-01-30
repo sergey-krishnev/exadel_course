@@ -60,4 +60,9 @@ public class RestCRUDController {
         SubjectDTO subjectDTO = crudService.searchSubjectById(subjectId);
         return subjectDTO.getComments();
     }
+
+    @RequestMapping(value = "/comments", method = RequestMethod.GET)
+    public List<CommentDTO> getAllCommentDTO() {
+        return crudService.searchAllComment();
+    }
 }

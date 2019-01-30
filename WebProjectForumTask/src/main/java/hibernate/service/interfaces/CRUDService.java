@@ -24,4 +24,6 @@ public interface CRUDService {
     List<SubjectDTO> searchAllSubject();
 
     List<CommentDTO> searchCommentBySubject(Subject subject);
+
+    List<CommentDTO> searchAllComment();
 }
