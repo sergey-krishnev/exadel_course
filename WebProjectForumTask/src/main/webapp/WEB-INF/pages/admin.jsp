@@ -235,6 +235,7 @@
 <!-- Custom scripts for all pages-->
 <script src="js/sb-admin.min.js"></script>
 <script src="scripts/adminPasteData.js"></script>
+<script src="scripts/deleteComment.js"></script>
 
 <!-- Page level plugin JavaScript-->
 <script src="vendor/datatables/jquery.dataTables.js"></script>

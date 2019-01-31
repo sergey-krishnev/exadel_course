@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
@@ -108,7 +109,8 @@ public class RestCRUDController {
     }
 
     @RequestMapping(value = "/comments/{commentId}", method = RequestMethod.DELETE)
-    public void updateCommentDTO(@PathVariable int commentId) {
+    @Secured("ROLE_ADMIN")
+    public void deleteCommentDTO(@PathVariable int commentId) {
         crudService.deleteComment(commentId);
     }
 
