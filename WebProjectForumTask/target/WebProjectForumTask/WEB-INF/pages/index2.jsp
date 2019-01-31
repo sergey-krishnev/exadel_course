@@ -60,7 +60,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <sec:authorize access="hasRole('ADMIN')">
-                        <a class="dropdown-item" href="/admin/dashboard">Admin panel</a>
+                        <a class="dropdown-item" href="/admin">Admin panel</a>
                         </sec:authorize>
                         <a class="dropdown-item" href="#">Settings</a>
                         <a class="dropdown-item" href="#">Activity Log</a>

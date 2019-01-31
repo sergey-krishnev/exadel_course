@@ -49,21 +49,29 @@ public class CRUDController {
     }
 
     @RequestMapping(value = "/admin/dashboard", method = RequestMethod.GET)
-    public String getAdminDashBoard() {
+    public String getAdminDashboard() {
         return "admin";
     }
 
     @RequestMapping(value = "/admin/comments", method = RequestMethod.GET)
-    public String getAdminComments() { return "admin";}
+    public String getAdminComments() {
+        return "admin";
+    }
 
     @RequestMapping(value = "/admin/subjects", method = RequestMethod.GET)
-    public String getAdminSubjects() { return "admin";}
+    public String getAdminSubjects() {
+        return "admin";
+    }
 
     @RequestMapping(value = "/admin/users", method = RequestMethod.GET)
-    public String getAdminUsers() { return "admin";}
+    public String getAdminUsers() {
+        return "admin";
+    }
 
     @RequestMapping(value = "/admin/topics", method = RequestMethod.GET)
-    public String getAdminTopics() { return "admin";}
+    public String getAdminTopics() {
+        return "admin";
+    }
 
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

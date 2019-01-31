@@ -8,6 +8,7 @@ public class SubjectDTO {
     private String subjectName;
     private String description;
     private String userName;
+    private String topicName;
     private String date;
     private String text;
     private List<CommentDTO> comments;
@@ -42,6 +43,14 @@ public class SubjectDTO {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getTopicName() {
+        return topicName;
+    }
+
+    public void setTopicName(String topicName) {
+        this.topicName = topicName;
     }
 
     public String getDate() {

@@ -4,9 +4,11 @@ import hibernate.dao.interfaces.CRUDDao;
 import hibernate.dto.CommentDTO;
 import hibernate.dto.SubjectDTO;
 import hibernate.dto.TopicDTO;
+import hibernate.dto.UsersDTO;
 import hibernate.model.Comment;
 import hibernate.model.Subject;
 import hibernate.model.Topic;
+import hibernate.model.Users;
 import hibernate.service.interfaces.CRUDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -104,6 +106,7 @@ public class CRUDServiceImpl implements CRUDService {
             subjectDTO.setId(subject.getId());
             subjectDTO.setUserName(subject.getUsers().getNickname());
             subjectDTO.setSubjectName(subject.getName());
+            subjectDTO.setTopicName(subject.getTopic().getName());
             subjectDTO.setDate(subject.getFormattedDateSending());
             subjectDTO.setDescription(subject.getText());
             subjectDTO.setText(subject.getText());
@@ -128,6 +131,129 @@ public class CRUDServiceImpl implements CRUDService {
         List<CommentDTO> comments = new ArrayList<>();
         commentToCommentDTO(commentList, comments);
         return comments;
+    }
+
+    @Transactional
+    @Override
+    public void insertTopic(TopicDTO topicDTO) {
+        crudDao.insertTopic(topicDTO.getTopicName());
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<UsersDTO> searchAllUsers() {
+        List<Users> usersList = crudDao.searchAllUsers();
+        List<UsersDTO> users = new ArrayList<>();
+        for (Users user : usersList) {
+            UsersDTO usersDTO = new UsersDTO();
+            usersDTO.setId(user.getId());
+            usersDTO.setUserName(user.getNickname());
+            usersDTO.setPassword(user.getPassword());
+            usersDTO.setEmail(user.getEmail());
+            usersDTO.setFirstName(user.getFirstName());
+            usersDTO.setLastName(user.getLastName());
+            users.add(usersDTO);
+        }
+        return users;
+    }
+
+    @Transactional
+    @Override
+    public void updateTopic(int topicId, TopicDTO topicDTO) {
+        crudDao.updateTopic(topicId, topicDTO.getTopicName());
+    }
+
+    @Transactional
+    @Override
+    public void deleteTopic(int topicId) {
+        crudDao.deleteTopic(topicId);
+    }
+
+    @Override
+    public void insertSubject(SubjectDTO subjectDTO) {
+        crudDao.insertSubject(subjectDTO.getSubjectName(), stringAsDate(subjectDTO.getDate()), subjectDTO.getText(),
+                subjectDTO.getUserName(), subjectDTO.getTopicName());
+    }
+
+    @Transactional
+    @Override
+    public void updateSubject(int subjectId, SubjectDTO subjectDTO) {
+        crudDao.updateSubject(subjectId, subjectDTO.getSubjectName(), stringAsDate(subjectDTO.getDate()), subjectDTO.getText(),
+                subjectDTO.getUserName(), subjectDTO.getTopicName());
+    }
+
+    @Transactional
+    @Override
+    public void deleteSubject(int subjectId) {
+        crudDao.deleteSubject(subjectId);
+    }
+
+    @Transactional
+    @Override
+    public void insertUsers(UsersDTO usersDTO) {
+        crudDao.insertUsers(usersDTO.getUserName(),usersDTO.getPassword(),usersDTO.getEmail(),usersDTO.getFirstName(),
+                usersDTO.getLastName());
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public UsersDTO searchUserById(int userId) {
+        Users users = crudDao.searchUserById(userId);
+        UsersDTO usersDTO = new UsersDTO();
+        usersDTO.setId(users.getId());
+        usersDTO.setUserName(users.getNickname());
+        usersDTO.setPassword(users.getPassword());
+        usersDTO.setEmail(users.getEmail());
+        usersDTO.setFirstName(users.getFirstName());
+        usersDTO.setLastName(users.getLastName());
+        return usersDTO;
+    }
+
+    @Transactional
+    @Override
+    public void updateUsers(int userId, UsersDTO usersDTO) {
+        crudDao.updateUsers(userId, usersDTO.getUserName(),usersDTO.getPassword(),usersDTO.getEmail(),usersDTO.getFirstName(),
+                usersDTO.getLastName());
+    }
+
+    @Transactional
+    @Override
+    public void deleteUsers(int userId) {
+        crudDao.deleteUsers(userId);
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public CommentDTO searchCommentById(int commentId) {
+        Comment comment = crudDao.searchCommentById(commentId);
+        CommentDTO commentDTO = new CommentDTO();
+        commentDTO.setId(comment.getId());
+        commentDTO.setUserName(comment.getUsers().getNickname());
+        commentDTO.setSubjectName(comment.getSubject().getName());
+        commentDTO.setTopicName(comment.getSubject().getTopic().getName());
+        commentDTO.setMessage(comment.getMessage());
+        commentDTO.setDate(comment.getFormattedDateSending());
+        return commentDTO;
+    }
+
+    @Transactional
+    @Override
+    public void insertComment(CommentDTO commentDTO) {
+        crudDao.insertComment(commentDTO.getMessage(), stringAsDate(commentDTO.getDate()), commentDTO.getUserName(),
+                commentDTO.getSubjectName());
+    }
+
+    @Transactional
+    @Override
+    public void updateComment(int commentId, CommentDTO commentDTO) {
+        crudDao.updateComment(commentId, commentDTO.getMessage(), stringAsDate(commentDTO.getDate()), commentDTO.getUserName(),
+                commentDTO.getSubjectName());
+    }
+
+    @Transactional
+    @Override
+    public void deleteComment(int commentId) {
+        crudDao.deleteComment(commentId);
     }
 
     private void commentToCommentDTO(List<Comment> commentList, List<CommentDTO> comments) {

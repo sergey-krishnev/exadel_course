@@ -26,4 +26,34 @@ public interface CRUDService {
     List<CommentDTO> searchCommentBySubject(Subject subject);
 
     List<CommentDTO> searchAllComment();
+
+    void insertTopic(TopicDTO topicDTO);
+
+    List<UsersDTO> searchAllUsers();
+
+    void updateTopic(int topicId, TopicDTO topicDTO);
+
+    void deleteTopic(int topicId);
+
+    void insertSubject(SubjectDTO subjectDTO);
+
+    void updateSubject(int subjectId, SubjectDTO subjectDTO);
+
+    void deleteSubject(int subjectId);
+
+    void insertUsers(UsersDTO usersDTO);
+
+    UsersDTO searchUserById(int userId);
+
+    void updateUsers(int userId, UsersDTO usersDTO);
+
+    void deleteUsers(int userId);
+
+    CommentDTO searchCommentById(int commentId);
+
+    void insertComment(CommentDTO commentDTO);
+
+    void updateComment(int commentId, CommentDTO commentDTO);
+
+    void deleteComment(int commentId);
 }
