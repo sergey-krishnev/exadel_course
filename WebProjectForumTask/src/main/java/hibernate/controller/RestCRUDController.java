@@ -61,7 +61,7 @@ public class RestCRUDController {
         return topicDTO.getSubjects();
     }
 
-    @RequestMapping(value = "/topics/subjects", method = RequestMethod.GET)
+    @RequestMapping(value = "/subjects", method = RequestMethod.GET)
     public List<SubjectDTO> getAllSubjectDTO() {
         return crudService.searchAllSubject();
     }
@@ -71,7 +71,7 @@ public class RestCRUDController {
         return crudService.searchSubjectById(subjectId);
     }
 
-    @RequestMapping(value = "/topics/subjects", method = RequestMethod.POST)
+    @RequestMapping(value = "/subjects", method = RequestMethod.POST)
     public void addSubjectDTO(@RequestBody SubjectDTO subjectDTO) { crudService.insertSubject(subjectDTO);}
 
     @RequestMapping(value = "/subjects/{subjectId}", method = RequestMethod.PUT)

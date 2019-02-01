@@ -105,7 +105,107 @@
 
             <!-- Comments DataTables Example -->
 
-            <div id ="adminTables"></div>
+            <div id ="adminTables">
+                <div id="displayCommentsTable" style="display: none">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fas fa-comments"></i>
+                            Comments Data Table
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>Comment</th>
+                                        <th>Username</th>
+                                        <th>Topic name</th>
+                                        <th>Subject name</th>
+                                        <th>Date</th>
+                                        <th colspan="2">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="commentsBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                    </div>
+                </div>
+                <div id="displaySubjectsTable" style="display: none">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fas fa-list"></i>
+                            Subjects Data Table
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>Subject name</th>
+                                        <th>Username</th>
+                                        <th>Topic name</th>
+                                        <th>Date</th>
+                                        <th colspan="2">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="subjectsBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                    </div>
+                </div>
+                <div id="displayUsersTable" style="display: none">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fas fa-users"></i>
+                            Users Data Table
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Password</th>
+                                        <th>Email</th>
+                                        <th>First name</th>
+                                        <th>Last name</th>
+                                        <th colspan="2">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="usersBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                    </div>
+                </div>
+                <div id="displayTopicsTable" style="display: none">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fas fa-list"></i>
+                            Topics Data Table
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>Topic name</th>
+                                        <th colspan="2">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="topicsBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                    </div>
+                </div>
+            </div>
 
     </div>
 
@@ -150,6 +250,112 @@
     </div>
 </div>
 
+<!-- Modal Update-->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+</div>
+
+<!-- Templates -->
+    <script id="commentsTemplate" type="text/x-jQuery-tmpl">
+        <tr id ="column\${id}">
+            <td>\${message}</td>
+            <td>\${userName}</td>
+            <td>\${topicName}</td>
+            <td>\${subjectName}</td>
+            <td>\${date}</td>
+            <td><button type="button" class = "btn btn-primary updateComments" id ="\${id}" data-toggle="modal" data-target="#updateModal">Update</button></td>
+            <td><button type="button" class = "btn btn-danger deleteComments" id ="\${id}">Delete</button></td>
+        </tr>
+    </script>
+
+    <script id="commentsUpdateTemplate" type="text/x-jQuery-tmpl">
+        <tr id ="column\${id}">
+            <td><input type="text" value="\${message}"/></td>
+            <td><select id = "usersSelectUpdate"></select></td>
+            <td><select id = "topicsSelectUpdate"></select></td>
+            <td><select id = "subjectsSelectUpdate"></select></td>
+            <td><input type="text" value="\${date}"/></td>
+            <td><button type="button" class = "btn btn-primary okComments" id ="\${id}">OK</button></td>
+            <td><button type="button" class = "btn btn-danger cancelComments" id ="\${id}">Cancel</button></td>
+        </tr>
+    </script>
+
+    <script id="subjectsTemplate" type="text/x-jQuery-tmpl">
+        <tr id ="column\${id}">
+            <td>\${subjectName}</td>
+            <td>\${userName}</td>
+            <td>\${topicName}</td>
+            <td>\${date}</td>
+            <td><button type="button" class = "btn btn-primary updateSubjects" id ="\${id}">Update</button></td>
+            <td><button type="button" class = "btn btn-danger deleteSubjects" id ="\${id}">Delete</button></td>
+        </tr>
+    </script>
+
+    <script id="subjectsUpdateTemplate" type="text/x-jQuery-tmpl">
+        <tr id ="column\${id}">
+            <td><input type="text" value="\${subjectName}"/></td>
+            <td><select id = "usersSelectUpdate"></select></td>
+            <td><select id = "topicsSelectUpdate"/></select></td>
+            <td><input type="text" value="\${date}"/></td>
+            <td><button type="button" class = "btn btn-primary okSubjects" id ="\${id}">OK</button></td>
+            <td><button type="button" class = "btn btn-danger cancelSubjects" id ="\${id}">Cancel</button></td>
+        </tr>
+    </script>
+
+    <script id="usersTemplate" type="text/x-jQuery-tmpl">
+        <tr id ="column\${id}">
+            <td>\${userName}</td>
+            <td>\${password}</td>
+            <td>\${email}</td>
+            <td>\${firstName}</td>
+            <td>\${lastName}</td>
+            <td><button type="button" class = "btn btn-primary updateUsers" id ="\${id}">Update</button></td>
+            <td><button type="button" class = "btn btn-danger deleteUsers" id ="\${id}">Delete</button></td>
+        </tr>
+    </script>
+
+    <script id="usersUpdateTemplate" type="text/x-jQuery-tmpl">
+        <tr id ="column\${id}">
+            <td><input type="text" value="\${userName}"/></td>
+            <td><input type="text" value="\${password}"/></td>
+            <td><input type="text" value="\${email}"/></td>
+            <td><input type="text" value="\${firstName}"/></td>
+            <td><input type="text" value="\${lastName}"/></td>
+            <td><button type="button" class = "btn btn-primary okUsers" id ="\${id}">OK</button></td>
+            <td><button type="button" class = "btn btn-danger cancelUsers" id ="\${id}">Cancel</button></td>
+        </tr>
+    </script>
+
+    <script id="topicsTemplate" type="text/x-jQuery-tmpl">
+        <tr id ="column\${id}">
+            <td>\${topicName}</td>
+            <td><button type="button" class = "btn btn-primary updateTopics" id ="\${id}">Update</button></td>
+            <td><button type="button" class = "btn btn-danger deleteTopics" id ="\${id}">Delete</button></td>
+        </tr>
+    </script>
+
+    <script id="topicsUpdateTemplate" type="text/x-jQuery-tmpl">
+        <tr id ="column\${id}">
+            <td><input type="text" value="\${topicName}"/></td>
+            <td><button type="button" class = "btn btn-primary okTopics" id ="\${id}">OK</button></td>
+            <td><button type="button" class = "btn btn-danger cancelTopics" id ="\${id}">Cancel</button></td>
+        </tr>
+    </script>
+
+    <script id="topicsSelectTemplate" type="text/x-jQuery-tmpl">
+        <option value="\${topicName}">\${topicName}</option>
+    </script>
+
+    <script id="subjectsSelectTemplate" type="text/x-jQuery-tmpl">
+        <option value="\${subjectName}">\${subjectName}</option>
+    </script>
+
+    <script id="usersSelectTemplate" type="text/x-jQuery-tmpl">
+        <option value="\${userName}">\${userName}</option>
+    </script>
+
+
+
 <!-- Bootstrap core JavaScript-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -159,8 +365,11 @@
 
 <!-- Custom scripts for all pages-->
 <script src="js/sb-admin.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
 <script src="scripts/adminPasteData.js"></script>
-<script src="scripts/deleteComment.js"></script>
+<script src="scripts/deleteData.js"></script>
+<script src="scripts/updateFormData.js"></script>
+<script src="scripts/aggregateSelects.js"></script>
 
 <!-- Page level plugin JavaScript-->
 <script src="vendor/datatables/jquery.dataTables.js"></script>

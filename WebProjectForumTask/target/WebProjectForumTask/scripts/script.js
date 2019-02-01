@@ -13,7 +13,7 @@ $(document).ready(function () {
         $('.aggregate-topics').append(topicDTO_data)
     });
 
-    $.getJSON("http://localhost:8080/topics" + pathname, function (data) {
+    $.getJSON("http://localhost:8080/" + pathname, function (data) {
         $('.topicName').text(data.topicName);
     });
 
