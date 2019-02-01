@@ -48,11 +48,6 @@ public class CRUDController {
         return "index3";
     }
 
-    @RequestMapping(value = "/admin/dashboard", method = RequestMethod.GET)
-    public String getAdminDashboard() {
-        return "admin";
-    }
-
     @RequestMapping(value = "/admin/comments", method = RequestMethod.GET)
     public String getAdminComments() {
         return "admin";
