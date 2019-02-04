@@ -305,11 +305,40 @@
             </button>
         </div>
         <div class="modal-body">
-
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-comment"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="Comment" type="text">
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <select class="form-control" id = "usersSelectUpdate"></select>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-list"></i></span>
+                </div>
+                <select class="form-control" id = "topicsSelectUpdate"></select>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-list"></i></span>
+                </div>
+                <select class="form-control" id = "subjectsSelectUpdate"></select>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="Date" type="text">
+            </div>
         </div>
         <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="/admin/comments">Add</a>
+            <button class="btn btn-primary" id="addCommentsModalButton" type="button" data-dismiss="modal">Add</button>
         </div>
     </div>
 </div>
@@ -368,7 +397,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/admin/subjects">Add</a>
+                <button class="btn btn-primary" id="addSubjectsModalButton" type="button" data-dismiss="modal">Add</button>
             </div>
         </div>
     </div>
@@ -427,7 +456,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/admin/users">Add</a>
+                <a class="btn btn-primary" id="addUsersModalButton" type="button" data-dismiss="modal">Add</a>
             </div>
         </div>
     </div>
@@ -486,7 +515,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/admin/topics">Add</a>
+                <a class="btn btn-primary" id="addTopicsModalButton" type="button" data-dismiss="modal">Add</a>
             </div>
         </div>
     </div>

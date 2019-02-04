@@ -305,7 +305,36 @@
             </button>
         </div>
         <div class="modal-body">
-
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-comment"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="Comment" type="text">
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <select class="form-control usersSelectUpdate"></select>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-list"></i></span>
+                </div>
+                <select class="form-control topicsSelectUpdate"></select>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-list"></i></span>
+                </div>
+                <select class="form-control subjectsSelectUpdate"></select>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
+                </div>
+                <input name="" class="form-control" placeholder="Date" type="text">
+            </div>
         </div>
         <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
@@ -364,7 +393,30 @@
                 </button>
             </div>
             <div class="modal-body">
-
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-list"></i> </span>
+                    </div>
+                    <input type="text" value="" placeholder="Subject name">
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <select class = "form-control usersSelectUpdate"></select>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-list"></i> </span>
+                    </div>
+                    <select class = "form-control topicsSelectUpdate"></select>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-clock"></i></span>
+                    </div>
+                    <input type="text" value="" placeholder="Date"/>
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
@@ -423,7 +475,36 @@
                 </button>
             </div>
             <div class="modal-body">
-
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i></span>
+                    </div>
+                    <input type="text" value="" placeholder="Username"/>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i></span>
+                    </div>
+                    <input type="text" value="" placeholder="Password"/>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
+                    </div>
+                    <input type="text" value="" placeholder="E-mail"/>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i></span>
+                    </div>
+                    <input type="text" value="" placeholder="First name"/>
+                </div>
+                <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i></span>
+                </div>
+                    <input type="text" value="" placeholder="Last name"/>
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
