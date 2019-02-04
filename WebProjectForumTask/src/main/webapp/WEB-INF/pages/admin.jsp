@@ -127,6 +127,7 @@
                                     </thead>
                                     <tbody id="commentsBody"></tbody>
                                 </table>
+                                <button type="button" class = "btn btn-info addComments" data-toggle="modal" data-target="#addCommentsModal">Add new comment</button>
                             </div>
                         </div>
                         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
@@ -152,6 +153,7 @@
                                     </thead>
                                     <tbody id="subjectsBody"></tbody>
                                 </table>
+                                <button type="button" class = "btn btn-info addSubjects" data-toggle="modal" data-target="#addSubjectsModal">Add new subject</button>
                             </div>
                         </div>
                         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
@@ -178,6 +180,7 @@
                                     </thead>
                                     <tbody id="usersBody"></tbody>
                                 </table>
+                                <button type="button" class = "btn btn-info addUsers" data-toggle="modal" data-target="#addUsersModal">Add new user</button>
                             </div>
                         </div>
                         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
@@ -200,6 +203,7 @@
                                     </thead>
                                     <tbody id="topicsBody"></tbody>
                                 </table>
+                                <button type="button" class = "btn btn-info addTopics" data-toggle="modal" data-target="#addTopicsModal">Add new topic</button>
                             </div>
                         </div>
                         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
@@ -250,9 +254,242 @@
     </div>
 </div>
 
-<!-- Modal Update-->
-<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-hidden="true">
+<!-- Modal Delete Comments-->
+<div class="modal fade" id="deleteCommentsModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete the comment?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Delete" below if you are ready to delete this comment.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" id="deleteCommentsModalButton" type="button" data-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Update Comments-->
+<div class="modal fade" id="updateCommentsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update the comment</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="/admin/comments">Update</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add Comments-->
+<div class="modal fade" id="addCommentsModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Add the comment</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary" id="addCommentsModalButton" type="button" data-dismiss="modal">Add</button>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal Delete Subjects-->
+<div class="modal fade" id="deleteSubjectsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete the subject?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Delete" below if you are ready to delete this subject.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" id="deleteSubjectsModalButton" type="button" data-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Update Subjects-->
+<div class="modal fade" id="updateSubjectsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update the subject?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="/admin/subjects">Update</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add Subjects-->
+<div class="modal fade" id="addSubjectsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add the subject</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" id="addSubjectsModalButton" type="button" data-dismiss="modal">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete Users-->
+<div class="modal fade" id="deleteUsersModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete the user?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Delete" below if you are ready to delete this user.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" id="deleteUsersModalButton" type="button" data-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Update Users-->
+<div class="modal fade" id="updateUsersModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update the user?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="/admin/users">Update</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add Users-->
+<div class="modal fade" id="addUsersModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add the user</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" id="addUsersModalButton" type="button" data-dismiss="modal">Add</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete Topics-->
+<div class="modal fade" id="deleteTopicsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete the topic?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Delete" below if you are ready to delete this topic.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" id="deleteTopicsModalButton" type="button" data-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Update Topics-->
+<div class="modal fade" id="updateTopicsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update the topic?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="/admin/topics">Update</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add Topics-->
+<div class="modal fade" id="addTopicsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add the topic</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" id="addTopicsModalButton" type="button" data-dismiss="modal">Add</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Templates -->
@@ -263,8 +500,8 @@
             <td>\${topicName}</td>
             <td>\${subjectName}</td>
             <td>\${date}</td>
-            <td><button type="button" class = "btn btn-primary updateComments" id ="\${id}" data-toggle="modal" data-target="#updateModal">Update</button></td>
-            <td><button type="button" class = "btn btn-danger deleteComments" id ="\${id}">Delete</button></td>
+            <td><button type="button" class = "btn btn-primary updateComments" id ="\${id}" data-toggle="modal" data-target="#updateCommentsModal">Update</button></td>
+            <td><button type="button" class = "btn btn-danger deleteComments" id ="\${id}" data-toggle="modal" data-target="#deleteCommentsModal">Delete</button></td>
         </tr>
     </script>
 
@@ -286,8 +523,8 @@
             <td>\${userName}</td>
             <td>\${topicName}</td>
             <td>\${date}</td>
-            <td><button type="button" class = "btn btn-primary updateSubjects" id ="\${id}">Update</button></td>
-            <td><button type="button" class = "btn btn-danger deleteSubjects" id ="\${id}">Delete</button></td>
+            <td><button type="button" class = "btn btn-primary updateSubjects" id ="\${id}" data-toggle="modal" data-target="#updateSubjectsModal">Update</button></td>
+            <td><button type="button" class = "btn btn-danger deleteSubjects" id ="\${id}" data-toggle="modal" data-target="#deleteSubjectsModal">Delete</button></td>
         </tr>
     </script>
 
@@ -309,8 +546,8 @@
             <td>\${email}</td>
             <td>\${firstName}</td>
             <td>\${lastName}</td>
-            <td><button type="button" class = "btn btn-primary updateUsers" id ="\${id}">Update</button></td>
-            <td><button type="button" class = "btn btn-danger deleteUsers" id ="\${id}">Delete</button></td>
+            <td><button type="button" class = "btn btn-primary updateUsers" id ="\${id}" data-toggle="modal" data-target="#updateUsersModal">Update</button></td>
+            <td><button type="button" class = "btn btn-danger deleteUsers" id ="\${id}" data-toggle="modal" data-target="#deleteUsersModal">Delete</button></td>
         </tr>
     </script>
 
@@ -329,8 +566,8 @@
     <script id="topicsTemplate" type="text/x-jQuery-tmpl">
         <tr id ="column\${id}">
             <td>\${topicName}</td>
-            <td><button type="button" class = "btn btn-primary updateTopics" id ="\${id}">Update</button></td>
-            <td><button type="button" class = "btn btn-danger deleteTopics" id ="\${id}">Delete</button></td>
+            <td><button type="button" class = "btn btn-primary updateTopics" id ="\${id}" data-toggle="modal" data-target="#updateTopicsModal">Update</button></td>
+            <td><button type="button" class = "btn btn-danger deleteTopics" id ="\${id}" data-toggle="modal" data-target="#deleteTopicsModal">Delete</button></td>
         </tr>
     </script>
 

@@ -116,6 +116,8 @@ public class CriteriaDaoImpl implements CRUDDao {
     public void deleteTopic(int topicId) {
         Session session = sessionFactory.getCurrentSession();
         Topic topic = (Topic) session.get(Topic.class,topicId);
+        List<Subject> subjects = topic.getSubjects();
+        deleteSubjectList(session, subjects);
         session.delete(topic);
     }
 
@@ -146,6 +148,10 @@ public class CriteriaDaoImpl implements CRUDDao {
     public void deleteSubject(int subjectId) {
         Session session = sessionFactory.getCurrentSession();
         Subject subject = (Subject) session.get(Subject.class, subjectId);
+        List<Comment> comments = subject.getComments();
+        for (Comment comment : comments) {
+            session.delete(comment);
+        }
         session.delete(subject);
     }
 
@@ -184,7 +190,23 @@ public class CriteriaDaoImpl implements CRUDDao {
     public void deleteUsers(int userId) {
         Session session = sessionFactory.getCurrentSession();
         Users users = (Users) session.get(Users.class, userId);
+        List<Subject> subjects = users.getSubjects();
+        deleteSubjectList(session, subjects);
+        List<Comment> comments = users.getComments();
+        for (Comment comment : comments) {
+            session.delete(comment);
+        }
         session.delete(users);
+    }
+
+    private void deleteSubjectList(Session session, List<Subject> subjects) {
+        for (Subject subject : subjects) {
+            List<Comment> comments = subject.getComments();
+            for (Comment comment : comments) {
+                session.delete(comment);
+            }
+            session.delete(subject);
+        }
     }
 
     @Override
