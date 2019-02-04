@@ -39,8 +39,10 @@ $(document).ready(function () {
             contentType: 'application/json; charset=UTF-8',
             dataType: "json",
             success: function (data, textStatus, xhr) {
-                $("#" + pathname + "Template").tmpl(JSON.stringify(map)).appendTo("#" + pathname + "Body"); //Change
-                alert("success")
+                var htmlMap = $("#" + pathname + "Template").tmpl(map);
+                alert(htmlMap);
+                htmlMap.appendTo("#" + pathname + "Body"); //Change
+                alert("success");
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 alert("error")

@@ -2,8 +2,9 @@ $(document).ready(function () {
     var pathname = window.location.pathname;
     pathname = pathname.replace("/admin/", "");
     var Pathname = pathname.charAt(0).toUpperCase() + pathname.slice(1);
+    var id;
     $(document).on('click', '.update' + Pathname, function() {
-        var id = $(this).attr("id");
+        id = $(this).attr("id");
         $.getJSON("http://localhost:8080/" + pathname + "/" + id,function (data) {
             $.each(data, function (key, value) {
                 $("#" + key.toString() + "Update" + Pathname + "Modal").val(value);
@@ -32,5 +33,32 @@ $(document).ready(function () {
             $(".topicsSelectUpdate").html(topicDTO_data);
         });
 
-    })
+    });
+    $(document).on('click', '#update' + Pathname + "ModalButton", function() {
+        var map = {};
+        $(".update" + Pathname + "Data").each(function() {
+            map[$(this).attr("name")] = $(this).val();
+        });
+        map["id"] = 1;
+        $.ajax({
+            type: "PUT",
+            url: "http://localhost:8080/" + pathname + "/" + id,
+            data: JSON.stringify(map),
+            contentType: 'application/json; charset=UTF-8',
+            dataType: "json",
+            success: function (data, textStatus, xhr) {
+                map["id"] = id;
+                if (pathname === "subjects") {
+                    map["text"] = map["text"].split(".")[0] + ".";
+                }
+                var htmlMap = $("#" + pathname + "Template").tmpl(map).html();
+                $("#column" + id).html(htmlMap);
+                //Change
+                alert("success")
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error")
+            }
+        });
+    });
 });
