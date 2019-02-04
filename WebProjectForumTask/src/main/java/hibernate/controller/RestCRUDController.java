@@ -41,13 +41,15 @@ public class RestCRUDController {
     }
 
     @RequestMapping(value = "/topics", method = RequestMethod.POST)
-    public void addTopicDTO(@RequestBody TopicDTO topicDTO) {
+    public ResponseEntity addTopicDTO(@RequestBody TopicDTO topicDTO) {
         crudService.insertTopic(topicDTO);
+        return ResponseEntity.ok(topicDTO);
     }
 
     @RequestMapping(value = "/topics/{topicId}", method = RequestMethod.PUT)
-    public void updateTopicDTO(@RequestBody TopicDTO topicDTO, @PathVariable int topicId) {
+    public ResponseEntity updateTopicDTO(@RequestBody TopicDTO topicDTO, @PathVariable int topicId) {
         crudService.updateTopic(topicId,topicDTO);
+        return ResponseEntity.ok(topicDTO);
     }
 
     @RequestMapping(value = "/topics/{topicId}", method = RequestMethod.DELETE)
@@ -72,11 +74,15 @@ public class RestCRUDController {
     }
 
     @RequestMapping(value = "/subjects", method = RequestMethod.POST)
-    public void addSubjectDTO(@RequestBody SubjectDTO subjectDTO) { crudService.insertSubject(subjectDTO);}
+    public ResponseEntity addSubjectDTO(@RequestBody SubjectDTO subjectDTO) {
+        crudService.insertSubject(subjectDTO);
+        return ResponseEntity.ok(subjectDTO);
+    }
 
     @RequestMapping(value = "/subjects/{subjectId}", method = RequestMethod.PUT)
-    public void updateSubjectDTO(@RequestBody SubjectDTO subjectDTO, @PathVariable int subjectId) {
+    public ResponseEntity updateSubjectDTO(@RequestBody SubjectDTO subjectDTO, @PathVariable int subjectId) {
         crudService.updateSubject(subjectId, subjectDTO);
+        return ResponseEntity.ok(subjectDTO);
     }
 
     @RequestMapping(value = "/subjects/{subjectId}", method = RequestMethod.DELETE)
@@ -101,15 +107,18 @@ public class RestCRUDController {
     }
 
     @RequestMapping(value = "/comments", method = RequestMethod.POST)
-    public void addCommentDTO(@RequestBody CommentDTO commentDTO) { crudService.insertComment(commentDTO);}
+    public ResponseEntity addCommentDTO(@RequestBody CommentDTO commentDTO) {
+        crudService.insertComment(commentDTO);
+        return ResponseEntity.ok(commentDTO);
+    }
 
     @RequestMapping(value = "/comments/{commentId}", method = RequestMethod.PUT)
-    public void updateCommentDTO(@RequestBody CommentDTO commentDTO, @PathVariable int commentId) {
+    public ResponseEntity updateCommentDTO(@RequestBody CommentDTO commentDTO, @PathVariable int commentId) {
         crudService.updateComment(commentId, commentDTO);
+        return ResponseEntity.ok(commentDTO);
     }
 
     @RequestMapping(value = "/comments/{commentId}", method = RequestMethod.DELETE)
-    @Secured("ROLE_ADMIN")
     public void deleteCommentDTO(@PathVariable int commentId) {
         crudService.deleteComment(commentId);
     }
@@ -124,13 +133,15 @@ public class RestCRUDController {
     }
 
     @RequestMapping(value = "/users", method = RequestMethod.POST)
-    public void addUsersDTO(@RequestBody UsersDTO usersDTO) {
+    public ResponseEntity addUsersDTO(@RequestBody UsersDTO usersDTO) {
         crudService.insertUsers(usersDTO);
+        return ResponseEntity.ok(usersDTO);
     }
 
     @RequestMapping(value = "/users/{userId}", method = RequestMethod.PUT)
-    public void updateUsersDTO(@RequestBody UsersDTO usersDTO, @PathVariable int userId) {
+    public ResponseEntity updateUsersDTO(@RequestBody UsersDTO usersDTO, @PathVariable int userId) {
         crudService.updateUsers(userId, usersDTO);
+        return ResponseEntity.ok(usersDTO);
     }
 
     @RequestMapping(value = "/users/{userId}", method = RequestMethod.DELETE)

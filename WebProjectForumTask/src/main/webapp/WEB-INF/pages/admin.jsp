@@ -145,10 +145,11 @@
                                     <thead>
                                     <tr>
                                         <th>Subject name</th>
+                                        <th>Description</th>
                                         <th>Username</th>
                                         <th>Topic name</th>
                                         <th>Date</th>
-                                        <th colspan="2">Action</th>
+                                        <th colspan="3">Action</th>
                                     </tr>
                                     </thead>
                                     <tbody id="subjectsBody"></tbody>
@@ -284,11 +285,30 @@
                 </button>
             </div>
             <div class="modal-body">
-
+                <div class="form-group">
+                    <label for="messageUpdateCommentsModal">Comment</label>
+                    <input name="message" id="messageUpdateCommentsModal" class="form-control updateCommentsData" placeholder="Comment" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="userNameUpdateCommentsModal">Username</label>
+                    <select name="userName" id="userNameUpdateCommentsModal" class="form-control updateCommentsData usersSelectUpdate"></select>
+                </div>
+                <div class="form-group">
+                    <label for="topicNameUpdateCommentsModal">Topic name:</label>
+                    <select name="topicName" id="topicNameUpdateCommentsModal" class="form-control updateCommentsData topicsSelectUpdate"></select>
+                </div>
+                <div class="form-group">
+                    <label for="subjectNameUpdateCommentsModal">Subject name:</label>
+                    <select name="subjectName" id="subjectNameUpdateCommentsModal" class="form-control updateCommentsData subjectsSelectUpdate"></select>
+                </div>
+                <div class="form-group">
+                    <label for="dateUpdateCommentsModal">Date:</label>
+                    <input name="date" id="dateUpdateCommentsModal" class="form-control updateCommentsData" placeholder="Date" type="text">
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/admin/comments">Update</a>
+                <button class="btn btn-primary" id="updateCommentsModalButton" type="button" data-dismiss="modal">Update</button>
             </div>
         </div>
     </div>
@@ -305,35 +325,25 @@
             </button>
         </div>
         <div class="modal-body">
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-comment"></i> </span>
-                </div>
-                <input name="" class="form-control" placeholder="Comment" type="text">
+            <div class="form-group">
+                <label for="messageAddCommentsModal">Comment</label>
+                <input name="message" id="messageAddCommentsModal" class="form-control addCommentsData" placeholder="Comment" type="text">
             </div>
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                </div>
-                <select class="form-control usersSelectUpdate"></select>
+            <div class="form-group">
+                <label for="userNameAddCommentsModal">Username</label>
+                    <select name="userName" id="userNameAddCommentsModal" class="form-control addCommentsData usersSelectUpdate"></select>
             </div>
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-list"></i></span>
-                </div>
-                <select class="form-control topicsSelectUpdate"></select>
+            <div class="form-group">
+                <label for="topicNameAddCommentsModal">Topic name:</label>
+                    <select name="topicName" id="topicNameAddCommentsModal" class="form-control addCommentsData topicsSelectUpdate"></select>
             </div>
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-list"></i></span>
-                </div>
-                <select class="form-control subjectsSelectUpdate"></select>
+            <div class="form-group">
+                <label for="subjectNameAddCommentsModal">Subject name:</label>
+                    <select name="subjectName" id="subjectNameAddCommentsModal" class="form-control addCommentsData subjectsSelectUpdate"></select>
             </div>
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
-                </div>
-                <input name="" class="form-control" placeholder="Date" type="text">
+            <div class="form-group">
+                <label for="dateAddCommentsModal">Date:</label>
+                <input name="date" id="dateAddCommentsModal" class="form-control addCommentsData" placeholder="Date" type="text">
             </div>
         </div>
         <div class="modal-footer">
@@ -368,15 +378,36 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Update the subject?</h5>
+                <h5 class="modal-title">Update the subject</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="subjectNameUpdateSubjectsModal">Subject name:</label>
+                    <input name="subjectName" id="subjectNameUpdateSubjectsModal" type="text" class="form-control updateSubjectsData" value="" placeholder="Subject name">
+                </div>
+                <div class="form-group">
+                    <label for="userNameUpdateSubjectsModal">Username:</label>
+                    <select name="userName" id="userNameUpdateSubjectsModal" class = "form-control usersSelectUpdate updateSubjectsData"></select>
+                </div>
+                <div class="form-group">
+                    <label for="topicNameUpdateSubjectsModal">Topic name:</label>
+                    <select name="topicName" id="topicNameUpdateSubjectsModal" class = "form-control topicsSelectUpdate updateSubjectsData"></select>
+                </div>
+                <div class="form-group">
+                    <label for="dateUpdateSubjectsModal">Date</label>
+                    <input name="date" type="text" id="dateUpdateSubjectsModal" class="form-control updateSubjectsData" value="" placeholder="Date"/>
+                </div>
+                <div class="form-group">
+                    <label for="textUpdateSubjectsModal">Text</label>
+                    <textarea name="text" id="textUpdateSubjectsModal" type="text" class="form-control updateSubjectsData" placeholder="Text" rows = 5></textarea>
+                </div>
+            </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/admin/subjects">Update</a>
+                <button class="btn btn-primary" id="updateSubjectsModalButton" type="button" data-dismiss="modal">Update</button>
             </div>
         </div>
     </div>
@@ -393,34 +424,46 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-list"></i> </span>
-                    </div>
-                    <input type="text" value="" placeholder="Subject name">
+                <div class="form-group">
+                    <label for="subjectNameAddSubjectsModal">Subject name:</label>
+                    <input name="subjectName" id="subjectNameAddSubjectsModal" type="text" class="form-control addSubjectsData" value="" placeholder="Subject name">
                 </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                    </div>
-                    <select class = "form-control usersSelectUpdate"></select>
+                <div class="form-group">
+                    <label for="userNameAddSubjectsModal">Username:</label>
+                    <select name="userName" id="userNameAddSubjectsModal" class = "form-control usersSelectUpdate addSubjectsData"></select>
                 </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-list"></i> </span>
-                    </div>
-                    <select class = "form-control topicsSelectUpdate"></select>
+                <div class="form-group">
+                    <label for="topicNameAddSubjectsModal">Topic name:</label>
+                    <select name="topicName" id="topicNameAddSubjectsModal" class = "form-control topicsSelectUpdate addSubjectsData"></select>
                 </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-clock"></i></span>
-                    </div>
-                    <input type="text" value="" placeholder="Date"/>
+                <div class="form-group">
+                    <label for="dateAddSubjectsModal">Date</label>
+                    <input name="date" type="text" id="dateAddSubjectsModal" class="form-control addSubjectsData" value="" placeholder="Date"/>
+                </div>
+                <div class="form-group">
+                    <label for="textAddSubjectsModal">Text</label>
+                    <textarea name="text" id="textAddSubjectsModal" type="text" class="form-control addSubjectsData" placeholder="Text" rows = 5></textarea>
                 </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                 <button class="btn btn-primary" id="addSubjectsModalButton" type="button" data-dismiss="modal">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Read Subjects-->
+<div class="modal fade" id="readSubjectsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Read the text</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body subjectsText">
             </div>
         </div>
     </div>
@@ -455,10 +498,31 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="userNameUpdateUsersModal">Username:</label>
+                    <input name="userName" id="userNameUpdateUsersModal" type="text" class="form-control updateUsersData" value="" placeholder="Username"/>
+                </div>
+                <div class="form-group">
+                    <label for="passwordUpdateUsersModal">Password:</label>
+                    <input name="password" id="passwordUpdateUsersModal" type="text" class="form-control updateUsersData" value="" placeholder="Password" required="required"/>
+                </div>
+                <div class="form-group">
+                    <label for="emailUpdateUsersModal">E-mail:</label>
+                    <input name="email" type="text" id="emailUpdateUsersModal" class="form-control updateUsersData" value="" placeholder="E-mail"/>
+                </div>
+                <div class="form-group">
+                    <label for="firstNameUpdateUsersModal">First name:</label>
+                    <input name="firstName" type="text" id="firstNameUpdateUsersModal" class="form-control updateUsersData" value="" placeholder="First name"/>
+                </div>
+                <div class="form-group">
+                    <label for="lastNameUpdateUsersModal">Last name:</label>
+                    <input name="lastName" type="text" id="lastNameUpdateUsersModal" class="form-control updateUsersData" value="" placeholder="Last name"/>
+                </div>
+            </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/admin/users">Update</a>
+                <button class="btn btn-primary" id="updateUsersModalButton" type="button" data-dismiss="modal">Update</button>
             </div>
         </div>
     </div>
@@ -475,35 +539,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-user"></i></span>
-                    </div>
-                    <input type="text" value="" placeholder="Username"/>
+                <div class="form-group">
+                    <label for="userNameAddUsersModal">Username:</label>
+                    <input name="userName" id="userNameAddUsersModal" type="text" class="form-control addUsersData" value="" placeholder="Username"/>
                 </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-lock"></i></span>
-                    </div>
-                    <input type="text" value="" placeholder="Password"/>
+                <div class="form-group">
+                    <label for="passwordAddUsersModal">Password:</label>
+                    <input name="password" id="passwordAddUsersModal" type="text" class="form-control addUsersData" value="" placeholder="Password" required="required"/>
                 </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
-                    </div>
-                    <input type="text" value="" placeholder="E-mail"/>
+                <div class="form-group">
+                    <label for="emailAddUsersModal">E-mail:</label>
+                    <input name="email" type="text" id="emailAddUsersModal" class="form-control addUsersData" value="" placeholder="E-mail"/>
                 </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-user"></i></span>
-                    </div>
-                    <input type="text" value="" placeholder="First name"/>
+                <div class="form-group">
+                    <label for="firstNameAddUsersModal">First name:</label>
+                    <input name="firstName" type="text" id="firstNameAddUsersModal" class="form-control addUsersData" value="" placeholder="First name"/>
                 </div>
-                <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-user"></i></span>
-                </div>
-                    <input type="text" value="" placeholder="Last name"/>
+                <div class="form-group">
+                    <label for="lastNameAddUsersModal">Last name:</label>
+                    <input name="lastName" type="text" id="lastNameAddUsersModal" class="form-control addUsersData" value="" placeholder="Last name"/>
                 </div>
             </div>
             <div class="modal-footer">
@@ -543,10 +597,15 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="topicNameUpdateTopicsModal">Topic name:</label>
+                    <input name="topicName" id="topicNameUpdateTopicsModal" type="text" class="form-control updateTopicsData" value="" placeholder="Topic name"/>
+                </div>
+            </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/admin/topics">Update</a>
+                <button class="btn btn-primary" id="updateTopicsModalButton" type="button" data-dismiss="modal">Update</button>
             </div>
         </div>
     </div>
@@ -563,7 +622,10 @@
                 </button>
             </div>
             <div class="modal-body">
-
+                <div class="form-group">
+                    <label for="topicNameAddTopicsModal">Topic name:</label>
+                    <input name="topicName" id="topicNameAddTopicsModal" type="text" class="form-control addTopicsData" value="" placeholder="Topic name"/>
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
@@ -586,37 +648,16 @@
         </tr>
     </script>
 
-    <script id="commentsUpdateTemplate" type="text/x-jQuery-tmpl">
-        <tr id ="column\${id}">
-            <td><input type="text" value="\${message}"/></td>
-            <td><select id = "usersSelectUpdate"></select></td>
-            <td><select id = "topicsSelectUpdate"></select></td>
-            <td><select id = "subjectsSelectUpdate"></select></td>
-            <td><input type="text" value="\${date}"/></td>
-            <td><button type="button" class = "btn btn-primary okComments" id ="\${id}">OK</button></td>
-            <td><button type="button" class = "btn btn-danger cancelComments" id ="\${id}">Cancel</button></td>
-        </tr>
-    </script>
-
     <script id="subjectsTemplate" type="text/x-jQuery-tmpl">
         <tr id ="column\${id}">
             <td>\${subjectName}</td>
+            <td>\${text}</td>
             <td>\${userName}</td>
             <td>\${topicName}</td>
             <td>\${date}</td>
+            <td><button type="button" class = "btn btn-success readSubjects" id ="\${id}" data-toggle="modal" data-target="#readSubjectsModal">Read</button></td>
             <td><button type="button" class = "btn btn-primary updateSubjects" id ="\${id}" data-toggle="modal" data-target="#updateSubjectsModal">Update</button></td>
             <td><button type="button" class = "btn btn-danger deleteSubjects" id ="\${id}" data-toggle="modal" data-target="#deleteSubjectsModal">Delete</button></td>
-        </tr>
-    </script>
-
-    <script id="subjectsUpdateTemplate" type="text/x-jQuery-tmpl">
-        <tr id ="column\${id}">
-            <td><input type="text" value="\${subjectName}"/></td>
-            <td><select id = "usersSelectUpdate"></select></td>
-            <td><select id = "topicsSelectUpdate"/></select></td>
-            <td><input type="text" value="\${date}"/></td>
-            <td><button type="button" class = "btn btn-primary okSubjects" id ="\${id}">OK</button></td>
-            <td><button type="button" class = "btn btn-danger cancelSubjects" id ="\${id}">Cancel</button></td>
         </tr>
     </script>
 
@@ -632,31 +673,11 @@
         </tr>
     </script>
 
-    <script id="usersUpdateTemplate" type="text/x-jQuery-tmpl">
-        <tr id ="column\${id}">
-            <td><input type="text" value="\${userName}"/></td>
-            <td><input type="text" value="\${password}"/></td>
-            <td><input type="text" value="\${email}"/></td>
-            <td><input type="text" value="\${firstName}"/></td>
-            <td><input type="text" value="\${lastName}"/></td>
-            <td><button type="button" class = "btn btn-primary okUsers" id ="\${id}">OK</button></td>
-            <td><button type="button" class = "btn btn-danger cancelUsers" id ="\${id}">Cancel</button></td>
-        </tr>
-    </script>
-
     <script id="topicsTemplate" type="text/x-jQuery-tmpl">
         <tr id ="column\${id}">
             <td>\${topicName}</td>
             <td><button type="button" class = "btn btn-primary updateTopics" id ="\${id}" data-toggle="modal" data-target="#updateTopicsModal">Update</button></td>
             <td><button type="button" class = "btn btn-danger deleteTopics" id ="\${id}" data-toggle="modal" data-target="#deleteTopicsModal">Delete</button></td>
-        </tr>
-    </script>
-
-    <script id="topicsUpdateTemplate" type="text/x-jQuery-tmpl">
-        <tr id ="column\${id}">
-            <td><input type="text" value="\${topicName}"/></td>
-            <td><button type="button" class = "btn btn-primary okTopics" id ="\${id}">OK</button></td>
-            <td><button type="button" class = "btn btn-danger cancelTopics" id ="\${id}">Cancel</button></td>
         </tr>
     </script>
 
@@ -686,6 +707,9 @@
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
 <script src="scripts/adminPasteData.js"></script>
 <script src="scripts/deleteData.js"></script>
+<script src="scripts/addFormData.js"></script>
+<script src="scripts/readData.js"></script>
+<script src="scripts/updateFormData.js"></script>
 
 <!-- Page level plugin JavaScript-->
 <script src="vendor/datatables/jquery.dataTables.js"></script>

@@ -70,7 +70,6 @@ public class CRUDServiceImpl implements CRUDService {
         subjectDTO.setUserName(subject.getUsers().getNickname());
         subjectDTO.setSubjectName(subject.getName());
         subjectDTO.setDate(subject.getFormattedDateSending());
-        subjectDTO.setDescription(subject.getText());
         subjectDTO.setText(subject.getText());
         subjectDTO.setComments(searchCommentBySubject(subject));
         return subjectDTO;
@@ -108,7 +107,6 @@ public class CRUDServiceImpl implements CRUDService {
             subjectDTO.setSubjectName(subject.getName());
             subjectDTO.setTopicName(subject.getTopic().getName());
             subjectDTO.setDate(subject.getFormattedDateSending());
-            subjectDTO.setDescription(subject.getText());
             subjectDTO.setText(subject.getText());
             subjectDTO.setComments(searchCommentBySubject(subject));
             subjectDTOList.add(subjectDTO);
@@ -169,6 +167,7 @@ public class CRUDServiceImpl implements CRUDService {
         crudDao.deleteTopic(topicId);
     }
 
+    @Transactional
     @Override
     public void insertSubject(SubjectDTO subjectDTO) {
         crudDao.insertSubject(subjectDTO.getSubjectName(), stringAsDate(subjectDTO.getDate()), subjectDTO.getText(),

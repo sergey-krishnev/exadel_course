@@ -102,12 +102,7 @@ public class Subject implements Serializable {
         this.comments = comments;
     }
 
-    public Subject(String name, Date dateSending, Users users, Topic topic) {
-        this.name = name;
-        this.date = dateSending;
-        this.users = users;
-        this.topic = topic;
-    }
+
 
     @Override
     public String toString() {
@@ -115,6 +110,7 @@ public class Subject implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", date=" + date +
+                ", text=" + text +
                 ", users=" + users +
                 ", topic=" + topic +
                 '}';

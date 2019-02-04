@@ -126,7 +126,12 @@ public class CriteriaDaoImpl implements CRUDDao {
         Session session = sessionFactory.getCurrentSession();
         Users users = searchByUserName(userName);
         Topic topic = searchByTopicName(topicName);
-        Subject subject = new Subject(subjectName, date, users, topic);
+        Subject subject = new Subject();
+        subject.setUsers(users);
+        subject.setTopic(topic);
+        subject.setName(subjectName);
+        subject.setDate(date);
+        subject.setText(text);
         session.save(subject);
     }
 

@@ -9,6 +9,11 @@ $(document).ready(function () {
     $(idDispl).css("display", "block");
 
     $.getJSON("http://localhost:8080/" + pathname, function (data) {
+        if (pathname === "subjects") {
+            $.each(data, function (key, value) {
+                value.text = value.text.split(".")[0] + ".";
+            });
+        }
         $("#" + pathname + "Template").tmpl(data).appendTo("#" + pathname + "Body");
     });
 });

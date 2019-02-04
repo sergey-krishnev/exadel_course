@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 public class SubjectDTO {
     private int id;
     private String subjectName;
-    private String description;
     private String userName;
     private String topicName;
     private String date;
@@ -27,14 +26,6 @@ public class SubjectDTO {
 
     public void setSubjectName(String subjectName) {
         this.subjectName = subjectName;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String text) {
-            this.description = text.split(Pattern.quote("."))[0];
     }
 
     public String getUserName() {
