@@ -3,6 +3,7 @@ $(document).ready(function () {
     pathname = pathname.replace("/admin/", "");
     var Pathname = pathname.charAt(0).toUpperCase() + pathname.slice(1);
     $(document).on('click', '.add' + Pathname, function() {
+        $(".add" + Pathname + "Data").val("");
         $.getJSON("http://localhost:8080/subjects",function (data) {
             var subjectDTO_data = '';
             $.each(data, function (key, value) {
@@ -39,10 +40,19 @@ $(document).ready(function () {
             contentType: 'application/json; charset=UTF-8',
             dataType: "json",
             success: function (data, textStatus, xhr) {
-                var htmlMap = $("#" + pathname + "Template").tmpl(map);
-                alert(htmlMap);
-                htmlMap.appendTo("#" + pathname + "Body"); //Change
-                alert("success")
+                // var htmlMap = $("#" + pathname + "Template").tmpl(map);
+                // alert(htmlMap);
+                // htmlMap.appendTo("#" + pathname + "Body"); //Change
+                // alert("success");
+                $("#" + pathname + "Body").empty();
+                $.getJSON("http://localhost:8080/" + pathname, function (data) {
+                    if (pathname === "subjects") {
+                        $.each(data, function (key, value) {
+                            value.text = value.text.split(".")[0] + ".";
+                        });
+                    }
+                    $("#" + pathname + "Template").tmpl(data).appendTo("#" + pathname + "Body");
+                });
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 alert("error")
