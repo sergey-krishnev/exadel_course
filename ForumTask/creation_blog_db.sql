@@ -18,7 +18,7 @@ SET search_path TO forum_schema;
 	(
 		id BIGINT PRIMARY KEY,
 		name CHARACTER VARYING(100) NOT NULL,
-		date DATE NOT NULL,
+		date TIMESTAMP NOT NULL,
 		text CHARACTER VARYING(4000) NOT NULL,
 		user_id BIGINT NOT NULL,
 		topic_id BIGINT NOT NULL
@@ -27,7 +27,7 @@ SET search_path TO forum_schema;
 	(
 		id BIGINT PRIMARY KEY,
 		message CHARACTER VARYING(256) NOT NULL,
-		date DATE NOT NULL,
+		date TIMESTAMP NOT NULL,
 		subject_id BIGINT NOT NULL,
 		user_id BIGINT NOT NULL
 	);
