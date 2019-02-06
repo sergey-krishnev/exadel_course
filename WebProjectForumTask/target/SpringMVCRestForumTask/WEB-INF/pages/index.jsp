@@ -73,17 +73,17 @@ Current Locale :
         <td>:</td>
     <td><input type="text" id="subject"
     value=""/></td>
+        <td class="error" id = "NotEmpty-subjectDTO-subject"></td>
+        <td class="error" id = "CapitalizeSubject-subjectDTO-subject"></td>
     </tr>
-    <tr class="error" id = "NotEmpty-subjectDTO-subject"></tr>
-    <tr class="error" id = "CapitalizeSubject-subjectDTO-subject"></tr>
     <tr>
     <td class = "messageLocale"></td>
         <td>:</td>
     <td><input type="text" id="message"
     value=""/></td>
+        <td class="error" id = "NotEmpty-subjectDTO-message"></td>
+        <td class="error" id = "CapitalizeMessage-subjectDTO-message"> <td>
     </tr>
-    <tr class="error" id = "NotEmpty-subjectDTO-message"></tr>
-    <tr class="error" id = "CapitalizeMessage-subjectDTO-message"></tr>
     <tr>
     <td class = "dateLocale"></td>
         <td>:</td>
