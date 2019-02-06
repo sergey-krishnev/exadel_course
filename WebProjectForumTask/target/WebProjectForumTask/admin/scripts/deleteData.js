@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var schemeHost = $("#url").attr("href");
     var pathname = window.location.pathname;
     pathname = pathname.replace("/admin/", "");
     var Pathname = pathname.charAt(0).toUpperCase() + pathname.slice(1);
@@ -6,7 +7,7 @@ $(document).ready(function () {
     var path;
     $(document).on('click', '.delete' + Pathname, function() {
         id = $(this).attr("id");
-        path = "http://localhost:8080/" + pathname + "/" + id;
+        path = schemeHost + pathname + "/" + id;
     });
         $(document).on('click', '#delete' + Pathname + "ModalButton", function() {
             $.ajax({

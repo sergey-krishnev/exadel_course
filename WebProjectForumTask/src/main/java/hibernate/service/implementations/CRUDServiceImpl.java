@@ -31,7 +31,7 @@ public class CRUDServiceImpl implements CRUDService {
 
 
     private static java.sql.Date stringAsDate(String s) {
-        SimpleDateFormat sdf = new SimpleDateFormat();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         java.util.Date date = null;
         try {
             date = sdf.parse(s);
@@ -70,6 +70,7 @@ public class CRUDServiceImpl implements CRUDService {
         subjectDTO.setUserName(subject.getUsers().getNickname());
         subjectDTO.setSubjectName(subject.getName());
         subjectDTO.setDate(subject.getFormattedDateSending());
+        subjectDTO.setTopicName(subject.getTopic().getName());
         subjectDTO.setText(subject.getText());
         subjectDTO.setComments(searchCommentBySubject(subject));
         return subjectDTO;

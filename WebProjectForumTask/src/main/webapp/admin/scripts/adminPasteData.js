@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var schemeHost = $("#url").attr("href");
     var pathname = window.location.pathname;
     pathname = pathname.replace("/admin/", "");
     var Pathname = pathname.charAt(0).toUpperCase() + pathname.slice(1);
@@ -8,7 +9,10 @@ $(document).ready(function () {
     $(".Pathname").text(Pathname);
     $(idDispl).css("display", "block");
 
-    $.getJSON("http://localhost:8080/" + pathname, function (data) {
+    $.getJSON(schemeHost + pathname, function (data) {
+        $.each(data, function (key, value) {
+            value.href = '/admin/' + pathname + '/' + data.id;
+        });
         if (pathname === "subjects") {
             $.each(data, function (key, value) {
                 value.text = value.text.split(".")[0] + ".";

@@ -62,7 +62,7 @@ public class Subject implements Serializable {
     }
 
     public String getFormattedDateSending() {
-        SimpleDateFormat df = new SimpleDateFormat();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return df.format(date);
     }
 

@@ -33,14 +33,12 @@ public class CriteriaDaoImpl implements CRUDDao {
     @Override
     public List<Topic> searchAllTopic() {
         Criteria cr = sessionFactory.getCurrentSession().createCriteria(Topic.class);
-        cr.addOrder(Order.asc("name"));
         return cr.list();
     }
 
     @Override
     public List<Subject> searchAllSubject() {
         Criteria cr = sessionFactory.getCurrentSession().createCriteria(Subject.class);
-        cr.addOrder(Order.asc("name"));
         return cr.list();
     }
 
@@ -61,14 +59,12 @@ public class CriteriaDaoImpl implements CRUDDao {
     @Override
     public List<Comment> searchAllComment() {
         Criteria cr = sessionFactory.getCurrentSession().createCriteria(Comment.class);
-        cr.addOrder(Order.asc("message"));
         return cr.list();
     }
 
     @Override
     public List<Users> searchAllUsers() {
         Criteria cr = sessionFactory.getCurrentSession().createCriteria(Users.class);
-        cr.addOrder(Order.asc("nickname"));
         return cr.list();
     }
 
