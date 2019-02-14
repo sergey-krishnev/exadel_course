@@ -9,6 +9,12 @@ SET search_path TO forum_schema;
 		first_name CHARACTER VARYING(15) NOT NULL,
 		last_name CHARACTER VARYING(20) NOT NULL
 	);
+	CREATE TABLE authorities
+	(
+		id BIGINT NOT NULL,
+		user_id BIGINT NOT NULL,
+		authority CHARACTER VARYING(50) NOT NULL
+	);
 	CREATE TABLE topic
 	(
 		id BIGINT PRIMARY KEY,
@@ -38,7 +44,10 @@ SET search_path TO forum_schema;
 	ADD CONSTRAINT fk_topic_subject FOREIGN KEY (topic_id) REFERENCES topic (id);
 	
 	ALTER TABLE forum_schema.comment
-	ADD CONSTRAINT fk_subject_message FOREIGN KEY (subject_id) REFERENCES subject (id);
+	ADD CONSTRAINT fk_subject_comment FOREIGN KEY (subject_id) REFERENCES subject (id);
 	
 	ALTER TABLE forum_schema.comment
 	ADD CONSTRAINT fk_users_comment FOREIGN KEY (user_id) REFERENCES users (id);
+	
+	ALTER TABLE forum_schema.authorities
+	ADD CONSTRAINT fk_users_authorities FOREIGN KEY (user_id) REFERENCES users (id);

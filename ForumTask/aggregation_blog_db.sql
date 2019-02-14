@@ -11,6 +11,9 @@ CREATE SEQUENCE forum_id_users_seq
 	CREATE SEQUENCE forum_id_comment_seq
 		INCREMENT BY 1
 		START WITH 100;
+	CREATE SEQUENCE forum_id_authorities_seq
+		INCREMENT BY 1
+		START WITH 100;
 INSERT INTO forum_schema.users (id, nickname, password, email, first_name, last_name) VALUES
 	(NEXTVAL('forum_id_users_seq'), 'Mingel', 'kianagn', 'mingel99@gmail.com', 'Bethanie', 'Moul'),
 	(NEXTVAL('forum_id_users_seq'), 'Stio', 'quinn', 'stio93@gmail.com', 'Anabelle', 'Curzi'),
@@ -22,6 +25,18 @@ INSERT INTO forum_schema.users (id, nickname, password, email, first_name, last_
 	(NEXTVAL('forum_id_users_seq'), 'Uvitkas', 'jenivi', 'duliokas86@gmail.com', 'Kerry', 'Riess'),
 	(NEXTVAL('forum_id_users_seq'), 'Mljeted', 'qwer3456uio', 'tMljeted777@gmail.com', 'Anita', 'Kaaya'),
 	(NEXTVAL('forum_id_users_seq'), 'Dumiel', 'tontacay', 'ddumielar101@gmail.com', 'Roan', 'Cather');
+INSERT INTO forum_schema.authorities (id, user_id, authority) VALUES
+	(NEXTVAL('forum_id_authorities_seq'), 100, 'ROLE_ADMIN'),
+	(NEXTVAL('forum_id_authorities_seq'), 100, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 101, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 102, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 103, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 104, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 105, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 106, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 107, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 108, 'ROLE_USER'),
+	(NEXTVAL('forum_id_authorities_seq'), 109, 'ROLE_USER');
 INSERT INTO forum_schema.topic (id, name) VALUES
 	(NEXTVAL('forum_id_topic_seq'),'Birds'),
 	(NEXTVAL('forum_id_topic_seq'),'U.S. Cities'),
