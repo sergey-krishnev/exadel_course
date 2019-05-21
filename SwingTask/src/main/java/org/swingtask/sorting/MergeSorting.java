@@ -7,11 +7,8 @@ public class MergeSorting<T extends Comparable<T>> implements Sorting<T> {
 
 
     @Override
-    public void sort(List<T> students) {
-        long startTime =System.nanoTime();
-        mergeSort(students);
-        long endTime = System.nanoTime();
-        System.out.println(endTime - startTime + " nanosecond");
+    public void sort(List<T> entities) {
+        mergeSort(entities);
     }
 
     public List<T> mergeSort(List<T> whole) {

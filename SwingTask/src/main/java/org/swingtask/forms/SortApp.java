@@ -9,8 +9,6 @@ import org.swingtask.utils.*;
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.Collections;
 import java.util.List;
@@ -23,9 +21,15 @@ public class SortApp {
 
     private JPanel panelMain;
 
+    public JPanel getPanelMain() {
+        return panelMain;
+    }
+
+    private JFrame mainFrame;
+
     private JTable tableStudent;
 
-    private JComboBox sortType;
+    private JComboBox<String> sortType;
 
     private JButton save;
 
@@ -33,55 +37,49 @@ public class SortApp {
 
     private JButton selectButton;
 
+    private JLabel timeCount;
+
     private List<Student> students;
 
+
+
     public SortApp() {
-        sortButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                SortFactory<Student> sortFactory = new SortFactory<>();
-                Sorting sorting = sortFactory.getSorting((String) sortType.getSelectedItem());
-                sorting.sort(students);
-                if (descOrder.isSelected()) {
-                    Collections.reverse(students);
-                }
+        sortButton.addActionListener(e -> {
+            SortFactory<Student> sortFactory = new SortFactory<>();
+            Sorting sorting = sortFactory.getSorting((String) sortType.getSelectedItem());
 
-                Object[][] matrix = ListConverter.getMatrix(students);
-                String[] titles = ListConverter.getFieldNames(students);
-                tableStudent.setModel(new EntityTableModel(titles,matrix));
+            TimeCounter timeCounter = new TimeCounterImpl();
+            timeCount.setText(timeCounter.count(students,sorting) + " nanosecond, number of records = " + students.size());
+
+
+
+            if (descOrder.isSelected()) {
+                Collections.reverse(students);
             }
+
+            Object[][] matrix = ListConverter.getMatrix(students);
+            String[] titles = ListConverter.getFieldNames(students);
+            tableStudent.setModel(new EntityTableModel(titles,matrix));
         });
-        save.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                FileWriter<Student> studentFileWriter = new FileWriterImpl<>();
-                studentFileWriter.write(panelMain,students);
+        save.addActionListener(e -> {
+            FileWriter<Student> studentFileWriter = new FileWriterImpl<>();
+            studentFileWriter.write(panelMain,students);
 
-            }
         });
-        selectButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        selectButton.addActionListener(e -> {
+            JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 
-                int returnValue = jfc.showOpenDialog(panelMain);
+            int returnValue = jfc.showOpenDialog(panelMain);
 
-                if (returnValue == JFileChooser.APPROVE_OPTION) {
-                    File selectedFile = jfc.getSelectedFile();
-                    System.out.println(selectedFile.getAbsolutePath());
-                }
+            if (returnValue == JFileChooser.APPROVE_OPTION) {
+                File selectedFile = jfc.getSelectedFile();
+                System.out.println(selectedFile.getAbsolutePath());
             }
         });
     }
 
     public static void main(String[] args) {
-
-        JFrame jFrame = new JFrame("SortApp");
-        jFrame.setContentPane(new SortApp().panelMain);
-        jFrame.setPreferredSize(new Dimension(500, 200));
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jFrame.pack();
-        jFrame.setVisible(true);
+        JFrameInitializer.initialize();
     }
 
     private void createUIComponents() {
@@ -91,7 +89,7 @@ public class SortApp {
         Object[][] studentMatrix = ListConverter.getMatrix(students);
         String[] titles = ListConverter.getFieldNames(students);
         tableStudent = new JTable(new EntityTableModel(titles,studentMatrix));
-        sortType = new JComboBox();
+        sortType = new JComboBox<>();
         sortType.addItem("Bubble Sorting");
         sortType.addItem("Heap Sorting");
         sortType.addItem("Merge Sorting");

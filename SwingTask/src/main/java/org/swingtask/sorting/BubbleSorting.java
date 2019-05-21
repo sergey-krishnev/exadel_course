@@ -1,13 +1,10 @@
 package org.swingtask.sorting;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class BubbleSorting<T extends Comparable<T>> implements Sorting<T>{
     @Override
     public void sort(List<T> entities) {
-
-        long startTime =System.nanoTime();
 
             int n = entities.size();
             for (int i = 0; i < n-1; i++)
@@ -19,7 +16,5 @@ public class BubbleSorting<T extends Comparable<T>> implements Sorting<T>{
                         entities.set(j+1, temp);
                     }
 
-        long endTime = System.nanoTime();
-        System.out.println(endTime - startTime + " nanosecond");
     }
 }

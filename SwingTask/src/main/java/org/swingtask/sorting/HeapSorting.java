@@ -6,8 +6,6 @@ public class HeapSorting<T extends Comparable<T>> implements Sorting<T> {
     @Override
     public void sort(List<T> entities) {
 
-        long startTime =System.nanoTime();
-
         int n = entities.size();
 
         // Build heap (rearrange array)
@@ -23,9 +21,6 @@ public class HeapSorting<T extends Comparable<T>> implements Sorting<T> {
             // call max heapify on the reduced heap
             heapify(entities, i, 0);
         }
-
-        long endTime = System.nanoTime();
-        System.out.println(endTime - startTime + " nanosecond");
     }
 
     private void heapify(List<T> entities, int n, int i) {
