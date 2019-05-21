@@ -2,7 +2,7 @@ package org.swingtask.entities;
 
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student>{
 
     private String name;
 
@@ -46,5 +46,11 @@ public class Student {
     @Override
     public int hashCode() {
         return Objects.hash(name, performance);
+    }
+
+
+    @Override
+    public int compareTo(Student o) {
+        return Float.compare(this.performance,o.performance);
     }
 }

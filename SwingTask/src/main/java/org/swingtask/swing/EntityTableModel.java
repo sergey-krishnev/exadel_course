@@ -2,13 +2,13 @@ package org.swingtask.swing;
 
 import javax.swing.table.AbstractTableModel;
 
-public class StudentTableModel extends AbstractTableModel {
+public class EntityTableModel extends AbstractTableModel {
 
     private boolean DEBUG = false;
 
-    String[] columnNames;
+    private String[] columnNames;
 
-    Object[][] data;
+    private Object[][] data;
 
     public int getColumnCount() {
         return columnNames.length;
@@ -26,25 +26,15 @@ public class StudentTableModel extends AbstractTableModel {
         return data[row][col];
     }
 
-    public StudentTableModel(String[] columnNames, Object[][] data) {
+    public EntityTableModel(String[] columnNames, Object[][] data) {
         this.columnNames = columnNames;
         this.data = data;
     }
 
-    /*
-     * JTable uses this method to determine the default renderer/
-     * editor for each cell.  If we didn't implement this method,
-     * then the last column would contain text ("true"/"false"),
-     * rather than a check box.
-     */
     public Class getColumnClass(int c) {
         return getValueAt(0, c).getClass();
     }
 
-    /*
-     * Don't need to implement this method unless your table's
-     * editable.
-     */
     public boolean isCellEditable(int row, int col) {
         //Note that the data/cell address is constant,
         //no matter where the cell appears onscreen.
@@ -55,10 +45,6 @@ public class StudentTableModel extends AbstractTableModel {
         }
     }
 
-    /*
-     * Don't need to implement this method unless your table's
-     * data can change.
-     */
     public void setValueAt(Object value, int row, int col) {
         if (DEBUG) {
             System.out.println("Setting value at " + row + "," + col

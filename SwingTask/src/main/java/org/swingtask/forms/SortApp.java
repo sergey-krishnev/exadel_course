@@ -2,70 +2,74 @@ package org.swingtask.forms;
 
 import org.swingtask.entities.Student;
 import org.swingtask.factories.SortFactory;
-import org.swingtask.swing.StudentTableModel;
+import org.swingtask.sorting.Sorting;
+import org.swingtask.swing.EntityTableModel;
 import org.swingtask.utils.*;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Field;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class SortApp {
 
 
 
     private JButton sortButton;
+
     private JPanel panelMain;
+
     private JTable tableStudent;
+
     private JComboBox sortType;
+
     private JButton save;
+
+    private JCheckBox descOrder;
+
+    private JButton selectButton;
+
     private List<Student> students;
 
     public SortApp() {
         sortButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SortFactory sortFactory = new SortFactory();
+                SortFactory<Student> sortFactory = new SortFactory<>();
                 Sorting sorting = sortFactory.getSorting((String) sortType.getSelectedItem());
                 sorting.sort(students);
+                if (descOrder.isSelected()) {
+                    Collections.reverse(students);
+                }
 
-                Object[][] studentMatrix = ListConverter.convert(students);
-                List<Field> fields = Arrays.asList(Student.class.getDeclaredFields());
-                String[] titles = fields.stream().map(Field::getName).collect(Collectors.toList()).toArray(new String[fields.size()]);
-                tableStudent.setModel(new StudentTableModel(titles,studentMatrix));
+                Object[][] matrix = ListConverter.getMatrix(students);
+                String[] titles = ListConverter.getFieldNames(students);
+                tableStudent.setModel(new EntityTableModel(titles,matrix));
             }
         });
         save.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFileChooser fileChooser = new JFileChooser();
-                fileChooser.setDialogTitle("Specify a file to save");
+                FileWriter<Student> studentFileWriter = new FileWriterImpl<>();
+                studentFileWriter.write(panelMain,students);
 
-                FileNameExtensionFilter filter = new FileNameExtensionFilter("Text File", "txt");
-                fileChooser.setFileFilter(filter);
+            }
+        });
+        selectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 
-                int userSelection = fileChooser.showSaveDialog(panelMain);
+                int returnValue = jfc.showOpenDialog(panelMain);
 
-                if (userSelection == JFileChooser.APPROVE_OPTION) {
-                    File fileToSave = fileChooser.getSelectedFile();
-                    System.out.println("Save as file: " + fileToSave.getAbsolutePath());
-                    List<String> viewStudents = students.stream().map(Student::toString).collect(Collectors.toList());
-                    try {
-                        Files.write(Paths.get(fileToSave.getAbsolutePath()), viewStudents);
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
+                if (returnValue == JFileChooser.APPROVE_OPTION) {
+                    File selectedFile = jfc.getSelectedFile();
+                    System.out.println(selectedFile.getAbsolutePath());
                 }
-
             }
         });
     }
@@ -81,12 +85,12 @@ public class SortApp {
     }
 
     private void createUIComponents() {
+
         FileReader fileReader = new FileReaderImpl();
         students = fileReader.read("students.txt");
-        Object[][] studentMatrix = ListConverter.convert(students);
-        List<Field> fields = Arrays.asList(Student.class.getDeclaredFields());
-        String[] titles = fields.stream().map(Field::getName).collect(Collectors.toList()).toArray(new String[fields.size()]);
-        tableStudent = new JTable(new StudentTableModel(titles,studentMatrix));
+        Object[][] studentMatrix = ListConverter.getMatrix(students);
+        String[] titles = ListConverter.getFieldNames(students);
+        tableStudent = new JTable(new EntityTableModel(titles,studentMatrix));
         sortType = new JComboBox();
         sortType.addItem("Bubble Sorting");
         sortType.addItem("Heap Sorting");
