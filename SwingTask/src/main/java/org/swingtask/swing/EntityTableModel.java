@@ -1,21 +1,26 @@
 package org.swingtask.swing;
 
+import org.swingtask.entities.Student;
+
 import javax.swing.table.AbstractTableModel;
+import java.util.List;
 
 public class EntityTableModel extends AbstractTableModel {
 
     private boolean DEBUG = false;
 
-    private String[] columnNames;
+    private String[] columnNames = {"name", "performance"};
 
     private Object[][] data;
+
+    private List<Student> entities;
 
     public int getColumnCount() {
         return columnNames.length;
     }
 
     public int getRowCount() {
-        return data.length;
+        return entities.size();
     }
 
     public String getColumnName(int col) {
@@ -23,12 +28,23 @@ public class EntityTableModel extends AbstractTableModel {
     }
 
     public Object getValueAt(int row, int col) {
-        return data[row][col];
+        switch(col)
+        {
+            case 0:
+                return entities.get(row).getName();
+            case 1:
+                return entities.get(row).getPerformance();
+        }
+        return new Object();
     }
 
     public EntityTableModel(String[] columnNames, Object[][] data) {
         this.columnNames = columnNames;
         this.data = data;
+    }
+
+    public EntityTableModel(List<Student> entities) {
+        this.entities = entities;
     }
 
     public Class getColumnClass(int c) {

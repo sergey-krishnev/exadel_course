@@ -1,7 +1,7 @@
 Student1,8.5
 Student2,6.5
-Student3,5.0
-Student4,7.3
+Student3,a.0
+Student4,7..3
 Student5,6.8
 Student6,7.5.
 Student7,9.3
