@@ -39,14 +39,6 @@
           <text value="Desc"/>
         </properties>
       </component>
-      <component id="bad27" class="javax.swing.JButton" binding="selectButton">
-        <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Select file"/>
-        </properties>
-      </component>
       <scrollpane id="e342">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>

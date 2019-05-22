@@ -25,8 +25,6 @@ public class SortApp {
         return panelMain;
     }
 
-    private JFrame mainFrame;
-
     private JTable tableStudent;
 
     private JComboBox<String> sortType;
@@ -34,8 +32,6 @@ public class SortApp {
     private JButton save;
 
     private JCheckBox descOrder;
-
-    private JButton selectButton;
 
     private JLabel timeCount;
 
@@ -49,13 +45,7 @@ public class SortApp {
             Sorting sorting = sortFactory.getSorting((String) sortType.getSelectedItem());
 
             TimeCounter timeCounter = new TimeCounterImpl();
-            timeCount.setText(timeCounter.count(students,sorting) + " nanosecond, number of records = " + students.size());
-
-
-
-            if (descOrder.isSelected()) {
-                Collections.reverse(students);
-            }
+            timeCount.setText(timeCounter.count(students,sorting,descOrder.isSelected()) + " nanosecond, number of records = " + students.size());
 
             Object[][] matrix = ListConverter.getMatrix(students);
             String[] titles = ListConverter.getFieldNames(students);
@@ -65,16 +55,6 @@ public class SortApp {
             FileWriter<Student> studentFileWriter = new FileWriterImpl<>();
             studentFileWriter.write(panelMain,students);
 
-        });
-        selectButton.addActionListener(e -> {
-            JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-
-            int returnValue = jfc.showOpenDialog(panelMain);
-
-            if (returnValue == JFileChooser.APPROVE_OPTION) {
-                File selectedFile = jfc.getSelectedFile();
-                System.out.println(selectedFile.getAbsolutePath());
-            }
         });
     }
 

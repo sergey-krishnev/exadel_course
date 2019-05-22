@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface TimeCounter {
 
-    long count(List<?> entities, Sorting sorting);
+    long count(List<?> entities, Sorting sorting, boolean descOrder);
 
 }

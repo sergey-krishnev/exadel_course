@@ -7,11 +7,11 @@ public class MergeSorting<T extends Comparable<T>> implements Sorting<T> {
 
 
     @Override
-    public void sort(List<T> entities) {
-        mergeSort(entities);
+    public void sort(List<T> entities, boolean descOrder) {
+        mergeSort(entities, descOrder);
     }
 
-    public List<T> mergeSort(List<T> whole) {
+    public List<T> mergeSort(List<T> whole, boolean descOrder) {
         List<T> left = new ArrayList<>();
         List<T> right = new ArrayList<>();
         int center;
@@ -31,25 +31,25 @@ public class MergeSorting<T extends Comparable<T>> implements Sorting<T> {
             }
 
             // Sort the left and right halves of the arraylist.
-            left  = mergeSort(left);
-            right = mergeSort(right);
+            left  = mergeSort(left, descOrder);
+            right = mergeSort(right, descOrder);
 
             // Merge the results back together.
-            merge(left, right, whole);
+            merge(left, right, whole, descOrder);
         }
         return whole;
     }
 
-    private void merge(List<T> left, List<T> right, List<T> whole) {
+    private void merge(List<T> left, List<T> right, List<T> whole, boolean descOrder) {
         int leftIndex = 0;
         int rightIndex = 0;
         int wholeIndex = 0;
-
+        int descValue = (descOrder) ? -1 : 1;
         // As long as neither the left nor the right ArrayList has
         // been used up, keep taking the smaller of left.get(leftIndex)
         // or right.get(rightIndex) and adding it at both.get(bothIndex).
         while (leftIndex < left.size() && rightIndex < right.size()) {
-            if ( (left.get(leftIndex).compareTo(right.get(rightIndex))) < 0) {
+            if ( (descValue*(left.get(leftIndex).compareTo(right.get(rightIndex)))) < 0) {
                 whole.set(wholeIndex, left.get(leftIndex));
                 leftIndex++;
             } else {
