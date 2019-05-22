@@ -38,6 +38,10 @@ public enum EnumSort {
         return Arrays.stream(EnumSort.values()).map(n -> n.name).toArray(String[]::new);
     }
 
+    public static EnumSort getByName(String name) {
+        return Arrays.stream(EnumSort.values()).filter(v -> v.name.equals(name)).findAny().orElse(null);
+    }
+
     EnumSort(String s) {
         this.name = s;
     }

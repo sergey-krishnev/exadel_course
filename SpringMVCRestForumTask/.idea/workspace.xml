@@ -7,18 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4472d323-eb17-4887-a0f3-ac88475430e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/classes/hibernate/annotations/CapitalizeSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/classes/hibernate/annotations/CapitalizeSubject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCRestForumTask/scripts/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/annotations/CapitalizeSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/annotations/CapitalizeSubject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebProjectForumTask/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/annotations/CapitalizeMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/annotations/CapitalizeSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/annotationsImpl/CapitalizeMessageValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/annotationsImpl/CapitalizeSubjectValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/config/WebAppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/controller/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/controller/BlogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/controller/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/controller/ValidationError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/controller/ValidationErrorBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/dao/implementations/CriteriaDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/dao/interfaces/CRUDDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/dto/CommentDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/dto/SubjectDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/dto/TopicDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/dto/UsersDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/model/Comment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/model/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/model/Topic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/model/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/service/implementations/CRUDServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebProjectForumTask/target/classes/hibernate/service/interfaces/CRUDService.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -257,16 +268,17 @@
     <session id="493533938">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="59" />
+          <entry key="project.closed" value="60" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="19" />
           <entry key="project.open.time.11" value="10" />
           <entry key="project.open.time.12" value="8" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="16" />
-          <entry key="project.opened" value="60" />
+          <entry key="project.opened" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -385,28 +397,28 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_en_US.properties">
-          <provider editor-type-id="ResourceBundle" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="102">
               <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
             </state>
           </provider>
+          <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_ru.properties">
-          <provider editor-type-id="ResourceBundle" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="51">
               <caret line="3" column="147" selection-start-line="3" selection-start-column="147" selection-end-line="3" selection-end-column="147" />
             </state>
           </provider>
+          <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationError.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
+            <state relative-caret-position="68">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -418,7 +430,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/add.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
+            <state relative-caret-position="476">
               <caret line="28" column="37" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="37" />
             </state>
           </provider>
@@ -427,7 +439,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="459">
               <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
             </state>
           </provider>
@@ -436,8 +448,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="84" column="7" lean-forward="true" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+            <state relative-caret-position="478">
+              <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -445,7 +457,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/subject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="187">
               <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
             </state>
           </provider>
@@ -454,7 +466,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="170">
               <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
             </state>
           </provider>
@@ -463,7 +475,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeSubject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="136">
               <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
             </state>
           </provider>
@@ -472,7 +484,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="255">
               <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
             </state>
           </provider>
@@ -607,6 +619,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -793,8 +807,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1251,17 +1263,17 @@
       <workItem from="1548024788554" duration="1746000" />
       <workItem from="1548026595661" duration="920000" />
       <workItem from="1548028196753" duration="557000" />
+      <workItem from="1550047758431" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359797000" />
+    <option name="totallyTimeSpent" value="359803000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33489934" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3347548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1522,24 +1534,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_en_US.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="102">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/bundle/messages_ru.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="51">
           <caret line="3" column="147" selection-start-line="3" selection-start-column="147" selection-end-line="3" selection-end-column="147" />
         </state>
       </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/controller/ValidationError.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
+        <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1549,50 +1561,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
+        <state relative-caret-position="476">
           <caret line="28" column="37" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/update.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="459">
           <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/subject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="187">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="170">
           <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/annotations/CapitalizeSubject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="136">
           <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/dto/SubjectDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="255">
           <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="84" column="7" lean-forward="true" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+        <state relative-caret-position="478">
+          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
         </state>
       </provider>
     </entry>

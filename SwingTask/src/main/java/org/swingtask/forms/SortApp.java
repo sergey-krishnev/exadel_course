@@ -35,11 +35,10 @@ public class SortApp {
     private List<Student> students;
 
 
-
     public SortApp() {
         sortButton.addActionListener(e -> {
             SortFactory<Student> sortFactory = new SortFactory<>();
-            Sorting sorting = sortFactory.getSorting((EnumSort) sortType.getSelectedItem());
+            Sorting sorting = sortFactory.getSorting(EnumSort.getByName((String)sortType.getSelectedItem()));
 
             TimeCounter timeCounter = new TimeCounterImpl();
             timeCount.setText(timeCounter.count(students,sorting,descOrder.isSelected()) + " nanosecond, number of records = " + students.size());
@@ -60,7 +59,8 @@ public class SortApp {
     private void createUIComponents() {
 
         FileReader fileReader = new FileReaderImpl();
-        students = fileReader.read("students.txt");
+        String fileName = "students.txt";
+        students = fileReader.read(fileName);
         tableStudent = new JTable(new EntityTableModel(students));
         sortType = new JComboBox<>(EnumSort.names());
     }
