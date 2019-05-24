@@ -62,6 +62,6 @@ public class SortApp {
         String fileName = "students.txt";
         students = fileReader.read(fileName);
         tableStudent = new JTable(new EntityTableModel(students));
-        sortType = new JComboBox<>(EnumSort.names());
+        sortType = new JComboBox<>(new SortAlgorithmModel(EnumSort.values()));
     }
 }
