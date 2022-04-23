@@ -10,7 +10,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<springframework.version>4.2.2.RELEASE</springframework.version>
+		<springframework.version>5.3.19</springframework.version>
 		<hibernate.version>4.3.5.Final</hibernate.version>
 		<postgresql.version>9.1-901-1.jdbc4</postgresql.version>
 		<log4j.version>1.2.17</log4j.version>
